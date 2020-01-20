@@ -77,6 +77,15 @@ namespace SmartLib
 				Connect(last, first);
 				return last;
 			}
+
+			static void ConnectCircle(Node* first1, Node* first2)
+			{
+				Node* last1 = first1->Prev;
+				Node* last2 = first2->Prev;
+
+				Connect(last1, first2);
+				Connect(last2, first1);
+			}
 		};
 
 
@@ -425,11 +434,12 @@ namespace SmartLib
 						}
 						else
 						{
-							Node* prevfirst = arr[mappedValue];
-							Node* prevlast = prevfirst->Prev;
+							Node::ConnectCircle(arr[mappedValue], first);
+							//Node* prevfirst = arr[mappedValue];
+							//Node* prevlast = prevfirst->Prev;
 
-							Node::Connect(prevlast, first);
-							Node::Connect(last, prevfirst);
+							//Node::Connect(prevlast, first);
+							//Node::Connect(last, prevfirst);
 						}
 						
 					}
@@ -522,14 +532,15 @@ namespace SmartLib
 					}
 					else
 					{
-						Node* first1 = minNode;
-						Node* last1 = first1->Prev;
+						Node::ConnectCircle(minNode, arr[ii]);
+						//Node* first1 = minNode;
+						//Node* last1 = first1->Prev;
 
-						Node* first2 = arr[ii];
-						Node* last2 = first2->Prev;
+						//Node* first2 = arr[ii];
+						//Node* last2 = first2->Prev;
 
-						Node::Connect(last1, first2);
-						Node::Connect(last2, first1);
+						//Node::Connect(last1, first2);
+						//Node::Connect(last2, first1);
 					}
 				}
 			}
@@ -557,10 +568,13 @@ namespace SmartLib
 			Node::DisconnectAndCircle(first, &_start);
 			Node* minNode = SortCircularNodes(first, less, equal);
 
-			Node* sortedFirst = minNode; //make code "more" clear and readable
-			Node* sortedLast = minNode->Prev;
-			Node::Connect(sortedLast, &_start);
-			Node::Connect(&_start, sortedFirst);
+
+			Node::ConnectCircle(&_start, minNode);
+
+			//Node* sortedFirst = minNode; //make code "more" clear and readable
+			//Node* sortedLast = minNode->Prev;
+			//Node::Connect(sortedLast, &_start);
+			//Node::Connect(&_start, sortedFirst);
 
 			_size = savedSize; //restore size
 		}
