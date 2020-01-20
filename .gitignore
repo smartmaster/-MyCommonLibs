@@ -348,3 +348,10 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+
+###############my ignored files start###############
+Autobackup_*.db
+*.tlog
+*.lastbuildstate
+###############my ignored files end###############
