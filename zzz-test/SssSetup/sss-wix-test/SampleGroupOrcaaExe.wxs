@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="TARGETDIR">
+            <Directory Id="dir0F9EDF6C1FA79027DD32A89705FC824D" Name="Orca" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="SampleGroupOrcaExe">
+            <Component Id="cmp607FCAAC7416C9ED9DF8EF01F60FAAAB" Directory="dir0F9EDF6C1FA79027DD32A89705FC824D" Guid="PUT-GUID-HERE">
+                <File Id="fil1AFDE75D9F1B03D35267CAC70205BF30" KeyPath="yes" Source="SourceDir\Orca\Orca.exe" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

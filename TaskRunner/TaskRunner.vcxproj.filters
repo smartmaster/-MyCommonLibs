@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="MySources">
+      <UniqueIdentifier>{e7cc21d9-70f5-4866-b03f-322d1e1fdf80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySources\iocp-async-task">
+      <UniqueIdentifier>{221e7b9a-708d-4672-8110-775c6d2668cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySources\sml-common">
+      <UniqueIdentifier>{175c5e39-3704-4f9c-a593-dd4e8bfd0692}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SmlCircularBuffer.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="SmlCircularBuffer.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="SmlVector.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="SmlVector.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="SmlList.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="SmlList.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="SmlRefPtr.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="SmlRefPtr.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="SmlMTQueue.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="SmlMTQueue.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="SmlMisc.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="SmlMisc.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="SmlTree.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="SmlTree.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="SmlVectorList.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="SmlVectorList.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="sml-iocp-async-task\SmlIFile.h">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClInclude>
+    <ClInclude Include="sml-iocp-async-task\SmlIFile.test.h">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClInclude>
+    <ClInclude Include="sml-iocp-async-task\SmlITask.h">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClInclude>
+    <ClInclude Include="sml-iocp-async-task\SmlITask.test.h">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClInclude>
+    <ClInclude Include="sml-iocp-async-task\SmlCommon.h">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClInclude>
+    <ClInclude Include="sml-iocp-async-task\SmlCommon.test.h">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClInclude>
+    <ClInclude Include="sml-iocp-async-task\SmlTaskRunnner.h">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClInclude>
+    <ClInclude Include="sml-iocp-async-task\SmlTaskRunnner.test.h">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClInclude>
+    <ClInclude Include="sml-iocp-async-task\SmlSimpleEvent.h">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClInclude>
+    <ClInclude Include="sml-iocp-async-task\SmlSimpleEvent.test.h">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClInclude>
+    <ClInclude Include="sml-iocp-async-task\SmlSocketIOTask.test.h">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClInclude>
+    <ClInclude Include="sml-iocp-async-task\SmlSocketIOTask.h">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClInclude>
+    <ClInclude Include="sml-iocp-async-task\SmlWin32FileIOTask.test.h">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClInclude>
+    <ClInclude Include="sml-iocp-async-task\SmlWin32FileIOTask.h">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClInclude>
+    <ClInclude Include="sml-iocp-async-task\SmlSocketAcceptTask.h">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClInclude>
+    <ClInclude Include="sml-iocp-async-task\SmlSocketAcceptTask.test.h">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClInclude>
+    <ClInclude Include="sml-iocp-async-task\SmlSimpleHandlerTask.test.h">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClInclude>
+    <ClInclude Include="sml-iocp-async-task\SmlSimpleHandlerTask.h">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClInclude>
+    <ClInclude Include="sml-common\CodeBlock.h">
+      <Filter>MySources\sml-common</Filter>
+    </ClInclude>
+    <ClInclude Include="sml-common\log.h">
+      <Filter>MySources\sml-common</Filter>
+    </ClInclude>
+    <ClInclude Include="SmlTimeList.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="SmlTimeList.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="sml-iocp-async-task\SmlSocketAccepter.test.h">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClInclude>
+    <ClInclude Include="sml-iocp-async-task\SmlSocketAccepter.h">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClInclude>
+    <ClInclude Include="sml-iocp-async-task\SmlSocketRequestReplyTask.test.h">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClInclude>
+    <ClInclude Include="sml-iocp-async-task\SmlSocketRequestReplyTask.h">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClInclude>
+    <ClInclude Include="SmlVectorDeque.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="SmlVectorDeque.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SmlCircularBuffer.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="SmlCircularBuffer.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="SmlVector.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="SmlVector.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="main-test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="SmlList.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="SmlList.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="SmlRefPtr.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="SmlRefPtr.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="SmlMTQueue.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="SmlMTQueue.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="SmlMisc.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="SmlMisc.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="SmlTree.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="SmlTree.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="SmlVectorList.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="SmlVectorList.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="sml-iocp-async-task\SmlIFile.cpp">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClCompile>
+    <ClCompile Include="sml-iocp-async-task\SmlIFile.test.cpp">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClCompile>
+    <ClCompile Include="sml-iocp-async-task\SmlITask.cpp">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClCompile>
+    <ClCompile Include="sml-iocp-async-task\SmlITask.test.cpp">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClCompile>
+    <ClCompile Include="sml-iocp-async-task\SmlCommon.cpp">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClCompile>
+    <ClCompile Include="sml-iocp-async-task\SmlCommon.test.cpp">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClCompile>
+    <ClCompile Include="sml-iocp-async-task\SmlTaskRunnner.cpp">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClCompile>
+    <ClCompile Include="sml-iocp-async-task\SmlTaskRunnner.test.cpp">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClCompile>
+    <ClCompile Include="sml-iocp-async-task\SmlSimpleEvent.cpp">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClCompile>
+    <ClCompile Include="sml-iocp-async-task\SmlSimpleEvent.test.cpp">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClCompile>
+    <ClCompile Include="sml-iocp-async-task\SmlSocketIOTask.test.cpp">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClCompile>
+    <ClCompile Include="sml-iocp-async-task\SmlSocketIOTask.cpp">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClCompile>
+    <ClCompile Include="sml-iocp-async-task\SmlWin32FileIOTask.test.cpp">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClCompile>
+    <ClCompile Include="sml-iocp-async-task\SmlWin32FileIOTask.cpp">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClCompile>
+    <ClCompile Include="sml-iocp-async-task\SmlSocketAcceptTask.cpp">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClCompile>
+    <ClCompile Include="sml-iocp-async-task\SmlSocketAcceptTask.test.cpp">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClCompile>
+    <ClCompile Include="sml-iocp-async-task\SmlSimpleHandlerTask.test.cpp">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClCompile>
+    <ClCompile Include="sml-iocp-async-task\SmlSimpleHandlerTask.cpp">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClCompile>
+    <ClCompile Include="sml-common\CodeBlock.cpp">
+      <Filter>MySources\sml-common</Filter>
+    </ClCompile>
+    <ClCompile Include="sml-common\log.cpp">
+      <Filter>MySources\sml-common</Filter>
+    </ClCompile>
+    <ClCompile Include="SmlTimeList.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="SmlTimeList.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="sml-iocp-async-task\SmlSocketAccepter.test.cpp">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClCompile>
+    <ClCompile Include="sml-iocp-async-task\SmlSocketAccepter.cpp">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClCompile>
+    <ClCompile Include="sml-iocp-async-task\SmlSocketRequestReplyTask.test.cpp">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClCompile>
+    <ClCompile Include="sml-iocp-async-task\SmlSocketRequestReplyTask.cpp">
+      <Filter>MySources\iocp-async-task</Filter>
+    </ClCompile>
+    <ClCompile Include="SmlVectorDeque.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="SmlVectorDeque.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

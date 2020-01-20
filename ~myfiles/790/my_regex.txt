@@ -1,0 +1,51 @@
+
+/////////////////////////////////////////////////////////////
+\b(\w+?)(\s+?)(\w+?)\[\];
+std::vector<$1>$2$3;
+
+
+/////////////////////////////////////////////////////////////
+\b(\w+?)(\s+?)(\w+?);
+$1$2$3;			SERIALIZE_BASIC($3);
+
+\b(.*?vector<.+?>)(\s+?)(\w+?);
+$1$2$3;			SERIALIZE_VECTOR($3);
+
+
+/////////////////////////////////////////////////////////////
+SERIALIZE_BEGIN_STRUCT(xxx, xxx);
+
+SERIALIZE_END_STRUCT(xxx, xxx);
+STRUCT_XML_SERIALIZER;
+
+VOID NameValuesToFields(CONST vector<CString> & names, CONST vector<CComVariant> & vars);
+
+
+
+/////////////////////////////////////////////////////////////
+VOID NameValuesToFields(CONST vector<CString> & names, CONST vector<CComVariant> & vars)
+{
+	for (size_t ii = 0; ii < names.size(); ++ii)
+	{
+		if (0){}
+		
+	}
+}
+
+
+
+/////////////////////////////////////////////////////////////
+\b(CString)(\s+?)(\w+?);(.*?)
+WMI_GET_PROP_STRING($3) //
+
+
+\b(.*?INT\d*?|BOOL)(\s+?)(\w+?);(.*?)
+WMI_GET_PROP_INT($3) //
+
+
+\b(SYSTEMTIME)(\s+?)(\w+?);(.*?)
+WMI_GET_PROP_SYSTEMTIME($3) //
+
+
+\b(.*?vector<.+?>)(\s+?)(\w+?);(.*?)
+WMI_GET_PROP_ARRAY(xxx, xxx, $3)  //

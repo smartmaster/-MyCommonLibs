@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Rpc" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="StreamedNetTcpRpcEndpoint_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <msf:Streamed xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/Message" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="RpcData">
+    <wsdl:part name="StreamData" element="tns:StreamData" />
+  </wsdl:message>
+  <wsdl:message name="RpcData_Headers">
+    <wsdl:part name="Data1" element="tns:Data1" />
+    <wsdl:part name="Data2" element="tns:Data2" />
+    <wsdl:part name="DataLen" element="tns:DataLen" />
+    <wsdl:part name="DataOffset" element="tns:DataOffset" />
+    <wsdl:part name="EnumId" element="tns:EnumId" />
+    <wsdl:part name="Flags" element="tns:Flags" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="false" name="IRpc">
+    <wsdl:operation name="Invoke">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRpc/Invoke" name="RpcData" message="tns:RpcData" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRpc/InvokeResponse" name="RpcData" message="tns:RpcData" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="StreamedNetTcpRpcEndpoint" type="tns:IRpc">
+    <wsp:PolicyReference URI="#StreamedNetTcpRpcEndpoint_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="Invoke">
+      <soap12:operation soapAction="http://tempuri.org/IRpc/Invoke" style="document" />
+      <wsdl:input name="RpcData">
+        <soap12:header message="tns:RpcData_Headers" part="Data1" use="literal" />
+        <soap12:header message="tns:RpcData_Headers" part="Data2" use="literal" />
+        <soap12:header message="tns:RpcData_Headers" part="DataLen" use="literal" />
+        <soap12:header message="tns:RpcData_Headers" part="DataOffset" use="literal" />
+        <soap12:header message="tns:RpcData_Headers" part="EnumId" use="literal" />
+        <soap12:header message="tns:RpcData_Headers" part="Flags" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="RpcData">
+        <soap12:header message="tns:RpcData_Headers" part="Data1" use="literal" />
+        <soap12:header message="tns:RpcData_Headers" part="Data2" use="literal" />
+        <soap12:header message="tns:RpcData_Headers" part="DataLen" use="literal" />
+        <soap12:header message="tns:RpcData_Headers" part="DataOffset" use="literal" />
+        <soap12:header message="tns:RpcData_Headers" part="EnumId" use="literal" />
+        <soap12:header message="tns:RpcData_Headers" part="Flags" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Rpc">
+    <wsdl:port name="StreamedNetTcpRpcEndpoint" binding="tns:StreamedNetTcpRpcEndpoint">
+      <soap12:address location="net.tcp://localhost:8834/_000WcfStreamService.RPCInvoke.Rpc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:8834/_000WcfStreamService.RPCInvoke.Rpc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

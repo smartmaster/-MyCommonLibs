@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{90973dca-dcb8-4856-891e-3d9e87f93d9c}</UniqueIdentifier>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="MySources">
+      <UniqueIdentifier>{b1dd58b4-1bc2-49e1-8c38-7005914fff06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Externs">
+      <UniqueIdentifier>{cd343edd-3674-4770-bf17-6b07cca71242}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerVssLayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerVssLayer_i.c">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyVssSnapshotProp.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="query.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="revert.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="select.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="shadow.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="tracing.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="vssclient.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="VssCommon.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="writer.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\MiscHelper.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="VssLayerObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="break.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="create.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="delete.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="expose.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerVssLayer_i.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tracing.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="util.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="MyVssSnapshotProp.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="shadow.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="vssclient.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="VssCommon.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="vsstargetver.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="writer.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\MiscHelper.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="VssLayerObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="macros.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ServerVssLayer.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="ServerVssLayer.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VssLayerObject.rgs">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="ServerVssLayer.idl">
+      <Filter>Source Files</Filter>
+    </Midl>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+  <?define TestFilesDir = "F:\zzz-exclusion"?>
+  
+    <Fragment>
+        <DirectoryRef Id="TESTFOLDER">
+            <Component Id="cmpE8A0E380D42313DACC2287AEBB2169A4" Guid="{A7BD71F9-6801-4722-AB73-694D4315E1E9}">
+                <File Id="fil70C1A91B5F8CB36ADBBDEF8B5F72E535" KeyPath="yes" Source="$(var.TestFilesDir)\.DS_Store" />
+            </Component>
+            <Component Id="cmp3D9F1B31260FDE848A7816282DDA3010" Guid="{A676FF30-77BF-4D08-A370-A4CC6429DFED}">
+                <File Id="fil44486231221EDD40D5AC5854C306BD18" KeyPath="yes" Source="$(var.TestFilesDir)\visual assist x crack.rar" />
+            </Component>
+            <Directory Id="dir1A229B131D2BEE354B3BB09310588C49" Name="1">
+                <Component Id="cmp0A86D6DFBBF11BE69283EDDA3BE1F39F" Guid="{480307A3-B217-411E-9AEA-C912A91069D7}">
+                    <File Id="filDF008A0CEB7967274FD92243D781BF07" KeyPath="yes" Source="$(var.TestFilesDir)\1\MSCOMCTL.OCX" />
+                </Component>
+                <Component Id="cmp778F45B28A79B4BE844061100DBB608D" Guid="{BEDE53A3-C1D5-44CA-AC84-E34686ACCF8B}">
+                    <File Id="fil37353428ACEA9D27BFE375F2E870DE7B" KeyPath="yes" Source="$(var.TestFilesDir)\1\Trial-Reset.exe" />
+                </Component>
+            </Directory>
+            <Directory Id="dir9C37C5BA0642077E93024501EB489EEC" Name="1.0">
+                <Component Id="cmp900A87DD45955545FEAA5B86FFE3815A" Guid="{4CE5A570-7203-4585-AC1F-543964F94071}">
+                    <File Id="filE20402867042935118775C71C60FE2F2" KeyPath="yes" Source="$(var.TestFilesDir)\1.0\2 (1).exe" />
+                </Component>
+                <Component Id="cmp8E86006CAD80838DCDFF91AF5C7D6734" Guid="{836D8204-9EA0-471D-850A-A7C71B0E7E9C}">
+                    <File Id="fil624C4D45BF7E6218B0C8916BEBFE55A8" KeyPath="yes" Source="$(var.TestFilesDir)\1.0\2 (1).nfo" />
+                </Component>
+                <Component Id="cmpDC9910458675323D5A9771089A3E2C42" Guid="{23520534-A1E6-4FD5-83DB-ED56F15DDAB7}">
+                    <File Id="fil04F011BA09A71B6B4908700BB61C9062" KeyPath="yes" Source="$(var.TestFilesDir)\1.0\2 (1).png" />
+                </Component>
+                <Component Id="cmp31C1DE82CB083507EF15F19DE923EECE" Guid="{7265AE89-D66E-4B74-BF9C-49721E41F3A2}">
+                    <File Id="fil983108D42C50C04E1EDF8C9EDFA6733B" KeyPath="yes" Source="$(var.TestFilesDir)\1.0\2 (1).txt" />
+                </Component>
+                <Component Id="cmp0F713284139E8CEC8A4BA6002BDF12F6" Guid="{C1C3A02B-276A-470E-90DE-26298A199ADD}">
+                    <File Id="fil58EBD733811C4498D66867F837D93F83" KeyPath="yes" Source="$(var.TestFilesDir)\1.0\2 (2).txt" />
+                </Component>
+                <Component Id="cmpEB5CA6DD90A6A35A07BCD0CC8CCB6007" Guid="{21C954AD-089C-4268-AB6E-679E57B6B577}">
+                    <File Id="filC46EF04C1DCDD162B2C6FE37372538FA" KeyPath="yes" Source="$(var.TestFilesDir)\1.0\2 (3).txt" />
+                </Component>
+                <Component Id="cmpA55828A881C77CCDEE03339CDD2C9FC5" Guid="{057D90F2-1B6F-4B41-8152-FEC012991C63}">
+                    <File Id="fil35DA6D01EA54E87E2EA6A116F3FB570E" KeyPath="yes" Source="$(var.TestFilesDir)\1.0\2 (4).txt" />
+                </Component>
+                <Component Id="cmpB5D17A7B7B5C7F6E21D2FE5F8890F3C9" Guid="{131D9C30-730D-4995-9AE5-D68A793E6131}">
+                    <File Id="fil88AC32687C43CDB878CECD33C818461F" KeyPath="yes" Source="$(var.TestFilesDir)\1.0\2 (5).txt" />
+                </Component>
+            </Directory>
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="TestComponents">
+            <ComponentRef Id="cmpE8A0E380D42313DACC2287AEBB2169A4" />
+            <ComponentRef Id="cmp3D9F1B31260FDE848A7816282DDA3010" />
+            <ComponentRef Id="cmp0A86D6DFBBF11BE69283EDDA3BE1F39F" />
+            <ComponentRef Id="cmp778F45B28A79B4BE844061100DBB608D" />
+            <ComponentRef Id="cmp900A87DD45955545FEAA5B86FFE3815A" />
+            <ComponentRef Id="cmp8E86006CAD80838DCDFF91AF5C7D6734" />
+            <ComponentRef Id="cmpDC9910458675323D5A9771089A3E2C42" />
+            <ComponentRef Id="cmp31C1DE82CB083507EF15F19DE923EECE" />
+            <ComponentRef Id="cmp0F713284139E8CEC8A4BA6002BDF12F6" />
+            <ComponentRef Id="cmpEB5CA6DD90A6A35A07BCD0CC8CCB6007" />
+            <ComponentRef Id="cmpA55828A881C77CCDEE03339CDD2C9FC5" />
+            <ComponentRef Id="cmpB5D17A7B7B5C7F6E21D2FE5F8890F3C9" />
+        </ComponentGroup>
+    </Fragment>
+</Wix>

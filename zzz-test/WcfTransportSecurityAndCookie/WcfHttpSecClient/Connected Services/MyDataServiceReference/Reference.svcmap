@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="afb05031-f755-4b18-ac25-a4593e124add" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://songmin-9010:60443" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="af4987cd-a07a-4ddb-aff3-90d9825db42e" SourceId="1" SourceUrl="https://songmin-9010:60443/?xsd=xsd2" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="e0e27425-f2e9-4c00-be93-88be999d2288" SourceId="1" SourceUrl="https://songmin-9010:60443/?xsd=xsd0" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="3235d59f-db3c-461a-939f-20bb397390be" SourceId="1" SourceUrl="https://songmin-9010:60443/?xsd=xsd1" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="88b9ec34-51c2-453b-90c7-21a1636222b1" SourceId="1" SourceUrl="https://songmin-9010:60443/?disco" />
+    <MetadataFile FileName="MyDataService.wsdl" MetadataType="Wsdl" ID="b9c09ac4-3653-499e-8ebb-af5857593f7f" SourceId="1" SourceUrl="https://songmin-9010:60443/?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

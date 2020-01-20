@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="MyOrca">
+            <Directory Id="dirE6757FBE35112DF0FC4CBFA53C26E741" Name="Orca" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="SampleGroupOrca">
+            <Component Id="cmpD4C2AB9DE0904E09FB1FD3AA380E387D" Directory="dirE6757FBE35112DF0FC4CBFA53C26E741" Guid="PUT-GUID-HERE">
+                <File Id="filC3C2DDD07D99B04F1FF580F6360EC7CD" KeyPath="yes" Source="SourceDir\darice.cub" />
+            </Component>
+            <Component Id="cmp52E2CE1C491A3C495D86B2CCC50FCC09" Directory="dirE6757FBE35112DF0FC4CBFA53C26E741" Guid="PUT-GUID-HERE">
+                <File Id="fil944C89C70F094AF10E8A5C11148AD0B4" KeyPath="yes" Source="SourceDir\evalcom2.dll" />
+            </Component>
+            <Component Id="cmp2CD6732895C0B77489402C6D8B7457E8" Directory="dirE6757FBE35112DF0FC4CBFA53C26E741" Guid="PUT-GUID-HERE">
+                <File Id="fil5C6ABD6FA0018AE5A9757DE0CBDF7382" KeyPath="yes" Source="SourceDir\logo.cub" />
+            </Component>
+            <Component Id="cmpF2CA79BAAE7E6B95487B47FD1E53C46F" Directory="dirE6757FBE35112DF0FC4CBFA53C26E741" Guid="PUT-GUID-HERE">
+                <File Id="fil502A8D55E0EBC7F1A2F0F4223D306E86" KeyPath="yes" Source="SourceDir\mergemod.cub" />
+            </Component>
+            <Component Id="cmp8A011561A5903618079F9B092A8C1320" Directory="dirE6757FBE35112DF0FC4CBFA53C26E741" Guid="PUT-GUID-HERE">
+                <File Id="fil3A2E5EEF19152E064521C9C74C03DEF3" KeyPath="yes" Source="SourceDir\mergemod.dll">
+                    <Class Id="{0ADDA830-2C26-11D2-AD65-00A0C9AF11A6}" Context="InprocServer32" Description="MSM Merge COM Server" ThreadingModel="both">
+                        <ProgId Id="MSM.Merge.1" Description="MSM Merge COM Server">
+                            <ProgId Id="MSM.Merge" Description="MSM Merge COM Server" />
+                        </ProgId>
+                    </Class>
+                    <Class Id="{F94985D5-29F9-4743-9805-99BC3F35B678}" Context="InprocServer32" Description="MSM Merge Extended COM Server" ThreadingModel="both">
+                        <ProgId Id="MSM.Merge2.1" Description="MSM Merge Extended COM Server">
+                            <ProgId Id="MSM.Merge2" Description="MSM Merge Extended COM Server" />
+                        </ProgId>
+                    </Class>
+                    <TypeLib Id="{0ADDA82F-2C26-11D2-AD65-00A0C9AF11A6}" Description="Microsoft MSM Merge Type Library" HelpDirectory="dirE6757FBE35112DF0FC4CBFA53C26E741" Language="0" MajorVersion="2" MinorVersion="0">
+                        <Interface Id="{0ADDA827-2C26-11D2-AD65-00A0C9AF11A6}" Name="IMsmStrings" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{0ADDA828-2C26-11D2-AD65-00A0C9AF11A6}" Name="IMsmError" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{0ADDA82A-2C26-11D2-AD65-00A0C9AF11A6}" Name="IMsmErrors" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{0ADDA82B-2C26-11D2-AD65-00A0C9AF11A6}" Name="IMsmDependency" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{0ADDA82D-2C26-11D2-AD65-00A0C9AF11A6}" Name="IMsmDependencies" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{0ADDA82E-2C26-11D2-AD65-00A0C9AF11A6}" Name="IMsmMerge" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{351A72AB-21CB-47AB-B7AA-C4D7B02EA305}" Name="IMsmMerge2" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{4D6E6284-D21D-401E-84F6-909E00B50F71}" Name="IMsmConfigurableItem" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{55BF723C-9A0D-463E-B42B-B4FBC7BE3C7C}" Name="IMsmConfigurableItems" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{7041AE26-2D78-11D2-888A-00A0C981B015}" Name="IMsmGetFiles" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                        <Interface Id="{AC013209-18A7-4851-8A21-2353443D70A0}" Name="IMsmConfigureModule" ProxyStubClassId32="{00020424-0000-0000-C000-000000000046}" />
+                    </TypeLib>
+                </File>
+            </Component>
+            <Component Id="cmp6A78C2E401A98AB936E3EDD758326999" Directory="dirE6757FBE35112DF0FC4CBFA53C26E741" Guid="PUT-GUID-HERE">
+                <File Id="fil431ACCD88D9F9081A16EE15A65F2655A" KeyPath="yes" Source="SourceDir\orca.chm" />
+            </Component>
+            <Component Id="cmpC499B53547F83A5C40711214E57E26ED" Directory="dirE6757FBE35112DF0FC4CBFA53C26E741" Guid="PUT-GUID-HERE">
+                <File Id="filC53880E8811002B1E92A869E730B9350" KeyPath="yes" Source="SourceDir\orca.dat" />
+            </Component>
+            <Component Id="cmp5F2DBAFD8AFDA14FF02713D5410E5AD5" Directory="dirE6757FBE35112DF0FC4CBFA53C26E741" Guid="PUT-GUID-HERE">
+                <File Id="filBB81FD5FB0ACDB3FB6E385623E7ED805" KeyPath="yes" Source="SourceDir\Orca.exe" />
+            </Component>
+            <Component Id="cmpBF0E7DC5A84C2AC871A9437F63976032" Directory="dirE6757FBE35112DF0FC4CBFA53C26E741" Guid="PUT-GUID-HERE">
+                <File Id="filB58504CC98C71609AA2812F3A1AEC2AE" KeyPath="yes" Source="SourceDir\orca.ico" />
+            </Component>
+            <Component Id="cmp0FD2240CC69CAD39BAB2F42D392A8FAE" Directory="dirE6757FBE35112DF0FC4CBFA53C26E741" Guid="PUT-GUID-HERE">
+                <File Id="filEB9355858A15721E19EA9A460800F7D7" KeyPath="yes" Source="SourceDir\Vstalogo.cub" />
+            </Component>
+            <Component Id="cmp968D4B01F73E0E012FF631B12A2897EF" Directory="dirE6757FBE35112DF0FC4CBFA53C26E741" Guid="PUT-GUID-HERE">
+                <File Id="fil74FAF4E0AC3C549DD40803EAF9CF249D" KeyPath="yes" Source="SourceDir\XPlogo.cub" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

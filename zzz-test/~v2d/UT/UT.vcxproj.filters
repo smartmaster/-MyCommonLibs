@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Externs">
+      <UniqueIdentifier>{cb65ac63-90ea-4c46-bd15-9df6a5f3585b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySources">
+      <UniqueIdentifier>{d1b9d384-556f-4634-b1db-7e5e86284011}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\AsyncIoBuffer.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\DiskHelper.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\IocpThreadPool.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\MiscHelper.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\ntddvol.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\PerformanceTiming.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\SimpleBitArray.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\SingleVolumeInfo.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\VirtualDiskHelper.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\VolumeHelper.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\SingleDiskInfo.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\VDSVolumeDiskHelper.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\SingleVdsDiskInfo.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\SingleVdsVolumeInfo.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\AllVdsDiskVolumeInfo.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\LocalFileDevice.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\VhdHelper.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\CrcCalc.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\GPTDiskLayout.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\MyStgHelper.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\EnumFile.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\NTFS_Lib_Helper.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\NTFS_Lib_FileRecord.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\NTFS_Lib_DataType.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\NTFS_Lib_Common.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\NTFS_Lib_Attribute.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\NTFS_Lib.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\FileLockLib.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\XmlHelper.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerVssLayer\MyVssSnapshotProp.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerDiskVolumeInfo\ServerDiskVolumeInfo_i.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerFileDevice\ServerFileDevice_i.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerVssLayer\ServerVssLayer_i.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\IocpAsyncCopy.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\AsyncIOCompleteRoutine.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\DataTransfer.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\DataTransferPipe.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\DataTransferSocket.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\LengthBuffer.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\DataTransferBuffer.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\MTCopy.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CommonFunctions\LocalFileDevicePreAlloc.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UT.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FileDeviceTest.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\AsyncIoBuffer.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\DiskHelper.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\MiscHelper.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\PerformanceTiming.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\SimpleBitArray.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\SingleVolumeInfo.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\VolumeHelper.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleVolumeInfoTest.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\SingleDiskInfo.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleDiskInfoTest.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\VDSVolumeDiskHelper.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="VDSVolumeDiskHelperTest.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\SingleVdsDiskInfo.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\SingleVdsVolumeInfo.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\AllVdsDiskVolumeInfo.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="VShadowClientTest.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\AsyncIoCopy.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="AsyncIoCopyTest.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="AllDiskVolumeInformationTest.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\LocalFileDevice.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\CrcCalc.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\GPTDiskLayout.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="GptDiskLayOutCrcTest.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="NtfsTest.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\MyStgHelper.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="EnumFileTest.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\EnumFile.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\NTFS_Lib_Helper.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\NTFS_Lib_FileRecord.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\NTFS_Lib_Attribute.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="VolumeToDiskCopyTest.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="VhdHelperTest.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\VhdHelper.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\VirtualDiskHelper.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\FileLockLib.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\FileLockMain.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\XmlHelper.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ServerVssLayer\MyVssSnapshotProp.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ServerDiskVolumeInfo\ServerDiskVolumeInfo_i.c">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ServerFileDevice\ServerFileDevice_i.c">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ServerVssLayer\ServerVssLayer_i.c">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\IocpAsyncCopy.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\AsyncIOCompleteRoutine.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\DataTransferPipe.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\DataTransferSocket.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\LengthBuffer.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\DataTransferBuffer.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\MTCopy.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CommonFunctions\LocalFileDevicePreAlloc.cpp">
+      <Filter>Externs</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

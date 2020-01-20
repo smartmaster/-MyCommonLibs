@@ -1,0 +1,33 @@
+// Single.idl : IDL source for Single
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Single.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(0CF1E0A7-9689-4130-81C7-11BDE7F53CD2),
+	pointer_default(unique)
+]
+interface IObjSingle : IUnknown{
+	[] HRESULT Print();
+};
+[
+	uuid(3CD2B548-85D8-40E8-A060-8B499D3D393F),
+	version(1.0),
+]
+library SingleLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(660E1C80-F274-46BA-9B41-01829BE9B067)		
+	]
+	coclass ObjSingle
+	{
+		[default] interface IObjSingle;
+	};
+};
+

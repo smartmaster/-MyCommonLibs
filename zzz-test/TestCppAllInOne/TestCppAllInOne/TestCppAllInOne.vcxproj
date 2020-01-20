@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{BBA6D68F-A030-4C48-9909-A88324190741}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>TestCppAllInOne</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <SpectreMitigation>false</SpectreMitigation>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>..\..\..\CommonSources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CustomBuild>
+      <Command>
+      </Command>
+    </CustomBuild>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>..\..\..\CommonSources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>Default</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ws2_32.lib;Wtsapi32.lib;Netapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>..\..\..\CommonSources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling>Sync</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ws2_32.lib;Wtsapi32.lib;Netapi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="BstrConv.h" />
+    <ClInclude Include="CodeBlock.h" />
+    <ClInclude Include="ComposeMax.h" />
+    <ClInclude Include="ComposeMax.test.h" />
+    <ClInclude Include="construct-binary-tree-from-preorder-and-inorder-traversal.h" />
+    <ClInclude Include="construct-binary-tree-from-preorder-and-inorder-traversal.test.h" />
+    <ClInclude Include="DebugHelper.h" />
+    <ClInclude Include="EnumFileSystem.h" />
+    <ClInclude Include="external\distorm\include\distorm.h" />
+    <ClInclude Include="external\distorm\include\mnemonics.h" />
+    <ClInclude Include="external\distorm\src\config.h" />
+    <ClInclude Include="external\distorm\src\decoder.h" />
+    <ClInclude Include="external\distorm\src\instructions.h" />
+    <ClInclude Include="external\distorm\src\insts.h" />
+    <ClInclude Include="external\distorm\src\operands.h" />
+    <ClInclude Include="external\distorm\src\prefix.h" />
+    <ClInclude Include="external\distorm\src\textdefs.h" />
+    <ClInclude Include="external\distorm\src\wstring.h" />
+    <ClInclude Include="external\distorm\src\x86defs.h" />
+    <ClInclude Include="finc.h" />
+    <ClInclude Include="FindFileExist.h" />
+    <ClInclude Include="asm_func.h" />
+    <ClInclude Include="clangraii.test.h" />
+    <ClInclude Include="FirstUniqueChar.h" />
+    <ClInclude Include="FirstUniqueChar.test.h" />
+    <ClInclude Include="flatten-nested-list-iterator.h" />
+    <ClInclude Include="flatten-nested-list-iterator.test.h" />
+    <ClInclude Include="frog-jump.h" />
+    <ClInclude Include="frog-jump.test.h" />
+    <ClInclude Include="GetSpecialFolder.h" />
+    <ClInclude Include="HCPPCreate.h" />
+    <ClInclude Include="HCPPCreate.test.h" />
+    <ClInclude Include="interleaving-string.h" />
+    <ClInclude Include="interleaving-string.test.h" />
+    <ClInclude Include="iocp-async-pattern.h" />
+    <ClInclude Include="iocp-async-pattern.test.h" />
+    <ClInclude Include="iocp-async-socket.h" />
+    <ClInclude Include="iocp-async-socket.test.h" />
+    <ClInclude Include="k-concatenation-maximum-sum.h" />
+    <ClInclude Include="k-concatenation-maximum-sum.test.h" />
+    <ClInclude Include="LeetCodeLongestNonRepeatedString.h" />
+    <ClInclude Include="LeetCodeLongestNonRepeatedString.test.h" />
+    <ClInclude Include="ListTest.h" />
+    <ClInclude Include="ListTest.test.h" />
+    <ClInclude Include="longest-common-subsequence.h" />
+    <ClInclude Include="longest-common-subsequence.test.h" />
+    <ClInclude Include="maximum-length-of-a-concatenated-string-with-unique-characters.h" />
+    <ClInclude Include="maximum-length-of-a-concatenated-string-with-unique-characters.test.h" />
+    <ClInclude Include="misc.small.h" />
+    <ClInclude Include="misc.small.test.h" />
+    <ClInclude Include="NextPerm.h" />
+    <ClInclude Include="NextPerm.test.h" />
+    <ClInclude Include="partition-equal-subset-sum.h" />
+    <ClInclude Include="partition-equal-subset-sum.test.h" />
+    <ClInclude Include="partition-list.h" />
+    <ClInclude Include="partition-list.test.h" />
+    <ClInclude Include="permutation-and-combination.h" />
+    <ClInclude Include="permutation-and-combination.test.h" />
+    <ClInclude Include="ReadConfig.h" />
+    <ClInclude Include="ReadConfig.test.h" />
+    <ClInclude Include="RefPtr.h" />
+    <ClInclude Include="RefPtr.test.h" />
+    <ClInclude Include="SmlQuickSort.h" />
+    <ClInclude Include="SmlQuickSort.test.h" />
+    <ClInclude Include="sml_raii_clang.test.h" />
+    <ClInclude Include="sml_raii_clang.h" />
+    <ClInclude Include="IAllocator.h" />
+    <ClInclude Include="IocpCooyFile.h" />
+    <ClInclude Include="LoadLocalStrings.h" />
+    <ClInclude Include="MaskBitCountToString.h" />
+    <ClInclude Include="MaskBitCountToString.test.h" />
+    <ClInclude Include="raii_func.h" />
+    <ClInclude Include="MyFormatCode.h" />
+    <ClInclude Include="MyPrintType.h" />
+    <ClInclude Include="SmlBlockAllocator.h" />
+    <ClInclude Include="SmlHook.h" />
+    <ClInclude Include="SmlList.h" />
+    <ClInclude Include="log.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="ScopeExit.h" />
+    <ClInclude Include="SmlCVector.h" />
+    <ClInclude Include="SmlCVector.test.h" />
+    <ClInclude Include="SocketConnect.h" />
+    <ClInclude Include="sort-array-by-parity.h" />
+    <ClInclude Include="sort-array-by-parity.test.h" />
+    <ClInclude Include="StartAppOnActiveUserSession.h" />
+    <ClInclude Include="StartAppOnActiveUserSession.test.h" />
+    <ClInclude Include="StringOf.h" />
+    <ClInclude Include="TestArgs.h" />
+    <ClInclude Include="testCallAsm.h" />
+    <ClInclude Include="TestCircularRef.h" />
+    <ClInclude Include="TestConstExpr.h" />
+    <ClInclude Include="TestCV.h" />
+    <ClInclude Include="TestCV.test.h" />
+    <ClInclude Include="TestForward.h" />
+    <ClInclude Include="TestFwdMove.h" />
+    <ClInclude Include="testInvalidHandler.h" />
+    <ClInclude Include="testSharedPtr.h" />
+    <ClInclude Include="TestStdCppCV.h" />
+    <ClInclude Include="TestStdCppCV.test.h" />
+    <ClInclude Include="testWinVer.h" />
+    <ClInclude Include="TestWTS.h" />
+    <ClInclude Include="TestWTS.test.h" />
+    <ClInclude Include="test_apache_load.h" />
+    <ClInclude Include="test_cpp_type.h" />
+    <ClInclude Include="test_utf8_cout.h" />
+    <ClInclude Include="test_woss.h" />
+    <ClInclude Include="wildcard-matching.h" />
+    <ClInclude Include="wildcard-matching.test.h" />
+    <ClInclude Include="wordBreak.h" />
+    <ClInclude Include="wordBreak.test.h" />
+    <ClInclude Include="zigzag-conversion.h" />
+    <ClInclude Include="zigzag-conversion.test.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CodeBlock.cpp" />
+    <ClCompile Include="ComposeMax.cpp" />
+    <ClCompile Include="ComposeMax.test.cpp" />
+    <ClCompile Include="construct-binary-tree-from-preorder-and-inorder-traversal.cpp" />
+    <ClCompile Include="construct-binary-tree-from-preorder-and-inorder-traversal.test.cpp" />
+    <ClCompile Include="counted_ptr.cpp" />
+    <ClCompile Include="DebugHelper.cpp" />
+    <ClCompile Include="EnumFileSystem.cpp" />
+    <ClCompile Include="ExceptionDump.cpp" />
+    <ClCompile Include="external\distorm\src\decoder.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="external\distorm\src\distorm.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="external\distorm\src\instructions.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="external\distorm\src\insts.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="external\distorm\src\mnemonics.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="external\distorm\src\operands.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="external\distorm\src\prefix.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="external\distorm\src\textdefs.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="external\distorm\src\wstring.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="finc.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="clangraii.test.cpp" />
+    <ClCompile Include="FirstUniqueChar.cpp" />
+    <ClCompile Include="FirstUniqueChar.test.cpp" />
+    <ClCompile Include="flatten-nested-list-iterator.cpp" />
+    <ClCompile Include="flatten-nested-list-iterator.test.cpp" />
+    <ClCompile Include="frog-jump.cpp" />
+    <ClCompile Include="frog-jump.test.cpp" />
+    <ClCompile Include="HCPPCreate.cpp" />
+    <ClCompile Include="HCPPCreate.test.cpp" />
+    <ClCompile Include="IAllocator.cpp" />
+    <ClCompile Include="interleaving-string.cpp" />
+    <ClCompile Include="interleaving-string.test.cpp" />
+    <ClCompile Include="iocp-async-pattern.cpp" />
+    <ClCompile Include="iocp-async-pattern.test.cpp" />
+    <ClCompile Include="iocp-async-socket.cpp" />
+    <ClCompile Include="iocp-async-socket.test.cpp" />
+    <ClCompile Include="IocpCooyFile.cpp" />
+    <ClCompile Include="k-concatenation-maximum-sum.cpp" />
+    <ClCompile Include="k-concatenation-maximum-sum.test.cpp" />
+    <ClCompile Include="LeetCodeLongestNonRepeatedString.cpp" />
+    <ClCompile Include="LeetCodeLongestNonRepeatedString.test.cpp" />
+    <ClCompile Include="ListTest.cpp" />
+    <ClCompile Include="ListTest.test.cpp" />
+    <ClCompile Include="log.cpp" />
+    <ClCompile Include="longest-common-subsequence.cpp" />
+    <ClCompile Include="longest-common-subsequence.test.cpp" />
+    <ClCompile Include="MaskBitCountToString.test.cpp" />
+    <ClCompile Include="maximum-length-of-a-concatenated-string-with-unique-characters.cpp" />
+    <ClCompile Include="maximum-length-of-a-concatenated-string-with-unique-characters.test.cpp" />
+    <ClCompile Include="misc.small.cpp" />
+    <ClCompile Include="misc.small.test.cpp" />
+    <ClCompile Include="NextPerm.cpp" />
+    <ClCompile Include="NextPerm.test.cpp" />
+    <ClCompile Include="partition-equal-subset-sum.cpp" />
+    <ClCompile Include="partition-equal-subset-sum.test.cpp" />
+    <ClCompile Include="partition-list.cpp" />
+    <ClCompile Include="partition-list.test.cpp" />
+    <ClCompile Include="permutation-and-combination.cpp" />
+    <ClCompile Include="permutation-and-combination.test.cpp" />
+    <ClCompile Include="raii_func.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="MyPrintType.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ReadConfig.test.cpp" />
+    <ClCompile Include="RefPtr.test.cpp" />
+    <ClCompile Include="ScopeExit.cpp" />
+    <ClCompile Include="SmlBlockAllocator.cpp" />
+    <ClCompile Include="SmlHook.cpp" />
+    <ClCompile Include="SmlList.cpp" />
+    <ClCompile Include="SmlCVector.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SmlCVector.test.cpp" />
+    <ClCompile Include="SmlQuickSort.test.cpp" />
+    <ClCompile Include="sml_raii_clang.test.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</PreprocessSuppressLineNumbers>
+      <PreprocessKeepComments Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</PreprocessKeepComments>
+      <IgnoreStandardIncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</IgnoreStandardIncludePath>
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</PreprocessSuppressLineNumbers>
+      <PreprocessKeepComments Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</PreprocessKeepComments>
+      <IgnoreStandardIncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</IgnoreStandardIncludePath>
+    </ClCompile>
+    <ClCompile Include="sml_raii_clang.test.nomacro.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SocketConnect.cpp" />
+    <ClCompile Include="sort-array-by-parity.cpp" />
+    <ClCompile Include="sort-array-by-parity.test.cpp" />
+    <ClCompile Include="StartAppOnActiveUserSession.cpp" />
+    <ClCompile Include="StartAppOnActiveUserSession.test.cpp" />
+    <ClCompile Include="StringOf.cpp" />
+    <ClCompile Include="testCallAsm.cpp" />
+    <ClCompile Include="TestCV.cpp" />
+    <ClCompile Include="TestCV.test.cpp" />
+    <ClCompile Include="TestFwdMove.cpp" />
+    <ClCompile Include="TestStdCppCV.cpp" />
+    <ClCompile Include="TestStdCppCV.test.cpp" />
+    <ClCompile Include="testWinVer.cpp" />
+    <ClCompile Include="TestWTS.cpp" />
+    <ClCompile Include="TestWTS.test.cpp" />
+    <ClCompile Include="test_cpp_type.cpp" />
+    <ClCompile Include="test_utf8_cout.cpp" />
+    <ClCompile Include="wildcard-matching.cpp" />
+    <ClCompile Include="wildcard-matching.test.cpp" />
+    <ClCompile Include="wordBreak.cpp" />
+    <ClCompile Include="wordBreak.test.cpp" />
+    <ClCompile Include="zigzag-conversion.cpp" />
+    <ClCompile Include="zigzag-conversion.test.cpp" />
+    <ClCompile Include="zzz-TestCppAllInOne.cpp" />
+    <ClCompile Include="TestForward.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="testAsm_64.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ml64.exe /c %(FullPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(FileName).obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ml64.exe /c %(FullPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(FileName).obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ml.exe /c %(FullPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FileName).obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ml.exe /c %(FullPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FileName).obj</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="testAsm_32.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ml.exe /c %(FullPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FileName).obj</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="asm_func.64.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ml64.exe /c %(FullPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(FileName).obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ml64.exe /c %(FullPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(FileName).obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ml.exe /c %(FullPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FileName).obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ml.exe /c %(FullPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FileName).obj</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="asm_func.32.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">ml.exe /c %(FullPath)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(FileName).obj</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

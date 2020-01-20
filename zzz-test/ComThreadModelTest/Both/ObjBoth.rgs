@@ -1,0 +1,15 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {56297545-4AC8-49BE-A979-B311BED73DF4} = s 'ObjBoth Class'
+		{
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			TypeLib = s '{3CB2A90D-E824-4072-9387-607EB678EC95}'
+			Version = s '1.0'
+		}
+	}
+}

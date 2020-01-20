@@ -1,0 +1,151 @@
+#include "stdafx.h"
+
+
+HRESULT CFileRecord::TraverseSubNodeExRP(CONST ULONGLONG vcn, ISubEntryCallBackRP * pSubEntryCallBackRP/*, BOOL bAllEntries*/) CONST
+{
+	HRESULT hr = S_OK;
+	DWORD LastError = 0;
+
+	ATLASSERT(pSubEntryCallBackRP);
+	
+	BEGIN_BLOCK(0);
+	//////////////////////////////////////////////////////////////////////////
+	CAttr_IndexAlloc *ia = (CAttr_IndexAlloc*)FindFirstAttr(ATTR_TYPE_INDEX_ALLOCATION);
+	if (ia == NULL)
+		return;
+
+	//<sonmi01>2014-4-20 ###???
+	BOOL bParseIndexBlockOK = FALSE;
+	CIndexBlock ib;
+	for (;;)
+	{
+		if (NULL == ia)
+		{
+			break;
+		}
+
+		bParseIndexBlockOK = ia->ParseIndexBlock(vcn, ib, m_IndexRootVirtualClusterSize, m_IndexRootIndexBufferSize);
+		if (bParseIndexBlockOK)
+		{
+			break;
+		}
+
+		ia = (CAttr_IndexAlloc*)FindNextAttr(ATTR_TYPE_INDEX_ALLOCATION);
+	}
+
+	if (bParseIndexBlockOK) //<sonmi01>2014-4-18 ###???
+	{
+		//////////////////////////////////////////////////////////////////////////
+		CIndexEntry *ie = ib.FindFirstEntry();
+		while (ie)
+		{
+			INDEX_ENTRY_RP * ieRP = ie->Convert_INDEX_ENTRY<INDEX_ENTRY_RP*>();
+			if (ie->IsSubNodePtr())
+			{
+				hr = TraverseSubNodeExRP(ie->GetSubNodeVCN(), pSubEntryCallBackRP/*, bAllEntries*/);	// recursive call
+				break;
+			}
+
+			if (ieRP->m_Flags & INDEX_ENTRY_FLAG_LAST)
+			{
+				break;
+			}
+
+			pSubEntryCallBackRP->Operate(ieRP);
+			ie = ib.FindNextEntry();
+		}
+		//////////////////////////////////////////////////////////////////////////
+		if (FAILED(hr))
+		{
+			LEAVE_BLOCK(0);
+		}
+	}
+	else
+	{
+		hr = E_FAIL;
+		D_API_ERR(0, TEXT("ParseIndexBlock"), hr, TEXT("failed"));
+	}
+	
+	//////////////////////////////////////////////////////////////////////////
+	END_BLOCK(0);
+	
+	return hr;
+}
+
+HRESULT CFileRecord::TraverseSubEntriesExRP(ISubEntryCallBackRP * pSubEntryCallBackRP/*, BOOL bAllEntries*/) CONST
+{
+	HRESULT hr = S_OK;
+	DWORD LastError = 0;
+
+	_ASSERT(pSubEntryCallBackRP);
+	
+	BEGIN_BLOCK(0);
+	//////////////////////////////////////////////////////////////////////////
+	CAttr_IndexRoot * attrRoot = (CAttr_IndexRoot *)FindFirstAttr(ATTR_TYPE_INDEX_ROOT);
+	ULONGLONG dataSize = attrRoot->GetDataSize();
+	CVMemPtr<BYTE> apBuffer;
+	apBuffer.Allocate(dataSize);
+	if (nullptr == apBuffer.m_pData)
+	{
+		hr = E_OUTOFMEMORY;
+		D_API_ERR(0, TEXT("Allocate"), hr, TEXT("dataSize=%I64d"), dataSize);
+		LEAVE_BLOCK(0);
+	}
+
+	//////////////////////////////////////////////////////////////////////////
+	DWORD actural = 0;
+	BOOL bIO = attrRoot->ReadData(0, apBuffer.m_pData, dataSize, &actural);
+	if (!bIO || dataSize != actural)
+	{
+		hr = E_FAIL;
+		D_API_ERR(0, TEXT("ReadData"), hr, TEXT("bIO=%d, actural=%d, dataSize=%I64d"), bIO, actural, dataSize);
+		LEAVE_BLOCK(0);
+	}
+
+	//////////////////////////////////////////////////////////////////////////
+	if (dataSize < sizeof(ATTR_INDEX_ROOT))
+	{
+		hr = E_FAIL;
+		D_INFO(0, TEXT("Buffer too small, assume no index entries for reparse points. sizeof(ATTR_INDEX_ROOT)=%d, dataSize=%I64d"), sizeof(ATTR_INDEX_ROOT), dataSize);
+		LEAVE_BLOCK(0);
+	}
+
+	//////////////////////////////////////////////////////////////////////////
+	ATTR_INDEX_ROOT * indexRootHeader = (ATTR_INDEX_ROOT *)(apBuffer.m_pData);
+	D_INFO(0, TEXT("TotalEntrySize=%d, AllocEntrySize=%d"), indexRootHeader->m_TotalEntrySize, indexRootHeader->m_AllocEntrySize);
+	INDEX_ENTRY_RP * ieRP = (INDEX_ENTRY_RP*)((BYTE*)(&(indexRootHeader->m_EntryOffset)) + indexRootHeader->m_EntryOffset);
+
+	//////////////////////////////////////////////////////////////////////////
+	LONG parsedSize = 0;
+	LONG maxParsedSize = dataSize - sizeof(ATTR_INDEX_ROOT);
+	while (parsedSize < maxParsedSize)
+	{
+		if (ieRP->m_Flags & INDEX_ENTRY_FLAG_LAST)
+		{
+			break;
+		}
+
+		if (ieRP->m_Flags & INDEX_ENTRY_FLAG_SUBNODE)
+		{
+			ULONGLONG vcn = -1ULL;
+			CopyMemory(&vcn, (BYTE*)ieRP + (ieRP->m_Size - 8), sizeof(ULONGLONG));
+			hr = TraverseSubNodeExRP(vcn, pSubEntryCallBackRP/*, BOOL bAllEntries*/);
+			D_API_ERR(0, TEXT("TraverseSubNodeExRP"), hr, TEXT(""));
+			break;
+		}
+
+		pSubEntryCallBackRP(ieRP);
+		parsedSize += ieRP->m_SizeOfIndexEntry;
+		ieRP = (INDEX_ENTRY_RP *)((BYTE*)ieRP + ieRP->m_SizeOfIndexEntry); //next entry
+	}
+	//////////////////////////////////////////////////////////////////////////
+	if (FAILED(hr))
+	{
+		LEAVE_BLOCK(0);
+	}
+	
+	//////////////////////////////////////////////////////////////////////////
+	END_BLOCK(0);
+	
+	return hr;
+}

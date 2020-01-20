@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BackupInfo Version="2.1">
+  <BackupName></BackupName>
+  <ServerInfo HostName="SONMI01-D2D" CPU="AMD64" OsType="64-bit" OS="Windows Server 2012 Datacenter" BootFirmware=""></ServerInfo>
+  <TimeStamp>
+    <Date>2013-06-04</Date>
+    <Time>18:00:38</Time>
+    <CopyDate></CopyDate>
+    <CopyTime></CopyTime>
+  </TimeStamp>
+  <BackupStatus Status="Finished" SessStatus="0"></BackupStatus>
+  <BackupDetail ID="9" JobID="22" SessGuid="{F2A0AA98-F0F3-45B4-BE24-94B39997AD3F}" BackupType="Resync" IsFullMachine="TRUE" CompressType="1" DataSizeKB="37913504" TransferDataSizeKB="" CatalogSizeB="0" EncryptType="65539" EncryptPasswordHash="8b117552407ec3e7fa052702fd4ae190" DataStoreKeyHash="2cb2a6cc1e8c9070f351cf43f4fd24d0" TotalRawDataSizeWritten="33619968" BackupDest="\\sonmi01-790\q$\rps-ds\111\sonmi01-d2d@sonmi01-790.ca.com" BMRFlag="-1" ReplicationStatus="Finished" SourceDataStore="" SourceDataStoreName="" DestDataStore="" DestDataStoreName="" RPSServerName="" PolicyName="" BKSetFlag="0" EnableDataSlice="TRUE" SliceSizeInMB="512">
+    <RootItem Type="Volume" DisplayName="Volume{45aae3c3-8d5f-11e2-93e8-806e6f6e6963}" MountPoints="" GUID="\\?\Volume{45aae3c3-8d5f-11e2-93e8-806e6f6e6963}" VolumeDataSizeB="367001600" SubSessNo="1" CatalogFile="$DISABLED$" IsBootVolume="FALSE" IsSystemVolume="TRUE" IsReFSVolume="FALSE" IsNTFSVolume="TRUE" IsDedupVolume="FALSE"></RootItem>
+    <RootItem Type="Volume" DisplayName="C:" MountPoints="C:\" GUID="\\?\Volume{45aae3c4-8d5f-11e2-93e8-806e6f6e6963}" VolumeDataSizeB="53317992448" SubSessNo="2" CatalogFile="$DISABLED$" IsBootVolume="TRUE" IsSystemVolume="FALSE" IsReFSVolume="FALSE" IsNTFSVolume="TRUE" IsDedupVolume="FALSE"></RootItem>
+    <RootItem Type="Volume" DisplayName="E:" MountPoints="E:\" GUID="\\?\Volume{5C89407D-B3F6-48D9-9ABF-F1604B2B6E14}" VolumeDataSizeB="214612049920" SubSessNo="3" CatalogFile="$DISABLED$" IsBootVolume="FALSE" IsSystemVolume="FALSE" IsReFSVolume="FALSE" IsNTFSVolume="TRUE" IsDedupVolume="FALSE"></RootItem>
+  </BackupDetail>
+</BackupInfo>

@@ -1,0 +1,16 @@
+https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=revert+snapshot+CBT
+http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1020128
+http://vmetc.com/2010/05/15/pre-existing-snapshot-could-cause-inconsistent-incrementals-using-vsphere-cbt/
+http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1021607
+http://forums.veeam.com/veeam-backup-replication-f2/vmware-issue-with-cbt-t3699.html#p15139
+http://planetvm.net/blog/?p=1520&utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+planetvm%2FjeAy+%28PlanetVM%29
+http://planetvm.net/blog/?p=1520http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1021607
+http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1021607
+http://forums.veeam.com/vmware-vsphere-f24/vmware-snapshots-cbt-and-revert-t20792.html
+https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=how+vmware+CBT+implemented
+http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1020128
+
+
+
+https://pubs.vmware.com/vsphere-51/index.jsp?topic=%2Fcom.vmware.vddk.pg.doc%2FvddkBkupVadp.9.5.html
+http://www.veeam.com/kb1940

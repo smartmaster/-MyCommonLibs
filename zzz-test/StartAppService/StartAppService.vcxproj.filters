@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="MyConfigExample">
+      <UniqueIdentifier>{79930bed-fb8d-42a8-9835-1b200991ca96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySource">
+      <UniqueIdentifier>{3870c90b-a44c-4adc-a3bd-a33f6c9ffd91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyCrypto">
+      <UniqueIdentifier>{ee3cfe19-2359-4e11-8a97-0ad50da6c662}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugLog.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="EncryptPassword.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="IniDefine.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="RestartWorker.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceHandlerAndMain.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceManager.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="StartAppOnActiveSession.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="StartEndApp.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="UtililityAndHelper.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="CNGAPIWrapper.cpp">
+      <Filter>MyCrypto</Filter>
+    </ClCompile>
+    <ClCompile Include="CryptoCAPIWrapperImp.cpp">
+      <Filter>MyCrypto</Filter>
+    </ClCompile>
+    <ClCompile Include="CryptoCNGWrapperImp.cpp">
+      <Filter>MyCrypto</Filter>
+    </ClCompile>
+    <ClCompile Include="CryptoCommon.cpp">
+      <Filter>MyCrypto</Filter>
+    </ClCompile>
+    <ClCompile Include="CryptoWrapFactory.cpp">
+      <Filter>MyCrypto</Filter>
+    </ClCompile>
+    <ClCompile Include="CXMLFileMgr.cpp">
+      <Filter>MyCrypto</Filter>
+    </ClCompile>
+    <ClCompile Include="EncryptString.cpp">
+      <Filter>MyCrypto</Filter>
+    </ClCompile>
+    <ClCompile Include="RunCount.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="StartAppService.MainEntry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StartAppService.UT.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CodeBlockDef.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstDef.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugLog.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="EncryptPassword.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="IniDefine.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="RestartWorker.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceHandlerAndMain.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceManager.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="StartAppOnActiveSession.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="StartEndApp.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="UtililityAndHelper.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="bcrypt.h">
+      <Filter>MyCrypto</Filter>
+    </ClInclude>
+    <ClInclude Include="CNGAPIWrapper.h">
+      <Filter>MyCrypto</Filter>
+    </ClInclude>
+    <ClInclude Include="CryptoCAPIWrapperImp.h">
+      <Filter>MyCrypto</Filter>
+    </ClInclude>
+    <ClInclude Include="CryptoCNGWrapperImp.h">
+      <Filter>MyCrypto</Filter>
+    </ClInclude>
+    <ClInclude Include="CryptoCommon.h">
+      <Filter>MyCrypto</Filter>
+    </ClInclude>
+    <ClInclude Include="CryptoDefine.h">
+      <Filter>MyCrypto</Filter>
+    </ClInclude>
+    <ClInclude Include="CryptoSynchUtility.h">
+      <Filter>MyCrypto</Filter>
+    </ClInclude>
+    <ClInclude Include="CXMLFileMgr.h">
+      <Filter>MyCrypto</Filter>
+    </ClInclude>
+    <ClInclude Include="D2DCryptoError.h">
+      <Filter>MyCrypto</Filter>
+    </ClInclude>
+    <ClInclude Include="D2DErrorCode.h">
+      <Filter>MyCrypto</Filter>
+    </ClInclude>
+    <ClInclude Include="EncryptString.h">
+      <Filter>MyCrypto</Filter>
+    </ClInclude>
+    <ClInclude Include="ICryptoWrapperInterface.h">
+      <Filter>MyCrypto</Filter>
+    </ClInclude>
+    <ClInclude Include="RunCount.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt">
+      <Filter>MyConfigExample</Filter>
+    </None>
+    <None Include="StartAppService.Example.ini">
+      <Filter>MyConfigExample</Filter>
+    </None>
+    <None Include="StartAppService.Full.ini">
+      <Filter>MyConfigExample</Filter>
+    </None>
+    <None Include="StartAppService.Reg.txt">
+      <Filter>MyConfigExample</Filter>
+    </None>
+    <None Include="StartAppService.start-app-ui.ini">
+      <Filter>MyConfigExample</Filter>
+    </None>
+  </ItemGroup>
+</Project>

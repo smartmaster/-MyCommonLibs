@@ -1,0 +1,208 @@
+#pragma once
+
+#include <tchar.h>
+#include <windows.h>
+#include <atlbase.h>
+#include <atlstr.h>
+#include <vector>
+
+
+
+#include "..\PublicHeader\PublicSerializeFieldDefine.h"
+#include "..\PublicHeader\PublicFileDeviceInterface.h"
+#include "..\PublicHeader\PublicDTraceLib.h"
+
+#include "..\PublicHeader\PublicSimpleXml.h"
+#include "..\PublicHeader\PublicSerializeFieldDefine.h"
+#include "..\PublicHeader\PublicValueXmlElementConvert.h"
+#include "..\PublicHeader\PublicParameterStreamDef.h"
+
+#include "WmiHelper.h"
+
+
+
+struct My_Win32_OperatingSystem /*: CIM_OperatingSystem*/
+{
+	CString		__Path;				
+	CString   BootDevice;
+	CString   BuildNumber;
+	CString   BuildType;
+	CString   Caption;
+	CString   CodeSet;
+	CString   CountryCode;
+	CString   CreationClassName;
+	CString   CSCreationClassName;
+	CString   CSDVersion;
+	CString   CSName;
+	INT16   CurrentTimeZone;
+	BOOL  DataExecutionPrevention_Available;
+	BOOL  DataExecutionPrevention_32BitApplications;
+	BOOL  DataExecutionPrevention_Drivers;
+	UINT8    DataExecutionPrevention_SupportPolicy;
+	BOOL  Debug;
+	CString   Description;
+	BOOL  Distributed;
+	UINT32   EncryptionLevel;
+	UINT8    ForegroundApplicationBoost;
+	UINT64   FreePhysicalMemory;
+	UINT64   FreeSpaceInPagingFiles;
+	UINT64   FreeVirtualMemory;
+	SYSTEMTIME InstallDate;
+	UINT32   LargeSystemCache;
+	SYSTEMTIME LastBootUpTime;
+	SYSTEMTIME LocalSYSTEMTIME;
+	CString   Locale;
+	CString   Manufacturer;
+	UINT32   MaxNumberOfProcesses;
+	UINT64   MaxProcessMemorySize;
+	std::vector<CString>   MUILanguages;
+	CString   Name;
+	UINT32   NumberOfLicensedUsers;
+	UINT32   NumberOfProcesses;
+	UINT32   NumberOfUsers;
+	UINT32   OperatingSystemSKU;
+	CString   Organization;
+	CString   OSArchitecture;
+	UINT32   OSLanguage;
+	UINT32   OSProductSuite;
+	UINT16   OSType;
+	CString   OtherTypeDescription;
+	BOOL  PAEEnabled;
+	CString   PlusProductID;
+	CString   PlusVersionNumber;
+	BOOL  PortableOperatingSystem;
+	BOOL  Primary;
+	UINT32   ProductType;
+	CString   RegisteredUser;
+	CString   SerialNumber;
+	UINT16   ServicePackMajorVersion;
+	UINT16   ServicePackMinorVersion;
+	UINT64   SizeStoredInPagingFiles;
+	CString   Status;
+	UINT32   SuiteMask;
+	CString   SystemDevice;
+	CString   SystemDirectory;
+	CString   SystemDrive;
+	UINT64   TotalSwapSpaceSize;
+	UINT64   TotalVirtualMemorySize;
+	UINT64   TotalVisibleMemorySize;
+	CString   Version;
+	CString   WindowsDirectory;
+};
+
+
+struct My_Win32_ComputerSystem/* : CIM_UnitaryComputerSystem*/
+{
+	CString		__Path;
+	UINT16   AdminPasswordStatus;
+	BOOL  AutomaticManagedPagefile;
+	BOOL  AutomaticResetBootOption;
+	BOOL  AutomaticResetCapability;
+	UINT16   BootOptionOnLimit;
+	UINT16   BootOptionOnWatchDog;
+	BOOL  BootROMSupported;
+	CString   BootupState;
+	CString   Caption;
+	UINT16   ChassisBootupState;
+	CString   CreationClassName;
+	INT16   CurrentTimeZone;
+	BOOL  DaylightInEffect;
+	CString   Description;
+	CString   DNSHostName;
+	CString   Domain;
+	UINT16   DomainRole;
+	BOOL  EnableDaylightSavingsTime;
+	UINT16   FrontPanelResetStatus;
+	BOOL  InfraredSupported;
+	CString   InitialLoadInfo;
+	SYSTEMTIME InstallDate;
+	UINT16   KeyboardPasswordStatus;
+	CString   LastLoadInfo;
+	CString   Manufacturer;
+	CString   Model;
+	CString   Name;
+	CString   NameFormat;
+	BOOL  NetworkServerModeEnabled;
+	UINT32   NumberOfLogicalProcessors;
+	UINT32   NumberOfProcessors;
+	vector<UINT8>    OEMLogoBitmap;
+	vector<CString>   OEMCStringArray;
+	BOOL  PartOfDomain;
+	INT64   PauseAfterReset;
+	UINT16   PCSystemType;
+	vector<UINT16>   PowerManagementCapabilities;
+	BOOL  PowerManagementSupported;
+	UINT16   PowerOnPasswordStatus;
+	UINT16   PowerState;
+	UINT16   PowerSupplyState;
+	CString   PrimaryOwnerContact;
+	CString   PrimaryOwnerName;
+	UINT16   ResetCapability;
+	INT16   ResetCount;
+	INT16   ResetLimit;
+	vector<CString>   Roles;
+	CString   Status;
+	vector<CString>   SupportContactDescription;
+	UINT16   SystemStartupDelay;
+	vector<CString>   SystemStartupOptions;
+	UINT8    SystemStartupSetting;
+	CString   SystemType;
+	UINT16   ThermalState;
+	UINT64   TotalPhysicalMemory;
+	CString   UserName;
+	UINT16   WakeUpType;
+	CString   Workgroup;
+};
+
+struct My_Win32_Processor /*: CIM_Processor*/
+{
+	CString		__Path;
+	UINT16   AddressWidth;
+	UINT16   Architecture;
+	UINT16   Availability;
+	CString   Caption;
+	UINT32   ConfigManagerErrorCode;
+	BOOL  ConfigManagerUserConfig;
+	UINT16   CpuStatus;
+	CString   CreationClassName;
+	UINT32   CurrentClockSpeed;
+	UINT16   CurrentVoltage;
+	UINT16   DataWidth;
+	CString   Description;
+	CString   DeviceID;
+	BOOL  ErrorCleared;
+	CString   ErrorDescription;
+	UINT32   ExtClock;
+	UINT16   Family;
+	SYSTEMTIME InstallDate;
+	UINT32   L2CacheSize;
+	UINT32   L2CacheSpeed;
+	UINT32   L3CacheSize;
+	UINT32   L3CacheSpeed;
+	UINT32   LastErrorCode;
+	UINT16   Level;
+	UINT16   LoadPercentage;
+	CString   Manufacturer;
+	UINT32   MaxClockSpeed;
+	CString   Name;
+	UINT32   NumberOfCores;
+	UINT32   NumberOfLogicalProcessors;
+	CString   OtherFamilyDescription;
+	CString   PNPDeviceID;
+	vector<UINT16>   PowerManagementCapabilities;
+	BOOL  PowerManagementSupported;
+	CString   ProcessorId;
+	UINT16   ProcessorType;
+	UINT16   Revision;
+	CString   Role;
+	CString   SocketDesignation;
+	CString   Status;
+	UINT16   StatusInfo;
+	CString   Stepping;
+	CString   SystemCreationClassName;
+	CString   SystemName;
+	CString   UniqueId;
+	UINT16   UpgradeMethod;
+	CString   Version;
+	UINT32   VoltageCaps;		SERIALIZE_BASIC(xxx);
+};

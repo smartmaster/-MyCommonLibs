@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?define FilesDir="$(var.ProjectDir)..\SssCustomAction\bin\Debug"?>
+
+
+
+  <Fragment>
+    <DirectoryRef Id="INSTALLFOLDER">
+      <Component Id="cmp8629CF0F26225FCC046BF1FD111EB65A" Guid="{F360CD33-18E8-4AB7-B3A1-A8D761EA2E45}">
+        <File Id="fil4EABCF2AFD4EF860DF435226792508B7" KeyPath="yes" Source="$(var.FilesDir)\SssCustomAction.dll" />
+      </Component>
+      <Component Id="cmp2F368F2830CC5885F659F74BECD00F95" Guid="{C9E0CC15-661E-4871-AAC0-DC57505FCA6F}">
+        <File Id="fil373C17D6BBA3977CF24E99C32E56D897" KeyPath="yes" Source="$(var.FilesDir)\SssCustomAction.exp" />
+      </Component>
+      <Component Id="cmp8B9073E28B38C91D9AC90AA8F0CA856B" Guid="{5B9E4535-83FC-41B2-839F-8288E5EF004C}">
+        <File Id="fil3357CDA897C7500AE005F4ADCECDE3B0" KeyPath="yes" Source="$(var.FilesDir)\SssCustomAction.ilk" />
+      </Component>
+      <Component Id="cmp1F13F579668BF2EA6E8A1474E4956F73" Guid="{B39D00AE-E25E-4EF1-98E6-EB7ECFED8EBC}">
+        <File Id="fil1ED479A87CF7BA1DCE9AC76AC92326F9" KeyPath="yes" Source="$(var.FilesDir)\SssCustomAction.lib" />
+      </Component>
+      <Component Id="cmp77D41C95CF184EB494387E2963098088" Guid="{5139DBC8-02D5-425F-91F1-4D414179909A}">
+        <File Id="fil3773AA1E4DB7443DA98ACB1271B9F8D3" KeyPath="yes" Source="$(var.FilesDir)\SssCustomAction.pdb" />
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+  
+  <Fragment>
+    <ComponentGroup Id="ProductComponents">
+      <ComponentRef Id="cmp8629CF0F26225FCC046BF1FD111EB65A" />
+      <ComponentRef Id="cmp2F368F2830CC5885F659F74BECD00F95" />
+      <ComponentRef Id="cmp8B9073E28B38C91D9AC90AA8F0CA856B" />
+      <ComponentRef Id="cmp1F13F579668BF2EA6E8A1474E4956F73" />
+      <ComponentRef Id="cmp77D41C95CF184EB494387E2963098088" />
+    </ComponentGroup>
+  </Fragment>
+</Wix>

@@ -1,0 +1,33 @@
+// Apartment.idl : IDL source for Apartment
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Apartment.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(451516EE-3703-4C01-B2BE-474FCE19617C),
+	pointer_default(unique)
+]
+interface IObjApartment : IUnknown{
+	[] HRESULT Print();
+};
+[
+	uuid(504E1221-D769-4197-AE73-E8F5BA5B68F9),
+	version(1.0),
+]
+library ApartmentLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(A2186E5A-E028-4BE4-8324-776E0C7DB731)		
+	]
+	coclass ObjApartment
+	{
+		[default] interface IObjApartment;
+	};
+};
+

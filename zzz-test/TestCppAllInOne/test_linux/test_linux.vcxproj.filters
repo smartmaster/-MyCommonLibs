@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="EnumDir.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="MySources">
+      <UniqueIdentifier>{aa23a9ca-ea89-4839-b155-b29056a65224}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EnumDir.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="EnumDir.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

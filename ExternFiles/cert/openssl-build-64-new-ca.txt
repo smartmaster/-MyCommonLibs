@@ -1,0 +1,33 @@
+cd /d E:\MyProjects\~MyCommonLibs-3rdparty-source\Build-OpenSSL-VC-64-dbg-with-zlib\bin
+D:\Perl64\bin\perl E:\MyProjects\~MyCommonLibs-3rdparty-source\openssl-x64-release\apps\ca.pl -newca
+
+
+openssl req -newkey rsa:2048 -out req-server.pem -keyout sslserverkey.pem
+openssl req -newkey rsa:2048 -out req-client.pem -keyout sslclientkey.pem
+
+
+openssl ca -in req-server.pem -out  sslservercert.pem
+openssl ca -in req-client.pem -out  sslclientcert.pem
+
+openssl ca -in kms-abcd_signed_csr.pem -out kms-abcd_signed_cert.pem
+
+
+openssl x509 -in kms-abcd_signed_csr.pem -inform pem -noout -text
+
+
+openssl x509 -in keytool_crt.der -inform der -noout -text
+
+
+CN
+Beijing
+arcserve
+hbbu
+shuli02-vc65.arcserve.com
+min.song@arcserve.com
+
+c@123456
+
+
+Cnbjrdqa1!
+
+administrator@vsphere.local

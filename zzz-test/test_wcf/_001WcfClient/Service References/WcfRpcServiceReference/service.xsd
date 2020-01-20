@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/Message" />
+  <xs:element xmlns:q1="http://schemas.microsoft.com/Message" name="StreamData" type="q1:StreamBody" />
+  <xs:element name="Data1" nillable="true" type="xs:string" />
+  <xs:element name="Data2" nillable="true" type="xs:string" />
+  <xs:element name="DataLen" type="xs:long" />
+  <xs:element name="DataOffset" type="xs:long" />
+  <xs:element name="EnumId" type="xs:long" />
+  <xs:element name="Flags" type="xs:long" />
+</xs:schema>

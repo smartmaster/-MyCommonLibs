@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="\songmin-9010\e$\MyProjects\~MyCommonLibs\zzz-test\TestCsAllInOne\TestCsAllInOne" t="IncludeFlat">
+      <e p="TestCsAllInOne.sln" t="IncludeFlat" />
+    </e>
+    <e p="C:\Users\Administrator\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Administrator\.Rider2019.2\system\resharper-host\temp\ReSharperHost\v192\TempCaches\Solution.00" t="ExcludeRecursive" />
+  </component>
+</project>

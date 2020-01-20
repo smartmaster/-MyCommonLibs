@@ -1,0 +1,58 @@
+<Wix xmlns='http://schemas.microsoft.com/wix/2006/wi'>
+  <Product Name='Foobar 1.0' Id='{2C9A3180-95F0-4cdd-B02C-A0ABCAAE3413}' UpgradeCode='{F4F8195E-E907-42dd-BB90-CC2403FA7384}' Language='1033' Codepage='1252' Version='$(var.Version)' Manufacturer='Acme Ltd.'>
+    <Package Id='*' Keywords='Installer' Description="Acme's Foobar 1.0 Installer" Comments='Foobar is a registered trademark of Acme Ltd.' Manufacturer='Acme Ltd.'  InstallerVersion='100' Languages='1033' Compressed='yes' SummaryCodepage='1252' />
+    <Media Id='1' Cabinet='Sample.cab' EmbedCab='yes' DiskPrompt="CD-ROM #1" />
+    <Property Id='DiskPrompt' Value="Acme's Foobar 1.0 Installation [1]" />
+    <Icon Id="Foobar10.exe" SourceFile="$(var.Version)/FoobarAppl10.exe" />
+    <Icon Id="word.ico" SourceFile="$(var.Version)/word.ico" />
+    <Feature Id='Complete' Title='Foobar 1.0' Description='The complete package.' Display='expand' Level='1' ConfigurableDirectory='INSTALLDIR'>
+      <Feature Id='MainProgram' Title='Program' Description='The main executable.' Level='1'>
+        <ComponentGroupRef Id='MainCompGroup' />
+        <ComponentRef Id='compHelperLibrary' />
+      </Feature>
+      <Feature Id='Documentation' Title='Description' Description='The instruction manual.' Level='1000'>
+        <ComponentRef Id='compManual' />
+      </Feature>
+    </Feature>
+  </Product>
+  <Fragment>
+    <ComponentGroup Id ="MainCompGroup">
+      <Component Id='compMainExecutable' Guid='{0008EE68-EA36-4d5d-8BC5-713029E1909A}' Directory='INSTALLDIR'>
+        <File Id='filFoobarEXE' Name='FoobarAppl10.exe' DiskId='1' Source='$(var.Version)/FoobarAppl10.exe' KeyPath='yes'>
+          <Shortcut Id="startmenuFoobar10" Directory="ProgramMenuDir" Name="Foobar 1.0" WorkingDirectory='INSTALLDIR' Icon="Foobar10.exe" IconIndex="0" Advertise="yes" />
+          <Shortcut Id="desktopFoobar10" Directory="DesktopFolder" Name="Foobar 1.0" WorkingDirectory='INSTALLDIR' Icon="Foobar10.exe" IconIndex="0" Advertise="yes" />
+        </File>
+      </Component>
+      <Component Id="compProgramMenuDir" Guid="{6886685C-E1B1-48d9-B6A7-548175BD8F17}" Directory="ProgramMenuDir">
+        <Shortcut Id="UninstallProduct"  Name="Uninstall My Application" Directory="ProgramMenuDir" Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]" Description="Uninstall"/>
+        <RemoveFolder Id='rmvProgramMenuDir' On='uninstall' />
+        <RegistryValue Root='HKCU' Key='Software/[Manufacturer]/[ProductName]' Type='string' Value='' KeyPath='yes' />
+      </Component>
+    </ComponentGroup>
+    <ComponentGroup Id='ExtraGroup'>
+      <Component Id='compHelperLibrary' Guid='{A30DAC3F-2902-479c-B530-B90A7BA8E514}' Directory='INSTALLDIR'>
+        <File Id='filHelperDLL' Name='Helper.dll' DiskId='1' Source='$(var.Version)/Helper.dll' KeyPath='yes' />
+      </Component>
+      <Component Id='compManual' Guid='{25518565-2E48-415c-B4FD-A20E2EA869D5}' Directory='INSTALLDIR'>
+        <File Id='filManual' Name='Manual.pdf' DiskId='1' Source='$(var.Version)/Manual.pdf' KeyPath='yes'>
+          <Shortcut Id="startmenuManual" Directory="ProgramMenuDir" Name="Instruction Manual" Icon="word.ico" Advertise="yes" />
+        </File>
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+  <Fragment>
+    <Directory Id='TARGETDIR' Name='SourceDir'>
+      <Directory Id='ProgramFilesFolder' Name='PFiles'>
+        <Directory Id='ManufacturerDir' Name='Acme'>
+          <Directory Id='INSTALLDIR' Name='Foobar 1.0'>
+          </Directory>
+        </Directory>
+      </Directory>
+      <Directory Id="ProgramMenuFolder" Name="Programs">
+        <Directory Id="ProgramMenuDir" Name="Foobar 1.0">
+        </Directory>
+      </Directory>
+      <Directory Id="DesktopFolder" Name="Desktop" />
+    </Directory>
+  </Fragment>
+</Wix>

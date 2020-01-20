@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="MySources">
+      <UniqueIdentifier>{598ac3a4-138d-45f4-b37b-fdd831eeda97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySources\DiskVolumeWin">
+      <UniqueIdentifier>{313a7d4d-3e06-46d7-b707-6da00944dec6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySources\Helper">
+      <UniqueIdentifier>{27427df5-8a53-4daa-a381-042b59062263}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySources\DiskVolumeInfoWin">
+      <UniqueIdentifier>{18d221cb-11a7-4bff-8b22-02b389ce12e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySources\DiskVolumeInfoVDS">
+      <UniqueIdentifier>{fa4ed7fc-84db-41c2-9538-5d572b570d88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySources\DeployGuestVSS">
+      <UniqueIdentifier>{cf568c2a-c1d3-45a8-b545-d468b50cdd93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySources\AllVolumeDiskInfo">
+      <UniqueIdentifier>{63aa1410-c8e4-42e5-b25e-94bf6ec7b0d9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ComInit.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="DiskHelper.h">
+      <Filter>MySources\DiskVolumeWin</Filter>
+    </ClInclude>
+    <ClInclude Include="VolumeHelper.h">
+      <Filter>MySources\DiskVolumeWin</Filter>
+    </ClInclude>
+    <ClInclude Include="MiscHelper.h">
+      <Filter>MySources\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="MyStgHelper.h">
+      <Filter>MySources\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleAndAllDiskInfo.h">
+      <Filter>MySources\DiskVolumeInfoWin</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleAndAllVolumeInfo.h">
+      <Filter>MySources\DiskVolumeInfoWin</Filter>
+    </ClInclude>
+    <ClInclude Include="AllVdsDiskVolumeInfo.h">
+      <Filter>MySources\DiskVolumeInfoVDS</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleVdsDiskInfo.h">
+      <Filter>MySources\DiskVolumeInfoVDS</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleVdsVolumeInfo.h">
+      <Filter>MySources\DiskVolumeInfoVDS</Filter>
+    </ClInclude>
+    <ClInclude Include="VDSVolumeDiskHelper.h">
+      <Filter>MySources\DiskVolumeInfoVDS</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleAndAllVolumeInfoXml.h">
+      <Filter>MySources\DiskVolumeInfoWin</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleAndAllDiskInfoXml.h">
+      <Filter>MySources\DiskVolumeInfoWin</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleVdsVolumeInfoXml.h">
+      <Filter>MySources\DiskVolumeInfoVDS</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleVdsDiskInfoXml.h">
+      <Filter>MySources\DiskVolumeInfoVDS</Filter>
+    </ClInclude>
+    <ClInclude Include="AllVdsDiskVolumeInfoXml.h">
+      <Filter>MySources\DiskVolumeInfoVDS</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceManagerHelper.h">
+      <Filter>MySources\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="ModifyFileForVSS.h">
+      <Filter>MySources\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="MyVersionHelpers.h">
+      <Filter>MySources\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="DeployVMwareVSS.h">
+      <Filter>MySources\DeployGuestVSS</Filter>
+    </ClInclude>
+    <ClInclude Include="AllVolumeDiskInfoXml.h">
+      <Filter>MySources\AllVolumeDiskInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="FileVerInfo.h">
+      <Filter>MySources\Helper</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VolumeDiskInfo-Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DiskHelper.cpp">
+      <Filter>MySources\DiskVolumeWin</Filter>
+    </ClCompile>
+    <ClCompile Include="VolumeHelper.cpp">
+      <Filter>MySources\DiskVolumeWin</Filter>
+    </ClCompile>
+    <ClCompile Include="MiscHelper.cpp">
+      <Filter>MySources\Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="MyStgHelper.cpp">
+      <Filter>MySources\Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleAndAllDiskInfo.cpp">
+      <Filter>MySources\DiskVolumeInfoWin</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleAndAllVolumeInfo.cpp">
+      <Filter>MySources\DiskVolumeInfoWin</Filter>
+    </ClCompile>
+    <ClCompile Include="AllVdsDiskVolumeInfo.cpp">
+      <Filter>MySources\DiskVolumeInfoVDS</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleVdsDiskInfo.cpp">
+      <Filter>MySources\DiskVolumeInfoVDS</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleVdsVolumeInfo.cpp">
+      <Filter>MySources\DiskVolumeInfoVDS</Filter>
+    </ClCompile>
+    <ClCompile Include="VDSVolumeDiskHelper.cpp">
+      <Filter>MySources\DiskVolumeInfoVDS</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleAndAllVolumeInfoXml.cpp">
+      <Filter>MySources\DiskVolumeInfoWin</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleAndAllDiskInfoXml.cpp">
+      <Filter>MySources\DiskVolumeInfoWin</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleVdsVolumeInfoXml.cpp">
+      <Filter>MySources\DiskVolumeInfoVDS</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleVdsDiskInfoXml.cpp">
+      <Filter>MySources\DiskVolumeInfoVDS</Filter>
+    </ClCompile>
+    <ClCompile Include="AllVdsDiskVolumeInfoXml.cpp">
+      <Filter>MySources\DiskVolumeInfoVDS</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceManagerHelper.cpp">
+      <Filter>MySources\Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="ModifyFileForVSS.cpp">
+      <Filter>MySources\Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="DeployVMwareVSS.cpp">
+      <Filter>MySources\DeployGuestVSS</Filter>
+    </ClCompile>
+    <ClCompile Include="AllVolumeDiskInfoXml.cpp">
+      <Filter>MySources\AllVolumeDiskInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="FileVerInfo.cpp">
+      <Filter>MySources\Helper</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

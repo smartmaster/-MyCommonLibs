@@ -1,0 +1,16 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {6A92E926-1E73-4678-A2CA-3B85F01DD06F} = s 'OuterObjectDotNet Class'
+		{
+			ForceRemove Programmable
+			LocalServer32 = s '%MODULE%'
+			{
+				val ServerExecutable = s '%MODULE_RAW%'
+			}
+			TypeLib = s '{8838EB73-670F-4DAF-8082-2E131C8EC4AE}'
+			Version = s '1.0'
+		}
+	}
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="aea05824-4ae0-47dc-8893-9a0549d55230" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/_002WcfMessgeStreamLib/ServiceMessgeStream/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="75b297c1-2a12-48ea-97bb-1f3769f5339e" SourceId="1" SourceUrl="http://localhost:8733/_002WcfMessgeStreamLib/ServiceMessgeStream/mex" />
+    <MetadataFile FileName="Message.xsd" MetadataType="Schema" ID="5977e460-ca89-4ad8-af68-5f925300e210" SourceId="1" SourceUrl="http://localhost:8733/_002WcfMessgeStreamLib/ServiceMessgeStream/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="bcdcc453-8e09-4892-980d-dad2c1886e4b" SourceId="1" SourceUrl="http://localhost:8733/_002WcfMessgeStreamLib/ServiceMessgeStream/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="a93f7365-c490-4c1c-b3d5-43b382f08b0f" SourceId="1" SourceUrl="http://localhost:8733/_002WcfMessgeStreamLib/ServiceMessgeStream/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

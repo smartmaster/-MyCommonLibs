@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7B926C33-7BAA-4AF9-98C1-BE602588B84F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>CommonFunctions</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfAtl>false</UseOfAtl>
+    <UseOfMfc>Static</UseOfMfc>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfAtl>false</UseOfAtl>
+    <UseOfMfc>Static</UseOfMfc>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>..\DTraceLib;$(IncludePath)</IncludePath>
+    <LibraryPath>..\DTraceLib\Release;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>..\DTraceLib;$(IncludePath)</IncludePath>
+    <LibraryPath>..\DTraceLib\x64\Release;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>..\DTraceLib;$(IncludePath)</IncludePath>
+    <LibraryPath>..\DTraceLib\Release;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>..\DTraceLib;$(IncludePath)</IncludePath>
+    <LibraryPath>..\DTraceLib\x64\Release;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;COMMONFUNCTIONS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>DTraceLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;COMMONFUNCTIONS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\DTraceLib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>DTraceLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\DTraceLib\x64\Release</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;COMMONFUNCTIONS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;COMMONFUNCTIONS_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\ServerFileDevice\ServerFileDevice_i.h" />
+    <ClInclude Include="LocalFileDevicePreAlloc.h" />
+    <ClInclude Include="DataTransferBuffer.h" />
+    <ClInclude Include="DataTransfer.h" />
+    <ClInclude Include="AllVdsDiskVolumeInfo.h" />
+    <ClInclude Include="AsyncIoBuffer.h" />
+    <ClInclude Include="AsyncIOCompleteRoutine.h" />
+    <ClInclude Include="AsyncIoCopy.h" />
+    <ClInclude Include="AutoHandleEx.h" />
+    <ClInclude Include="CrcCalc.h" />
+    <ClInclude Include="DataTransferPipe.h" />
+    <ClInclude Include="DataTransferSocket.h" />
+    <ClInclude Include="DiskHelper.h" />
+    <ClInclude Include="EnumFile.h" />
+    <ClInclude Include="FileLockLib.h" />
+    <ClInclude Include="GPTDiskLayout.h" />
+    <ClInclude Include="IocpAsyncCopy.h" />
+    <ClInclude Include="IocpThreadPool.h" />
+    <ClInclude Include="LengthBuffer.h" />
+    <ClInclude Include="LocalFileDevice.h" />
+    <ClInclude Include="MiscHelper.h" />
+    <ClInclude Include="MTCopy.h" />
+    <ClInclude Include="MTQueque.h" />
+    <ClInclude Include="MyStgHelper.h" />
+    <ClInclude Include="ntdddisk.h" />
+    <ClInclude Include="ntddvol.h" />
+    <ClInclude Include="NTFS_Lib.h" />
+    <ClInclude Include="NTFS_Lib_Attribute.h" />
+    <ClInclude Include="NTFS_Lib_Common.h" />
+    <ClInclude Include="NTFS_Lib_DataType.h" />
+    <ClInclude Include="NTFS_Lib_FileRecord.h" />
+    <ClInclude Include="NTFS_Lib_Helper.h" />
+    <ClInclude Include="PerformanceTiming.h" />
+    <ClInclude Include="SimpleBitArray.h" />
+    <ClInclude Include="SimpleTree.h" />
+    <ClInclude Include="SingleDiskInfo.h" />
+    <ClInclude Include="SingleVdsDiskInfo.h" />
+    <ClInclude Include="SingleVdsVolumeInfo.h" />
+    <ClInclude Include="SingleVolumeInfo.h" />
+    <ClInclude Include="SocketAddrHelper.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="VDSVolumeDiskHelper.h" />
+    <ClInclude Include="VhdHelper.h" />
+    <ClInclude Include="VirtualDiskHelper.h" />
+    <ClInclude Include="VMPtr.h" />
+    <ClInclude Include="VolumeHelper.h" />
+    <ClInclude Include="XmlHelper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DataTransferBuffer.cpp" />
+    <ClCompile Include="AllVdsDiskVolumeInfo.cpp" />
+    <ClCompile Include="AsyncIoBuffer.cpp" />
+    <ClCompile Include="AsyncIOCompleteRoutine.cpp" />
+    <ClCompile Include="AsyncIoCopy.cpp" />
+    <ClCompile Include="CommonFunctions.cpp" />
+    <ClCompile Include="CrcCalc.cpp" />
+    <ClCompile Include="DataTransferPipe.cpp" />
+    <ClCompile Include="DataTransferSocket.cpp" />
+    <ClCompile Include="DiskHelper.cpp" />
+    <ClCompile Include="dllmain.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="EnumFile.cpp" />
+    <ClCompile Include="FileLockLib.cpp" />
+    <ClCompile Include="FileLockMain.cpp" />
+    <ClCompile Include="GPTDiskLayout.cpp" />
+    <ClCompile Include="IocpAsyncCopy.cpp" />
+    <ClCompile Include="LengthBuffer.cpp" />
+    <ClCompile Include="LocalFileDevice.cpp" />
+    <ClCompile Include="LocalFileDevicePreAlloc.cpp" />
+    <ClCompile Include="MiscHelper.cpp" />
+    <ClCompile Include="MTCopy.cpp" />
+    <ClCompile Include="MTQueque.cpp" />
+    <ClCompile Include="MyStgHelper.cpp" />
+    <ClCompile Include="NTFS_Lib_Attribute.cpp" />
+    <ClCompile Include="NTFS_Lib_FileRecord.cpp" />
+    <ClCompile Include="NTFS_Lib_Helper.cpp" />
+    <ClCompile Include="PerformanceTiming.cpp" />
+    <ClCompile Include="SimpleBitArray.cpp" />
+    <ClCompile Include="SimpleTree.cpp" />
+    <ClCompile Include="SingleDiskInfo.cpp" />
+    <ClCompile Include="SingleVdsDiskInfo.cpp" />
+    <ClCompile Include="SingleVdsVolumeInfo.cpp" />
+    <ClCompile Include="SingleVolumeInfo.cpp" />
+    <ClCompile Include="SocketAddrHelper.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="VDSVolumeDiskHelper.cpp" />
+    <ClCompile Include="VhdHelper.cpp" />
+    <ClCompile Include="VirtualDiskHelper.cpp" />
+    <ClCompile Include="VolumeHelper.cpp" />
+    <ClCompile Include="XmlHelper.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

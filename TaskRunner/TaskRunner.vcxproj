@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="sml-common\CodeBlock.h" />
+    <ClInclude Include="sml-common\log.h" />
+    <ClInclude Include="sml-iocp-async-task\SmlCommon.h" />
+    <ClInclude Include="sml-iocp-async-task\SmlCommon.test.h" />
+    <ClInclude Include="sml-iocp-async-task\SmlIFile.h" />
+    <ClInclude Include="sml-iocp-async-task\SmlIFile.test.h" />
+    <ClInclude Include="sml-iocp-async-task\SmlITask.h" />
+    <ClInclude Include="sml-iocp-async-task\SmlITask.test.h" />
+    <ClInclude Include="sml-iocp-async-task\SmlSimpleEvent.h" />
+    <ClInclude Include="sml-iocp-async-task\SmlSimpleEvent.test.h" />
+    <ClInclude Include="sml-iocp-async-task\SmlSimpleHandlerTask.h" />
+    <ClInclude Include="sml-iocp-async-task\SmlSimpleHandlerTask.test.h" />
+    <ClInclude Include="sml-iocp-async-task\SmlSocketAccepter.h" />
+    <ClInclude Include="sml-iocp-async-task\SmlSocketAccepter.test.h" />
+    <ClInclude Include="sml-iocp-async-task\SmlSocketAcceptTask.h" />
+    <ClInclude Include="sml-iocp-async-task\SmlSocketAcceptTask.test.h" />
+    <ClInclude Include="sml-iocp-async-task\SmlSocketIOTask.h" />
+    <ClInclude Include="sml-iocp-async-task\SmlSocketIOTask.test.h" />
+    <ClInclude Include="sml-iocp-async-task\SmlSocketRequestReplyTask.h" />
+    <ClInclude Include="sml-iocp-async-task\SmlSocketRequestReplyTask.test.h" />
+    <ClInclude Include="sml-iocp-async-task\SmlTaskRunnner.h" />
+    <ClInclude Include="sml-iocp-async-task\SmlTaskRunnner.test.h" />
+    <ClInclude Include="sml-iocp-async-task\SmlWin32FileIOTask.h" />
+    <ClInclude Include="sml-iocp-async-task\SmlWin32FileIOTask.test.h" />
+    <ClInclude Include="SmlCircularBuffer.h" />
+    <ClInclude Include="SmlCircularBuffer.test.h" />
+    <ClInclude Include="SmlVectorDeque.h" />
+    <ClInclude Include="SmlVectorDeque.test.h" />
+    <ClInclude Include="SmlList.h" />
+    <ClInclude Include="SmlList.test.h" />
+    <ClInclude Include="SmlMisc.h" />
+    <ClInclude Include="SmlMisc.test.h" />
+    <ClInclude Include="SmlMTQueue.h" />
+    <ClInclude Include="SmlMTQueue.test.h" />
+    <ClInclude Include="SmlRefPtr.h" />
+    <ClInclude Include="SmlRefPtr.test.h" />
+    <ClInclude Include="SmlTimeList.h" />
+    <ClInclude Include="SmlTimeList.test.h" />
+    <ClInclude Include="SmlTree.h" />
+    <ClInclude Include="SmlTree.test.h" />
+    <ClInclude Include="SmlVector.h" />
+    <ClInclude Include="SmlVector.test.h" />
+    <ClInclude Include="SmlVectorList.h" />
+    <ClInclude Include="SmlVectorList.test.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main-test.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="sml-common\CodeBlock.cpp" />
+    <ClCompile Include="sml-common\log.cpp" />
+    <ClCompile Include="sml-iocp-async-task\SmlCommon.cpp" />
+    <ClCompile Include="sml-iocp-async-task\SmlCommon.test.cpp" />
+    <ClCompile Include="sml-iocp-async-task\SmlIFile.cpp" />
+    <ClCompile Include="sml-iocp-async-task\SmlIFile.test.cpp" />
+    <ClCompile Include="sml-iocp-async-task\SmlITask.cpp" />
+    <ClCompile Include="sml-iocp-async-task\SmlITask.test.cpp" />
+    <ClCompile Include="sml-iocp-async-task\SmlSimpleEvent.cpp" />
+    <ClCompile Include="sml-iocp-async-task\SmlSimpleEvent.test.cpp" />
+    <ClCompile Include="sml-iocp-async-task\SmlSimpleHandlerTask.cpp" />
+    <ClCompile Include="sml-iocp-async-task\SmlSimpleHandlerTask.test.cpp" />
+    <ClCompile Include="sml-iocp-async-task\SmlSocketAccepter.cpp" />
+    <ClCompile Include="sml-iocp-async-task\SmlSocketAccepter.test.cpp" />
+    <ClCompile Include="sml-iocp-async-task\SmlSocketAcceptTask.cpp" />
+    <ClCompile Include="sml-iocp-async-task\SmlSocketAcceptTask.test.cpp" />
+    <ClCompile Include="sml-iocp-async-task\SmlSocketIOTask.cpp" />
+    <ClCompile Include="sml-iocp-async-task\SmlSocketIOTask.test.cpp" />
+    <ClCompile Include="sml-iocp-async-task\SmlSocketRequestReplyTask.cpp" />
+    <ClCompile Include="sml-iocp-async-task\SmlSocketRequestReplyTask.test.cpp" />
+    <ClCompile Include="sml-iocp-async-task\SmlTaskRunnner.cpp" />
+    <ClCompile Include="sml-iocp-async-task\SmlTaskRunnner.test.cpp" />
+    <ClCompile Include="sml-iocp-async-task\SmlWin32FileIOTask.cpp" />
+    <ClCompile Include="sml-iocp-async-task\SmlWin32FileIOTask.test.cpp" />
+    <ClCompile Include="SmlCircularBuffer.cpp" />
+    <ClCompile Include="SmlCircularBuffer.test.cpp" />
+    <ClCompile Include="SmlVectorDeque.cpp" />
+    <ClCompile Include="SmlVectorDeque.test.cpp" />
+    <ClCompile Include="SmlList.cpp" />
+    <ClCompile Include="SmlList.test.cpp" />
+    <ClCompile Include="SmlMisc.cpp" />
+    <ClCompile Include="SmlMisc.test.cpp" />
+    <ClCompile Include="SmlMTQueue.cpp" />
+    <ClCompile Include="SmlMTQueue.test.cpp" />
+    <ClCompile Include="SmlRefPtr.cpp" />
+    <ClCompile Include="SmlRefPtr.test.cpp" />
+    <ClCompile Include="SmlTimeList.cpp" />
+    <ClCompile Include="SmlTimeList.test.cpp" />
+    <ClCompile Include="SmlTree.cpp" />
+    <ClCompile Include="SmlTree.test.cpp" />
+    <ClCompile Include="SmlVector.cpp" />
+    <ClCompile Include="SmlVector.test.cpp" />
+    <ClCompile Include="SmlVectorList.cpp" />
+    <ClCompile Include="SmlVectorList.test.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{39DBDFEE-78E8-483E-8521-4705B295AC43}</ProjectGuid>
+    <RootNamespace>TaskRunner</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

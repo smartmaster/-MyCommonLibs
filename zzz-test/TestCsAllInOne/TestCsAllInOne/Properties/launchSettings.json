@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TestCsAllInOne": {
+      "commandName": "Executable",
+      "executablePath": "$(CORE_ROOT)\\corerun.exe",
+      "commandLineArgs": "$(TargetPath) 32 e:\\111.txt 23 F:\\zzz-temp-fff\\000 LocalMachine \"SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Installer\\UserData\\S-1-5-18\\Components\" \"\\Replication Agent\\\\\" no yes",
+      "workingDirectory": "$(CORE_ROOT)"
+    }
+  }
+}

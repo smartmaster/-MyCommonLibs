@@ -1,0 +1,686 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="MySources">
+      <UniqueIdentifier>{8f9de279-32e4-4156-8439-4ce7400f564d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Extern">
+      <UniqueIdentifier>{08f98144-f3a2-492d-80b3-b173354f15b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="External">
+      <UniqueIdentifier>{69e73d00-1b8a-4ef8-848f-f0cf2891d0fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="External\distorm">
+      <UniqueIdentifier>{04e5f97f-a277-4627-8806-b68ef0fbe663}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="External\distorm\include">
+      <UniqueIdentifier>{42f4f4c5-7c56-490f-b420-f9c4b635a57a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="External\distorm\src">
+      <UniqueIdentifier>{8c48ff74-35d4-425c-b4f5-6d1cea460ad5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="clangraii">
+      <UniqueIdentifier>{2558a56d-a7a0-48f0-acf1-d29c566fa69e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="log.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="StringOf.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="CodeBlock.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="ScopeExit.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="TestForward.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="TestFwdMove.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="SmlList.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="MyPrintType.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="IAllocator.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="IocpCooyFile.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="TestArgs.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="test_woss.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="MyFormatCode.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="BstrConv.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="FindFileExist.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="TestCircularRef.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="TestConstExpr.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="testInvalidHandler.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadLocalStrings.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="EnumFileSystem.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugHelper.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="testCallAsm.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="SmlHook.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="SocketConnect.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="SmlBlockAllocator.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="external\distorm\include\distorm.h">
+      <Filter>External\distorm\include</Filter>
+    </ClInclude>
+    <ClInclude Include="external\distorm\include\mnemonics.h">
+      <Filter>External\distorm\include</Filter>
+    </ClInclude>
+    <ClInclude Include="external\distorm\src\config.h">
+      <Filter>External\distorm\src</Filter>
+    </ClInclude>
+    <ClInclude Include="external\distorm\src\decoder.h">
+      <Filter>External\distorm\src</Filter>
+    </ClInclude>
+    <ClInclude Include="external\distorm\src\instructions.h">
+      <Filter>External\distorm\src</Filter>
+    </ClInclude>
+    <ClInclude Include="external\distorm\src\insts.h">
+      <Filter>External\distorm\src</Filter>
+    </ClInclude>
+    <ClInclude Include="external\distorm\src\operands.h">
+      <Filter>External\distorm\src</Filter>
+    </ClInclude>
+    <ClInclude Include="external\distorm\src\prefix.h">
+      <Filter>External\distorm\src</Filter>
+    </ClInclude>
+    <ClInclude Include="external\distorm\src\textdefs.h">
+      <Filter>External\distorm\src</Filter>
+    </ClInclude>
+    <ClInclude Include="external\distorm\src\wstring.h">
+      <Filter>External\distorm\src</Filter>
+    </ClInclude>
+    <ClInclude Include="external\distorm\src\x86defs.h">
+      <Filter>External\distorm\src</Filter>
+    </ClInclude>
+    <ClInclude Include="testWinVer.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="testSharedPtr.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="finc.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="MaskBitCountToString.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="MaskBitCountToString.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="clangraii.test.h">
+      <Filter>clangraii</Filter>
+    </ClInclude>
+    <ClInclude Include="raii_func.h">
+      <Filter>clangraii</Filter>
+    </ClInclude>
+    <ClInclude Include="asm_func.h">
+      <Filter>clangraii</Filter>
+    </ClInclude>
+    <ClInclude Include="SmlCVector.h">
+      <Filter>clangraii</Filter>
+    </ClInclude>
+    <ClInclude Include="SmlCVector.test.h">
+      <Filter>clangraii</Filter>
+    </ClInclude>
+    <ClInclude Include="sml_raii_clang.h">
+      <Filter>clangraii</Filter>
+    </ClInclude>
+    <ClInclude Include="sml_raii_clang.test.h">
+      <Filter>clangraii</Filter>
+    </ClInclude>
+    <ClInclude Include="test_utf8_cout.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="test_cpp_type.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="RefPtr.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="RefPtr.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="SmlQuickSort.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="SmlQuickSort.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="ReadConfig.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="ReadConfig.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="HCPPCreate.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="HCPPCreate.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="misc.small.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="misc.small.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="TestWTS.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="TestWTS.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="StartAppOnActiveUserSession.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="StartAppOnActiveUserSession.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="GetSpecialFolder.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="test_apache_load.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="ComposeMax.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="ComposeMax.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="wordBreak.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="wordBreak.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="LeetCodeLongestNonRepeatedString.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="LeetCodeLongestNonRepeatedString.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="NextPerm.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="NextPerm.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="FirstUniqueChar.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="FirstUniqueChar.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="ListTest.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="ListTest.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="TestCV.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="TestCV.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="TestStdCppCV.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="TestStdCppCV.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="partition-equal-subset-sum.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="partition-equal-subset-sum.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="longest-common-subsequence.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="longest-common-subsequence.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="flatten-nested-list-iterator.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="flatten-nested-list-iterator.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="interleaving-string.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="interleaving-string.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="construct-binary-tree-from-preorder-and-inorder-traversal.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="construct-binary-tree-from-preorder-and-inorder-traversal.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="partition-list.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="partition-list.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="zigzag-conversion.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="zigzag-conversion.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="frog-jump.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="frog-jump.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="sort-array-by-parity.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="sort-array-by-parity.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="k-concatenation-maximum-sum.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="k-concatenation-maximum-sum.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="wildcard-matching.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="wildcard-matching.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="iocp-async-pattern.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="iocp-async-pattern.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="iocp-async-socket.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="iocp-async-socket.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="maximum-length-of-a-concatenated-string-with-unique-characters.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="maximum-length-of-a-concatenated-string-with-unique-characters.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="permutation-and-combination.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="permutation-and-combination.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="log.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="StringOf.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="CodeBlock.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="ScopeExit.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="TestForward.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="zzz-TestCppAllInOne.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TestFwdMove.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="SmlList.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="MyPrintType.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="IAllocator.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="IocpCooyFile.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="ExceptionDump.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="EnumFileSystem.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugHelper.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="testCallAsm.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="SmlHook.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="SocketConnect.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="SmlBlockAllocator.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="external\distorm\src\decoder.c">
+      <Filter>External\distorm\src</Filter>
+    </ClCompile>
+    <ClCompile Include="external\distorm\src\distorm.c">
+      <Filter>External\distorm\src</Filter>
+    </ClCompile>
+    <ClCompile Include="external\distorm\src\instructions.c">
+      <Filter>External\distorm\src</Filter>
+    </ClCompile>
+    <ClCompile Include="external\distorm\src\insts.c">
+      <Filter>External\distorm\src</Filter>
+    </ClCompile>
+    <ClCompile Include="external\distorm\src\mnemonics.c">
+      <Filter>External\distorm\src</Filter>
+    </ClCompile>
+    <ClCompile Include="external\distorm\src\operands.c">
+      <Filter>External\distorm\src</Filter>
+    </ClCompile>
+    <ClCompile Include="external\distorm\src\prefix.c">
+      <Filter>External\distorm\src</Filter>
+    </ClCompile>
+    <ClCompile Include="external\distorm\src\textdefs.c">
+      <Filter>External\distorm\src</Filter>
+    </ClCompile>
+    <ClCompile Include="external\distorm\src\wstring.c">
+      <Filter>External\distorm\src</Filter>
+    </ClCompile>
+    <ClCompile Include="testWinVer.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="counted_ptr.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="finc.c">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="MaskBitCountToString.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="clangraii.test.cpp">
+      <Filter>clangraii</Filter>
+    </ClCompile>
+    <ClCompile Include="raii_func.c">
+      <Filter>clangraii</Filter>
+    </ClCompile>
+    <ClCompile Include="SmlCVector.c">
+      <Filter>clangraii</Filter>
+    </ClCompile>
+    <ClCompile Include="SmlCVector.test.cpp">
+      <Filter>clangraii</Filter>
+    </ClCompile>
+    <ClCompile Include="sml_raii_clang.test.c">
+      <Filter>clangraii</Filter>
+    </ClCompile>
+    <ClCompile Include="sml_raii_clang.test.nomacro.c">
+      <Filter>clangraii</Filter>
+    </ClCompile>
+    <ClCompile Include="test_utf8_cout.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="RefPtr.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="test_cpp_type.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="SmlQuickSort.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="ReadConfig.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="HCPPCreate.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="HCPPCreate.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="misc.small.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="misc.small.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="TestWTS.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="TestWTS.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="StartAppOnActiveUserSession.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="StartAppOnActiveUserSession.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="ComposeMax.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="ComposeMax.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="wordBreak.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="wordBreak.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="LeetCodeLongestNonRepeatedString.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="LeetCodeLongestNonRepeatedString.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="NextPerm.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="NextPerm.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="FirstUniqueChar.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="FirstUniqueChar.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="ListTest.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="ListTest.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="TestCV.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="TestCV.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="TestStdCppCV.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="TestStdCppCV.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="partition-equal-subset-sum.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="partition-equal-subset-sum.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="longest-common-subsequence.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="longest-common-subsequence.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="flatten-nested-list-iterator.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="flatten-nested-list-iterator.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="interleaving-string.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="interleaving-string.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="construct-binary-tree-from-preorder-and-inorder-traversal.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="construct-binary-tree-from-preorder-and-inorder-traversal.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="partition-list.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="partition-list.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="zigzag-conversion.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="zigzag-conversion.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="frog-jump.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="frog-jump.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="sort-array-by-parity.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="sort-array-by-parity.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="k-concatenation-maximum-sum.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="k-concatenation-maximum-sum.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="wildcard-matching.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="wildcard-matching.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="iocp-async-pattern.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="iocp-async-pattern.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="iocp-async-socket.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="iocp-async-socket.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="maximum-length-of-a-concatenated-string-with-unique-characters.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="maximum-length-of-a-concatenated-string-with-unique-characters.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="permutation-and-combination.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="permutation-and-combination.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="testAsm_32.asm">
+      <Filter>MySources</Filter>
+    </CustomBuild>
+    <CustomBuild Include="asm_func.32.asm">
+      <Filter>clangraii</Filter>
+    </CustomBuild>
+    <CustomBuild Include="asm_func.64.asm">
+      <Filter>clangraii</Filter>
+    </CustomBuild>
+    <CustomBuild Include="testAsm_64.asm">
+      <Filter>MySources</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

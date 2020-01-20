@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="MySource">
+      <UniqueIdentifier>{45116933-d5d7-4256-8649-6dc69bd95525}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySparseMemory">
+      <UniqueIdentifier>{e90cc956-dc1f-4583-aefe-3df395f1c20c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VhdxHeader.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="crc32.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="VHDXRegionTableEntry.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="VhdxFileIdentifier.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="VHDXMetadataTableHeader.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="VHDXMetadataTableEntry.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="VHDXBATEntry.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="CacheIO.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="FileDeviceForVhdxCacheIO.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="ParserSeparateVHDX.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="ParserChainVHDX.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="MergeBuffer.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="FileDeviceForVhdxChainCacheIO.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="DiskImageVhdx.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="DiskImageInterface.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="VhdxHelper.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="VhdxPrintField.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="VHDXRegionTableHeader.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="SeparateVhdxInterface.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="SeparateVhdx.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="VHDXLogReplay.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="VHDXLogReplayCallback.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="SparseBlockMemory.h">
+      <Filter>MySparseMemory</Filter>
+    </ClInclude>
+    <ClInclude Include="SparseMemory.h">
+      <Filter>MySparseMemory</Filter>
+    </ClInclude>
+    <ClInclude Include="Apply_VMIOF_RT_CBT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="crc32.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="VhdxHeader.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="VHDXRegionTableHeader.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="VHDXRegionTableEntry.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="VhdxFileIdentifier.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="VHDXMetadataTableHeader.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="VHDXMetadataTableEntry.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="VHDXBATEntry.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="CacheIO.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="FileDeviceForVhdxCacheIO.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="ParserSeparateVHDX.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="MergeBuffer.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="VHDXParser_Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ParserChainVHDX.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="FileDeviceForVhdxChainCacheIO.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="DiskImageVhdx.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="VhdxHelper.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="VhdxPrintField.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="SeparateVhdx.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="VHDXLogReplay.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="VHDXLogReplayCallback.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="SparseBlockMemory.cpp">
+      <Filter>MySparseMemory</Filter>
+    </ClCompile>
+    <ClCompile Include="SparseMemory.cpp">
+      <Filter>MySparseMemory</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

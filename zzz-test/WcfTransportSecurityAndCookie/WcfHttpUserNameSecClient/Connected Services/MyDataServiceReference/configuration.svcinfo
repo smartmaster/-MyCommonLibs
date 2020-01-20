@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configurationSnapshot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:xml-wcfconfigurationsnapshot">
+  <behaviors />
+  <bindings>
+    <binding digest="System.ServiceModel.Configuration.BasicHttpBindingElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089:&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data messageEncoding=&quot;Mtom&quot; name=&quot;basicHttpBinding&quot;&gt;&lt;security mode=&quot;TransportWithMessageCredential&quot;&gt;&lt;message algorithmSuite=&quot;TripleDes&quot; /&gt;&lt;/security&gt;&lt;/Data&gt;" bindingType="basicHttpBinding" name="basicHttpBinding" />
+  </bindings>
+  <endpoints>
+    <endpoint normalizedDigest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;https://songmin-9010:60443/MyDataService&quot; binding=&quot;basicHttpBinding&quot; bindingConfiguration=&quot;basicHttpBinding&quot; contract=&quot;MyDataServiceReference.IMyDataService&quot; name=&quot;basicHttpBinding&quot; /&gt;" digest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;https://songmin-9010:60443/MyDataService&quot; binding=&quot;basicHttpBinding&quot; bindingConfiguration=&quot;basicHttpBinding&quot; contract=&quot;MyDataServiceReference.IMyDataService&quot; name=&quot;basicHttpBinding&quot; /&gt;" contractName="MyDataServiceReference.IMyDataService" name="basicHttpBinding" />
+  </endpoints>
+</configurationSnapshot>

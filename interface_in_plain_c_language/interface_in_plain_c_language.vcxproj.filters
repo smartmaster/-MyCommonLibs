@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="MySource">
+      <UniqueIdentifier>{9e916f4f-e952-443e-b117-dc52c97260bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyTest">
+      <UniqueIdentifier>{a356ebdd-6285-4684-a14b-e8a29bb6d45d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyCommon">
+      <UniqueIdentifier>{a00221fe-e0cb-48c2-a926-df1cf023304e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="my_interface.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="my_interface_imp.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="sml_resource_manager.h">
+      <Filter>MyCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="test_res_mgmt_macro.h">
+      <Filter>MyTest</Filter>
+    </ClInclude>
+    <ClInclude Include="test_SML_RCM_FUNC_PARAMS.h">
+      <Filter>MyTest</Filter>
+    </ClInclude>
+    <ClInclude Include="sml_interface_common.h">
+      <Filter>MyCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="sml_iobject.h">
+      <Filter>MyCommon</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="interface_in_plain_c_language.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="my_interface_imp.c">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="sml_resource_manager.c">
+      <Filter>MyCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="test_res_mgmt_macro.c">
+      <Filter>MyTest</Filter>
+    </ClCompile>
+    <ClCompile Include="test_SML_RCM_FUNC_PARAMS.c">
+      <Filter>MyTest</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

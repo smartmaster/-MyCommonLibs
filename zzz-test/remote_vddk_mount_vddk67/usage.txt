@@ -1,0 +1,26 @@
+- run "...\Arcserve\Unified Data Protection\Engine\BIN\VDDK\BIN\VDDK64\bin\vstor2install.bat" to install VDDK mounting driver if having not installed in proxy machine
+- copy "...\bin-pre-built\*" to "...\Arcserve\Unified Data Protection\Engine\BIN\VDDK\BIN\VDDK64\bin"
+- run a backup job
+- chkdsk logs wil be created in the folder "...\Arcserve\Unified Data Protection\Engine\BIN\VDDK\BIN\VDDK64\bin"
+- the log files names is like remote_vddk_mount.exe.M.07-03-03-03-45-508.ppid18128.log
+		-- one log for each volume
+		-- where ppid is the process id of the backup job
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- run "...\Arcserve\Unified Data Protection\Engine\BIN\VDDK\BIN\VDDK64\bin\vstor2install.bat" to install VDDK mounting driver if having not installed in proxy machine
+- copy "...\bin-pre-built\*" to "...\Arcserve\Unified Data Protection\Engine\BIN\VDDK\BIN\VDDK64\bin"
+- run a backup job
+- chkdsk logs wil be created in the folder "...\Arcserve\Unified Data Protection\Engine\BIN\VDDK\BIN\VDDK64\bin"
+- the log files names is like remote_vddk_mount.exe.M.07-03-03-03-45-508.ppid18128.log
+		-- one log for each volume
+		-- where ppid is the process id of the backup job
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- run "...\Arcserve\Unified Data Protection\Engine\BIN\VDDK\BIN\VDDK64\bin\vstor2install.bat" to install VDDK mounting driver if having not installed in proxy machine
+- copy "...\bin-pre-built\*" to "...\Arcserve\Unified Data Protection\Engine\BIN\VDDK\BIN\VDDK64\bin"
+- run a backup job
+- chkdsk logs wil be created in the folder "...\Arcserve\Unified Data Protection\Engine\BIN\VDDK\BIN\VDDK64\bin"
+- the log files names is like remote_vddk_mount.exe.M.07-03-03-03-45-508.ppid18128.log
+		-- one log for each volume
+		-- where ppid is the process id of the backup job
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

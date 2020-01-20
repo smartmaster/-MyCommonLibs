@@ -1,0 +1,39 @@
+// ServerDiskVolumeInfo.idl : IDL source for ServerDiskVolumeInfo
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ServerDiskVolumeInfo.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(C4C51433-1A9F-44B8-9D11-2EB006FC8D4E),
+	pointer_default(unique)
+]
+interface IDiskVolumeInfoObject : IUnknown{
+	[] HRESULT WriteDiskInfo([in] IStorage* pIStorage);
+	[] HRESULT WriteVolumeInfo([in] IStorage* pIStorage , [in]  LONG bGetVolumeBitmap);
+
+	[] HRESULT WriteVdsDiskVolumeInfo([in] IStorage* pIStorageDisk , [in]  IStorage* pIStorageVolume);
+	
+	[] HRESULT WriteSingleDiskInfo([in] ULONG ulDiskNumber , [in]  IStorage* pIStorage , [in] LONG bBreakOnError);
+	[] HRESULT WriteSingleVolumeInfo([in] BSTR bstrVolume , [in] LONG bGetVolumeBitmap , [in] IStorage* pIStorage , [in] LONG bBreakOnError);
+};
+[
+	uuid(18CAEC26-FE95-4251-8866-048C5221F566),
+	version(1.0),
+]
+library ServerDiskVolumeInfoLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(55EAC270-442D-4D79-B078-5EE44B810969)		
+	]
+	coclass DiskVolumeInfoObject
+	{
+		[default] interface IDiskVolumeInfoObject;
+	};
+};
+

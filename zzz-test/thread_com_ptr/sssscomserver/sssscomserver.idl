@@ -1,0 +1,33 @@
+// sssscomserver.idl : IDL source for sssscomserver
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (sssscomserver.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(17F3EED0-77E3-4DC9-BF71-11B8E33A8837),
+	pointer_default(unique)
+]
+interface Isss : IUnknown{
+	HRESULT Do();
+};
+[
+	uuid(4E47D95B-1FF1-40AB-8661-2B3E5E24261B),
+	version(1.0),
+]
+library sssscomserverLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(2FA71697-6FDD-4CFD-8AA4-19061A619C67)		
+	]
+	coclass sss
+	{
+		[default] interface Isss;
+	};
+};
+

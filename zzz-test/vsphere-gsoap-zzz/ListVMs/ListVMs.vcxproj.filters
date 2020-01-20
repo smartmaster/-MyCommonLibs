@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="browseHypervisor.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="searchHypervisor.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="VimHelper.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="browseHypervisor.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="searchHypervisor.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="VimHelper.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="MySource">
+      <UniqueIdentifier>{6c2bfa1b-f0a4-4a95-a2fb-8d786e94f10d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

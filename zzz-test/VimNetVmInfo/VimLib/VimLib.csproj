@@ -1,0 +1,1318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{86A3AD06-CAD0-40DF-84AC-4D75F85C6077}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VimLib</RootNamespace>
+    <AssemblyName>VimLib</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\VimServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Service References\VimServiceReference\core-types.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VimServiceReference\query-messagetypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VimServiceReference\query-types.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VimServiceReference\reflect-messagetypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VimServiceReference\reflect-types.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VimServiceReference\vim-messagetypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VimServiceReference\vim-types.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VimServiceReference\vim.wsdl" />
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.AbdicateDomOwnershipResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.AddAuthorizationRoleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.AddDisks_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.AddDVPortgroup_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.AddFilterEntitiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.AddFilterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.AddInternetScsiSendTargetsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.AddInternetScsiStaticTargetsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.AddKeysResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.AddLicenseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.AddMonitoredEntitiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.AddNetworkResourcePoolResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.AlarmState.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.AnswerFile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.AnswerFileStatusResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ApplyEntitiesConfig_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ApplyEvcModeVM_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ApplyHostConfig_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ApplyProfile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ApplyStorageDrsRecommendation_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.AssociateProfileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.AttachScsiLunEx_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.CancelStorageDrsRecommendationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.CanProvisionObjectsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.CertMgrRefreshCACertificatesAndCRLs_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.CertMgrRefreshCertificates_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.CertMgrRevokeCertificates_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.CheckAnswerFileStatus_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.CheckClone_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.CheckCompatibility_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.CheckCompliance_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.CheckHostPatch_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.CheckInstantClone_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.CheckMigrate_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.CheckPowerOn_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.CheckProfileCompliance_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.CheckRelocate_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.CheckVmConfig_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ClearComplianceStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ClearVStorageObjectControlFlagsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.CloseInventoryViewFolderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ClusterDasAdvancedRuntimeInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ClusterEnterMaintenanceModeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ClusterEnterMaintenanceResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ClusterHostRecommendation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ClusterIoFilterInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ClusterResourceUsageSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ClusterRuleInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ComplianceResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.CompositeHostProfile_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ConfigTarget.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ConfigureVFlashResourceEx_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.CreateContainerViewResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.CreateDiskFromSnapshot_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.CreateListViewResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.CryptoKeyId.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.CryptoKeyResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.CryptoManagerKmipServerCertInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.CustomFieldDef.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.CustomizationSpecItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.DatabaseSizeEstimate.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.DeleteVsanObjectsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.DetachScsiLunEx_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.DiagnosticManagerLogDescriptor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.DiagnosticManagerLogHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.DiskChangeInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.DissociateProfileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.DistributedVirtualPort.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.DistributedVirtualSwitchHostProductSpec.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.DistributedVirtualSwitchManagerCompatibilityResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.DistributedVirtualSwitchProductSpec.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.DVSFeatureCapability.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.DVSManagerDvsConfigTarget.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.DVSManagerExportEntity_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.DVSManagerImportEntity_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.DvsReconfigureVmVnicNetworkResourcePool_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.EntityPrivilege.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.Event.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.EventArgDesc.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ExecuteHostProfileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ExecuteSimpleCommandResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.Extension.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ExtensionManagerIpAllocationUsage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.FetchDVPortKeysResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.FetchDVPortsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.fetchSoftwarePackagesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.FetchSystemEventLogResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.FetchUserPrivilegeOnEntitiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.FileTransferInformation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.FindAllByDnsNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.FindAllByIpResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.FindAllByUuidResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.FindAssociatedProfileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.FindRulesForVmResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.GenerateHostConfigTaskSpec_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.GenerateLogBundles_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.GetAlarmResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.GetAlarmStateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.GetVsanObjExtAttrsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.GuestAliases.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.GuestAuthentication.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.GuestListFileInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.GuestMappedAliases.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.GuestProcessInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.GuestRegKeyRecordSpec.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.GuestRegValueSpec.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HasPrivilegeOnEntitiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HasPrivilegeOnEntityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HasUserPrivilegeOnEntitiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HealthUpdate.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HealthUpdateInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostAccessControlEntry.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostBootDeviceInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostCapability.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostClearVStorageObjectControlFlagsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostConnectInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostDateTimeSystemTimeZone.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostDiagnosticPartition.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostDiagnosticPartitionCreateDescription.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostDiagnosticPartitionCreateOption.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostDiskDimensionsChs.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostDiskPartitionInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostImageProfileSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostListVStorageObjectResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostNasVolumeUserInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostNetworkConfigResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostPathSelectionPolicyOption.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostProfileManagerConfigTaskList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostRetrieveVStorageInfrastructureObjectPolicyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostScsiDisk.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostServiceTicket.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostSetVStorageObjectControlFlagsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostSpecGetUpdatedHostsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostSpecification.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostStorageArrayTypePolicyOption.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostTpmAttestationReport.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostUnresolvedVmfsResolutionResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostUnresolvedVmfsVolume.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostVffsVolume.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostVmfsVolume.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostVMotionCompatibility.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostVsanInternalSystemDeleteVsanObjectsResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostVsanInternalSystemVsanObjectOperationResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostVsanInternalSystemVsanPhysicalDiskDiagnosticsResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HostVStorageObjectCreateDiskFromSnapshot_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HttpNfcLeaseGetManifestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HttpNfcLeaseManifestEntry.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HttpNfcLeasePullFromUrls_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.HttpNfcLeaseSetManifestChecksumTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ID.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.InitializeDisks_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.InstallHostPatchV2_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.IoFilterQueryIssueResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.IpPool.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.IpPoolManagerIpAllocation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.IscsiMigrationDependency.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.IscsiPortInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.IscsiStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.KernelModuleInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.KmipClusterInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.LicenseAssignmentManagerLicenseAssignment.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.LicenseAvailabilityInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.LicenseFeatureInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.LicenseManagerLicenseInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.LicenseUsageInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ListCACertificateRevocationListsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ListCACertificatesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ListGuestAliasesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ListGuestMappedAliasesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ListKeysResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ListKmipServersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ListProcessesInGuestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ListRegistryKeysInGuestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ListRegistryValuesInGuestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ListSmartCardTrustAnchorsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ListTagsAttachedToVStorageObjectResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ListVStorageObjectResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ListVStorageObjectsAttachedToTagResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.LocalizedMethodFault.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ManagedObjectReference.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ModifyListViewResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.MountVmfsVolumeEx_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.MoveDVPort_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.MoveIntoFolder_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.MoveIntoResourcePoolResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.MoveInto_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.MoveVirtualDisk_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ObjectContent.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.OpenInventoryViewFolderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.OptionValue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.OvfCreateDescriptorResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.OvfCreateImportSpecResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.OvfParseDescriptorResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.OvfValidateHostResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.PerfCompositeMetric.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.PerfCounterInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.PerfEntityMetricBase.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.PerfMetricId.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.PerformVsanUpgrade_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.PerfProviderSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.Permission.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.PhysicalNicHintInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.PlacementResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.PostHealthUpdatesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.PowerOnMultiVM_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ProductComponentInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ProfileDescription.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ProfileExecuteResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ProfileExpressionMetadata.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ProfileMetadata.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ProfilePolicyMetadata.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ProfileProfileStructure.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.PromoteDisks_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryAnswerFileStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryAssignedLicensesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryAvailableDisksForVmfsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryAvailableDvsSpecResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryAvailablePartitionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryAvailablePerfMetricResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryAvailableSsdsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryAvailableTimeZonesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryBoundVnicsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryCandidateNicsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryCmmdsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryCompatibleHostForExistingDvsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryCompatibleHostForNewDvsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryComplianceStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryConfigOptionDescriptorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.queryDatacenterConfigOptionDescriptorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryDatastorePerformanceSummaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryDescriptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryDisksForVsanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryDisksUsingFilterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryDvsCheckCompatibilityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryDvsCompatibleHostSpecResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryEventsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryExpressionMetadataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryExtensionIpAllocationUsageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryFaultToleranceCompatibilityExResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryFaultToleranceCompatibilityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryFilterEntitiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryFilterInfoIdsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryFilterListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryHealthUpdateInfosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryHealthUpdatesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryHostProfileMetadataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryIoFilterInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryIPAllocationsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryIpPoolsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryLicenseSourceAvailabilityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryLockdownExceptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryManagedByResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryMigrationDependenciesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryModulesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryMonitoredEntitiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryNetworkHintResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryObjectsOnPhysicalVsanDiskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryPartitionCreateOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryPathSelectionPolicyOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryPerfCounterByLevelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryPerfCounterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryPerfResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryPhysicalVsanDisksResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryPolicyMetadataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryProviderListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryServiceListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryStorageArrayTypePolicyOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QuerySupportedFeaturesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QuerySyncingVsanObjectsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QuerySystemUsersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryUnmonitoredHostsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryUnownedFilesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryUnresolvedVmfsVolumeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryUnresolvedVmfsVolumesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryUsedVlanIdInDvsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryVmfsConfigOptionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryVmfsDatastoreCreateOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryVmfsDatastoreExpandOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryVmfsDatastoreExtendOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryVMotionCompatibilityEx_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryVMotionCompatibilityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryVsanObjectsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryVsanObjectUuidsByFilterResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.QueryVsanStatisticsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ReadEnvironmentVariableInGuestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ReadNextEventsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ReadNextTasksResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ReadPreviousEventsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ReadPreviousTasksResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RecommendHostsForVmResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ReconfigurationSatisfiableResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ReconfigureDVPort_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RectifyDvsHost_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RectifyDvsOnHost_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RefreshDVPortStateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RegisterHealthUpdateProviderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RemoveDatastoreEx_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RemoveDiskMapping_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RemoveDisk_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RemoveFilterEntitiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RemoveInternetScsiSendTargetsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RemoveInternetScsiStaticTargetsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RemoveKeysResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RemoveMonitoredEntitiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RemoveNetworkResourcePoolResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ReplaceCACertificatesAndCRLsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ReplaceSmartCardTrustAnchorsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ResetCounterLevelMappingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ResetEntityPermissionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ResetListViewResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ResolveMultipleUnresolvedVmfsVolumesEx_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ResolveMultipleUnresolvedVmfsVolumesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ResourceConfigOption.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RetrieveAllPermissionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RetrieveArgumentDescriptionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RetrieveDiskPartitionInfoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RetrieveEntityPermissionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RetrieveEntityScheduledTaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RetrieveHostAccessControlEntriesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RetrieveHostCustomizationsForProfileResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RetrieveHostCustomizationsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RetrieveKmipServersStatus_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RetrieveObjectScheduledTaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RetrieveProductComponentsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RetrievePropertiesExResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RetrievePropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RetrieveResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RetrieveRolePermissionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RetrieveUserGroupsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RetrieveVStorageInfrastructureObjectPolicyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RetrieveVStorageObjectAssociationsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.RunVsanPhysicalDiskDiagnosticsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ScanHostPatchV2_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ScanHostPatch_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ServiceContent.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ServiceManagerServiceInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.SessionManagerGenericServiceTicket.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.SessionManagerLocalTicket.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.SetDisplayTopologyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.SetEntityPermissionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.SetVStorageObjectControlFlagsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.SoftwarePackage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.StageHostPatch_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.StorageIORMConfigOption.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.StoragePerformanceSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.StoragePlacementResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.StructuredCustomizations.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.SystemEventInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.TaskInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.TerminateSessionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.TurnDiskLocatorLedOff_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.TurnDiskLocatorLedOn_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.UninstallHostPatch_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.UnmapVmfsVolumeEx_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.UnmountDiskMapping_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.UnmountVmfsVolumeEx_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.UpdateAuthorizationRoleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.UpdateChildResourceConfigurationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.UpdateCounterLevelMappingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.UpdateDVSHealthCheckConfig_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.UpdateDVSLacpGroupConfig_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.UpdateHostCustomizations_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.UpdateInternetScsiAdvancedOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.UpdateLicenseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.UpdateLinkedChildrenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.UpdateLockdownExceptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.UpdateNetworkResourcePoolResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.UpdateOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.UpdatePassthruConfigResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.UpdateSet.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.UpdateSystemUsersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.UpdateVirtualMachineFiles_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.UpdateVStorageObjectPolicy_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.UpdateVVolVirtualMachineFiles_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.UpgradeVsanObjectsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.UserPrivilegeResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.UserSearchResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.UserSession.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ValidateHostProfileComposition_TaskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.ValidateMigrationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.VchaClusterConfigInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.VchaClusterHealth.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.VirtualDiskId.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.VirtualDiskVFlashCacheConfigInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.VirtualMachineConfigOption.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.VirtualMachineConfigOptionDescriptor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.VirtualMachineMksTicket.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.VirtualMachineTicket.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.VirtualNicManagerNetConfig.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.VmfsConfigOption.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.VmfsDatastoreOption.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.VsanHostClusterStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.VsanHostDiskResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.VsanPolicySatisfiability.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.VsanUpgradeSystemPreflightCheckResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.VsanUpgradeSystemUpgradeStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.vslmInfrastructureObjectPolicy.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.VslmTagEntry.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.VStorageObject.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.VStorageObjectAssociations.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.VStorageObjectSnapshotInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\VimLib.VimServiceReference.VStorageObjectStateInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\VimServiceReference\vimService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\VimServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VimServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VimServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VimServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

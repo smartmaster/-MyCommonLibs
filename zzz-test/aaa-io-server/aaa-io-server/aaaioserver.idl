@@ -1,0 +1,53 @@
+// aaaioserver.idl : IDL source for aaa-io-server
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (aaaioserver.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+
+typedef
+[
+	uuid(861A36FD-5D37-4ED8-8272-ED8D56D0D3C0),
+	version(1.0),
+	helpstring("My Params")
+]
+struct MyParams 
+{
+	long Code;
+	long CodeEx;
+	long Flags;
+	long FlagsEx;
+	BSTR	StringData;
+	SAFEARRAY(byte) ArrayData;
+} MyParams;
+
+
+[
+	object,
+	uuid(64A6C08E-C141-498C-B8AC-BD29337EF10F),
+	pointer_default(unique)
+]
+interface IMyObj : IUnknown
+{
+	[] HRESULT IO([in] MyParams * input, [out] MyParams * output);
+};
+
+[
+	uuid(1295A6F1-6D4D-4801-B5EE-3B147091B042),
+	version(1.0),
+]
+library aaaioserverLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(8E654261-462F-4E02-BBCB-2940094C7D2F)		
+	]
+	coclass MyObj
+	{
+		[default] interface IMyObj;
+	};
+};
+

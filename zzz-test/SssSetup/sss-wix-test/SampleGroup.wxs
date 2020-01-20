@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="TARGETDIR">
+            <Directory Id="dir_pdb-dot-net-core" Name="pdb-dot-net-core" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="SampleGroup">
+            <Component Id="cmp4E71EF3E544FC0C56A62AA9C1762CEE5" Directory="dir_pdb-dot-net-core" Guid="PUT-GUID-HERE">
+                <File Id="fil55CF0045E30506F64D56D86A3D131C52" KeyPath="yes" Source="SourceDir\pingme.txt" />
+            </Component>
+            <Component Id="cmpF293435DF01DAEB8CC7DEEEE0AB6D750" Directory="dir68783107B5A6B515797299C52A5DBB55" Guid="PUT-GUID-HERE">
+                <File Id="fil6D919C5957E9CA5C73C11E3D24039E76" KeyPath="yes" Source="SourceDir\gdi32.pdb\B69F1692DAB74A9BA5FEC70FA0F9FC781\gdi32.pdb" />
+            </Component>
+            <Component Id="cmpC204EC66A61A3D6E64590A6C3FFB2557" Directory="dir928517639FBAC149D013C43DB5740DB3" Guid="PUT-GUID-HERE">
+                <File Id="fil28A21E71887E2A5159B084A0789805BD" KeyPath="yes" Source="SourceDir\gdi32full.pdb\5B3CC5858EFC47C690B376FAF1F8CEF51\gdi32full.pdb" />
+            </Component>
+            <Component Id="cmp12CE151491D23D5E55739467DE43618B" Directory="dir4A2314A3E4880612C63759DA50DB1EFF" Guid="PUT-GUID-HERE">
+                <File Id="filDB56A0632F9D406D6605C92BA88227AA" KeyPath="yes" Source="SourceDir\kernel32.pdb\73AB6FCCD8AF423EB7B5DF504BBA64FD1\kernel32.pdb" />
+            </Component>
+            <Component Id="cmp59399F20179CAA73CC27E5A93BF8A3BA" Directory="dir2D7A34A16731EEC28344C32D30C00CB2" Guid="PUT-GUID-HERE">
+                <File Id="filA0F6120B84385175A9DF04E35392D5EC" KeyPath="yes" Source="SourceDir\kernelbase.pdb\B3D5B7155D8F4050A8FF20652659B36A1\kernelbase.pdb" />
+            </Component>
+            <Component Id="cmpA8255BD32B7DD39B8D38BDCA80D19AF0" Directory="dir8CE48A6386CC4C4D7A04049EE928286E" Guid="PUT-GUID-HERE">
+                <File Id="fil7BDE49197931BB729B750F72B82541C3" KeyPath="yes" Source="SourceDir\netstandard.ni.pdb\5628A5609751235896F762DE9757C0E01\netstandard.ni.pdb" />
+            </Component>
+            <Component Id="cmpBD710A759BD5D9C4626C6343C809CDA4" Directory="dirC7EBC0CE3A1C86F02A35E522A8E30527" Guid="PUT-GUID-HERE">
+                <File Id="filB097C99BAB9E19C72488A6EE023C801B" KeyPath="yes" Source="SourceDir\ntdll.pdb\4A71B509A35941A796F5B86F1AD38F531\ntdll.pdb" />
+            </Component>
+            <Component Id="cmp9E799A7D58A2FD361964ECAE14FD610E" Directory="dir793D8B600AABB158A22A994F2A3F9720" Guid="PUT-GUID-HERE">
+                <File Id="fil9F1D9DEBB889A049720E986083D457B0" KeyPath="yes" Source="SourceDir\System.Console.pdb\EC484AA6E8614F98AE2DEAB8593C78781\System.Console.pdb" />
+            </Component>
+            <Component Id="cmp46F4318163A10CA99D083C8B48FB8A00" Directory="dir024CE0C4F05DA7784819389B606BE358" Guid="PUT-GUID-HERE">
+                <File Id="filDD216D06C033E8294046EB1B697301E4" KeyPath="yes" Source="SourceDir\System.Memory.pdb\1B61E35E276749599B4556EB254D0F0Cffffffff\System.Memory.pdb" />
+            </Component>
+            <Component Id="cmpB3B9412CC6D01B102B89ED8700C77994" Directory="dir949F38DA1BD18FD4019057381FEA2AC4" Guid="PUT-GUID-HERE">
+                <File Id="fil267FA4904F2504860D88C7A635868D3C" KeyPath="yes" Source="SourceDir\System.Private.CoreLib.pdb\EBE67D938F1A4FF482250FFB9D3706581\System.Private.CoreLib.pdb" />
+            </Component>
+            <Component Id="cmp381B49F5DB2584FD346D6C307025A5AE" Directory="dir84F60C547B58E097FDCB19F1A9555DC7" Guid="PUT-GUID-HERE">
+                <File Id="filA5707B20A06627F1E7D9F582B61C01A4" KeyPath="yes" Source="SourceDir\System.Runtime.Extensions.pdb\35017BD147CE41CDAE819AE9AC6ADFF91\System.Runtime.Extensions.pdb" />
+            </Component>
+            <Component Id="cmp5837EE9DA5792F37F190CD94790F1513" Directory="dir0711EB840EE8A205B87F917BDC29CF3A" Guid="PUT-GUID-HERE">
+                <File Id="fil5DBC3F127BE4D931122D284BB330A2D0" KeyPath="yes" Source="SourceDir\System.Runtime.pdb\01DE2555AF8E46FB90D04E7396FBD0B91\System.Runtime.pdb" />
+            </Component>
+            <Component Id="cmp56A4A5477EC9815123927769F7A7BD38" Directory="dirDC1309DD949815310976C85799B129B6" Guid="PUT-GUID-HERE">
+                <File Id="filD737478C8AF4D79EB3E7BA8A26DA847C" KeyPath="yes" Source="SourceDir\System.Threading.pdb\5100BC321DF6434B829636F073AA217F1\System.Threading.pdb" />
+            </Component>
+            <Component Id="cmpB031BA2378612D494E72E7957AF48870" Directory="dir8270A545CE5483167E790EB4EC965A67" Guid="PUT-GUID-HERE">
+                <File Id="fil0B9CB3FFE4F5A13C26C7B36E754FD4E5" KeyPath="yes" Source="SourceDir\System.Threading.Tasks.pdb\3A836E08B571420DB7ED7944635FA5B11\System.Threading.Tasks.pdb" />
+            </Component>
+            <Component Id="cmp1FD40EE1FCB13B169BCA7611ECE0DD0E" Directory="dirD1ED63F4E6F7B24F838313C565F509CA" Guid="PUT-GUID-HERE">
+                <File Id="fil95A16CF647A856975E3A1388B1EF7A85" KeyPath="yes" Source="SourceDir\System.Threading.Thread.pdb\9E3F6E586C60448BA161A6F6756B514A1\System.Threading.Thread.pdb" />
+            </Component>
+            <Component Id="cmp17A37E7A3B62D2CC77C0F300497C8784" Directory="dir2EC5ACAA7CFBCAAF0CE15F14FDDD73BB" Guid="PUT-GUID-HERE">
+                <File Id="fil2ECAEDFCB4844AACF05E9C9DB77CC709" KeyPath="yes" Source="SourceDir\ucrtbased.pdb\C257FFFA55B658082E8BB401DDE53D292\download.error" />
+            </Component>
+            <Component Id="cmp5CD4A9034A9EF17C01D45B678C2020F8" Directory="dir48891B17EB50701E5E4CFFC51BE154E3" Guid="PUT-GUID-HERE">
+                <File Id="fil92050166FFFF29DAB597DB040826DF89" KeyPath="yes" Source="SourceDir\user32.pdb\27AC3870843A49558959446A7EE7C93E1\user32.pdb" />
+            </Component>
+            <Component Id="cmp41E17A6DC96E9C924F783B569D199AD1" Directory="dirFC5544EE231D8BE0A478E42ADC216448" Guid="PUT-GUID-HERE">
+                <File Id="fil61B2FAB13B2238DD719AD8517BBF314D" KeyPath="yes" Source="SourceDir\vcruntime140d.amd64.pdb\7CF00BEDF8664693BAD7285F2EDD7A901\vcruntime140d.amd64.pdb" />
+            </Component>
+            <Component Id="cmp2D6C5270CD92AC94B33218024A5E0589" Directory="dirD5BE7CED4840ABB8C36C597C7FD38C0A" Guid="PUT-GUID-HERE">
+                <File Id="filCFBE7C199093ADEC49368C6D1027826E" KeyPath="yes" Source="SourceDir\win32u.pdb\D746BAF2F0C04D5E9781C9CC9B12A2ED1\win32u.pdb" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dirFAA2DF866EE20E925702CE60B9BED5FB">
+            <Directory Id="dir024CE0C4F05DA7784819389B606BE358" Name="1B61E35E276749599B4556EB254D0F0Cffffffff" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir_pdb-dot-net-core">
+            <Directory Id="dir_ntdll.pdb" Name="ntdll.pdb" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dirA9D0247DBD93E74D1C22A437C3A3476A">
+            <Directory Id="dir0711EB840EE8A205B87F917BDC29CF3A" Name="01DE2555AF8E46FB90D04E7396FBD0B91" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir_pdb-dot-net-core">
+            <Directory Id="dir09C4445B66D705626CE693E578C45198" Name="kernelbase.pdb" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir_pdb-dot-net-core">
+            <Directory Id="dir2D6EAE9283760AA59F0F92A730C122C1" Name="win32u.pdb" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir09C4445B66D705626CE693E578C45198">
+            <Directory Id="dir2D7A34A16731EEC28344C32D30C00CB2" Name="B3D5B7155D8F4050A8FF20652659B36A1" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir9372B490B0D8B4513FB218FBF2FAC5FB">
+            <Directory Id="dir2EC5ACAA7CFBCAAF0CE15F14FDDD73BB" Name="C257FFFA55B658082E8BB401DDE53D292" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir_pdb-dot-net-core">
+            <Directory Id="dir3CA3AA20B5E9D0C72473F89E15718252" Name="gdi32full.pdb" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir_pdb-dot-net-core">
+            <Directory Id="dir3EB3C501291215C7B2841A4F5A7D9C2E" Name="user32.pdb" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir3EB3C501291215C7B2841A4F5A7D9C2E">
+            <Directory Id="dir48891B17EB50701E5E4CFFC51BE154E3" Name="27AC3870843A49558959446A7EE7C93E1" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dirB1796A25C8FED9B429D52A2833CFC201">
+            <Directory Id="dir4A2314A3E4880612C63759DA50DB1EFF" Name="73AB6FCCD8AF423EB7B5DF504BBA64FD1" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir_pdb-dot-net-core">
+            <Directory Id="dir5AB552D7F6CE9D1D657836FFE8948978" Name="System.Threading.Tasks.pdb" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir91FFEBC0C249A1E6043E891355B043C3">
+            <Directory Id="dir68783107B5A6B515797299C52A5DBB55" Name="B69F1692DAB74A9BA5FEC70FA0F9FC781" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir_pdb-dot-net-core">
+            <Directory Id="dir68AAD2EB24664BDA785194EE10AE2907" Name="System.Threading.Thread.pdb" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dirB9FBECBED9E76C9D81E36FD8C9CA4784">
+            <Directory Id="dir793D8B600AABB158A22A994F2A3F9720" Name="EC484AA6E8614F98AE2DEAB8593C78781" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir5AB552D7F6CE9D1D657836FFE8948978">
+            <Directory Id="dir8270A545CE5483167E790EB4EC965A67" Name="3A836E08B571420DB7ED7944635FA5B11" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir98C246C42DDF8B5EF15E47B7C5B31CE7">
+            <Directory Id="dir84F60C547B58E097FDCB19F1A9555DC7" Name="35017BD147CE41CDAE819AE9AC6ADFF91" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dirBB86CA5D0F69BFD20B103C122D38B2AA">
+            <Directory Id="dir8CE48A6386CC4C4D7A04049EE928286E" Name="5628A5609751235896F762DE9757C0E01" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir_pdb-dot-net-core">
+            <Directory Id="dir91FFEBC0C249A1E6043E891355B043C3" Name="gdi32.pdb" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir3CA3AA20B5E9D0C72473F89E15718252">
+            <Directory Id="dir928517639FBAC149D013C43DB5740DB3" Name="5B3CC5858EFC47C690B376FAF1F8CEF51" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir_pdb-dot-net-core">
+            <Directory Id="dir9372B490B0D8B4513FB218FBF2FAC5FB" Name="ucrtbased.pdb" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dirCE861DBB055F506488669ADFB41FAF57">
+            <Directory Id="dir949F38DA1BD18FD4019057381FEA2AC4" Name="EBE67D938F1A4FF482250FFB9D3706581" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir_pdb-dot-net-core">
+            <Directory Id="dir98C246C42DDF8B5EF15E47B7C5B31CE7" Name="System.Runtime.Extensions.pdb" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir_pdb-dot-net-core">
+            <Directory Id="dirA1A335F226180DEA5ED2D1189F1F0B1C" Name="vcruntime140d.amd64.pdb" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir_pdb-dot-net-core">
+            <Directory Id="dirA9D0247DBD93E74D1C22A437C3A3476A" Name="System.Runtime.pdb" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir_pdb-dot-net-core">
+            <Directory Id="dirB1796A25C8FED9B429D52A2833CFC201" Name="kernel32.pdb" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir_pdb-dot-net-core">
+            <Directory Id="dirB9FBECBED9E76C9D81E36FD8C9CA4784" Name="System.Console.pdb" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir_pdb-dot-net-core">
+            <Directory Id="dirBB86CA5D0F69BFD20B103C122D38B2AA" Name="netstandard.ni.pdb" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir_pdb-dot-net-core">
+            <Directory Id="dirC4876D0F671B3020FB1652DF143D6CEF" Name="System.Threading.pdb" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir_ntdll.pdb">
+            <Directory Id="dirC7EBC0CE3A1C86F02A35E522A8E30527" Name="4A71B509A35941A796F5B86F1AD38F531" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir_pdb-dot-net-core">
+            <Directory Id="dirCE861DBB055F506488669ADFB41FAF57" Name="System.Private.CoreLib.pdb" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir68AAD2EB24664BDA785194EE10AE2907">
+            <Directory Id="dirD1ED63F4E6F7B24F838313C565F509CA" Name="9E3F6E586C60448BA161A6F6756B514A1" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir2D6EAE9283760AA59F0F92A730C122C1">
+            <Directory Id="dirD5BE7CED4840ABB8C36C597C7FD38C0A" Name="D746BAF2F0C04D5E9781C9CC9B12A2ED1" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dirC4876D0F671B3020FB1652DF143D6CEF">
+            <Directory Id="dirDC1309DD949815310976C85799B129B6" Name="5100BC321DF6434B829636F073AA217F1" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir_pdb-dot-net-core">
+            <Directory Id="dirFAA2DF866EE20E925702CE60B9BED5FB" Name="System.Memory.pdb" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dirA1A335F226180DEA5ED2D1189F1F0B1C">
+            <Directory Id="dirFC5544EE231D8BE0A478E42ADC216448" Name="7CF00BEDF8664693BAD7285F2EDD7A901" />
+        </DirectoryRef>
+    </Fragment>
+</Wix>

@@ -1,0 +1,24 @@
+#include "stdafx.h"
+
+#include "Helper.h"
+
+LPCTSTR GuidToStringHelper(CONST GUID & guid, LPTSTR pBuffer, INT Len)
+{
+	StringFromGUID2(
+		guid,//_In_   REFGUID rguid,
+		pBuffer,//_Out_  LPOLESTR lpsz,
+		Len//_In_   int cchMax
+		);
+	return pBuffer;
+}
+
+VOID GetStringInBuffer( LPCBYTE pBufferStart, UINT Offset, UINT LengthInByte, CString & str )
+{
+	INT Bufferlen = LengthInByte / sizeof(TCHAR) + 2;
+	LPTSTR pBufferStr = str.GetBuffer(Bufferlen);
+	ZeroMemory(pBufferStr, Bufferlen * sizeof(TCHAR));
+	CopyMemory(pBufferStr, pBufferStart + Offset, LengthInByte);
+	str.ReleaseBuffer();
+}
+
+

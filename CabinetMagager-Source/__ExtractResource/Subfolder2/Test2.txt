@@ -1,0 +1,2 @@
+This is the content of the file:
+Subfolder2\Test2.txt

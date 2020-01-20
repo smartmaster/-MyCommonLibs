@@ -1,0 +1,95 @@
+call "E:\Microsoft Visual Studio 12.0\VC\vcvarsall.bat" amd64
+
+cd /d F:\MyProjects\openssl-kits\openssl-source
+
+perl Configure debug-VC-WIN64A --prefix=F:\MyProjects\openssl-kits\Build-OpenSSL-VC-64-dbg
+
+ms\do_win64a
+
+rem ---In a text editor (like Notepad), open ms\nt.mak and replace all occurrences of /Zi with /Z7 except on the line starting with ASM. There should be two replacements.
+
+nmake -f ms\ntdll.mak
+
+rem nmake -f ms\nt.mak
+
+nmake -f ms\ntdll.mak install
+
+rem nmake -f ms\nt.mak install
+
+
+
+
+
+
+
+call "E:\Microsoft Visual Studio 12.0\VC\vcvarsall.bat" amd64
+set include=%include%;F:\MyProjects\openssl-kits\zlib-source
+cd /d F:\MyProjects\openssl-kits\openssl-source-dbg-x64
+perl Configure debug-VC-WIN64A --prefix=F:\MyProjects\openssl-kits\Build-OpenSSL-VC-64-dbg
+ms\do_win64a
+nmake -f ms\ntdll.mak
+nmake -f ms\ntdll.mak install
+
+
+
+call "E:\Microsoft Visual Studio 12.0\VC\vcvarsall.bat" amd64
+set include=%include%;F:\MyProjects\openssl-kits\zlib-source
+cd /d F:\MyProjects\openssl-kits\openssl-source-rel-x64
+perl Configure VC-WIN64A --prefix=F:\MyProjects\openssl-kits\Build-OpenSSL-VC-64-rel
+ms\do_win64a
+nmake -f ms\ntdll.mak
+nmake -f ms\ntdll.mak install
+
+
+
+call "E:\Microsoft Visual Studio 12.0\VC\vcvarsall.bat" amd64
+set include=%include%;F:\MyProjects\openssl-kits\zlib-source
+cd /d F:\MyProjects\openssl-kits\openssl-source-dbg-x64-with-zlib
+perl Configure debug-VC-WIN64A zlib-dynamic --prefix=F:\MyProjects\openssl-kits\Build-OpenSSL-VC-64-dbg-with-zlib
+ms\do_win64a
+nmake -f ms\ntdll.mak
+nmake -f ms\ntdll.mak install
+
+
+call "E:\Microsoft Visual Studio 12.0\VC\vcvarsall.bat" amd64
+set include=%include%;F:\MyProjects\openssl-kits\zlib-source
+cd /d F:\MyProjects\openssl-kits\openssl-source-rel-x64-with-zlib
+perl Configure VC-WIN64A zlib-dynamic --prefix=F:\MyProjects\openssl-kits\Build-OpenSSL-VC-64-rel-with-zlib
+ms\do_win64a
+nmake -f ms\ntdll.mak
+nmake -f ms\ntdll.mak install
+
+
+
+
+
+
+cd /d F:\MyProjects\openssl-kits\Build-OpenSSL-VC-64-dbg-with-zlib\bin
+perl F:\MyProjects\openssl-kits\openssl-source-rel-x64-with-zlib\apps\ca.pl -newca
+
+openssl req -newkey rsa:1024 -out req1.pem -keyout sslclientkey.pem
+openssl req -newkey rsa:1024 -out req2.pem -keyout sslserverkey.pem
+
+
+openssl ca -in req1.pem -out  sslclientcert.pem
+openssl ca -in req2.pem -out  sslservercert.pem
+
+
+
+CN
+Beijing
+dev
+SmartMaster Co. Ltd
+www.smartmaster.com
+smart.master@live.com
+
+
+www.smartmaster-client.com
+smart.master.client@live.com
+
+
+www.smartmaster-server.com
+smart.master.server@live.com
+
+
+1qaz

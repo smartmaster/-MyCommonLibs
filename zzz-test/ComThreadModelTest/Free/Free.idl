@@ -1,0 +1,33 @@
+// Free.idl : IDL source for Free
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Free.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(162EF895-CC72-4DCC-BEE3-DF80A375CD66),
+	pointer_default(unique)
+]
+interface IObjFree : IUnknown{
+	[] HRESULT Print();
+};
+[
+	uuid(AB663287-B31D-4063-B0C7-C51851FA2502),
+	version(1.0),
+]
+library FreeLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(CF93CDFA-FDE0-462A-A0FE-E89FE1EC32F4)		
+	]
+	coclass ObjFree
+	{
+		[default] interface IObjFree;
+	};
+};
+

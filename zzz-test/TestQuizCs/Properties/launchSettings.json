@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TestQuiz": {
+      "commandName": "Project",
+      "commandLineArgs": "2"
+    }
+  }
+}

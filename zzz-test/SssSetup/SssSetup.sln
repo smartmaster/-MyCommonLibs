@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29123.88
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SssCustomAction", "SssCustomAction\SssCustomAction.vcxproj", "{D9DB4DB0-DE61-42F0-ADB4-26970904B129}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "SssSetupMsi", "SssSetupMsi\SssSetupMsi.wixproj", "{FFC4858E-5C4D-47C8-9768-F57CBA8B1A70}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9DB4DB0-DE61-42F0-ADB4-26970904B129}.Debug|x86.ActiveCfg = Debug|Win32
+		{D9DB4DB0-DE61-42F0-ADB4-26970904B129}.Debug|x86.Build.0 = Debug|Win32
+		{D9DB4DB0-DE61-42F0-ADB4-26970904B129}.Release|x86.ActiveCfg = Release|Win32
+		{D9DB4DB0-DE61-42F0-ADB4-26970904B129}.Release|x86.Build.0 = Release|Win32
+		{FFC4858E-5C4D-47C8-9768-F57CBA8B1A70}.Debug|x86.ActiveCfg = Debug|x86
+		{FFC4858E-5C4D-47C8-9768-F57CBA8B1A70}.Debug|x86.Build.0 = Debug|x86
+		{FFC4858E-5C4D-47C8-9768-F57CBA8B1A70}.Release|x86.ActiveCfg = Release|x86
+		{FFC4858E-5C4D-47C8-9768-F57CBA8B1A70}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B67ED46-0602-433E-9B43-728FE18C77F7}
+	EndGlobalSection
+EndGlobal

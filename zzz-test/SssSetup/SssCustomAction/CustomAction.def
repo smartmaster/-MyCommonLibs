@@ -1,0 +1,6 @@
+LIBRARY "SssCustomAction"
+
+EXPORTS
+	CustomAction1
+	CustomActionReboot
+	CustomActionRebootProp

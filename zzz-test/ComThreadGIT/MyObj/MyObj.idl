@@ -1,0 +1,33 @@
+// MyObj.idl : IDL source for MyObj
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (MyObj.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(86D9D5EE-1941-4619-81FB-563920086E18),
+	pointer_default(unique)
+]
+interface ISimpleObj : IUnknown{
+	[] HRESULT Method();
+};
+[
+	uuid(7B16697F-01EA-467F-87CF-8CA9287A2110),
+	version(1.0),
+]
+library MyObjLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(4E33AC9E-0406-460D-936D-A729D7663491)		
+	]
+	coclass SimpleObj
+	{
+		[default] interface ISimpleObj;
+	};
+};
+

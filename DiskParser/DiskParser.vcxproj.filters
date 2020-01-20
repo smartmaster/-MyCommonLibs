@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="AdjustBasicDisk4KBTo512B">
+      <UniqueIdentifier>{2a95b1d1-2006-49e0-9508-de69fbeff580}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LDMParser">
+      <UniqueIdentifier>{1c0ffacd-be77-4d63-a8b9-0ba080255636}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySource">
+      <UniqueIdentifier>{93dccd95-9df2-41a5-a33c-441a8854eeb6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdjustBasicDisk4KBTo512B\AdjustBasicDisk4KBTo512B.h">
+      <Filter>AdjustBasicDisk4KBTo512B</Filter>
+    </ClInclude>
+    <ClInclude Include="AdjustBasicDisk4KBTo512B\CrcCalc.h">
+      <Filter>AdjustBasicDisk4KBTo512B</Filter>
+    </ClInclude>
+    <ClInclude Include="AdjustBasicDisk4KBTo512B\DiskVolumeStructure.h">
+      <Filter>AdjustBasicDisk4KBTo512B</Filter>
+    </ClInclude>
+    <ClInclude Include="LDMParser\ArraySize.h">
+      <Filter>LDMParser</Filter>
+    </ClInclude>
+    <ClInclude Include="LDMParser\Endian.h">
+      <Filter>LDMParser</Filter>
+    </ClInclude>
+    <ClInclude Include="LDMParser\ErrnoException.h">
+      <Filter>LDMParser</Filter>
+    </ClInclude>
+    <ClInclude Include="LDMParser\FileGuard.h">
+      <Filter>LDMParser</Filter>
+    </ClInclude>
+    <ClInclude Include="LDMParser\Ldm.h">
+      <Filter>LDMParser</Filter>
+    </ClInclude>
+    <ClInclude Include="LDMParser\LdmObjects.h">
+      <Filter>LDMParser</Filter>
+    </ClInclude>
+    <ClInclude Include="LDMParser\Mbr.h">
+      <Filter>LDMParser</Filter>
+    </ClInclude>
+    <ClInclude Include="LDMParser\Parser.h">
+      <Filter>LDMParser</Filter>
+    </ClInclude>
+    <ClInclude Include="LDMParser\PhysicalDisk.h">
+      <Filter>LDMParser</Filter>
+    </ClInclude>
+    <ClInclude Include="LDMParser\stdafx.include.h">
+      <Filter>LDMParser</Filter>
+    </ClInclude>
+    <ClInclude Include="LDMParser\Units.h">
+      <Filter>LDMParser</Filter>
+    </ClInclude>
+    <ClInclude Include="LDMParser\VblkParser.h">
+      <Filter>LDMParser</Filter>
+    </ClInclude>
+    <ClInclude Include="CacheIOMaker.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="DiskExt.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="MirrorAndSingleSimpleRW.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="StrippedAndRaid5RW.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="SpannedAndSpannedSimpleRW.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="VolumeIOFileDevice.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DiskParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdjustBasicDisk4KBTo512B\AdjustBasicDisk4KBTo512B.cpp">
+      <Filter>AdjustBasicDisk4KBTo512B</Filter>
+    </ClCompile>
+    <ClCompile Include="AdjustBasicDisk4KBTo512B\CrcCalc.cpp">
+      <Filter>AdjustBasicDisk4KBTo512B</Filter>
+    </ClCompile>
+    <ClCompile Include="LDMParser\ErrnoException.cpp">
+      <Filter>LDMParser</Filter>
+    </ClCompile>
+    <ClCompile Include="LDMParser\FileGuard.cpp">
+      <Filter>LDMParser</Filter>
+    </ClCompile>
+    <ClCompile Include="LDMParser\LdmParser.cpp">
+      <Filter>LDMParser</Filter>
+    </ClCompile>
+    <ClCompile Include="LDMParser\Parser.cpp">
+      <Filter>LDMParser</Filter>
+    </ClCompile>
+    <ClCompile Include="LDMParser\PhysicalDisk.cpp">
+      <Filter>LDMParser</Filter>
+    </ClCompile>
+    <ClCompile Include="LDMParser\Units.cpp">
+      <Filter>LDMParser</Filter>
+    </ClCompile>
+    <ClCompile Include="LDMParser\VblkParser.cpp">
+      <Filter>LDMParser</Filter>
+    </ClCompile>
+    <ClCompile Include="CacheIOMaker.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="MirrorAndSingleSimpleRW.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="StrippedAndRaid5RW.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="DiskExt.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="SpannedAndSpannedSimpleRW.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="VolumeIOFileDevice.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

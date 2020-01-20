@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CalcExpZz": {
+      "commandName": "Project",
+      "commandLineArgs": "2"
+    }
+  }
+}

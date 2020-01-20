@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="MySource">
+      <UniqueIdentifier>{b15f3c46-ef87-47cd-80b0-2d251499c508}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyApps">
+      <UniqueIdentifier>{c33306e3-04c0-4b1e-a63a-82c6323a9669}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyFileOperation">
+      <UniqueIdentifier>{c6b095a0-1e4f-474c-bee0-93b7323e69cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyApps.BuildAll">
+      <UniqueIdentifier>{74579f2f-8c14-4b7c-9bb2-f87fb0624c91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GetTestCaseNumber">
+      <UniqueIdentifier>{c557949c-1027-49bd-b5bf-d09a6bd9372c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sampleXmlString.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleXml.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="StringValueConvert.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="testStruct.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleXmlHelper.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="ValueXmlElementConvert.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="VcxprojDisableOpt.h">
+      <Filter>MyApps</Filter>
+    </ClInclude>
+    <ClInclude Include="EnumElement.h">
+      <Filter>MyFileOperation</Filter>
+    </ClInclude>
+    <ClInclude Include="EnumWinFile.h">
+      <Filter>MyFileOperation</Filter>
+    </ClInclude>
+    <ClInclude Include="ReadWriteStringFile.h">
+      <Filter>MyFileOperation</Filter>
+    </ClInclude>
+    <ClInclude Include="FileTreeOp.h">
+      <Filter>MyApps</Filter>
+    </ClInclude>
+    <ClInclude Include="build_single_file.h">
+      <Filter>MyApps.BuildAll</Filter>
+    </ClInclude>
+    <ClInclude Include="GetTestCaseNumber.h">
+      <Filter>GetTestCaseNumber</Filter>
+    </ClInclude>
+    <ClInclude Include="testSerializeSample.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AddFileAttributesInFolder.Serialize.h">
+      <Filter>MyApps</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleXml.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="MySimpleXml-Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StringValueConvert.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="VcxprojDisableOpt.cpp">
+      <Filter>MyApps</Filter>
+    </ClCompile>
+    <ClCompile Include="EnumElement.cpp">
+      <Filter>MyFileOperation</Filter>
+    </ClCompile>
+    <ClCompile Include="EnumWinFile.cpp">
+      <Filter>MyFileOperation</Filter>
+    </ClCompile>
+    <ClCompile Include="ReadWriteStringFile.cpp">
+      <Filter>MyFileOperation</Filter>
+    </ClCompile>
+    <ClCompile Include="FileTreeOp.cpp">
+      <Filter>MyApps</Filter>
+    </ClCompile>
+    <ClCompile Include="build_single_file.cpp">
+      <Filter>MyApps.BuildAll</Filter>
+    </ClCompile>
+    <ClCompile Include="GetTestCaseNumber.cpp">
+      <Filter>GetTestCaseNumber</Filter>
+    </ClCompile>
+    <ClCompile Include="ValueXmlElementConvert.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="testSerializeSample.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AddFileAttributesInFolder.Serialize.cpp">
+      <Filter>MyApps</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

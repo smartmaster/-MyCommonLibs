@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="MySource">
+      <UniqueIdentifier>{b68ba1d0-8ed6-4a5b-9ed1-8672811cf7a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySourceDownload">
+      <UniqueIdentifier>{a5be7725-4429-4e08-8287-4fab3198a771}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySourceUpload">
+      <UniqueIdentifier>{f34c7172-4d6a-4b9a-88f6-ef7b56ae6e7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySourceServerAndCommon">
+      <UniqueIdentifier>{bad5e85e-741a-4202-a3d1-69b23d0b417a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySourceRunApp">
+      <UniqueIdentifier>{236bab62-a5de-4055-9dde-4bcbab4ebcbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySourceEnum">
+      <UniqueIdentifier>{18694380-6077-4ffb-a7c3-45d1726f6685}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyPluginFileFactory">
+      <UniqueIdentifier>{da2d6d7d-6a22-4e0c-be85-7c2636713c50}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HPTHeaderBody.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="HPTHandler.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="HPTSendReceiver.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandList.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="HPTHelper.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="HPTSendReceiverInterface.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="EventHelper.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandModuleDef.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="DownloadServerHandler.h">
+      <Filter>MySourceDownload</Filter>
+    </ClInclude>
+    <ClInclude Include="DownloadClientHandler.h">
+      <Filter>MySourceDownload</Filter>
+    </ClInclude>
+    <ClInclude Include="DowloadClient.h">
+      <Filter>MySourceDownload</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerHandlerFactory.h">
+      <Filter>MySourceServerAndCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerJobMainFlow.h">
+      <Filter>MySourceServerAndCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="UploadClient.h">
+      <Filter>MySourceUpload</Filter>
+    </ClInclude>
+    <ClInclude Include="UploadClientHandler.h">
+      <Filter>MySourceUpload</Filter>
+    </ClInclude>
+    <ClInclude Include="UploadServerHandler.h">
+      <Filter>MySourceUpload</Filter>
+    </ClInclude>
+    <ClInclude Include="RunAppServerHandler.h">
+      <Filter>MySourceRunApp</Filter>
+    </ClInclude>
+    <ClInclude Include="RunAppClientHandler.h">
+      <Filter>MySourceRunApp</Filter>
+    </ClInclude>
+    <ClInclude Include="RunAppClient.h">
+      <Filter>MySourceRunApp</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateWin32FileHelper.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="JobMainFlowbInterface.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="EnumServerHandler.h">
+      <Filter>MySourceEnum</Filter>
+    </ClInclude>
+    <ClInclude Include="EnumClientHandler.h">
+      <Filter>MySourceEnum</Filter>
+    </ClInclude>
+    <ClInclude Include="EnumClient.h">
+      <Filter>MySourceEnum</Filter>
+    </ClInclude>
+    <ClInclude Include="EumCallbackInterface.h">
+      <Filter>MySourceEnum</Filter>
+    </ClInclude>
+    <ClInclude Include="PluginFileFactoryInterface.h">
+      <Filter>MyPluginFileFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="PluginFileFactoryConfig.h">
+      <Filter>MyPluginFileFactory</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HighPerfTransfer-Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HPTHandler.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="HPTHeaderBody.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="HPTSendReceiver.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandList.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="EventHelper.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="DownloadServerHandler.cpp">
+      <Filter>MySourceDownload</Filter>
+    </ClCompile>
+    <ClCompile Include="DownloadClientHandler.cpp">
+      <Filter>MySourceDownload</Filter>
+    </ClCompile>
+    <ClCompile Include="DowloadClient.cpp">
+      <Filter>MySourceDownload</Filter>
+    </ClCompile>
+    <ClCompile Include="HPTSendReceiverInterface.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerHandlerFactory.cpp">
+      <Filter>MySourceServerAndCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerJobMainFlow.cpp">
+      <Filter>MySourceServerAndCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="UploadClient.cpp">
+      <Filter>MySourceUpload</Filter>
+    </ClCompile>
+    <ClCompile Include="UploadClientHandler.cpp">
+      <Filter>MySourceUpload</Filter>
+    </ClCompile>
+    <ClCompile Include="UploadServerHandler.cpp">
+      <Filter>MySourceUpload</Filter>
+    </ClCompile>
+    <ClCompile Include="RunAppServerHandler.cpp">
+      <Filter>MySourceRunApp</Filter>
+    </ClCompile>
+    <ClCompile Include="RunAppClientHandler.cpp">
+      <Filter>MySourceRunApp</Filter>
+    </ClCompile>
+    <ClCompile Include="RunAppClient.cpp">
+      <Filter>MySourceRunApp</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateWin32FileHelper.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="EnumServerHandler.cpp">
+      <Filter>MySourceEnum</Filter>
+    </ClCompile>
+    <ClCompile Include="EnumClientHandler.cpp">
+      <Filter>MySourceEnum</Filter>
+    </ClCompile>
+    <ClCompile Include="EnumClient.cpp">
+      <Filter>MySourceEnum</Filter>
+    </ClCompile>
+    <ClCompile Include="EumCallbackInterface.cpp">
+      <Filter>MySourceEnum</Filter>
+    </ClCompile>
+    <ClCompile Include="PluginFileFactoryInterface.cpp">
+      <Filter>MyPluginFileFactory</Filter>
+    </ClCompile>
+    <ClCompile Include="PluginFileFactoryConfig.cpp">
+      <Filter>MyPluginFileFactory</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

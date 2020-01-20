@@ -1,0 +1,94 @@
+#pragma once
+
+#include <tchar.h>
+#include <windows.h>
+#include <atlbase.h>
+#include <atlstr.h>
+
+/* regEx replacement
+
+//////////////////////////////////////////////////////////////////////////
+\b(\w+?)(\s+?)(\w+?);
+$1$2$3;			SERIALIZE_BASIC($3);
+
+\b(.*?vector<.+?>)(\s+?)(\w+?);
+$1$2$3;			SERIALIZE_VECTOR($3);
+
+//////////////////////////////////////////////////////////////////////////
+\b(\w+?)(\s+?)(\w+?);
+$1$2$3;			SERIALIZE_BASIC($3);
+
+\b(.*?vector<.+?>)(\s+?)(\w+?);
+$1$2$3;			SERIALIZE_VECTOR($3);
+
+*/
+
+/*
+SERIALIZE_BEGIN_STRUCT(xxx, xxx);
+
+SERIALIZE_END_STRUCT(xxx, xxx);
+STRUCT_XML_SERIALIZER;
+
+
+//////////////////////////////////////////////////////////////////////////
+SERIALIZE_BEGIN_STRUCT(xxx, xxx);
+
+SERIALIZE_END_STRUCT(xxx, xxx);
+STRUCT_XML_SERIALIZER;
+*/
+
+//////////////////////////////////////////////////////////////////////////
+#define SERIALIZE_BEGIN_STRUCT(StructName, MethodName)
+#define SERIALIZE_END_STRUCT(StructName, MethodName)
+
+/*
+SERIALIZE_BASIC and SERIALIZE_VECTOR can support all types,
+other SERIALIZE_XYZ or SERIALIZE_VECTOR_#D  are not recommended to use
+
+please use SERIALIZE_BASIC and SERIALIZE_VECTOR only!!
+please use SERIALIZE_BASIC and SERIALIZE_VECTOR only!!
+*/
+#define SERIALIZE_BASIC(FieldName)
+#define SERIALIZE_VECTOR(FieldName)
+
+#if 0
+#define SERIALIZE_CSTRING(FieldName)
+#define SERIALIZE_STDSTRING(FieldName)
+
+#define SERIALIZE_COMPLEX(FieldName)
+
+//vector of - basic data type / CString / STL string / struct containing all data
+
+#define SERIALIZE_VECTOR_2D(FieldName)
+#define SERIALIZE_VECTOR_3D(FieldName)
+
+//vector of data type which can be serialized
+#define SERIALIZE_COMPLEX_VECTOR(FieldName)
+#define SERIALIZE_COMPLEX_VECTOR_2D(FieldName)
+#define SERIALIZE_COMPLEX_VECTOR_3D(FieldName)
+
+////////////////////not recommended to use/////////////////////////////////
+#define SERIALIZE_FIXED_ARRAY(FieldName)
+#define SERIALIZE_RAW_ARRAY(FieldName, Length)
+//////////////////////////////////////////////////////////////////////////
+#endif
+
+
+//////////////////////////////////////////////////////////////////////////
+#define STRUCT_SERIALIZER \
+	HRESULT WriteTo(IFileDevice * pFileDevice) CONST; \
+	HRESULT ReadFrom(IFileDevice * pFileDevice); \
+	HRESULT WriteToBuffer(LPBYTE pBuffer, LONGLONG Length, LONGLONG & WrittenLength) CONST; \
+	HRESULT ReadFromBuffer(LPBYTE pBuffer, LONGLONG Length); \
+	HRESULT WriteToFile(LPCTSTR pFileName, LONGLONG & WrittenLength) CONST; \
+	HRESULT ReadFromFile(LPCTSTR pFileName); 
+
+#define STRUCT_XML_SERIALIZER \
+	VOID ToElement(LPCTSTR RootName, XmlElement & xmlElement) CONST; \
+	VOID FromElement(LPCTSTR RootName, CONST XmlElement & xmlElement); \
+	VOID ToString(LPCTSTR RootName, CString & strXml) CONST; \
+	HRESULT FromString(LPCTSTR RootName, CONST CString & strXml); \
+	HRESULT ToStream(LPCTSTR RootName, IFileDevice * pIFileDevice) CONST; \
+	HRESULT FromStream(LPCTSTR RootName, IFileDevice * pIFileDevice); \
+	HRESULT ToFile(LPCTSTR RootName, LPCTSTR pFileName) CONST; \
+	HRESULT FromFile(LPCTSTR RootName, LPCTSTR pFileName);

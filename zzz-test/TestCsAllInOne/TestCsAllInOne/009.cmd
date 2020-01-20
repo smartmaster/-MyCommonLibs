@@ -1,0 +1,1 @@
+dotnet.exe e:\MyProjects\~MyCommonLibs\zzz-test\TestCsAllInOne\TestCsAllInOne\bin\x64\Debug\netcoreapp2.1\TestCsAllInOne.dll 9 "F:\zzz-temp-fff\arc_log\host17_log\UDP Host-Based VM Backup\6.5.4175.667\Log\000-HyperVBackupStub1.0_0_20190130-155125-591.log" 60

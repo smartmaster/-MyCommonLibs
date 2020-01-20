@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<virtualMachineConfigInfo xmlns:ns2="urn:vim25">
+  <ns2:changeVersion>2014-10-20T16:02:26.479759Z</ns2:changeVersion>
+  <ns2:modified>1970-01-01T00:00:00Z</ns2:modified>
+  <ns2:name>sonmi01-001-12r2</ns2:name>
+  <ns2:guestFullName>Microsoft Windows Server 2012 (64-bit)</ns2:guestFullName>
+  <ns2:version>vmx-08</ns2:version>
+  <ns2:uuid>422decd3-4f0d-c34d-ccff-eb90c523bca7</ns2:uuid>
+  <ns2:instanceUuid>502d9e1a-ab79-e051-a382-ef505e5828cb</ns2:instanceUuid>
+  <ns2:npivTemporaryDisabled>true</ns2:npivTemporaryDisabled>
+  <ns2:locationId>564decce-a15b-de19-36cc-ea95ef2172fc</ns2:locationId>
+  <ns2:template>false</ns2:template>
+  <ns2:guestId>windows8Server64Guest</ns2:guestId>
+  <ns2:alternateGuestName></ns2:alternateGuestName>
+  <ns2:annotation></ns2:annotation>
+  <ns2:files>
+    <ns2:vmPathName>[datastore2-9T-raid0] sonmi01-001-12r2_1/sonmi01-001-12r2.vmx</ns2:vmPathName>
+    <ns2:snapshotDirectory>[datastore2-9T-raid0] sonmi01-001-12r2_1/</ns2:snapshotDirectory>
+    <ns2:suspendDirectory>[datastore2-9T-raid0] sonmi01-001-12r2_1/</ns2:suspendDirectory>
+    <ns2:logDirectory>[datastore2-9T-raid0] sonmi01-001-12r2_1/</ns2:logDirectory>
+  </ns2:files>
+  <ns2:tools>
+    <ns2:toolsVersion>9349</ns2:toolsVersion>
+    <ns2:afterPowerOn>true</ns2:afterPowerOn>
+    <ns2:afterResume>true</ns2:afterResume>
+    <ns2:beforeGuestStandby>true</ns2:beforeGuestStandby>
+    <ns2:beforeGuestShutdown>true</ns2:beforeGuestShutdown>
+    <ns2:toolsUpgradePolicy>manual</ns2:toolsUpgradePolicy>
+    <ns2:syncTimeWithHost>false</ns2:syncTimeWithHost>
+    <ns2:lastInstallInfo>
+      <ns2:counter>0</ns2:counter>
+    </ns2:lastInstallInfo>
+  </ns2:tools>
+  <ns2:flags>
+    <ns2:disableAcceleration>false</ns2:disableAcceleration>
+    <ns2:enableLogging>true</ns2:enableLogging>
+    <ns2:useToe>false</ns2:useToe>
+    <ns2:runWithDebugInfo>false</ns2:runWithDebugInfo>
+    <ns2:monitorType>release</ns2:monitorType>
+    <ns2:htSharing>any</ns2:htSharing>
+    <ns2:snapshotDisabled>false</ns2:snapshotDisabled>
+    <ns2:snapshotLocked>false</ns2:snapshotLocked>
+    <ns2:diskUuidEnabled>true</ns2:diskUuidEnabled>
+    <ns2:virtualMmuUsage>automatic</ns2:virtualMmuUsage>
+    <ns2:virtualExecUsage>hvAuto</ns2:virtualExecUsage>
+    <ns2:snapshotPowerOffBehavior>powerOff</ns2:snapshotPowerOffBehavior>
+    <ns2:recordReplayEnabled>false</ns2:recordReplayEnabled>
+  </ns2:flags>
+  <ns2:defaultPowerOps>
+    <ns2:powerOffType>soft</ns2:powerOffType>
+    <ns2:suspendType>hard</ns2:suspendType>
+    <ns2:resetType>soft</ns2:resetType>
+    <ns2:defaultPowerOffType>soft</ns2:defaultPowerOffType>
+    <ns2:defaultSuspendType>hard</ns2:defaultSuspendType>
+    <ns2:defaultResetType>soft</ns2:defaultResetType>
+    <ns2:standbyAction>checkpoint</ns2:standbyAction>
+  </ns2:defaultPowerOps>
+  <ns2:hardware>
+    <ns2:numCPU>4</ns2:numCPU>
+    <ns2:numCoresPerSocket>1</ns2:numCoresPerSocket>
+    <ns2:memoryMB>4096</ns2:memoryMB>
+    <ns2:virtualICH7MPresent>false</ns2:virtualICH7MPresent>
+    <ns2:virtualSMCPresent>false</ns2:virtualSMCPresent>
+    <ns2:device xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns2:VirtualIDEController">
+      <ns2:key>200</ns2:key>
+      <ns2:deviceInfo>
+        <ns2:label>IDE 0</ns2:label>
+        <ns2:summary>IDE 0</ns2:summary>
+      </ns2:deviceInfo>
+      <ns2:busNumber>0</ns2:busNumber>
+    </ns2:device>
+    <ns2:device xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns2:VirtualIDEController">
+      <ns2:key>201</ns2:key>
+      <ns2:deviceInfo>
+        <ns2:label>IDE 1</ns2:label>
+        <ns2:summary>IDE 1</ns2:summary>
+      </ns2:deviceInfo>
+      <ns2:busNumber>1</ns2:busNumber>
+      <ns2:device>3002</ns2:device>
+    </ns2:device>
+    <ns2:device xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns2:VirtualPS2Controller">
+      <ns2:key>300</ns2:key>
+      <ns2:deviceInfo>
+        <ns2:label>PS2 controller 0</ns2:label>
+        <ns2:summary>PS2 controller 0</ns2:summary>
+      </ns2:deviceInfo>
+      <ns2:busNumber>0</ns2:busNumber>
+      <ns2:device>600</ns2:device>
+      <ns2:device>700</ns2:device>
+    </ns2:device>
+    <ns2:device xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns2:VirtualPCIController">
+      <ns2:key>100</ns2:key>
+      <ns2:deviceInfo>
+        <ns2:label>PCI controller 0</ns2:label>
+        <ns2:summary>PCI controller 0</ns2:summary>
+      </ns2:deviceInfo>
+      <ns2:busNumber>0</ns2:busNumber>
+      <ns2:device>500</ns2:device>
+      <ns2:device>12000</ns2:device>
+      <ns2:device>1000</ns2:device>
+      <ns2:device>4000</ns2:device>
+    </ns2:device>
+    <ns2:device xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns2:VirtualSIOController">
+      <ns2:key>400</ns2:key>
+      <ns2:deviceInfo>
+        <ns2:label>SIO controller 0</ns2:label>
+        <ns2:summary>SIO controller 0</ns2:summary>
+      </ns2:deviceInfo>
+      <ns2:busNumber>0</ns2:busNumber>
+      <ns2:device>8000</ns2:device>
+    </ns2:device>
+    <ns2:device xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns2:VirtualKeyboard">
+      <ns2:key>600</ns2:key>
+      <ns2:deviceInfo>
+        <ns2:label>Keyboard </ns2:label>
+        <ns2:summary>Keyboard</ns2:summary>
+      </ns2:deviceInfo>
+      <ns2:controllerKey>300</ns2:controllerKey>
+      <ns2:unitNumber>0</ns2:unitNumber>
+    </ns2:device>
+    <ns2:device xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns2:VirtualPointingDevice">
+      <ns2:key>700</ns2:key>
+      <ns2:deviceInfo>
+        <ns2:label>Pointing device</ns2:label>
+        <ns2:summary>Pointing device; Device</ns2:summary>
+      </ns2:deviceInfo>
+      <ns2:backing xsi:type="ns2:VirtualPointingDeviceDeviceBackingInfo">
+        <ns2:deviceName></ns2:deviceName>
+        <ns2:useAutoDetect>false</ns2:useAutoDetect>
+        <ns2:hostPointingDevice>autodetect</ns2:hostPointingDevice>
+      </ns2:backing>
+      <ns2:controllerKey>300</ns2:controllerKey>
+      <ns2:unitNumber>1</ns2:unitNumber>
+    </ns2:device>
+    <ns2:device xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns2:VirtualMachineVideoCard">
+      <ns2:key>500</ns2:key>
+      <ns2:deviceInfo>
+        <ns2:label>Video card </ns2:label>
+        <ns2:summary>Video card</ns2:summary>
+      </ns2:deviceInfo>
+      <ns2:controllerKey>100</ns2:controllerKey>
+      <ns2:unitNumber>0</ns2:unitNumber>
+      <ns2:videoRamSizeInKB>4096</ns2:videoRamSizeInKB>
+      <ns2:numDisplays>1</ns2:numDisplays>
+      <ns2:useAutoDetect>false</ns2:useAutoDetect>
+      <ns2:enable3DSupport>false</ns2:enable3DSupport>
+      <ns2:use3dRenderer>automatic</ns2:use3dRenderer>
+    </ns2:device>
+    <ns2:device xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns2:VirtualMachineVMCIDevice">
+      <ns2:key>12000</ns2:key>
+      <ns2:deviceInfo>
+        <ns2:label>VMCI device</ns2:label>
+        <ns2:summary>Device on the virtual machine PCI bus that provides support for the virtual machine communication interface</ns2:summary>
+      </ns2:deviceInfo>
+      <ns2:controllerKey>100</ns2:controllerKey>
+      <ns2:unitNumber>17</ns2:unitNumber>
+      <ns2:id>-987513689</ns2:id>
+      <ns2:allowUnrestrictedCommunication>false</ns2:allowUnrestrictedCommunication>
+    </ns2:device>
+    <ns2:device xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns2:VirtualLsiLogicSASController">
+      <ns2:key>1000</ns2:key>
+      <ns2:deviceInfo>
+        <ns2:label>SCSI controller 0</ns2:label>
+        <ns2:summary>LSI Logic SAS</ns2:summary>
+      </ns2:deviceInfo>
+      <ns2:slotInfo xsi:type="ns2:VirtualDevicePciBusSlotInfo">
+        <ns2:pciSlotNumber>160</ns2:pciSlotNumber>
+      </ns2:slotInfo>
+      <ns2:controllerKey>100</ns2:controllerKey>
+      <ns2:unitNumber>3</ns2:unitNumber>
+      <ns2:busNumber>0</ns2:busNumber>
+      <ns2:device>2000</ns2:device>
+      <ns2:device>2001</ns2:device>
+      <ns2:hotAddRemove>true</ns2:hotAddRemove>
+      <ns2:sharedBus>noSharing</ns2:sharedBus>
+      <ns2:scsiCtlrUnitNumber>7</ns2:scsiCtlrUnitNumber>
+    </ns2:device>
+    <ns2:device xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns2:VirtualCdrom">
+      <ns2:key>3002</ns2:key>
+      <ns2:deviceInfo>
+        <ns2:label>CD/DVD drive 1</ns2:label>
+        <ns2:summary>Remote device /usr/lib/vmware/isoimages/windows.iso</ns2:summary>
+      </ns2:deviceInfo>
+      <ns2:backing xsi:type="ns2:VirtualCdromRemotePassthroughBackingInfo">
+        <ns2:deviceName>/usr/lib/vmware/isoimages/windows.iso</ns2:deviceName>
+        <ns2:useAutoDetect>false</ns2:useAutoDetect>
+        <ns2:exclusive>false</ns2:exclusive>
+      </ns2:backing>
+      <ns2:connectable>
+        <ns2:startConnected>false</ns2:startConnected>
+        <ns2:allowGuestControl>true</ns2:allowGuestControl>
+        <ns2:connected>false</ns2:connected>
+        <ns2:status>untried</ns2:status>
+      </ns2:connectable>
+      <ns2:controllerKey>201</ns2:controllerKey>
+      <ns2:unitNumber>0</ns2:unitNumber>
+    </ns2:device>
+    <ns2:device xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns2:VirtualDisk">
+      <ns2:key>2000</ns2:key>
+      <ns2:deviceInfo>
+        <ns2:label>Hard disk 1</ns2:label>
+        <ns2:summary>62,914,560 KB</ns2:summary>
+      </ns2:deviceInfo>
+      <ns2:backing xsi:type="ns2:VirtualDiskFlatVer2BackingInfo">
+        <ns2:fileName>[datastore2-9T-raid0] sonmi01-001-12r2_1/sonmi01-001-12r2.vmdk</ns2:fileName>
+        <ns2:datastore type="Datastore">datastore-17</ns2:datastore>
+        <ns2:backingObjectId>39-2000-0</ns2:backingObjectId>
+        <ns2:diskMode>persistent</ns2:diskMode>
+        <ns2:split>false</ns2:split>
+        <ns2:writeThrough>false</ns2:writeThrough>
+        <ns2:thinProvisioned>true</ns2:thinProvisioned>
+        <ns2:uuid>6000C29e-dab3-61d4-586a-de76606d5607</ns2:uuid>
+        <ns2:contentId>ffd9312717f05890cbd41f5ef25d770c</ns2:contentId>
+        <ns2:changeId>52 65 8b ed 67 e9 9c 91-f0 70 d7 12 40 e3 27 ae/1</ns2:changeId>
+        <ns2:digestEnabled>false</ns2:digestEnabled>
+      </ns2:backing>
+      <ns2:controllerKey>1000</ns2:controllerKey>
+      <ns2:unitNumber>0</ns2:unitNumber>
+      <ns2:capacityInKB>62914560</ns2:capacityInKB>
+      <ns2:capacityInBytes>64424509440</ns2:capacityInBytes>
+      <ns2:shares>
+        <ns2:shares>1000</ns2:shares>
+        <ns2:level>normal</ns2:level>
+      </ns2:shares>
+      <ns2:storageIOAllocation>
+        <ns2:limit>-1</ns2:limit>
+        <ns2:shares>
+          <ns2:shares>1000</ns2:shares>
+          <ns2:level>normal</ns2:level>
+        </ns2:shares>
+        <ns2:reservation>0</ns2:reservation>
+      </ns2:storageIOAllocation>
+      <ns2:diskObjectId>39-2000</ns2:diskObjectId>
+    </ns2:device>
+    <ns2:device xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns2:VirtualFloppy">
+      <ns2:key>8000</ns2:key>
+      <ns2:deviceInfo>
+        <ns2:label>Floppy drive 1</ns2:label>
+        <ns2:summary>Remote vmware-null-remote-floppy</ns2:summary>
+      </ns2:deviceInfo>
+      <ns2:backing xsi:type="ns2:VirtualFloppyRemoteDeviceBackingInfo">
+        <ns2:deviceName>vmware-null-remote-floppy</ns2:deviceName>
+        <ns2:useAutoDetect>false</ns2:useAutoDetect>
+      </ns2:backing>
+      <ns2:connectable>
+        <ns2:startConnected>false</ns2:startConnected>
+        <ns2:allowGuestControl>true</ns2:allowGuestControl>
+        <ns2:connected>false</ns2:connected>
+        <ns2:status>untried</ns2:status>
+      </ns2:connectable>
+      <ns2:controllerKey>400</ns2:controllerKey>
+      <ns2:unitNumber>0</ns2:unitNumber>
+    </ns2:device>
+    <ns2:device xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns2:VirtualE1000e">
+      <ns2:key>4000</ns2:key>
+      <ns2:deviceInfo>
+        <ns2:label>Network adapter 1</ns2:label>
+        <ns2:summary>VM Network</ns2:summary>
+      </ns2:deviceInfo>
+      <ns2:backing xsi:type="ns2:VirtualEthernetCardNetworkBackingInfo">
+        <ns2:deviceName>VM Network</ns2:deviceName>
+        <ns2:useAutoDetect>false</ns2:useAutoDetect>
+        <ns2:network type="Network">network-19</ns2:network>
+      </ns2:backing>
+      <ns2:connectable>
+        <ns2:startConnected>true</ns2:startConnected>
+        <ns2:allowGuestControl>true</ns2:allowGuestControl>
+        <ns2:connected>false</ns2:connected>
+        <ns2:status>untried</ns2:status>
+      </ns2:connectable>
+      <ns2:slotInfo xsi:type="ns2:VirtualDevicePciBusSlotInfo">
+        <ns2:pciSlotNumber>192</ns2:pciSlotNumber>
+      </ns2:slotInfo>
+      <ns2:controllerKey>100</ns2:controllerKey>
+      <ns2:unitNumber>7</ns2:unitNumber>
+      <ns2:addressType>assigned</ns2:addressType>
+      <ns2:macAddress>00:50:56:8b:56:15</ns2:macAddress>
+      <ns2:wakeOnLanEnabled>true</ns2:wakeOnLanEnabled>
+    </ns2:device>
+    <ns2:device xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns2:VirtualDisk">
+      <ns2:key>2001</ns2:key>
+      <ns2:deviceInfo>
+        <ns2:label>Hard disk 2</ns2:label>
+        <ns2:summary>104,857,600 KB</ns2:summary>
+      </ns2:deviceInfo>
+      <ns2:backing xsi:type="ns2:VirtualDiskFlatVer2BackingInfo">
+        <ns2:fileName>[datastore2-9T-raid0] sonmi01-001-12r2_1/sonmi01-001-12r2_1.vmdk</ns2:fileName>
+        <ns2:datastore type="Datastore">datastore-17</ns2:datastore>
+        <ns2:backingObjectId>39-2001-0</ns2:backingObjectId>
+        <ns2:diskMode>persistent</ns2:diskMode>
+        <ns2:split>false</ns2:split>
+        <ns2:writeThrough>false</ns2:writeThrough>
+        <ns2:thinProvisioned>true</ns2:thinProvisioned>
+        <ns2:uuid>6000C293-e53f-97c8-df53-861c348b71c3</ns2:uuid>
+        <ns2:contentId>bff5dbb6d8e489a4282209dc9462b1f4</ns2:contentId>
+        <ns2:changeId>52 bc ea 9d a5 21 41 9d-ee a8 92 d4 f9 12 c8 c7/1</ns2:changeId>
+        <ns2:digestEnabled>false</ns2:digestEnabled>
+      </ns2:backing>
+      <ns2:controllerKey>1000</ns2:controllerKey>
+      <ns2:unitNumber>1</ns2:unitNumber>
+      <ns2:capacityInKB>104857600</ns2:capacityInKB>
+      <ns2:capacityInBytes>107374182400</ns2:capacityInBytes>
+      <ns2:shares>
+        <ns2:shares>1000</ns2:shares>
+        <ns2:level>normal</ns2:level>
+      </ns2:shares>
+      <ns2:storageIOAllocation>
+        <ns2:limit>-1</ns2:limit>
+        <ns2:shares>
+          <ns2:shares>1000</ns2:shares>
+          <ns2:level>normal</ns2:level>
+        </ns2:shares>
+        <ns2:reservation>0</ns2:reservation>
+      </ns2:storageIOAllocation>
+      <ns2:diskObjectId>39-2001</ns2:diskObjectId>
+    </ns2:device>
+  </ns2:hardware>
+  <ns2:cpuAllocation>
+    <ns2:reservation>0</ns2:reservation>
+    <ns2:expandableReservation>false</ns2:expandableReservation>
+    <ns2:limit>-1</ns2:limit>
+    <ns2:shares>
+      <ns2:shares>4000</ns2:shares>
+      <ns2:level>normal</ns2:level>
+    </ns2:shares>
+  </ns2:cpuAllocation>
+  <ns2:memoryAllocation>
+    <ns2:reservation>0</ns2:reservation>
+    <ns2:expandableReservation>false</ns2:expandableReservation>
+    <ns2:limit>-1</ns2:limit>
+    <ns2:shares>
+      <ns2:shares>40960</ns2:shares>
+      <ns2:level>normal</ns2:level>
+    </ns2:shares>
+  </ns2:memoryAllocation>
+  <ns2:latencySensitivity>
+    <ns2:level>normal</ns2:level>
+  </ns2:latencySensitivity>
+  <ns2:memoryHotAddEnabled>false</ns2:memoryHotAddEnabled>
+  <ns2:cpuHotAddEnabled>false</ns2:cpuHotAddEnabled>
+  <ns2:cpuHotRemoveEnabled>false</ns2:cpuHotRemoveEnabled>
+  <ns2:extraConfig>
+    <ns2:key>svga.present</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">TRUE</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>sched.cpu.latencySensitivity</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">normal</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>vmci.filter.enable</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">true</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>sched.scsi0:0.throughputCap</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">off</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>tools.guest.desktop.autolock</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">FALSE</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>hpet0.present</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">true</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>nvram</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">sonmi01-001-12r2.nvram</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>virtualHW.productCompatibility</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">hosted</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>pciBridge0.present</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">true</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>disk.EnableUUID</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">true</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>pciBridge4.present</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">true</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>scsi0.pciSlotNumber</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">160</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>ethernet0.pciSlotNumber</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">192</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>vmci0.pciSlotNumber</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">32</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>replay.supported</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">false</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>unity.wasCapable</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">FALSE</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>pciBridge4.virtualDev</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">pcieRootPort</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>pciBridge0.pciSlotNumber</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">17</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>pciBridge4.pciSlotNumber</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">21</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>pciBridge5.pciSlotNumber</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">22</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>pciBridge6.pciSlotNumber</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">23</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>pciBridge7.pciSlotNumber</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">24</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>scsi0.sasWWID</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">50 05 05 63 4f 0d c3 40</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>vm.genid</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">1127688660933169893</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>vm.genidX</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">-8308288707041844787</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>tools.remindInstall</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">TRUE</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>hostCPUID.0</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">0000000d756e65476c65746e49656e69</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>hostCPUID.1</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">000306e40020080077bee3ffbfebfbff</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>hostCPUID.80000001</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">0000000000000000000000012c100800</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>guestCPUID.0</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">0000000d756e65476c65746e49656e69</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>guestCPUID.1</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">000306e400010800969822030fabfbff</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>pciBridge4.functions</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">8</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>guestCPUID.80000001</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">00000000000000000000000128100800</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>userCPUID.0</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">0000000d756e65476c65746e49656e69</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>userCPUID.1</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">000306e400010800969822030fabfbff</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>userCPUID.80000001</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">00000000000000000000000128100800</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>evcCompatibilityMode</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">FALSE</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>vmotion.checkpointFBSize</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">4194304</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>softPowerOff</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">TRUE</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>ethernet0.features</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">1</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>vmotion.checkpointSVGASize</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">7995392</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>pciBridge5.present</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">true</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>disk.EnableUUID----</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">true----</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>snapshot.action</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">keep</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>pciBridge5.virtualDev</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">pcieRootPort</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>pciBridge5.functions</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">8</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>pciBridge6.present</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">true</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>pciBridge6.virtualDev</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">pcieRootPort</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>pciBridge6.functions</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">8</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>pciBridge7.present</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">true</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>pciBridge7.virtualDev</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">pcieRootPort</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>pciBridge7.functions</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">8</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>checkpoint.vmState</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string"></ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>checkpoint.vmState.readOnly</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">FALSE</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>vmware.tools.internalversion</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">9349</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>vmware.tools.requiredversion</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">9349</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>migrate.hostLogState</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">none</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>migrate.migrationId</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">0</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>replay.filename</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string"></ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>sched.swap.derivedName</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">/vmfs/volumes/53a7f5d1-3b896bd0-7709-c81f66c25e9b/sonmi01-001-12r2_1/sonmi01-001-12r2-ad0d9979.vswp</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>scsi0:0.redo</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string"></ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>toolsInstallManager.lastInstallError</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">0</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>toolsInstallManager.updateCounter</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">2</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>scsi0:1.redo</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string"></ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>ctkEnabled</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">true</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>scsi0:0.ctkEnabled</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">true</ns2:value>
+  </ns2:extraConfig>
+  <ns2:extraConfig>
+    <ns2:key>scsi0:1.ctkEnabled</ns2:key>
+    <ns2:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">true</ns2:value>
+  </ns2:extraConfig>
+  <ns2:cpuFeatureMask>
+    <ns2:level>-2147483647</ns2:level>
+    <ns2:eax>--------------------------------</ns2:eax>
+    <ns2:ebx>--------------------------------</ns2:ebx>
+    <ns2:ecx>--------------------------------</ns2:ecx>
+    <ns2:edx>-----------H--------------------</ns2:edx>
+  </ns2:cpuFeatureMask>
+  <ns2:cpuFeatureMask>
+    <ns2:level>-2147483647</ns2:level>
+    <ns2:vendor>amd</ns2:vendor>
+    <ns2:eax>--------------------------------</ns2:eax>
+    <ns2:ebx>--------------------------------</ns2:ebx>
+    <ns2:ecx>--------------------------------</ns2:ecx>
+    <ns2:edx>-----------H--------------------</ns2:edx>
+  </ns2:cpuFeatureMask>
+  <ns2:datastoreUrl>
+    <ns2:name>datastore2-9T-raid0</ns2:name>
+    <ns2:url>/vmfs/volumes/53a7f5d1-3b896bd0-7709-c81f66c25e9b</ns2:url>
+  </ns2:datastoreUrl>
+  <ns2:swapPlacement>inherit</ns2:swapPlacement>
+  <ns2:bootOptions>
+    <ns2:bootDelay>0</ns2:bootDelay>
+    <ns2:enterBIOSSetup>false</ns2:enterBIOSSetup>
+    <ns2:bootRetryEnabled>false</ns2:bootRetryEnabled>
+    <ns2:bootRetryDelay>10000</ns2:bootRetryDelay>
+  </ns2:bootOptions>
+  <ns2:vAssertsEnabled>false</ns2:vAssertsEnabled>
+  <ns2:changeTrackingEnabled>true</ns2:changeTrackingEnabled>
+  <ns2:firmware>bios</ns2:firmware>
+  <ns2:maxMksConnections>40</ns2:maxMksConnections>
+  <ns2:guestAutoLockEnabled>false</ns2:guestAutoLockEnabled>
+  <ns2:memoryReservationLockedToMax>false</ns2:memoryReservationLockedToMax>
+  <ns2:initialOverhead>
+    <ns2:initialMemoryReservation>229122048</ns2:initialMemoryReservation>
+    <ns2:initialSwapReservation>344846336</ns2:initialSwapReservation>
+  </ns2:initialOverhead>
+  <ns2:nestedHVEnabled>false</ns2:nestedHVEnabled>
+  <ns2:vPMCEnabled>false</ns2:vPMCEnabled>
+  <ns2:scheduledHardwareUpgradeInfo>
+    <ns2:upgradePolicy>never</ns2:upgradePolicy>
+    <ns2:scheduledHardwareUpgradeStatus>none</ns2:scheduledHardwareUpgradeStatus>
+  </ns2:scheduledHardwareUpgradeInfo>
+</virtualMachineConfigInfo>

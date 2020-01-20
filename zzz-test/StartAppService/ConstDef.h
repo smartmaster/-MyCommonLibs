@@ -1,0 +1,7 @@
+#pragma once
+
+#include "stdafx.h"
+
+//////////////////////////////////////////////////////////////////////////
+CONST INT G_BUFFER_SIZE = 500;
+CONST INT G_MAX_PROC_COUNT = 127;

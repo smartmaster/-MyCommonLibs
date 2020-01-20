@@ -1,0 +1,15 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {585D2F07-73E9-4DB6-B93C-D9531D906326} = s 'VssLayerObject Class'
+		{
+			LocalServer32 = s '%MODULE%'
+			{
+				val ServerExecutable = s '%MODULE_RAW%'
+			}
+			TypeLib = s '{E3E07118-A6CC-487B-B6AE-C9E7485282E0}'
+			Version = s '1.0'
+		}
+	}
+}

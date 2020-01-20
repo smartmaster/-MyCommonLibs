@@ -1,0 +1,15 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {55EAC270-442D-4D79-B078-5EE44B810969} = s 'DiskVolumeInfoObject Class'
+		{
+			LocalServer32 = s '%MODULE%'
+			{
+				val ServerExecutable = s '%MODULE_RAW%'
+			}
+			TypeLib = s '{18CAEC26-FE95-4251-8866-048C5221F566}'
+			Version = s '1.0'
+		}
+	}
+}

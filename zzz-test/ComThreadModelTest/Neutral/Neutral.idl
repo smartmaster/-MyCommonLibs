@@ -1,0 +1,33 @@
+// Neutral.idl : IDL source for Neutral
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Neutral.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(8B843005-25A4-4399-A8EB-F5F571BFF839),
+	pointer_default(unique)
+]
+interface IObjNeutral : IUnknown{
+	[] HRESULT Print();
+};
+[
+	uuid(01A9DC5A-BF54-4454-97D0-71389A5CC13E),
+	version(1.0),
+]
+library NeutralLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(F1259BBB-A075-4DB1-8677-469622215F77)		
+	]
+	coclass ObjNeutral
+	{
+		[default] interface IObjNeutral;
+	};
+};
+

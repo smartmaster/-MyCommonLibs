@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+  <Fragment>
+    <Property Id="SmlRebootNeeded" Value="6789" />
+    <CustomAction Id="CustomAction1.SetProperty" Property="CustomAction1" Value="&quot;[INSTALLFOLDER]&quot;" />
+    <CustomAction Id="CustomAction1" FileKey="fil4EABCF2AFD4EF860DF435226792508B7" DllEntry="CustomAction1" Execute="deferred" Return="check" Impersonate="no" />
+    <CustomAction Id="CustomActionReboot.SetProperty" Property="CustomActionReboot" Value="0"/>
+    <CustomAction Id="CustomActionReboot" FileKey="fil4EABCF2AFD4EF860DF435226792508B7" DllEntry="CustomActionReboot" Execute="deferred" Return="check" Impersonate="no" />
+    <CustomAction Id="CustomActionRebootProp" FileKey="fil4EABCF2AFD4EF860DF435226792508B7" DllEntry="CustomActionRebootProp" Execute="immediate" Return="check" Impersonate="no" />
+
+    <InstallExecuteSequence>
+      <Custom Action="CustomAction1.SetProperty" Before="CustomAction1"><![CDATA[(REMOVE="" AND &ProductFeature=3) OR (REINSTALL~="ALL" AND !ProductFeature=3)]]></Custom>
+      <Custom Action="CustomAction1" Before="CustomActionReboot.SetProperty"><![CDATA[(REMOVE="" AND &ProductFeature=3) OR (REINSTALL~="ALL" AND !ProductFeature=3)]]></Custom>
+      <Custom Action="CustomActionReboot.SetProperty" Before="CustomActionReboot"><![CDATA[(REMOVE="" AND &ProductFeature=3) OR (REINSTALL~="ALL" AND !ProductFeature=3)]]></Custom>
+      <Custom Action="CustomActionReboot" Before="InstallFinalize"><![CDATA[(REMOVE="" AND &ProductFeature=3) OR (REINSTALL~="ALL" AND !ProductFeature=3)]]></Custom>
+      
+      <Custom Action="CustomActionRebootProp" After="InstallFinalize"><![CDATA[(REMOVE="" AND &ProductFeature=3) OR (REINSTALL~="ALL" AND !ProductFeature=3)]]></Custom>
+      <ScheduleReboot After="InstallFinalize">SmlRebootNeeded = 3010</ScheduleReboot>
+    </InstallExecuteSequence>
+  </Fragment>
+  
+  
+</Wix>
+

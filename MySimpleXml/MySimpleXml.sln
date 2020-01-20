@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29324.140
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MySimpleXml", "MySimpleXml.vcxproj", "{30F3F9FD-BB8E-4A3C-9639-34F3FAA0181F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		DebugStatic|x64 = DebugStatic|x64
+		DebugStatic|x86 = DebugStatic|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+		ReleaseStatic|x64 = ReleaseStatic|x64
+		ReleaseStatic|x86 = ReleaseStatic|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30F3F9FD-BB8E-4A3C-9639-34F3FAA0181F}.Debug|x64.ActiveCfg = Debug|x64
+		{30F3F9FD-BB8E-4A3C-9639-34F3FAA0181F}.Debug|x64.Build.0 = Debug|x64
+		{30F3F9FD-BB8E-4A3C-9639-34F3FAA0181F}.Debug|x86.ActiveCfg = Debug|Win32
+		{30F3F9FD-BB8E-4A3C-9639-34F3FAA0181F}.Debug|x86.Build.0 = Debug|Win32
+		{30F3F9FD-BB8E-4A3C-9639-34F3FAA0181F}.DebugStatic|x64.ActiveCfg = DebugStatic|x64
+		{30F3F9FD-BB8E-4A3C-9639-34F3FAA0181F}.DebugStatic|x64.Build.0 = DebugStatic|x64
+		{30F3F9FD-BB8E-4A3C-9639-34F3FAA0181F}.DebugStatic|x86.ActiveCfg = DebugStatic|Win32
+		{30F3F9FD-BB8E-4A3C-9639-34F3FAA0181F}.DebugStatic|x86.Build.0 = DebugStatic|Win32
+		{30F3F9FD-BB8E-4A3C-9639-34F3FAA0181F}.Release|x64.ActiveCfg = Release|x64
+		{30F3F9FD-BB8E-4A3C-9639-34F3FAA0181F}.Release|x64.Build.0 = Release|x64
+		{30F3F9FD-BB8E-4A3C-9639-34F3FAA0181F}.Release|x86.ActiveCfg = Release|Win32
+		{30F3F9FD-BB8E-4A3C-9639-34F3FAA0181F}.Release|x86.Build.0 = Release|Win32
+		{30F3F9FD-BB8E-4A3C-9639-34F3FAA0181F}.ReleaseStatic|x64.ActiveCfg = ReleaseStatic|x64
+		{30F3F9FD-BB8E-4A3C-9639-34F3FAA0181F}.ReleaseStatic|x64.Build.0 = ReleaseStatic|x64
+		{30F3F9FD-BB8E-4A3C-9639-34F3FAA0181F}.ReleaseStatic|x86.ActiveCfg = ReleaseStatic|Win32
+		{30F3F9FD-BB8E-4A3C-9639-34F3FAA0181F}.ReleaseStatic|x86.Build.0 = ReleaseStatic|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {25EC0B45-1CCC-455D-9558-F85110E0798B}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,6 @@
+for exe
+- output static lib with file extension *.lib
+
+
+for dll
+- output static lib with file extension *.lib.static

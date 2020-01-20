@@ -1,0 +1,8 @@
+﻿
+Renamed 'ii' to 'pos':
+----------------------
+e:\~~~temp\TestCpp-ExperssionTree\MaxSeq.h(47, 43)
+e:\~~~temp\TestCpp-ExperssionTree\MaxSeq.h(49, 19)
+e:\~~~temp\TestCpp-ExperssionTree\MaxSeq.h(50, 8)
+e:\~~~temp\TestCpp-ExperssionTree\MaxSeq.h(50, 18)
+e:\~~~temp\TestCpp-ExperssionTree\MaxSeq.h(51, 8)

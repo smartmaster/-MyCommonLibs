@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="MySources">
+      <UniqueIdentifier>{a1bbc5d8-fcc0-498c-96af-6817b98e4a9c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TestBoost.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test_translate.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="test_rest.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="test_boost_option.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="Eg0101ScopedPtrArray.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="Eg0101ScopedPtrArray.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="Eg0103SharedPtrArray.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="Eg0103SharedPtrArray.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="Eg05xxStringAlgotithm.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="Eg05xxStringAlgotithm.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="Eg08xx_regex.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="Eg08xx_regex.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="Eg12BoostContainer.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="Eg12BoostContainer.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="test_translate.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="test_rest.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="test_boost_option.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="Eg0101ScopedPtrArray.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="Eg0101ScopedPtrArray.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="Eg0103SharedPtrArray.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="Eg0103SharedPtrArray.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="Eg05xxStringAlgotithm.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="Eg05xxStringAlgotithm.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="Eg08xx_regex.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="Eg08xx_regex.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Eg12BoostContainer.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="Eg12BoostContainer.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

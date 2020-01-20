@@ -1,0 +1,33 @@
+// Both.idl : IDL source for Both
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Both.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(56577B88-B1D9-4E9A-8E5D-5BD9E0D54A09),
+	pointer_default(unique)
+]
+interface IObjBoth : IUnknown{
+	[] HRESULT Print();
+};
+[
+	uuid(3CB2A90D-E824-4072-9387-607EB678EC95),
+	version(1.0),
+]
+library BothLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(56297545-4AC8-49BE-A979-B311BED73DF4)		
+	]
+	coclass ObjBoth
+	{
+		[default] interface IObjBoth;
+	};
+};
+

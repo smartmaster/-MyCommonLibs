@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="mycode">
+      <UniqueIdentifier>{a3bd162b-1252-4246-bcc2-382e6ac66833}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="LibVirtualDisk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AFCmpr.cpp">
+      <Filter>mycode</Filter>
+    </ClCompile>
+    <ClCompile Include="HALog.cpp">
+      <Filter>mycode</Filter>
+    </ClCompile>
+    <ClCompile Include="IncDisksInFull.cpp">
+      <Filter>mycode</Filter>
+    </ClCompile>
+    <ClCompile Include="IncDisksMixMode.cpp">
+      <Filter>mycode</Filter>
+    </ClCompile>
+    <ClCompile Include="VDiskDiffImp.cpp">
+      <Filter>mycode</Filter>
+    </ClCompile>
+    <ClCompile Include="VHDFileWImp.cpp">
+      <Filter>mycode</Filter>
+    </ClCompile>
+    <ClCompile Include="VHDHelper.cpp">
+      <Filter>mycode</Filter>
+    </ClCompile>
+    <ClCompile Include="VHDImage.cpp">
+      <Filter>mycode</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AFCmpr.h">
+      <Filter>mycode</Filter>
+    </ClInclude>
+    <ClInclude Include="AFD2DUtil.h">
+      <Filter>mycode</Filter>
+    </ClInclude>
+    <ClInclude Include="BLIDef.h">
+      <Filter>mycode</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonUtil.h">
+      <Filter>mycode</Filter>
+    </ClInclude>
+    <ClInclude Include="D2dbaseDef.h">
+      <Filter>mycode</Filter>
+    </ClInclude>
+    <ClInclude Include="HALog.h">
+      <Filter>mycode</Filter>
+    </ClInclude>
+    <ClInclude Include="HATransErrorcode.h">
+      <Filter>mycode</Filter>
+    </ClInclude>
+    <ClInclude Include="HAVhdUtilErrorcode.h">
+      <Filter>mycode</Filter>
+    </ClInclude>
+    <ClInclude Include="HAVhdUtility.h">
+      <Filter>mycode</Filter>
+    </ClInclude>
+    <ClInclude Include="havmiointf.h">
+      <Filter>mycode</Filter>
+    </ClInclude>
+    <ClInclude Include="IncDisksInFull.h">
+      <Filter>mycode</Filter>
+    </ClInclude>
+    <ClInclude Include="IncDisksMixMode.h">
+      <Filter>mycode</Filter>
+    </ClInclude>
+    <ClInclude Include="InnerInterface.h">
+      <Filter>mycode</Filter>
+    </ClInclude>
+    <ClInclude Include="VDiskDiffImp.h">
+      <Filter>mycode</Filter>
+    </ClInclude>
+    <ClInclude Include="VHD2Def.h">
+      <Filter>mycode</Filter>
+    </ClInclude>
+    <ClInclude Include="vhddef.h">
+      <Filter>mycode</Filter>
+    </ClInclude>
+    <ClInclude Include="VHDFileWImp.h">
+      <Filter>mycode</Filter>
+    </ClInclude>
+    <ClInclude Include="VHDHelper.h">
+      <Filter>mycode</Filter>
+    </ClInclude>
+    <ClInclude Include="VHDImage.h">
+      <Filter>mycode</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

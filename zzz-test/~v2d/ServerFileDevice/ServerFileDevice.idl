@@ -1,0 +1,40 @@
+// ServerFileDevice.idl : IDL source for ServerFileDevice
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ServerFileDevice.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(4C13F41F-B70B-418B-9DF5-0CC48603D9A4),
+	pointer_default(unique)
+]
+interface IFileDeviceObject : IUnknown{
+	[] HRESULT SetPointerEx([in] LONGLONG llDistanceToMove, [out] LONGLONG* lpNewFilePointer, [in] ULONG ulMoveMethod);
+	[] HRESULT Read([in] ULONG nNumberOfBytesToRead, [out] ULONG* lpNumberOfBytesRead, [out, size_is(nNumberOfBytesToRead), length_is(*lpNumberOfBytesRead)] BYTE* pBuffer);
+	[] HRESULT Write([in] ULONG nNumberOfBytesToWrite, [out] ULONG* lpNumberOfBytesWritten, [in, size_is(nNumberOfBytesToWrite)] BYTE* pBuffer);
+	
+	[] HRESULT Create([in] BSTR bstrFileName, [in] ULONG ulDesiredAccess, [in] ULONG ulShareMode, [in] ULONG ulCreationDisposition, [in] ULONG ulFlagsAndAttributes);
+	[] HRESULT Close(void);
+
+	[] HRESULT GetFileSizeEx([out] LONGLONG* pllFileSize);
+};
+[
+	uuid(A9CEE3C5-E7A2-47D4-A1D6-51C236150C1E),
+	version(1.0),
+]
+library ServerFileDeviceLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(415700D7-BCA9-4F86-8A48-3592C8673946)		
+	]
+	coclass FileDeviceObject
+	{
+		[default] interface IFileDeviceObject;
+	};
+};
+

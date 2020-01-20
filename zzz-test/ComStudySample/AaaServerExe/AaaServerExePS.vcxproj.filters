@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{76a2cb4d-6076-4c82-aa5d-dc217f07f1dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{b06658b5-b24d-4cdc-9c8e-e2486b634508}</UniqueIdentifier>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AaaServerExeps.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AaaServerExe_i.c" />
+    <ClCompile Include="AaaServerExe_p.c" />
+    <ClCompile Include="dlldata.c" />
+  </ItemGroup>
+</Project>

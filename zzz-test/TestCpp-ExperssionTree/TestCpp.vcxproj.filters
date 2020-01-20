@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="MySource">
+      <UniqueIdentifier>{e6441e12-9ae5-41b7-b7cd-1367877bff32}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MultiDimArray.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="log.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonSubSeq.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="Knapsack.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="NumSeq.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="BinHeap.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="Helper.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="ExpressionTree.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="ExpTree.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="remove_spaces.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="QuickSort.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="ZigZag.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="DupNumber.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="Random01.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="max_number.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="MaxSeq.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="QuickSortWithOrder.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="QuickSortGeneric.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleLinkedList.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="HeapSort.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="BigNumber.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="FindCow.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="simpleTree.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="FractionNumber.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="MaxSubArraySum.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="TestSTL.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="ZigzagReview.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="lengthOfLongestSubstring.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="FindMedianSortedArrays.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="DivideTwoIntegers.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckBalancedBinaryTree.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="DivideTwoIntegers2.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="GenPair.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="LongestPalindrome.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="ZigZagString.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="DedupeInSortedArray.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="LongestValidParentheses.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="MergeSortedLists.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="SearchinRotatedSortedArray.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="MultiplyStrings.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="SwapNodesinPairs.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="TwoSum.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="SwapNodesinPairs2.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TestCpp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QuickSortGeneric.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="BinHeap.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="CommonSubSeq.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="DupNumber.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="ZigZag.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="remove_spaces.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="Random01.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="QuickSortWithOrder.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="QuickSort.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="NumSeq.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="MultiDimArray.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="MaxSeq.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="max_number.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="log.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="Knapsack.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="Helper.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpTree.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpressionTree.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleLinkedList.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="HeapSort.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="BigNumber.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="FindCow.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="simpleTree.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="FractionNumber.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="MaxSubArraySum.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="TestSTL.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="ZigzagReview.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="LengthOfLongestSubstring.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="DivideTwoIntegers.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckBalancedBinaryTree.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="DivideTwoIntegers2.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="GenPair.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="FindMedianSortedArrays.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestPalindrome.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="ZigZagString.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="DedupeInSortedArray.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestValidParentheses.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="MergeSortedLists.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="SearchinRotatedSortedArray.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="SwapNodesinPairs.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="TwoSum.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="SwapNodesinPairs2.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

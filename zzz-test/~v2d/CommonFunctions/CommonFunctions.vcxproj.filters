@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="MySources">
+      <UniqueIdentifier>{7f08ea3a-816d-49c1-aae5-fbb0a9677845}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Externs">
+      <UniqueIdentifier>{e469d1e8-5bd4-4466-93bf-70af92dbf97f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AllVdsDiskVolumeInfo.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="AsyncIoBuffer.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="AsyncIoCopy.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoHandleEx.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="CrcCalc.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="DiskHelper.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="EnumFile.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="FileLockLib.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="GPTDiskLayout.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="IocpThreadPool.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalFileDevice.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="MiscHelper.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="MyStgHelper.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="NTFS_Lib.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="NTFS_Lib_Attribute.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="NTFS_Lib_Common.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="NTFS_Lib_DataType.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="NTFS_Lib_FileRecord.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="NTFS_Lib_Helper.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="PerformanceTiming.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleBitArray.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleDiskInfo.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleVdsDiskInfo.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleVdsVolumeInfo.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleVolumeInfo.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="SocketAddrHelper.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="VDSVolumeDiskHelper.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="VhdHelper.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="VirtualDiskHelper.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="VolumeHelper.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="XmlHelper.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerFileDevice\ServerFileDevice_i.h">
+      <Filter>Externs</Filter>
+    </ClInclude>
+    <ClInclude Include="ntdddisk.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="ntddvol.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="MTQueque.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="IocpAsyncCopy.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="AsyncIOCompleteRoutine.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleTree.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="DataTransferPipe.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="DataTransferSocket.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="LengthBuffer.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="DataTransfer.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="DataTransfer.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="DataTransferBuffer.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="VMPtr.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="MTCopy.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalFileDevicePreAlloc.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CommonFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AllVdsDiskVolumeInfo.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="AsyncIoBuffer.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="AsyncIoCopy.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="CrcCalc.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="DiskHelper.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="EnumFile.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="FileLockLib.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="FileLockMain.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="GPTDiskLayout.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="LocalFileDevice.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="MiscHelper.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="MyStgHelper.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="NTFS_Lib_Attribute.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="NTFS_Lib_FileRecord.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="NTFS_Lib_Helper.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="PerformanceTiming.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleBitArray.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleDiskInfo.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleVdsDiskInfo.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleVdsVolumeInfo.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleVolumeInfo.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="SocketAddrHelper.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="VDSVolumeDiskHelper.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="VhdHelper.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="VirtualDiskHelper.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="VolumeHelper.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="XmlHelper.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="MTQueque.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="IocpAsyncCopy.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="AsyncIOCompleteRoutine.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleTree.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="DataTransferPipe.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="DataTransferSocket.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="LengthBuffer.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="DataTransferBuffer.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="MTCopy.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="LocalFileDevicePreAlloc.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

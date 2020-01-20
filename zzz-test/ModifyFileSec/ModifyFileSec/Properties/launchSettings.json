@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ModifyFileSec": {
+      "commandName": "Project",
+      "commandLineArgs": "D:\\pdb administrators guest"
+    }
+  }
+}

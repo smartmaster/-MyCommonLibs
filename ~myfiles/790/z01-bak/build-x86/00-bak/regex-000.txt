@@ -1,0 +1,27 @@
+((xcopy "\%__source_root\%\\)NTFSParser(\\\%__config\%\\\*\.)(\w{3})(" "\%__dest_x86\%\\\%__config\%\\" /s /e /h /i /c /y /exclude:excluded\.txt))
+$1
+$2xxxyyyzzz$3$4$5
+
+
+
+
+
+((xcopy "\%__source_root\%\\)NTFSParser(\\x64\\\*\.)(\w{3})(" "\%__dest_x64\%\\" /s /e /h /i /c /y /exclude:excluded\.txt))
+$1
+$2xxxyyyzzz$3$4$5
+
+
+
+
+((msbuild\.exe "\%__source_root\%\\)NTFSParser(\\)NTFSParser(\.vcxproj" \%__Rebuild\% /p:Configuration=\%__Configuration\%))
+$1
+$2xxxyyyzzz$3xxxyyyzzz$4
+
+
+
+
+
+(.+?)(\\RPCStructStream\\)(.+)
+
+$1$2$3
+$1XXXRPCStructStreamXmlXXX$3

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{426ada0c-3003-4551-a019-cde4d1f29d16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test">
+      <UniqueIdentifier>{611607ad-03cd-493f-9723-289f825d09f3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="test\sml_raii_clang.test.c">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\sml_raii_clang.test.nomacro.c">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\clangraii.test.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\SmlCVector.test.cpp">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="src\raii_func.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SmlCVector.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="test_main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="test\clangraii.test.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\sml_raii_clang.test.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="test\SmlCVector.test.h">
+      <Filter>test</Filter>
+    </ClInclude>
+    <ClInclude Include="src\asm_func.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\raii_func.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sml_raii_clang.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SmlCVector.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="test\log.h">
+      <Filter>test</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="src\asm_func.32.asm">
+      <Filter>src</Filter>
+    </MASM>
+    <MASM Include="src\asm_func.64.asm">
+      <Filter>src</Filter>
+    </MASM>
+  </ItemGroup>
+</Project>

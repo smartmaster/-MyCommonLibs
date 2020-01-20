@@ -1,0 +1,53 @@
+// AaaServerExe.idl : IDL source for AaaServerExe
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (AaaServerExe.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(BD16E1DA-F350-4EF8-A7A5-3C6905554A52),
+	pointer_default(unique)
+]
+interface IOuterObject : IUnknown{
+	[] HRESULT OutDynamicArray(
+		[out] LONG* pLength, 
+		[out, size_is(, * pLength)] WCHAR ** ppBuffer
+		);
+};
+[
+	object,
+	uuid(8D3C870F-7368-4DD3-8188-B697F2E10746),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IOuterObjectDotNet : IDispatch{
+	[id(1)] HRESULT Nop();
+};
+[
+	uuid(8838EB73-670F-4DAF-8082-2E131C8EC4AE),
+	version(1.0),
+]
+library AaaServerExeLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(2505D95E-689F-4E3F-866E-01E328FEE89B)		
+	]
+	coclass OuterObject
+	{
+		[default] interface IOuterObject;
+	};
+	[
+		uuid(6A92E926-1E73-4678-A2CA-3B85F01DD06F)		
+	]
+	coclass OuterObjectDotNet
+	{
+		[default] interface IOuterObjectDotNet;
+	};
+};
+

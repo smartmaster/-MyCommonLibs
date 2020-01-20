@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "testCS": {
+      "commandName": "Project",
+      "commandLineArgs": "4  \\\\?\\e:\\"
+    }
+  }
+}

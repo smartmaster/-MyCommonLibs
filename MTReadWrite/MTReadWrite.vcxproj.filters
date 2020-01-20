@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="MySource">
+      <UniqueIdentifier>{adc07cae-da69-42fb-903d-770d360d8cb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySource\FileWin">
+      <UniqueIdentifier>{02ac88b0-4f96-4038-bea4-e8fde5fbb7cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySource\FileMem">
+      <UniqueIdentifier>{9d7e212a-a1c9-4d2f-a3d8-c092d267c572}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySource\FileCopy">
+      <UniqueIdentifier>{c750b4ee-b5a9-454d-9c74-a76c69e1476a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySource\LoadLib">
+      <UniqueIdentifier>{b114eaaa-b20c-4757-af73-63861b8088ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySource\BitArray">
+      <UniqueIdentifier>{9552826c-47b7-40cb-9702-913e56522f1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySource\StopTimer">
+      <UniqueIdentifier>{973d835c-7d70-4fd0-a854-bb97e7b495fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySource\CircularBuffer">
+      <UniqueIdentifier>{215b71cc-dda7-407f-aa85-8d0b13add5db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySource\InstantSpeed">
+      <UniqueIdentifier>{9060746f-1263-4d81-bc5a-e2ec8ffac1a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySource\WideNarrowChar">
+      <UniqueIdentifier>{be811bbe-6754-40cf-9cd2-f8742acae1b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySource\IntDiv">
+      <UniqueIdentifier>{2772365e-35b7-4174-aa16-33ee6542d0ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySource\TaskMonitor">
+      <UniqueIdentifier>{15f020c9-1cf1-449d-9a2d-f26a7c396dad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySource\SimpleDataStructure">
+      <UniqueIdentifier>{ea30d3dc-742b-472c-a40b-97a4ce513f9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySource\SharedData">
+      <UniqueIdentifier>{c635f65d-b7e2-496e-b1db-866715bcea51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySource\smart_ptr">
+      <UniqueIdentifier>{68c7f3f6-0de2-4315-a305-e37642653509}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VMemPtr.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="FileDeviceWin32.h">
+      <Filter>MySource\FileWin</Filter>
+    </ClInclude>
+    <ClInclude Include="FileDeviceWin32Prealloc.h">
+      <Filter>MySource\FileWin</Filter>
+    </ClInclude>
+    <ClInclude Include="FileDeviceMem.h">
+      <Filter>MySource\FileMem</Filter>
+    </ClInclude>
+    <ClInclude Include="MTCopy.h">
+      <Filter>MySource\FileCopy</Filter>
+    </ClInclude>
+    <ClInclude Include="STCopy.h">
+      <Filter>MySource\FileCopy</Filter>
+    </ClInclude>
+    <ClInclude Include="FileCopyInterface.h">
+      <Filter>MySource\FileCopy</Filter>
+    </ClInclude>
+    <ClInclude Include="FileDeviceInterface.h">
+      <Filter>MySource\FileWin</Filter>
+    </ClInclude>
+    <ClInclude Include="MTPoolAndQueue.h">
+      <Filter>MySource\FileCopy</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadLibInterface.h">
+      <Filter>MySource\LoadLib</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadLibWin32.h">
+      <Filter>MySource\LoadLib</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleBitArray.h">
+      <Filter>MySource\BitArray</Filter>
+    </ClInclude>
+    <ClInclude Include="StopTimer.h">
+      <Filter>MySource\StopTimer</Filter>
+    </ClInclude>
+    <ClInclude Include="FileDeviceHandle.h">
+      <Filter>MySource\FileWin</Filter>
+    </ClInclude>
+    <ClInclude Include="CircularBuffer.h">
+      <Filter>MySource\CircularBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="BitOp.h">
+      <Filter>MySource\BitArray</Filter>
+    </ClInclude>
+    <ClInclude Include="InstantSpeed.h">
+      <Filter>MySource\InstantSpeed</Filter>
+    </ClInclude>
+    <ClInclude Include="WideNarrowChar.h">
+      <Filter>MySource\WideNarrowChar</Filter>
+    </ClInclude>
+    <ClInclude Include="IntDiv.h">
+      <Filter>MySource\IntDiv</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskMonitorInterface.h">
+      <Filter>MySource\TaskMonitor</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskMonitorClass.h">
+      <Filter>MySource\TaskMonitor</Filter>
+    </ClInclude>
+    <ClInclude Include="FileDeviceBackupHandle.h">
+      <Filter>MySource\FileWin</Filter>
+    </ClInclude>
+    <ClInclude Include="simple_fraction.h">
+      <Filter>MySource\IntDiv</Filter>
+    </ClInclude>
+    <ClInclude Include="MTQueueV2.h">
+      <Filter>MySource\FileCopy</Filter>
+    </ClInclude>
+    <ClInclude Include="simple_tree.h">
+      <Filter>MySource\SimpleDataStructure</Filter>
+    </ClInclude>
+    <ClInclude Include="VectorBasedList.h">
+      <Filter>MySource\SimpleDataStructure</Filter>
+    </ClInclude>
+    <ClInclude Include="FileDeviceMemAutoAlloc.h">
+      <Filter>MySource\FileMem</Filter>
+    </ClInclude>
+    <ClInclude Include="ThrottleControl.h">
+      <Filter>MySource\InstantSpeed</Filter>
+    </ClInclude>
+    <ClInclude Include="sharedData.h">
+      <Filter>MySource\SharedData</Filter>
+    </ClInclude>
+    <ClInclude Include="MachineMRSWLock.h">
+      <Filter>MySource\SharedData</Filter>
+    </ClInclude>
+    <ClInclude Include="RWLockWin32.h">
+      <Filter>MySource\SharedData</Filter>
+    </ClInclude>
+    <ClInclude Include="ParallelRun.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="counted_ptr.h">
+      <Filter>MySource\smart_ptr</Filter>
+    </ClInclude>
+    <ClInclude Include="counted_ptr.test.h">
+      <Filter>MySource\smart_ptr</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MTReadWrite-UT.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FileDeviceWin32.cpp">
+      <Filter>MySource\FileWin</Filter>
+    </ClCompile>
+    <ClCompile Include="FileDeviceWin32Prealloc.cpp">
+      <Filter>MySource\FileWin</Filter>
+    </ClCompile>
+    <ClCompile Include="FileDeviceMem.cpp">
+      <Filter>MySource\FileMem</Filter>
+    </ClCompile>
+    <ClCompile Include="MTCopy.cpp">
+      <Filter>MySource\FileCopy</Filter>
+    </ClCompile>
+    <ClCompile Include="STCopy.cpp">
+      <Filter>MySource\FileCopy</Filter>
+    </ClCompile>
+    <ClCompile Include="FileDeviceInterface.cpp">
+      <Filter>MySource\FileWin</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadLibWin32.cpp">
+      <Filter>MySource\LoadLib</Filter>
+    </ClCompile>
+    <ClCompile Include="StopTimer.cpp">
+      <Filter>MySource\StopTimer</Filter>
+    </ClCompile>
+    <ClCompile Include="FileDeviceHandle.cpp">
+      <Filter>MySource\FileWin</Filter>
+    </ClCompile>
+    <ClCompile Include="CircularBuffer.cpp">
+      <Filter>MySource\CircularBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="BitOp.cpp">
+      <Filter>MySource\BitArray</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleBitArray.old.cpp">
+      <Filter>MySource\BitArray</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleBitArray.cpp">
+      <Filter>MySource\BitArray</Filter>
+    </ClCompile>
+    <ClCompile Include="InstantSpeed.cpp">
+      <Filter>MySource\InstantSpeed</Filter>
+    </ClCompile>
+    <ClCompile Include="WideNarrowChar.cpp">
+      <Filter>MySource\WideNarrowChar</Filter>
+    </ClCompile>
+    <ClCompile Include="IntDiv.cpp">
+      <Filter>MySource\IntDiv</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskMonitorClass.cpp">
+      <Filter>MySource\TaskMonitor</Filter>
+    </ClCompile>
+    <ClCompile Include="FileDeviceBackupHandle.cpp">
+      <Filter>MySource\FileWin</Filter>
+    </ClCompile>
+    <ClCompile Include="FileDeviceMemAutoAlloc.cpp">
+      <Filter>MySource\FileMem</Filter>
+    </ClCompile>
+    <ClCompile Include="ThrottleControl.cpp">
+      <Filter>MySource\InstantSpeed</Filter>
+    </ClCompile>
+    <ClCompile Include="sharedData.cpp">
+      <Filter>MySource\SharedData</Filter>
+    </ClCompile>
+    <ClCompile Include="MachineMRSWLock.cpp">
+      <Filter>MySource\SharedData</Filter>
+    </ClCompile>
+    <ClCompile Include="RWLockWin32.cpp">
+      <Filter>MySource\SharedData</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

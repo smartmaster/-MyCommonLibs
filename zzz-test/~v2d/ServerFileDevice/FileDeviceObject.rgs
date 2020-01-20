@@ -1,0 +1,15 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {415700D7-BCA9-4F86-8A48-3592C8673946} = s 'FileDeviceObject Class'
+		{
+			LocalServer32 = s '%MODULE%'
+			{
+				val ServerExecutable = s '%MODULE_RAW%'
+			}
+			TypeLib = s '{A9CEE3C5-E7A2-47D4-A1D6-51C236150C1E}'
+			Version = s '1.0'
+		}
+	}
+}

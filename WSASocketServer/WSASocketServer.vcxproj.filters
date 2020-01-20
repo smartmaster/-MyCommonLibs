@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="MySources">
+      <UniqueIdentifier>{be494d28-55c2-4743-85d0-bce9d5629289}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySources\EchoSample">
+      <UniqueIdentifier>{8529c640-23bb-4401-8783-1c28880a59c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySources\RunApp">
+      <UniqueIdentifier>{ea75d147-977e-41fa-b6e8-0ee0a36cf099}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySources\FileDeviceHandler">
+      <UniqueIdentifier>{cd02bc1d-3ba2-4f69-865e-92b2f50b735d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySources\Test">
+      <UniqueIdentifier>{d10e526a-eb46-43cd-a75d-15dd58cfd910}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySources\ParameterSerializer">
+      <UniqueIdentifier>{664d2a94-d12d-433c-be22-08ad119b4bbe}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WSADataBuffer.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="WSAConnectedSocket.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="WSASocketServerModule.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="WSALibInit.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="InterfaceWSASocketServerModule.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="InterfaceWSADataBufferHandler.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="EchoResponceHandler.h">
+      <Filter>MySources\EchoSample</Filter>
+    </ClInclude>
+    <ClInclude Include="InterfaceRunApp.h">
+      <Filter>MySources\RunApp</Filter>
+    </ClInclude>
+    <ClInclude Include="InterfaceRunAppClient.h">
+      <Filter>MySources\RunApp</Filter>
+    </ClInclude>
+    <ClInclude Include="RunApp.h">
+      <Filter>MySources\RunApp</Filter>
+    </ClInclude>
+    <ClInclude Include="SocketRunAppClient.h">
+      <Filter>MySources\RunApp</Filter>
+    </ClInclude>
+    <ClInclude Include="SocketRunAppHandler.h">
+      <Filter>MySources\RunApp</Filter>
+    </ClInclude>
+    <ClInclude Include="SocketRunAppRPCDefines.h">
+      <Filter>MySources\RunApp</Filter>
+    </ClInclude>
+    <ClInclude Include="SocketFileDeviceClient.h">
+      <Filter>MySources\FileDeviceHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="SocketFileDeviceHandler.h">
+      <Filter>MySources\FileDeviceHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="SocketFileRPCDefines.h">
+      <Filter>MySources\FileDeviceHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="NameValueStream.h">
+      <Filter>MySources\ParameterSerializer</Filter>
+    </ClInclude>
+    <ClInclude Include="ParameterRPC.h">
+      <Filter>MySources\ParameterSerializer</Filter>
+    </ClInclude>
+    <ClInclude Include="ParameterStreamDef.h">
+      <Filter>MySources\ParameterSerializer</Filter>
+    </ClInclude>
+    <ClInclude Include="ParameterStreamHelper.h">
+      <Filter>MySources\ParameterSerializer</Filter>
+    </ClInclude>
+    <ClInclude Include="ParameterStreamRW.h">
+      <Filter>MySources\ParameterSerializer</Filter>
+    </ClInclude>
+    <ClInclude Include="SerializeFieldDefine.h">
+      <Filter>MySources\ParameterSerializer</Filter>
+    </ClInclude>
+    <ClInclude Include="test-param-stream.h">
+      <Filter>MySources\Test</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WSADataBuffer.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="WSADataBufferHandler.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="WSAConnectedSocket.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="WSASocketServerModule.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="WSASocketServer-Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EchoResponceHandler.cpp">
+      <Filter>MySources\EchoSample</Filter>
+    </ClCompile>
+    <ClCompile Include="RunApp.cpp">
+      <Filter>MySources\RunApp</Filter>
+    </ClCompile>
+    <ClCompile Include="SocketRunAppClient.cpp">
+      <Filter>MySources\RunApp</Filter>
+    </ClCompile>
+    <ClCompile Include="SocketRunAppHandler.cpp">
+      <Filter>MySources\RunApp</Filter>
+    </ClCompile>
+    <ClCompile Include="SocketRunAppRPCDefines.cpp">
+      <Filter>MySources\RunApp</Filter>
+    </ClCompile>
+    <ClCompile Include="SocketFileDeviceClient.cpp">
+      <Filter>MySources\FileDeviceHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="SocketFileDeviceHandler.cpp">
+      <Filter>MySources\FileDeviceHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="SocketFileRPCDefines.cpp">
+      <Filter>MySources\FileDeviceHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="ParameterStreamHelper.cpp">
+      <Filter>MySources\ParameterSerializer</Filter>
+    </ClCompile>
+    <ClCompile Include="ParameterStreamRW.cpp">
+      <Filter>MySources\ParameterSerializer</Filter>
+    </ClCompile>
+    <ClCompile Include="test-param-stream.cpp">
+      <Filter>MySources\Test</Filter>
+    </ClCompile>
+    <ClCompile Include="ParameterRPC.cpp">
+      <Filter>MySources\ParameterSerializer</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

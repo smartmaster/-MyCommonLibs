@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="MySource">
+      <UniqueIdentifier>{d472e569-e96f-4da5-8c69-c0ec292bcfc1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestMsStorage">
+      <UniqueIdentifier>{4cb2fef6-d400-4009-a91d-59dc3538448c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyMsftStorage">
+      <UniqueIdentifier>{b7df44f5-f9b2-42b9-b3ce-e45794607a8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySystemInfo">
+      <UniqueIdentifier>{aa93be4a-2cb4-48fd-9f0e-704107d7494d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestNFS">
+      <UniqueIdentifier>{0792f63a-5c02-4278-953c-4cc2fabf0782}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MySmbTest">
+      <UniqueIdentifier>{240de5df-f2ec-4313-9881-7039655adda3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WmiHelper.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="test_storage_api_enum.h">
+      <Filter>TestMsStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="MyMsftStorage.h">
+      <Filter>MyMsftStorage</Filter>
+    </ClInclude>
+    <ClInclude Include="MySystemInfo.h">
+      <Filter>MySystemInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="My_NetworkAdapter_Info.h">
+      <Filter>MySystemInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="TestNFS.h">
+      <Filter>TestNFS</Filter>
+    </ClInclude>
+    <ClInclude Include="MyTestSmb.h">
+      <Filter>MySmbTest</Filter>
+    </ClInclude>
+    <ClInclude Include="SmlWmi.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="SmlWmiParser.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="MyFormatCode.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+    <ClInclude Include="test_generated_wmi_class.h">
+      <Filter>MySource</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WmiHelper.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="WmiHelpers-main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test_storage_api_enum.cpp">
+      <Filter>TestMsStorage</Filter>
+    </ClCompile>
+    <ClCompile Include="MyMsftStorage.cpp">
+      <Filter>MyMsftStorage</Filter>
+    </ClCompile>
+    <ClCompile Include="MySystemInfo.cpp">
+      <Filter>MySystemInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="My_NetworkAdapter_Info.cpp">
+      <Filter>MySystemInfo</Filter>
+    </ClCompile>
+    <ClCompile Include="TestNFS.cpp">
+      <Filter>TestNFS</Filter>
+    </ClCompile>
+    <ClCompile Include="MyTestSmb.cpp">
+      <Filter>MySmbTest</Filter>
+    </ClCompile>
+    <ClCompile Include="SmlWmi.test.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="SmlWmiParser.test.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="test_generated_wmi_class.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+    <ClCompile Include="MyFormatCode.test.cpp">
+      <Filter>MySource</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SmlWmi.test.h">
+      <Filter>MySource</Filter>
+    </None>
+    <None Include="SmlWmiParser.test.h">
+      <Filter>MySource</Filter>
+    </None>
+    <None Include="MyFormatCode.test.h">
+      <Filter>MySource</Filter>
+    </None>
+  </ItemGroup>
+</Project>

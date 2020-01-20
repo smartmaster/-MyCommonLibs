@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  
+    
+  <Product Id="{D0A23922-EB0E-47B6-9E1D-288A7E5D19F3}" Name="SssSetupMsi" Codepage="utf-8" Language="1033" Version="1.0.0.0" Manufacturer="Smart SML" UpgradeCode="71f0cc89-4b18-498d-bd37-e92874ea4d1d">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <MediaTemplate />
+
+    <Feature Id="ProductFeature" Title="SssSetupMsi" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+      <!--<ComponentGroupRef Id="TestComponents" />-->
+    </Feature>
+
+    <Feature Id="TestFeature" Title="TestFeature" Level="1">
+      <!--<ComponentGroupRef Id="ProductComponents" />-->
+      <ComponentGroupRef Id="TestComponents" />
+    </Feature>
+
+    <CustomActionRef Id="CustomAction1.SetProperty" />
+    
+    <UIRef Id="WixUI_Mondo" />
+    <UIRef Id="WixUI_ErrorProgressText" />
+    
+  </Product>
+
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="SssSetupMsi">
+          <Directory Id="TESTFOLDER" Name="TestFolder" />
+        </Directory>
+      </Directory>
+    </Directory>
+  </Fragment>
+
+</Wix>

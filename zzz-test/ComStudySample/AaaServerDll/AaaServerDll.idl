@@ -1,0 +1,36 @@
+// AaaServerDll.idl : IDL source for AaaServerDll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (AaaServerDll.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(DF89BFBE-A053-41FF-ADCC-A00089870492),
+	pointer_default(unique)
+]
+interface IInnerObject : IUnknown{
+	[] HRESULT OutDynamicArray(
+		[out] LONG* pLength, 
+		[out, size_is(, * pLength)] WCHAR ** ppBuffer
+		);
+};
+[
+	uuid(B0B15A8F-142D-48F1-900B-4646D8192F36),
+	version(1.0),
+]
+library AaaServerDllLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(2B6C92B3-C783-49D7-A251-AF0D3FAE8664)		
+	]
+	coclass InnerObject
+	{
+		[default] interface IInnerObject;
+	};
+};
+
