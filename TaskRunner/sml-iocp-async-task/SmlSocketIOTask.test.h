@@ -28,7 +28,7 @@ namespace SmartLib
 				RefPtr<IFile*> file;
 				RefPtr<CircularBuffer> cbReceive;
 				RefPtr<CircularBuffer> cbSend;
-				RefPtr<TaskRunner> taskRunner;
+				RefPtr<TaskRunner> taskRunner = RefPtr<TaskRunner>::Make();
 				RefPtr<IAsyncTask*> reader = RefPtr<IAsyncTask*>::Make(new SocketIOAsyncTask{ file, cbReceive, cbSend, taskRunner });
 				reader.SetDispose(Disposer::DeletePtr<IAsyncTask>);
 				taskRunner->AddRunning(reader);
