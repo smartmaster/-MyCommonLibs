@@ -281,8 +281,10 @@ namespace SmartLib
 
 		T pop_back()
 		{
+			assert(_size > 0);
 			Node* nn = PopBackNode();
-			T result{ nn ? static_cast<T&&>(nn->Data) : T() };
+			//T result{ nn ? static_cast<T&&>(nn->Data) : T() };
+			T result{static_cast<T&&>(nn->Data)};
 			_cacheAlloc.Delete(nn);
 			return result;
 		}
@@ -323,8 +325,10 @@ namespace SmartLib
 
 		T pop_front()
 		{
+			assert(_size > 0);
 			Node* nn = PopFrontNode();
-			T result{ nn ? static_cast<T&&>(nn->Data) : T() };
+			//T result{ nn ? static_cast<T&&>(nn->Data) : T() };
+			T result{static_cast<T&&>(nn->Data)};
 			_cacheAlloc.Delete(nn);
 			return result;
 		}
