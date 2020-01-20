@@ -90,6 +90,16 @@ namespace SmartLib
 			return last;
 		}
 
+
+		void ConnectCircle(long first1, long first2)
+		{
+			long last1 = NodeRef(first1).Prev;
+			long last2 = NodeRef(first2).Prev;
+
+			ConnectNode(last1, first2);
+			ConnectNode(last2, first1);
+		}
+
 	private:
 		VectorList() = delete;
 		VectorList(const VectorList&) = delete;
@@ -214,10 +224,12 @@ namespace SmartLib
 						}
 						else
 						{
-							long prevFirst = arr[mappedValue];
-							long prevLast = NodeRef(prevFirst).Prev;
-							ConnectNode(prevLast, first);
-							ConnectNode(last, prevFirst);
+							ConnectCircle(arr[mappedValue], first);
+
+							//long prevFirst = arr[mappedValue];
+							//long prevLast = NodeRef(prevFirst).Prev;
+							//ConnectNode(prevLast, first);
+							//ConnectNode(last, prevFirst);
 						}
 						
 					}
@@ -310,14 +322,16 @@ namespace SmartLib
 					}
 					else
 					{
-						long first1 = minId;
-						long last1 = NodeRef(first1).Prev;
+						ConnectCircle(minId, arr[ii]);
 
-						long first2 = arr[ii];
-						long last2 = NodeRef(first2).Prev;
+						//long first1 = minId;
+						//long last1 = NodeRef(first1).Prev;
 
-						ConnectNode(last1, first2);
-						ConnectNode(last2, first1);
+						//long first2 = arr[ii];
+						//long last2 = NodeRef(first2).Prev;
+
+						//ConnectNode(last1, first2);
+						//ConnectNode(last2, first1);
 					}
 				}
 			}
@@ -344,10 +358,12 @@ namespace SmartLib
 			DisconnectAndCircle(first, _BUSY_ID);
 			long minId = SortCircularNodes(first, less, equal);
 
-			long sortedFirst = minId; //make code "more" clear and readable
-			long sortedLast = NodeRef(minId).Prev;
-			ConnectNode(sortedLast, _BUSY_ID);
-			ConnectNode(_BUSY_ID, sortedFirst);
+
+			ConnectCircle(_BUSY_ID, minId);
+			//long sortedFirst = minId; //make code "more" clear and readable
+			//long sortedLast = NodeRef(minId).Prev;
+			//ConnectNode(sortedLast, _BUSY_ID);
+			//ConnectNode(_BUSY_ID, sortedFirst);
 
 			_size = savedSize; //restore size
 		}
