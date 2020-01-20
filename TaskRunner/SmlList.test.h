@@ -55,6 +55,43 @@ namespace SmartLib
 			cout << endl;
 		}
 
+		static void Case20()
+		{
+			List<int> LL;
+			srand(time(nullptr));
+
+			for (long ii = 0; ii < 30; ++ii)
+			{
+				LL.push_back(rand() % 20);
+			}
+			Print(LL);
+
+			auto less = [](List<int>::Node* aa, List<int>::Node* bb)
+			{
+				return aa->Data > bb->Data;
+			};
+
+			auto equal = [](List<int>::Node* aa, List<int>::Node* bb)
+			{
+				return aa->Data == bb->Data;
+			};
+
+
+			LL.SortCircular(less, equal);
+			Print(LL);
+
+
+			if (LL.VerifyOrder(less, equal))
+			{
+				cout << "Sort ok" << endl;
+			}
+			else
+			{
+				cout << "Sort error!!" << endl;
+			}
+
+		}
+
 
 		static void Case19()
 		{

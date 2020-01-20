@@ -300,7 +300,7 @@ namespace SmartLib
 			
 
 			long minId = _INVALID_ID;
-			for (int ii = 0; ii < ARRAY_SIZE; ++ii)
+			for (long ii = 0; ii < ARRAY_SIZE; ++ii)
 			{
 				if (arr[ii] >= 0)
 				{

@@ -66,6 +66,17 @@ namespace SmartLib
 				Connect(nullptr, first);
 				return last;
 			}
+
+
+			static Node* DisconnectAndCircle(Node* first, Node* stop)
+			{
+				Node* last = stop->Prev;
+				//Connect(last, nullptr);
+				Connect(first->Prev, stop);
+				//Connect(nullptr, first);
+				Connect(last, first);
+				return last;
+			}
 		};
 
 
@@ -347,6 +358,7 @@ namespace SmartLib
 
 		void RecycleDelete(Node* nn)
 		{
+			T data = static_cast<T&&>(nn->Data); //in order to call destructor ~T()
 			_cacheAlloc.Delete(nn);
 		}
 
@@ -391,6 +403,170 @@ namespace SmartLib
 			return first;
 		}
 
+
+		//////////////////////////////////////////////////////////////////////////
+		template<typename MAPPER>
+		void PartitionCircular(Node* first, Node* stop, MAPPER&& mapper, Node** arr, long count)
+		{
+			while (first != stop)
+			{
+				long mappedValue = mapper(first);
+				long steps = 0;
+				Node* next = FindNotEqual(first, stop, mapper, mappedValue, steps);
+				if (steps > 0)
+				{
+					if (mappedValue < count)
+					{
+						_size -= steps;
+						Node* last = Node::DisconnectAndCircle(first, next);
+						if (nullptr == arr[mappedValue])
+						{
+							arr[mappedValue] = first;
+						}
+						else
+						{
+							Node* prevfirst = arr[mappedValue];
+							Node* prevlast = prevfirst->Prev;
+
+							Node::Connect(prevlast, first);
+							Node::Connect(last, prevfirst);
+						}
+						
+					}
+				}
+				first = next;
+			}
+		}
+
+		template<typename LESS, typename EQUAL>
+		Node* SortCircularNodes(Node* first, LESS&& less, EQUAL&& equal)
+		{
+			if (first->Next == first)
+			{
+				return first;
+			}
+
+
+			auto mapper = [first, &less, &equal](Node* nn) -> long
+			{
+				return less(nn, first) ? 0
+					: equal(nn, first) ? 1
+					: 2;
+			};
+
+			constexpr const long ARRAY_SIZE = 3;
+			Node* arr[ARRAY_SIZE] = { nullptr, nullptr, nullptr };
+
+			Node* newFirst = first->Next;
+			PartitionCircular(newFirst, first, mapper, arr, ARRAY_SIZE);
+
+			if (arr[1] == nullptr)
+			{
+				arr[1] = first;
+			}
+			else
+			{
+				InsertNodeAfter(arr[1]->Prev, first);
+			}
+
+			//////////////////////////////////////////////////////////////////////////DEBUG START
+			//auto printParts = [](VectorList<long>& vl, long start)
+			//{
+			//	long first = start;
+			//	while (start >= 0)
+			//	{
+			//		cout << vl.NodeRef(start).Data << ' ';
+			//		start = vl.NodeRef(start).Next;
+			//		if (start == first)
+			//		{
+			//			break;
+			//		}
+			//	}
+			//	cout << endl;
+			//};
+
+			//for (long ii = 0; ii < ARRAY_SIZE; ++ii)
+			//{
+			//	cout << ii << " parted:\t";
+			//	printParts(*this, arr[ii]);
+			//}
+			//cout << endl << endl;
+			//////////////////////////////////////////////////////////////////////////DEBNUG END
+
+			for (long ii = 0; ii < ARRAY_SIZE; ++ii)
+			{
+				if (ii != 1) //no need to sort "SAME" elements
+				{
+					if (arr[ii] != nullptr)
+					{
+						Node* min = SortCircularNodes(arr[ii], less, equal);
+						arr[ii] = min;
+					}
+				}
+
+				//////////////////////////////////////////////////////////////////////////DEBNUG START
+				//cout << ii << " sorted:\t";
+				//printParts(*this, arr[ii]);
+				//////////////////////////////////////////////////////////////////////////DEBNUG END
+			}
+
+
+			Node* minNode = nullptr;
+			for (long ii = 0; ii < ARRAY_SIZE; ++ii)
+			{
+				if (arr[ii] != nullptr)
+				{
+					if (minNode == nullptr)
+					{
+						minNode = arr[ii];
+					}
+					else
+					{
+						Node* first1 = minNode;
+						Node* last1 = first1->Prev;
+
+						Node* first2 = arr[ii];
+						Node* last2 = first2->Prev;
+
+						Node::Connect(last1, first2);
+						Node::Connect(last2, first1);
+					}
+				}
+			}
+
+			//////////////////////////////////////////////////////////////////////////DEBNUG START
+			//cout << "final sorted:\t";
+			//printParts(*this, minId);
+			//////////////////////////////////////////////////////////////////////////DEBNUG END
+
+			return minNode;
+		}
+
+
+		template<typename LESS, typename EQUAL>
+		void SortCircular(LESS&& less, EQUAL&& equal)
+		{
+			if (_size <= 1)
+			{
+				return;
+			}
+
+			long savedSize = _size; //to restore size because partition() will dec _size
+
+			Node* first = _start.Next;
+			Node::DisconnectAndCircle(first, &_start);
+			Node* minNode = SortCircularNodes(first, less, equal);
+
+			Node* sortedFirst = minNode; //make code "more" clear and readable
+			Node* sortedLast = minNode->Prev;
+			Node::Connect(sortedLast, &_start);
+			Node::Connect(&_start, sortedFirst);
+
+			_size = savedSize; //restore size
+		}
+
+
+		//////////////////////////////////////////////////////////////////////////
 		template<typename MAPPER>
 		void Partition(Node* first, Node* stop, MAPPER&& mapper, List* arr, long count)
 		{
