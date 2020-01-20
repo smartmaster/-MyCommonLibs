@@ -259,7 +259,8 @@ namespace SmartLib
 
 		T pop_back()
 		{
-			T data = static_cast<T&&>(_buffer[_size - 1]);
+			assert(_size > 0);
+			T data{ static_cast<T&&>(_buffer[_size - 1]) };
 			resize(_size - 1);
 			return data;
 		}
