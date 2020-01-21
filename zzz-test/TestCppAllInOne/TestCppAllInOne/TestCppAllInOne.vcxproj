@@ -217,6 +217,8 @@
     <ClInclude Include="misc.small.test.h" />
     <ClInclude Include="NextPerm.h" />
     <ClInclude Include="NextPerm.test.h" />
+    <ClInclude Include="number-of-digit-one.h" />
+    <ClInclude Include="number-of-digit-one.test.h" />
     <ClInclude Include="partition-equal-subset-sum.h" />
     <ClInclude Include="partition-equal-subset-sum.test.h" />
     <ClInclude Include="partition-list.h" />
@@ -382,6 +384,8 @@
     <ClCompile Include="misc.small.test.cpp" />
     <ClCompile Include="NextPerm.cpp" />
     <ClCompile Include="NextPerm.test.cpp" />
+    <ClCompile Include="number-of-digit-one.cpp" />
+    <ClCompile Include="number-of-digit-one.test.cpp" />
     <ClCompile Include="partition-equal-subset-sum.cpp" />
     <ClCompile Include="partition-equal-subset-sum.test.cpp" />
     <ClCompile Include="partition-list.cpp" />

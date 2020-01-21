@@ -21,7 +21,7 @@
 #include "CodeBlock.h"
 #include "log.h"
 
-#include "../TaskRunner/SmlCircularBuffer.h"
+#include "../TaskRunner-old/SmlCircularBuffer.h"
 
 
 namespace SmartLib

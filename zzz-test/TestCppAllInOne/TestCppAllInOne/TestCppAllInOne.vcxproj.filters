@@ -375,6 +375,12 @@
     <ClInclude Include="permutation-and-combination.h">
       <Filter>MySources</Filter>
     </ClInclude>
+    <ClInclude Include="number-of-digit-one.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="number-of-digit-one.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -666,6 +672,12 @@
       <Filter>MySources</Filter>
     </ClCompile>
     <ClCompile Include="permutation-and-combination.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="number-of-digit-one.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="number-of-digit-one.test.cpp">
       <Filter>MySources</Filter>
     </ClCompile>
   </ItemGroup>

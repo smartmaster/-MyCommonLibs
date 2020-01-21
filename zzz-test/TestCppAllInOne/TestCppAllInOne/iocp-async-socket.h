@@ -23,10 +23,10 @@
 #include "CodeBlock.h"
 #include "log.h"
 
-#include "../TaskRunner/SmlCircularBuffer.h"
-#include "../TaskRunner/SmlVector.h"
-#include "../TaskRunner/SmlRefPtr.h"
-#include "../TaskRunner/SmlMTQueue.h"
+#include "../TaskRunner-old/SmlCircularBuffer.h"
+#include "../TaskRunner-old/SmlVector.h"
+#include "../TaskRunner-old/SmlRefPtr.h"
+#include "../TaskRunner-old/SmlMTQueue.h"
 
 
 namespace SmartLib
