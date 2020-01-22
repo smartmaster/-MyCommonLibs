@@ -8,6 +8,19 @@ namespace SmartLib
 {
 	using namespace ::std;
 
+	template<typename START = function<void()> >
+	class ScopeStart
+	{
+	public:
+		ScopeStart(START&& start)
+		{
+			if (start)
+			{
+				start();
+			}
+		}
+	};
+
 	template<typename DISPOSE = function<void()> >
 	class ScopeResource
 	{

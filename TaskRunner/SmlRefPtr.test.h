@@ -82,6 +82,35 @@ namespace SmartLib
 			}
 		};
 
+
+		class ScopeTest
+		{
+		private:
+			string _str;
+
+			ScopeStart<> _ss_str{ [this]()
+			{
+				cout << _str << " started" << endl;
+			} };
+
+			ScopeResource<> _sr_str{ [this]()
+			{
+				cout << _str << " disposed" << endl;
+			} };
+
+		public:
+			ScopeTest(const char* str) :
+				_str{str? str : ""}
+			{
+			}
+		};
+
+		static void Case7()
+		{
+			ScopeTest st{ "hello" };
+			return;
+		}
+
 		static void Case6()
 		{
 			RefPtr<MyObj> sp1 = RefPtr<MyObj>::Make();
