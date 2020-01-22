@@ -103,6 +103,19 @@ namespace SmartLib
 		{
 			{
 				RefPtr<MyObj> sp1 = RefPtr<MyObj>::Make();
+				RefPtr<MyObj> sp2{sp1.Detach()};
+				//sp1 = sp2.Detach();
+			}
+
+			{
+				RefPtr<MyObj> sp1 = RefPtr<MyObj>::Make();
+				RefPtr<MyObj> sp2{ (MyObj*)nullptr };
+				//sp1 = sp2.Detach();
+			}
+
+
+			{
+				RefPtr<MyObj> sp1 = RefPtr<MyObj>::Make();
 				RefPtr<MyObj> sp2 = RefPtr<MyObj>::Make();
 
 				sp1 = sp2.Detach();

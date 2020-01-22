@@ -220,6 +220,11 @@ namespace SmartLib
 			}
 		}
 
+		RefPtr(T* other) //T* other must be dettached or nullptr
+		{
+			Attach(other);
+		}
+
 		//////////////////////////////////////////////////////////////////////////
 		const RefPtr& operator=(RefPtr&& other)
 		{
