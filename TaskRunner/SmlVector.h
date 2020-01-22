@@ -342,6 +342,29 @@ namespace SmartLib
 			resize(_size - count);
 		}
 
+		template<typename TEST>
+		void Delete(TEST&& test)
+		{
+			auto mapper = [&test](T* elem)
+			{
+				return test(elem) ? 0L : 1L;
+			};
+			T* half = PartitionFast(_buffer, _buffer + _size, mapper, 1);
+
+
+			if constexpr (NEED_CONSTRUCT_ELEMENT)
+			{
+				T* deleted = half;
+				while (deleted != (_buffer + _size))
+				{
+					T temp = static_cast<T&&>(*deleted); //in order to call ~T()
+					++deleted;
+				}
+			}
+
+			resize((long)(half - _buffer));
+		}
+
 		//////////////////////////////////////////////////////////////////////////
 		long size() const
 		{

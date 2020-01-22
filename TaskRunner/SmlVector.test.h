@@ -57,6 +57,63 @@ namespace SmartLib
 		}
 
 
+		static void Case18()
+		{
+			Vector<string, true, 1> vec;
+			for (long ii = 0; ii < 30; ++ii)
+			{
+				vec.push_back(to_string(ii));
+			}
+			IterPrint(vec);
+
+			auto even = [](string* data)
+			{
+				return 0 == (stol(*data) & 1);
+			};
+
+			auto odd = [](string* data)
+			{
+				return 0 != (stol(*data) & 1);
+			};
+
+
+			vec.Delete(even);
+			IterPrint(vec);
+
+			vec.Delete(odd);
+			IterPrint(vec);
+
+
+		}
+
+		static void Case17()
+		{
+			Vector<long, false, 1> vec;
+			for (long ii = 0; ii < 30; ++ ii)
+			{
+				vec.push_back(ii);
+			}
+			IterPrint(vec);
+
+			auto even = [](long* data)
+			{
+				return 0 == (*data & 1);
+			};
+
+			auto odd = [](long* data)
+			{
+				return 0 != (*data & 1);
+			};
+
+
+			vec.Delete(even);
+			IterPrint(vec);
+
+			vec.Delete(odd);
+			IterPrint(vec);
+
+
+		}
 		
 
 		static void Case16()
