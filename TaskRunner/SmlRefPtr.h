@@ -241,7 +241,7 @@ namespace SmartLib
 		//////////////////////////////////////////////////////////////////////////
 		const RefPtr& operator=(RefPtr&& other)
 		{
-			if (this != &other) //correct!! no need to move from self t self
+			if (this != &other) //correct!! no need to move from self to self
 			{
 				if (_objBlockPtr)
 				{
