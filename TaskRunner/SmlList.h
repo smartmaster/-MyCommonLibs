@@ -6,7 +6,7 @@
 
 namespace SmartLib
 {
-	template<typename T, long CACHE_SIZE = 128>
+	template<typename T, bool NEED_CONSTRUCT_ELEMENT = true, long CACHE_SIZE = 128>
 	class List
 	{
 	public:
@@ -341,7 +341,10 @@ namespace SmartLib
 			if (nn != &_start)
 			{
 				Node::Connect(nn->Prev, nn->Next);
-				T data = static_cast<T&&>(nn->Data); //in ordrt to call destructor ~T()
+				if constexpr(NEED_CONSTRUCT_ELEMENT)
+				{
+					T data = static_cast<T&&>(nn->Data); //in ordrt to call destructor ~T()
+				}
 				_cacheAlloc.Delete(nn);
 				--_size;
 			}
@@ -371,7 +374,10 @@ namespace SmartLib
 
 		void RecycleDelete(Node* nn)
 		{
-			T data = static_cast<T&&>(nn->Data); //in order to call destructor ~T()
+			if constexpr (NEED_CONSTRUCT_ELEMENT)
+			{
+				T data = static_cast<T&&>(nn->Data); //in order to call destructor ~T()
+			}
 			_cacheAlloc.Delete(nn);
 		}
 

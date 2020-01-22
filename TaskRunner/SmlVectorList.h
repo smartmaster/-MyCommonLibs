@@ -9,7 +9,7 @@
 
 namespace SmartLib
 {
-	template<typename T>
+	template<typename T, bool NEED_CONSTRUCT_ELEMENT = true>
 	class VectorList
 	{
 	private:
@@ -469,7 +469,10 @@ namespace SmartLib
 			DettachNode(nodeId);
 			InsertNodeAfter(_FREE_ID, nodeId);
 			--_size;
-			T data = static_cast<T&&>(NodeRef(nodeId).Data); //in ordrt to call destructor ~T()
+			if constexpr (NEED_CONSTRUCT_ELEMENT)
+			{
+				T data = static_cast<T&&>(NodeRef(nodeId).Data); //in ordrt to call destructor ~T()
+			}
 			return nextId;
 		}
 
