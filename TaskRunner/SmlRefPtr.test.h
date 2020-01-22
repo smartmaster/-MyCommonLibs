@@ -78,9 +78,74 @@ namespace SmartLib
 
 			~MyObj()
 			{
-				cout << "desttctor " << _str << endl;
+				cout << "destructor " << _str << endl;
 			}
 		};
+
+		static void Case6()
+		{
+			RefPtr<MyObj> sp1 = RefPtr<MyObj>::Make();
+			RefPtr<MyObj> sp2 = RefPtr<MyObj>::Make();
+
+			assert(sp1 != sp2);
+
+			sp1 = sp2;
+			assert(sp1 == sp2);
+
+			assert(sp1 != nullptr);
+
+			sp1 = nullptr;
+			assert(sp1 == nullptr);
+		}
+
+
+		static void Case5()
+		{
+			{
+				RefPtr<MyObj> sp1 = RefPtr<MyObj>::Make();
+				RefPtr<MyObj> sp2 = RefPtr<MyObj>::Make();
+
+				sp1 = sp2.Detach();
+			}
+			
+
+			{
+				RefPtr<MyObj> sp1 = RefPtr<MyObj>::Make();
+				RefPtr<MyObj> sp2 = RefPtr<MyObj>::Make();
+
+				sp1.Attach(sp2.Detach());
+			}
+
+
+			{
+				RefPtr<MyObj> sp1 = RefPtr<MyObj>::Make();
+				RefPtr<MyObj> sp2 = RefPtr<MyObj>::Make();
+
+				sp1.Attach(nullptr);
+			}
+
+			{
+				RefPtr<MyObj> sp1 = RefPtr<MyObj>::Make();
+				RefPtr<MyObj> sp2 = RefPtr<MyObj>::Make();
+
+				sp1 = nullptr;
+			}
+
+
+			{
+				RefPtr<MyObj> sp1 = RefPtr<MyObj>::Make();
+				RefPtr<MyObj> sp2 = RefPtr<MyObj>::Make();
+
+				sp1.Attach(sp1.Ptr());
+			}
+
+			{
+				RefPtr<MyObj> sp1 = RefPtr<MyObj>::Make();
+				RefPtr<MyObj> sp2 = RefPtr<MyObj>::Make();
+
+				sp1 = sp1.Ptr();
+			}
+		}
 
 		static void Case4()
 		{

@@ -254,6 +254,12 @@ namespace SmartLib
 			return *this;
 		}
 
+		const RefPtr& operator=(T* other) //T* other must be dettached or nullptr
+		{
+			Attach(other);
+			return *this;
+		}
+
 
 		//////////////////////////////////////////////////////////////////////////
 		T* Detach()
@@ -265,15 +271,27 @@ namespace SmartLib
 
 		void Attach(T* obj)
 		{
-			if (_objBlockPtr)
+			if (nullptr == obj)
 			{
-				_objBlockPtr->Release();
-				_objBlockPtr = nullptr;
+				if (_objBlockPtr)
+				{
+					_objBlockPtr->Release();
+					_objBlockPtr = nullptr;
+				}
 			}
-			if (obj)
+			else
 			{
-				_objBlockPtr = ObjectBlock::ContainingRecord(obj);
+				ObjectBlock* blockPtr = ObjectBlock::ContainingRecord(obj);
+				if (_objBlockPtr != blockPtr)
+				{
+					if (_objBlockPtr)
+					{
+						_objBlockPtr->Release();
+					}
+					_objBlockPtr = blockPtr;
+				}
 			}
+			
 		}
 
 		//////////////////////////////////////////////////////////////////////////
@@ -298,5 +316,27 @@ namespace SmartLib
 		{
 			return _objBlockPtr ? _objBlockPtr->Ptr() : nullptr;
 		}
+
+		//////////////////////////////////////////////////////////////////////////
+		bool operator==(const RefPtr& other)
+		{
+			return _objBlockPtr == other._objBlockPtr;
+		}
+
+		bool operator!=(const RefPtr& other)
+		{
+			return _objBlockPtr != other._objBlockPtr;
+		}
+
+		bool operator==(T* other)
+		{
+			return Ptr() == other;
+		}
+
+		bool operator!=(T* other)
+		{
+			return Ptr() != other;
+		}
+
 	};
 }
