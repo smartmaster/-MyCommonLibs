@@ -80,6 +80,7 @@ namespace SmartLib
 			T _obj{};
 			T* _cookie{ nullptr };
 			typename ATOMIC _refcount{ 1 };
+			typename ATOMIC _weakRefcount{ 0 };
 			typename DISPOSE _dispose;
 
 		private:
@@ -117,7 +118,8 @@ namespace SmartLib
 			ObjectBlock(TARGS&& ... args) :
 				_obj{ static_cast<TARGS&&>(args)... },
 				_cookie{ &_obj },
-				_refcount{ 1 }
+				_refcount{ 1 },
+				_weakRefcount{ 0 }
 			{
 			}
 
@@ -157,7 +159,7 @@ namespace SmartLib
 			long Release()
 			{
 				long ref = --_refcount;
-				if (0 == ref)
+				if (0 == ref &&  0 == _weakRefcount)
 				{
 					delete this;
 				}
@@ -167,6 +169,27 @@ namespace SmartLib
 			long RefCount() const
 			{
 				return _refcount;
+			}
+
+			//////////////////////////////////////////////////////////////////////////
+			long WeakAddRef()
+			{
+				return ++_weakRefcount;
+			}
+
+			long WeakRelease()
+			{
+				long ref = --_weakRefcount;
+				if (0 == ref && 0 == _refcount)
+				{
+					delete this;
+				}
+				return ref;
+			}
+
+			long WeakRefCount() const
+			{
+				return _weakRefcount;
 			}
 
 			//////////////////////////////////////////////////////////////////////////
@@ -356,5 +379,113 @@ namespace SmartLib
 			return Ptr() != other;
 		}
 
+
+		//////////////////////////////////////////////////////////////////////////
+		class Weak
+		{
+		private:
+			ObjectBlock* _sharedObjBlockPtr{ nullptr };
+
+		public:
+
+			Weak()
+			{
+
+			}
+
+			Weak(RefPtr& shared) :
+				_sharedObjBlockPtr{shared._objBlockPtr}
+			{
+				if (_sharedObjBlockPtr)
+				{
+					_sharedObjBlockPtr->WeakAddRef();
+				}
+			}
+
+
+			Weak(Weak& other) :
+				_sharedObjBlockPtr{other._sharedObjBlockPtr }
+			{
+				if (_sharedObjBlockPtr)
+				{
+					_sharedObjBlockPtr->WeakAddRef();
+				}
+			}
+
+			Weak(Weak&& other) :
+				_sharedObjBlockPtr{ other._sharedObjBlockPtr }
+			{
+				other._sharedObjBlockPtr = nullptr;
+			}
+
+			~Weak()
+			{
+				if (_sharedObjBlockPtr)
+				{
+					_sharedObjBlockPtr->WeakRelease();
+					_sharedObjBlockPtr = nullptr;
+				}
+			}
+
+			//////////////////////////////////////////////////////////////////////////
+			const Weak& operator=(Weak&& other)
+			{
+				if (this != &other) //correct!! no need to move from self to self
+				{
+					if (_sharedObjBlockPtr)
+					{
+						_sharedObjBlockPtr->WeakRelease();
+					}
+					_sharedObjBlockPtr = other._sharedObjBlockPtr;
+					other._sharedObjBlockPtr = nullptr;
+				}
+
+				return *this;
+			}
+
+			const Weak& operator=(const Weak& other)
+			{
+				if (_sharedObjBlockPtr != other._sharedObjBlockPtr) //correct!! no need to assign if they point to same object
+				{
+					if (_sharedObjBlockPtr)
+					{
+						_sharedObjBlockPtr->WeakRelease();
+					}
+					_sharedObjBlockPtr = other._sharedObjBlockPtr;
+					if (_sharedObjBlockPtr)
+					{
+						_sharedObjBlockPtr->WeakAddRef();
+					}
+				}
+
+				return *this;
+			}
+
+
+			const Weak operator=(RefPtr& shared)
+			{
+				if (_sharedObjBlockPtr)
+				{
+					_sharedObjBlockPtr->WeakRelease();
+				}
+				_sharedObjBlockPtr = shared._objBlockPtr;
+				if (_sharedObjBlockPtr)
+				{
+					_sharedObjBlockPtr->WeakAddRef();
+				}
+				return *this;
+			}
+
+			RefPtr lock()
+			{
+				if (_sharedObjBlockPtr && 0 != _sharedObjBlockPtr->RefCount())
+				{
+					_sharedObjBlockPtr->AddRef();
+					return RefPtr{ _sharedObjBlockPtr->Ptr() };
+				}
+
+				return RefPtr{};
+			}
+		};
 	};
 }

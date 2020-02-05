@@ -381,6 +381,12 @@
     <ClInclude Include="number-of-digit-one.test.h">
       <Filter>MySources</Filter>
     </ClInclude>
+    <ClInclude Include="lowest-common-ancestor-of-a-binary-tree.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
+    <ClInclude Include="lowest-common-ancestor-of-a-binary-tree.test.h">
+      <Filter>MySources</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -678,6 +684,12 @@
       <Filter>MySources</Filter>
     </ClCompile>
     <ClCompile Include="number-of-digit-one.test.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="lowest-common-ancestor-of-a-binary-tree.cpp">
+      <Filter>MySources</Filter>
+    </ClCompile>
+    <ClCompile Include="lowest-common-ancestor-of-a-binary-tree.test.cpp">
       <Filter>MySources</Filter>
     </ClCompile>
   </ItemGroup>

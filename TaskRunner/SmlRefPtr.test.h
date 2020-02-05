@@ -74,13 +74,89 @@ namespace SmartLib
 			MyObj()
 			{
 				_str = to_string(++_count);
+				cout << "constructror: " << _str << endl;
 			}
 
 			~MyObj()
 			{
-				cout << "destructor " << _str << endl;
+				cout << "destructor: " << _str << endl;
 			}
 		};
+
+
+		static void Case8()
+		{
+
+			//////////////////////////////////////////////////////////////////////////
+			{
+				RefPtr<MyObj> shared1 = RefPtr<MyObj>::Make();
+				RefPtr<MyObj> shared2 = RefPtr<MyObj>::Make();
+				RefPtr<MyObj>::Weak w1{ shared1 };
+				RefPtr<MyObj>::Weak w2{ shared2 };
+				w2 = move(w1);
+			}
+
+
+			//////////////////////////////////////////////////////////////////////////
+			{
+				RefPtr<MyObj> shared1 = RefPtr<MyObj>::Make();
+				RefPtr<MyObj> shared2 = RefPtr<MyObj>::Make();
+				RefPtr<MyObj>::Weak w1{ shared1 };
+				RefPtr<MyObj>::Weak w2{ shared2 };
+				w2 = w1;
+			}
+
+			//////////////////////////////////////////////////////////////////////////
+			{
+				RefPtr<MyObj> shared = RefPtr<MyObj>::Make();
+				RefPtr<MyObj>::Weak w1{ shared };
+				RefPtr<MyObj>::Weak w2{ shared };
+				w2 = move(w1);
+			}
+
+
+			//////////////////////////////////////////////////////////////////////////
+			{
+				RefPtr<MyObj> shared = RefPtr<MyObj>::Make();
+				RefPtr<MyObj>::Weak w1{ shared };
+				RefPtr<MyObj>::Weak w2{ shared };
+				w2 = w1;
+			}
+
+			//////////////////////////////////////////////////////////////////////////
+			{
+				RefPtr<MyObj> shared = RefPtr<MyObj>::Make();
+				RefPtr<MyObj>::Weak w1{ shared };
+				RefPtr<MyObj>::Weak w2{ move(w1) };
+			}
+			//////////////////////////////////////////////////////////////////////////
+			{
+				RefPtr<MyObj> shared = RefPtr<MyObj>::Make();
+				RefPtr<MyObj>::Weak w1{ shared };
+				RefPtr<MyObj>::Weak w2{ w1 };
+			}
+			//////////////////////////////////////////////////////////////////////////
+			{
+				RefPtr<MyObj>::Weak weak;
+				{
+					RefPtr<MyObj> shared = RefPtr<MyObj>::Make();
+					weak = shared;
+
+					auto shared1 = weak.lock();
+					assert(!!shared1);
+				}
+
+				auto shared2 = weak.lock();
+				assert(!shared2);
+			}
+			//////////////////////////////////////////////////////////////////////////
+			{
+				RefPtr<MyObj> shared = RefPtr<MyObj>::Make();
+				RefPtr<MyObj>::Weak weak{ shared };
+			}
+			
+
+		}
 
 
 		class ScopeTest
@@ -104,6 +180,8 @@ namespace SmartLib
 			{
 			}
 		};
+
+		
 
 		static void Case7()
 		{

@@ -211,6 +211,8 @@
     <ClInclude Include="ListTest.test.h" />
     <ClInclude Include="longest-common-subsequence.h" />
     <ClInclude Include="longest-common-subsequence.test.h" />
+    <ClInclude Include="lowest-common-ancestor-of-a-binary-tree.h" />
+    <ClInclude Include="lowest-common-ancestor-of-a-binary-tree.test.h" />
     <ClInclude Include="maximum-length-of-a-concatenated-string-with-unique-characters.h" />
     <ClInclude Include="maximum-length-of-a-concatenated-string-with-unique-characters.test.h" />
     <ClInclude Include="misc.small.h" />
@@ -377,6 +379,8 @@
     <ClCompile Include="log.cpp" />
     <ClCompile Include="longest-common-subsequence.cpp" />
     <ClCompile Include="longest-common-subsequence.test.cpp" />
+    <ClCompile Include="lowest-common-ancestor-of-a-binary-tree.cpp" />
+    <ClCompile Include="lowest-common-ancestor-of-a-binary-tree.test.cpp" />
     <ClCompile Include="MaskBitCountToString.test.cpp" />
     <ClCompile Include="maximum-length-of-a-concatenated-string-with-unique-characters.cpp" />
     <ClCompile Include="maximum-length-of-a-concatenated-string-with-unique-characters.test.cpp" />
