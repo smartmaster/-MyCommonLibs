@@ -159,6 +159,17 @@ namespace SmartLib
 			long Release()
 			{
 				long ref = --_refcount;
+
+
+				if (0 == ref) //dispose early
+				{
+					if (_dispose)
+					{
+						_dispose(_obj);
+						_dispose = nullptr;
+					}
+				}
+
 				if (0 == ref &&  0 == _weakRefcount)
 				{
 					delete this;

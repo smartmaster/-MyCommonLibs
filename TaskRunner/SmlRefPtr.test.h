@@ -83,6 +83,27 @@ namespace SmartLib
 			}
 		};
 
+		static void Case9()
+		{
+			struct Partner 
+			{
+				//MyObj _obj;
+				RefPtr<Partner>::Weak _partner;
+
+
+				~Partner()
+				{
+					cout << __FUNCTION__ << endl;
+				}
+			};
+
+
+			RefPtr<Partner> person1 = RefPtr<Partner>::Make();
+			RefPtr<Partner> person2 = RefPtr<Partner>::Make();
+
+			person1->_partner = person2;
+			person2->_partner = person1;
+		}
 
 		static void Case8()
 		{
