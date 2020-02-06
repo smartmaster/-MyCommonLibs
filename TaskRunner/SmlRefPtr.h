@@ -77,8 +77,15 @@ namespace SmartLib
 		struct ObjectBlock
 		{
 		private:
-			T _obj{};
-			T* _cookie{ nullptr };
+			class ObjMemory
+			{
+				char _mem[sizeof(T)];
+			};
+			
+
+		private:
+			ObjMemory _objMem;
+			ObjMemory* _cookie{ nullptr };
 			typename ATOMIC _refcount{ 1 };
 			typename ATOMIC _weakRefcount{ 0 };
 			typename DISPOSE _dispose;
@@ -87,7 +94,12 @@ namespace SmartLib
 			static constexpr long ObjOffset()
 			{
 				constexpr static ObjectBlock* const base = nullptr;
-				return ((char*)(&base->_obj) - (char*)(base));
+				return ((char*)(&base->_objMem) - (char*)(base));
+			}
+
+			T& MemToObj()
+			{
+				return *(reinterpret_cast<T*>(&_objMem));
 			}
 
 		public:
@@ -116,11 +128,12 @@ namespace SmartLib
 
 			template<typename... TARGS>
 			ObjectBlock(TARGS&& ... args) :
-				_obj{ static_cast<TARGS&&>(args)... },
-				_cookie{ &_obj },
+				//_obj{ static_cast<TARGS&&>(args)... },
+				_cookie{ &_objMem },
 				_refcount{ 1 },
 				_weakRefcount{ 0 }
 			{
+				new (&_objMem)T{ static_cast<TARGS&&>(args)... };
 			}
 
 			//////////////////////////////////////////////////////////////////////////
@@ -134,7 +147,7 @@ namespace SmartLib
 			{
 				if (_dispose)
 				{
-					_dispose(_obj);
+					_dispose(MemToObj());
 					_dispose = nullptr;
 				}
 			}
@@ -142,12 +155,12 @@ namespace SmartLib
 			//////////////////////////////////////////////////////////////////////////
 			T& Ref()
 			{
-				return _obj;
+				return MemToObj();
 			}
 
 			T* Ptr()
 			{
-				return &_obj;
+				return &MemToObj();
 			}
 
 			//////////////////////////////////////////////////////////////////////////
@@ -165,9 +178,10 @@ namespace SmartLib
 				{
 					if (_dispose)
 					{
-						_dispose(_obj);
+						_dispose(MemToObj());
 						_dispose = nullptr;
 					}
+					MemToObj().~T(); //2020-2-7 //!!@@##
 				}
 
 				if (0 == ref &&  0 == _weakRefcount)
@@ -206,7 +220,7 @@ namespace SmartLib
 			//////////////////////////////////////////////////////////////////////////
 			bool IsValid() const
 			{
-				return _cookie == &_obj;
+				return _cookie == &_objMem;
 			}
 		};
 
