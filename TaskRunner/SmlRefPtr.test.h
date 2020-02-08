@@ -83,6 +83,32 @@ namespace SmartLib
 			}
 		};
 
+
+		static void Case11()
+		{
+			struct MyStruct
+			{
+				MyObj obj;
+				//RefPtr<MyStruct> self;
+				weak_ptr<MyStruct> self;
+
+
+				~MyStruct()
+				{
+					return;
+				}
+
+			};
+
+
+			{
+				shared_ptr<MyStruct> sp = make_shared<MyStruct>();
+				sp->self = sp;
+			}
+
+
+		}
+
 		static void Case10()
 		{
 			struct Partner
@@ -316,12 +342,24 @@ namespace SmartLib
 			struct MyStruct
 			{
 				MyObj obj;
-				RefPtr<MyStruct> self;
+				//RefPtr<MyStruct> self;
+				RefPtr<MyStruct>::Weak self;
+
+
+				~MyStruct()
+				{
+					cout << __FUNCTION__ << endl;
+				}
+
 			};
 
-			RefPtr<MyStruct> sp = RefPtr<MyStruct>::Make();
-			sp->self = sp;
 
+			{
+				RefPtr<MyStruct> sp = RefPtr<MyStruct>::Make();
+				sp->self = sp;
+			}
+
+			
 		}
 
 		static void Case3()

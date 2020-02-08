@@ -107,14 +107,15 @@ namespace SmartLib
 			{
 				if (_shadow)
 				{
+					T* shadow = _shadow;
+					_shadow = nullptr;
+
 					if (_dispose)
 					{
-						_dispose(*_shadow/*MemToObj()*/);
+						_dispose(*shadow/*MemToObj()*/);
 						_dispose = nullptr;
 					}
-
-					_shadow->~T();
-					_shadow = nullptr;
+					shadow->~T();
 				}
 			}
 
@@ -212,7 +213,7 @@ namespace SmartLib
 			long WeakRelease()
 			{
 				long ref = --_weakRefcount;
-				if (0 == ref && 0 == _refcount)
+				if (0 == ref && 0 == _refcount /*&& _shadow*/) //2020-2-8 //!!@@## todo: how to handle self point to self
 				{
 					delete this;
 				}

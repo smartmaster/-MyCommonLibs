@@ -2,6 +2,8 @@
 
 #include <string>
 #include <memory>
+#include <functional>
+
 
 #include "SmlMisc.h"
 
@@ -12,6 +14,19 @@ namespace SmartLib
 	class MiscTest
 	{
 	public:
+		static long foo(long ll1, long ll2)
+		{
+			return ll1 + ll2;
+		}
+
+		static void Case1()
+		{
+			function<long(long, long)> func = foo;
+			long res = func(100, 200);
+			cout << res << endl;
+		}
+
+
 		static void Case0()
 		{
 			{
