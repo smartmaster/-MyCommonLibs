@@ -84,8 +84,8 @@ namespace SmartLib
 			
 
 		private:
-			ObjMemory _objMem;
-			ObjMemory* _cookie{ nullptr };
+			ObjMemory _objMem; //in order to not to call ~T() more than once
+			T* /*const*/ _shadow{ nullptr };
 			typename ATOMIC _refcount{ 1 };
 			typename ATOMIC _weakRefcount{ 0 };
 			typename DISPOSE _dispose;
@@ -97,9 +97,25 @@ namespace SmartLib
 				return ((char*)(&base->_objMem) - (char*)(base));
 			}
 
-			T& MemToObj()
+			//T& MemToObj()
+			//{
+			//	return *(reinterpret_cast<T*>(&_objMem));
+			//}
+
+
+			void DestroyObject()
 			{
-				return *(reinterpret_cast<T*>(&_objMem));
+				if (_shadow)
+				{
+					if (_dispose)
+					{
+						_dispose(*_shadow/*MemToObj()*/);
+						_dispose = nullptr;
+					}
+
+					_shadow->~T();
+					_shadow = nullptr;
+				}
 			}
 
 		public:
@@ -129,7 +145,7 @@ namespace SmartLib
 			template<typename... TARGS>
 			ObjectBlock(TARGS&& ... args) :
 				//_obj{ static_cast<TARGS&&>(args)... },
-				_cookie{ &_objMem },
+				_shadow{ reinterpret_cast<T*>(&_objMem) },
 				_refcount{ 1 },
 				_weakRefcount{ 0 }
 			{
@@ -145,22 +161,18 @@ namespace SmartLib
 
 			~ObjectBlock()
 			{
-				if (_dispose)
-				{
-					_dispose(MemToObj());
-					_dispose = nullptr;
-				}
+				DestroyObject();
 			}
 
 			//////////////////////////////////////////////////////////////////////////
 			T& Ref()
 			{
-				return MemToObj();
+				return *_shadow;
 			}
 
 			T* Ptr()
 			{
-				return &MemToObj();
+				return _shadow;
 			}
 
 			//////////////////////////////////////////////////////////////////////////
@@ -174,14 +186,9 @@ namespace SmartLib
 				long ref = --_refcount;
 
 
-				if (0 == ref) //dispose early
+				if (0 == ref) //destroy if shared ref count reaches zero
 				{
-					if (_dispose)
-					{
-						_dispose(MemToObj());
-						_dispose = nullptr;
-					}
-					MemToObj().~T(); //2020-2-7 //!!@@##
+					DestroyObject();
 				}
 
 				if (0 == ref &&  0 == _weakRefcount)
@@ -220,7 +227,7 @@ namespace SmartLib
 			//////////////////////////////////////////////////////////////////////////
 			bool IsValid() const
 			{
-				return _cookie == &_objMem;
+				return (const char*)_shadow == (const char*)&_objMem;
 			}
 		};
 
