@@ -14,6 +14,13 @@ namespace SmartLib
 	class MiscTest
 	{
 	public:
+		static void Case2()
+		{
+			string* const ptr = (string*)(void*)(1);
+
+			cout << (long long)(void*)(ptr) << endl;
+		}
+
 		static long foo(long ll1, long ll2)
 		{
 			return ll1 + ll2;

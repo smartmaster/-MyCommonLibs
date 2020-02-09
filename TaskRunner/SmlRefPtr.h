@@ -77,6 +77,12 @@ namespace SmartLib
 		struct ObjectBlock
 		{
 		private:
+			static T* _DESTRUCTING()
+			{
+				static T* const ptr = (T*)(void*)(1);
+				return ptr;
+			}
+
 			class ObjMemory
 			{
 				char _mem[sizeof(T)];
@@ -108,7 +114,7 @@ namespace SmartLib
 				if (_shadow)
 				{
 					T* shadow = _shadow;
-					_shadow = nullptr;
+					_shadow = _DESTRUCTING();
 
 					if (_dispose)
 					{
@@ -116,6 +122,7 @@ namespace SmartLib
 						_dispose = nullptr;
 					}
 					shadow->~T();
+					_shadow = nullptr;
 				}
 			}
 
@@ -213,9 +220,12 @@ namespace SmartLib
 			long WeakRelease()
 			{
 				long ref = --_weakRefcount;
-				if (0 == ref && 0 == _refcount /*&& _shadow*/) //2020-2-8 //!!@@## todo: how to handle self point to self
+				if (0 == ref && 0 == _refcount /*&& _shadow*/) //2020-2-8 //!!@@## done: how to handle self point to self
 				{
-					delete this;
+					if (_shadow != _DESTRUCTING())
+					{
+						delete this;
+					}
 				}
 				return ref;
 			}
