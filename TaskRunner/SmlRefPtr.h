@@ -77,9 +77,9 @@ namespace SmartLib
 		struct ObjectBlock
 		{
 		private:
-			static T* _DESTRUCTING()
+			constexpr static T* _DESTRUCTING()
 			{
-				static T* const ptr = (T*)(void*)(1);
+				T* const ptr = (T*)(void*)(-1);
 				return ptr;
 			}
 

@@ -11,6 +11,18 @@
 namespace SmartLib
 {
 	using namespace ::std;
+
+	class MiscTest2
+	{
+	private:
+		constexpr static string* const _ptr { (string*)(void*)(16) } ;
+	public:
+		static void Print()
+		{
+			string* ptr = _ptr;
+			cout << ptr << endl;
+		}
+	};
 	class MiscTest
 	{
 	public:
