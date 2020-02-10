@@ -201,6 +201,7 @@ namespace SmartLib
 
 				if (0 == ref &&  0 == _weakRefcount)
 				{
+					assert(nullptr == _shadow);
 					delete this;
 				}
 				return ref;
@@ -224,6 +225,7 @@ namespace SmartLib
 				{
 					if (_shadow != _DESTRUCTING())
 					{
+						assert(nullptr == _shadow);
 						delete this;
 					}
 				}
