@@ -77,12 +77,30 @@ namespace SmartLib
 				cout << "constructror: " << _str << endl;
 			}
 
+
+			MyObj(long val1, long val2)
+			{
+				_str = to_string(++_count);
+				cout << "constructror: " << val1 << " "  << val2 << " " << _str << endl;
+			}
+
 			~MyObj()
 			{
 				cout << "destructor: " << _str << endl;
 			}
+
+
+			void Print()
+			{
+				cout << _str << endl;
+			}
 		};
 
+		static void Case12()
+		{
+			RefPtr<MyObj> sp{ 's', 100, 200 };
+			sp->Print();
+		}
 
 		static void Case11()
 		{

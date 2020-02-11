@@ -277,7 +277,15 @@ namespace SmartLib
 				_objBlockPtr = nullptr;
 			}
 		}
-		
+
+
+		//////////////////////////////////////////////////////////////////////////
+		template<typename ... TAGRS>
+		RefPtr(const char /*marker*/, TAGRS&& ... args) :
+			_objBlockPtr{ ObjectBlock::Make(static_cast<TAGRS&&>(args)...) }
+		{
+		}
+			   		
 		//////////////////////////////////////////////////////////////////////////
 		RefPtr() :
 			_objBlockPtr{ nullptr }
@@ -401,6 +409,13 @@ namespace SmartLib
 		T* operator->()
 		{
 			return _objBlockPtr ? _objBlockPtr->Ptr() : nullptr;
+		}
+
+
+		T& operator*()
+		{
+			assert(_objBlockPtr);
+			return _objBlockPtr->Ref();
 		}
 
 		//////////////////////////////////////////////////////////////////////////
