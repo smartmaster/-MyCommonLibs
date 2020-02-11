@@ -68,6 +68,8 @@ namespace SmartLib
 		}
 	};
 
+	class RefPtrMakeTag {};
+
 
 	template<typename T, typename DISPOSE = function<void(T&)>, typename ATOMIC = atomic<long> >
 	class RefPtr
@@ -281,7 +283,7 @@ namespace SmartLib
 
 		//////////////////////////////////////////////////////////////////////////
 		template<typename ... TAGRS>
-		RefPtr(const char /*marker*/, TAGRS&& ... args) :
+		RefPtr(RefPtrMakeTag&& /*tag*/, TAGRS&& ... args) :
 			_objBlockPtr{ ObjectBlock::Make(static_cast<TAGRS&&>(args)...) }
 		{
 		}

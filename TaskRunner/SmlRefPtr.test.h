@@ -98,7 +98,7 @@ namespace SmartLib
 
 		static void Case12()
 		{
-			RefPtr<MyObj> sp{ 's', 100, 200 };
+			RefPtr<MyObj> sp{ RefPtrMakeTag{}, 100, 200 };
 			sp->Print();
 		}
 
