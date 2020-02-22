@@ -25,12 +25,18 @@ project(${MY_PROJECT_NAME})
 
 ################################################
 # usefull macros
-my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} ${CMAKE_CURRENT_LIST_DIR})
-my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} ${CMAKE_CURRENT_SOURCE_DIR})
-my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} ${CMAKE_CURRENT_BINARY_DIR})
-my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} ${PROJECT_SOURCE_DIR})
-my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} ${PROJECT_BINARY_DIR})
+# my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} ${CMAKE_CURRENT_LIST_DIR})
+# my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} ${CMAKE_CURRENT_LIST_FILE})
+# my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} ${CMAKE_CURRENT_LIST_LINE})
 
+# my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} ${CMAKE_CURRENT_SOURCE_DIR})
+# my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} ${CMAKE_CURRENT_BINARY_DIR})
+
+# my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} ${PROJECT_SOURCE_DIR})
+# my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} ${PROJECT_BINARY_DIR})
+
+# my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} ${CMAKE_CONFIGURATION_TYPES})
+# my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} ${CMAKE_BUILD_TYPE})
 
 
 ################################################
@@ -57,11 +63,19 @@ set(MY_SOURCES ${MY_SOURCES} ${MY_FOUND_SOURCES})
 file(GLOB MY_FOUND_SOURCES ./*.asm ./*.s)
 set(MY_SOURCES ${MY_SOURCES} ${MY_FOUND_SOURCES})
 
+
+file(GLOB MY_FOUND_SOURCES ./*.def)
+set(MY_SOURCES ${MY_SOURCES} ${MY_FOUND_SOURCES})
+
 ################################################
 # add target exe or lib
 
+if(ON)
 add_executable(${MY_PROJECT_NAME} ${MY_SOURCES})
-# add_library(${MY_PROJECT_NAME} SHARED ${MY_SOURCES})
+else()
+add_library(${MY_PROJECT_NAME} SHARED ${MY_SOURCES})
+endif()
+
 set_target_properties(${MY_PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
 
 
@@ -71,6 +85,8 @@ target_include_directories(${MY_PROJECT_NAME} PRIVATE "inc_dir1/inc1")
 target_include_directories(${MY_PROJECT_NAME} PRIVATE "inc_dir2/inc2")
 target_include_directories(${MY_PROJECT_NAME} PRIVATE "inc_dir3/inc3")
 
+
+################################################
 # target additional library directries
 target_link_directories(${MY_PROJECT_NAME} PRIVATE "lib_dir1/lib1")
 target_link_directories(${MY_PROJECT_NAME} PRIVATE "lib_dir2/lib2")
@@ -96,7 +112,7 @@ include(installRequiredSystemLibraries)
 
 ##################################################
 # add test 
-#add_test()
+# add_test()
 
 
 ##################################################
@@ -104,3 +120,4 @@ include(installRequiredSystemLibraries)
 # cmake-gui
 # cmake --build . --config debug
 # cmake --install . --config debug
+

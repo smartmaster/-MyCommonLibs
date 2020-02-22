@@ -1,0 +1,6 @@
+
+EXPORTS
+	main_cxx
+	main_asm
+	main_s
+	
