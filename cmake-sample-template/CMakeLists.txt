@@ -107,7 +107,7 @@ target_link_libraries(${MY_PROJECT_NAME} ${MY_EXTRA_LIBS})
 ##################################################
 # install taeget and system libraries
 install(TARGETS ${MY_PROJECT_NAME} DESTINATION bin)
-include(installRequiredSystemLibraries)
+include(InstallRequiredSystemLibraries)
 
 
 ##################################################
