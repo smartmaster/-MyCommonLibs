@@ -1,6 +1,11 @@
 
 EXPORTS
-	main_cxx
 	main_asm
+	main_c
+	main_cc
+	main_cpp
+	main_cxx
 	main_s
+
+
 	

@@ -1,21 +1,21 @@
-#CMakeLists.txt 
-#template and sample
+# CMakeLists.txt 
+# template and sample
 
 cmake_minimum_required(VERSION 3.15)
 
 ################################################
-function(my_print  my_file my_line my_list)
+function(my_print my_file my_line)
 	message("**************************")
-	foreach(item ${my_list})
-		message("sml: ${my_file} ${my_line}: ${item}")
+	math(EXPR INDEX 0)
+	foreach(item ${ARGV})
+		if(${INDEX} LESS 2)
+			math(EXPR INDEX "${INDEX} + 1")
+		else()
+			message("sml: ${my_file} ${my_line}: ${item}")
+		endif()
 	endforeach()
 	message("**************************")
 endfunction()
-
-
-macro(my_log my_list)
-	my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} ${my_list})
-endmacro()
 
 
 ################################################
@@ -23,20 +23,33 @@ endmacro()
 set(MY_PROJECT_NAME cmake-sample-template)
 project(${MY_PROJECT_NAME})
 
+
 ################################################
 # usefull macros
-# my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} ${CMAKE_CURRENT_LIST_DIR})
-# my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} ${CMAKE_CURRENT_LIST_FILE})
-# my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} ${CMAKE_CURRENT_LIST_LINE})
+set(MY_USEFULL_MACROS
 
-# my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} ${CMAKE_CURRENT_SOURCE_DIR})
-# my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} ${CMAKE_CURRENT_BINARY_DIR})
+	"CMAKE_CURRENT_LIST_***"
+	${CMAKE_CURRENT_LIST_DIR}
+	${CMAKE_CURRENT_LIST_FILE}
+	${CMAKE_CURRENT_LIST_LINE}
 
-# my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} ${PROJECT_SOURCE_DIR})
-# my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} ${PROJECT_BINARY_DIR})
+	"CMAKE_CURRENT_***_DIR"
+	${CMAKE_CURRENT_SOURCE_DIR}
+	${CMAKE_CURRENT_BINARY_DIR}
 
-# my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} ${CMAKE_CONFIGURATION_TYPES})
-# my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} ${CMAKE_BUILD_TYPE})
+
+	"PROJECT_***_DIR"
+	${PROJECT_SOURCE_DIR}
+	${PROJECT_BINARY_DIR}
+
+	"CMAKE_CONFIGURATION_TYPES***"
+	${CMAKE_CONFIGURATION_TYPES}
+
+	"CMAKE_BUILD_TYPE***"
+	${CMAKE_BUILD_TYPE}
+)
+my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} ${MY_USEFULL_MACROS})
+
 
 
 ################################################
@@ -68,9 +81,18 @@ file(GLOB MY_FOUND_SOURCES ./*.def)
 set(MY_SOURCES ${MY_SOURCES} ${MY_FOUND_SOURCES})
 
 ################################################
-# add target exe or lib
+# enable asm language and set additional asm file extenstions
+enable_language(ASM_MASM)
 
-if(ON)
+# set additional asm file extenstions
+file(GLOB MY_FOUND_SOURCES ./*.s)
+set_source_files_properties(${MY_FOUND_SOURCES} PROPERTIES LANGUAGE ASM_MASM)
+
+
+################################################
+# add target executable or library
+
+if(OFF)
 add_executable(${MY_PROJECT_NAME} ${MY_SOURCES})
 else()
 add_library(${MY_PROJECT_NAME} SHARED ${MY_SOURCES})
@@ -81,26 +103,31 @@ set_target_properties(${MY_PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
 
 ################################################
 # target additional include directries
-target_include_directories(${MY_PROJECT_NAME} PRIVATE "inc_dir1/inc1")
-target_include_directories(${MY_PROJECT_NAME} PRIVATE "inc_dir2/inc2")
-target_include_directories(${MY_PROJECT_NAME} PRIVATE "inc_dir3/inc3")
+set(MY_INC_DIRS 
+	"inc_dir1/inc1"
+	"inc_dir2/inc2"
+	"inc_dir3/inc3"
+)
+target_include_directories(${MY_PROJECT_NAME} PRIVATE ${MY_INC_DIRS})
+
 
 
 ################################################
 # target additional library directries
-target_link_directories(${MY_PROJECT_NAME} PRIVATE "lib_dir1/lib1")
-target_link_directories(${MY_PROJECT_NAME} PRIVATE "lib_dir2/lib2")
-target_link_directories(${MY_PROJECT_NAME} PRIVATE "lib_dir3/lib3")
+set(MY_LIB_DIRS ""
+	"lib_dir1/lib1"
+	"lib_dir2/lib2"
+	"lib_dir3/lib3"
+)
+target_link_directories(${MY_PROJECT_NAME} PRIVATE ${MY_LIB_DIRS})
 
 ##################################################
 # target additional library files
-
-set(MY_EXTRA_LIBS "")
-
-set(MY_EXTRA_LIBS ${MY_EXTRA_LIBS} "ws2_32.lib")
-set(MY_EXTRA_LIBS ${MY_EXTRA_LIBS} "Wtsapi32.lib")
-set(MY_EXTRA_LIBS ${MY_EXTRA_LIBS} "Netapi32.lib")
-
+set(MY_EXTRA_LIBS
+	"ws2_32.lib"
+	"Wtsapi32.lib"
+	"Netapi32.lib"
+)
 target_link_libraries(${MY_PROJECT_NAME} ${MY_EXTRA_LIBS})
 
 

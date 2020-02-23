@@ -2,14 +2,15 @@ INCLUDE main.inc
 
 .code
 
+
+PUBLIC main_asm
+
+; return the ip following the function call
+; void* main_asm()
+
 main_asm PROC
 
-	push 1
-	push 2
-
-	pop rax
-	pop rax
-
+	mov rax, [rsp]
 	ret
 
 main_asm ENDP
