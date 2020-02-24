@@ -23,6 +23,68 @@
 
 cmake_minimum_required(VERSION "3.15")
 
+##############################################
+# EDIT the following line
+set(MY_PROJECT_NAME_VAR "cmake-sample-template"}
+
+set(MY_BUILD_INSTALL_TYPE_VAR "Debug")
+
+set(MY_SOURCE_PATTERNS_VAR
+
+	"./*.h" "./*.hpp"
+
+	"./*.cpp" "./*.cxx"
+	"./*.c" "./*.cc"
+
+	"./*.inc"
+	"./*.asm" "./*.s"
+
+	"./*.def"
+)
+
+set(MY_TARGET_PROPERTIES_VAR
+
+	LANGUAGE CXX
+	LINKER_LANGUAGE CXX
+
+	CXX_STANDARD 17 
+	CXX_STANDARD_REQUIRED YES
+)
+
+set(MY_TARGET_TYPE_VAR 
+	# EXE
+	SHARED
+	# STATIC
+	# MODULE
+)
+
+
+set(MY_INC_DIRS_VAR
+	"inc_dir1/inc1"
+	"inc_dir2/inc2"
+	"inc_dir3/inc3"
+)
+
+set(MY_LIB_DIRS_VAR
+	"lib_dir1/lib1"
+	"lib_dir2/lib2"
+	"lib_dir3/lib3"
+)
+
+if(WIN32)
+	set(MY_EXTRA_LIBS_VAR
+		"ws2_32"
+		"Wtsapi32"
+		"Netapi32"
+	)
+else()
+	set(MY_EXTRA_LIBS_VAR
+		""
+		""
+		""
+	)
+endif()
+
 ################################################
 function(my_print MY_FILE MY_LINE)
 	message("**************************")
@@ -40,7 +102,7 @@ endfunction()
 
 ################################################
 # project
-set(MY_PROJECT_NAME "cmake-sample-template")
+set(MY_PROJECT_NAME ${MY_PROJECT_NAME_VAR})
 project(${MY_PROJECT_NAME})
 
 
@@ -73,7 +135,7 @@ my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} ${MY_USEFULL_MACR
 ################################################
 # set default_build_type to current Debug
 if(NOT MY_BUILD_INSTALL_TYPE)
-	set(MY_BUILD_INSTALL_TYPE "Debug" CACHE STRING "My type of build" FORCE)
+	set(MY_BUILD_INSTALL_TYPE ${MY_BUILD_INSTALL_TYPE_VAR} CACHE STRING "My type of build" FORCE)
 	set_property(CACHE MY_BUILD_INSTALL_TYPE PROPERTY STRINGS "Debug" "Release" "MinSizeRel" "RelWithDebInfo")
 endif()
 
@@ -104,19 +166,7 @@ endif()
 set(MY_SOURCES "")
 set(MY_FOUND_SOURCES "")
 
-set(MY_SOURCE_PATTERNS
-
-	"./*.h" "./*.hpp"
-
-	"./*.cpp" "./*.cxx"
-	"./*.c" "./*.cc"
-
-	"./*.inc"
-	"./*.asm" "./*.s"
-
-	"./*.def"
-)
-
+set(MY_SOURCE_PATTERNS ${MY_SOURCE_PATTERNS_VAR})
 file(GLOB MY_FOUND_SOURCES ${MY_SOURCE_PATTERNS})
 set(MY_SOURCES ${MY_SOURCES} ${MY_FOUND_SOURCES})
 
@@ -151,58 +201,31 @@ endif()
 ################################################
 # add target executable or library
 
-if(OFF)
+if(${MY_TARGET_TYPE_VAR} STREQUAL "EXE")
 add_executable(${MY_PROJECT_NAME} ${MY_SOURCES})
 else()
-add_library(${MY_PROJECT_NAME} SHARED ${MY_SOURCES})
+add_library(${MY_PROJECT_NAME} ${MY_TARGET_TYPE_VAR} ${MY_SOURCES})
 endif()
 
 
-set(MY_TARGET_PROPERTIES
-
-	LANGUAGE CXX
-	LINKER_LANGUAGE CXX
-
-	CXX_STANDARD 17 
-	CXX_STANDARD_REQUIRED YES
-)
+set(MY_TARGET_PROPERTIES ${MY_TARGET_PROPERTIES_VAR})
 set_target_properties(${MY_PROJECT_NAME} PROPERTIES ${MY_TARGET_PROPERTIES})
 
 ################################################
 # target additional include directries
-set(MY_INC_DIRS 
-	"inc_dir1/inc1"
-	"inc_dir2/inc2"
-	"inc_dir3/inc3"
-)
+set(MY_INC_DIRS ${MY_INC_DIRS_VAR})
 target_include_directories(${MY_PROJECT_NAME} PRIVATE ${MY_INC_DIRS})
 
 
 
 ################################################
 # target additional library directries
-set(MY_LIB_DIRS
-	"lib_dir1/lib1"
-	"lib_dir2/lib2"
-	"lib_dir3/lib3"
-)
+set(MY_LIB_DIRS ${MY_LIB_DIRS_VAR})
 target_link_directories(${MY_PROJECT_NAME} PRIVATE ${MY_LIB_DIRS})
 
 ##################################################
 # target additional library files
-if(WIN32)
-	set(MY_EXTRA_LIBS
-		"ws2_32"
-		"Wtsapi32"
-		"Netapi32"
-	)
-else()
-	set(MY_EXTRA_LIBS
-		""
-		""
-		""
-	)
-endif()
+set(MY_EXTRA_LIBS ${MY_EXTRA_LIBS_VAR})
 target_link_libraries(${MY_PROJECT_NAME} PRIVATE ${MY_EXTRA_LIBS})
 
 
