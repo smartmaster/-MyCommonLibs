@@ -88,7 +88,7 @@ endif()
 
 ################################################
 # set CMAKE_INSTALL_PREFIX to current PROJECT_BINARY_DIR
-if(${CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT} OR MY_BUILD_TYPE)
+if(MY_BUILD_TYPE OR ${CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT})
 	set(CMAKE_INSTALL_PREFIX "${PROJECT_BINARY_DIR}/install/${MY_BUILD_TYPE}" CACHE PATH "install to current project bin folder" FORCE)
 	set(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT FALSE CACHE BOOL "cmake_install_prefix_initialized_to_default" FORCE)
 endif()
