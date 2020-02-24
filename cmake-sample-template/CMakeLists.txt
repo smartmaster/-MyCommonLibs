@@ -190,11 +190,19 @@ target_link_directories(${MY_PROJECT_NAME} PRIVATE ${MY_LIB_DIRS})
 
 ##################################################
 # target additional library files
-set(MY_EXTRA_LIBS
-	"ws2_32"
-	"Wtsapi32"
-	"Netapi32"
-)
+if(WIN32)
+	set(MY_EXTRA_LIBS
+		"ws2_32"
+		"Wtsapi32"
+		"Netapi32"
+	)
+else()
+	set(MY_EXTRA_LIBS
+		""
+		""
+		""
+	)
+endif()
 target_link_libraries(${MY_PROJECT_NAME} PRIVATE ${MY_EXTRA_LIBS})
 
 
