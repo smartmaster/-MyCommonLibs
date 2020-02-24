@@ -24,14 +24,14 @@
 cmake_minimum_required(VERSION "3.15")
 
 ################################################
-function(my_print my_file my_line)
+function(my_print MY_FILE MY_LINE)
 	message("**************************")
 	math(EXPR INDEX 0)
-	foreach(item ${ARGV})
+	foreach(ITEM ${ARGV})
 		if(${INDEX} LESS 2)
 			math(EXPR INDEX "${INDEX} + 1")
 		else()
-			message("sml: ${my_file} ${my_line}: ${item}")
+			message("sml: ${MY_FILE} ${MY_LINE}: ${ITEM}")
 		endif()
 	endforeach()
 	message("**************************")
@@ -82,39 +82,36 @@ endif()
 # set default_build_type to current Debug
 set(MY_DEFAULT_BUILD_TYPE "Debug")
 if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
+	# Set the cache entry CMAKE_BUILD_TYPE to default build type for cmake-gui
     set(CMAKE_BUILD_TYPE ${MY_DEFAULT_BUILD_TYPE} CACHE STRING "Choose the type of build." FORCE)
-  # Set the possible values of build type for cmake-gui
+	# Set the possible values of build type for cmake-gui
   set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS "Debug" "Release" "MinSizeRel" "RelWithDebInfo")
 endif()
 
 
 
-################################################
-# project sources
-set(MY_SOURCES "")
-set(MY_FOUND_SOURCES "")
-
 ################################################# 
+# project sources
 # enum sources for taking easy, 
 # recomment to add sources mannually as cmake do good job on dependices
 
-file(GLOB MY_FOUND_SOURCES "./*.h" "./*.hpp")
-set(MY_SOURCES ${MY_SOURCES} ${MY_FOUND_SOURCES})
+set(MY_SOURCES "")
+set(MY_FOUND_SOURCES "")
 
-file(GLOB MY_FOUND_SOURCES "./*.cpp" "./*.cxx")
-set(MY_SOURCES ${MY_SOURCES} ${MY_FOUND_SOURCES})
+set(MY_SOURCE_PATTERNS
 
-file(GLOB MY_FOUND_SOURCES "./*.c" "./*.cc")
-set(MY_SOURCES ${MY_SOURCES} ${MY_FOUND_SOURCES})
+	"./*.h" "./*.hpp"
 
-file(GLOB MY_FOUND_SOURCES "./*.inc")
-set(MY_SOURCES ${MY_SOURCES} ${MY_FOUND_SOURCES})
+	"./*.cpp" "./*.cxx"
+	"./*.c" "./*.cc"
 
-file(GLOB MY_FOUND_SOURCES "./*.asm" "./*.s")
-set(MY_SOURCES ${MY_SOURCES} ${MY_FOUND_SOURCES})
+	"./*.inc"
+	"./*.asm" "./*.s"
 
+	"./*.def"
+)
 
-file(GLOB MY_FOUND_SOURCES "./*.def")
+file(GLOB MY_FOUND_SOURCES ${MY_SOURCE_PATTERNS})
 set(MY_SOURCES ${MY_SOURCES} ${MY_FOUND_SOURCES})
 
 ################################################
@@ -136,8 +133,16 @@ else()
 add_library(${MY_PROJECT_NAME} SHARED ${MY_SOURCES})
 endif()
 
-set_target_properties(${MY_PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
 
+set(MY_TARGET_PROPERTIES
+
+	LANGUAGE CXX
+	LINKER_LANGUAGE CXX
+
+	CXX_STANDARD 17 
+	CXX_STANDARD_REQUIRED YES
+)
+set_target_properties(${MY_PROJECT_NAME} PROPERTIES ${MY_TARGET_PROPERTIES})
 
 ################################################
 # target additional include directries
@@ -166,12 +171,12 @@ set(MY_EXTRA_LIBS
 	"Wtsapi32.lib"
 	"Netapi32.lib"
 )
-target_link_libraries(${MY_PROJECT_NAME} ${MY_EXTRA_LIBS})
+target_link_libraries(${MY_PROJECT_NAME} PRIVATE ${MY_EXTRA_LIBS})
 
 
 
 ##################################################
-# install taeget and system libraries
+# install target and system libraries
 install(TARGETS ${MY_PROJECT_NAME} DESTINATION bin)
 include(InstallRequiredSystemLibraries)
 
