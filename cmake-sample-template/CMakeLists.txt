@@ -3,7 +3,7 @@
 
 # books
 # https://cliutils.gitlab.io/modern-cmake/
-# kiware "Mastering CMake"
+# kitware "Mastering CMake"
 
 ##################################################
 # cmake commands
