@@ -25,7 +25,7 @@ cmake_minimum_required(VERSION "3.15")
 
 ##############################################
 # EDIT the following line
-set(MY_PROJECT_NAME_VAR "cmake-sample-template"}
+set(MY_PROJECT_NAME_VAR "cmake-sample-template")
 
 set(MY_BUILD_INSTALL_TYPE_VAR "Debug")
 
