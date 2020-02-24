@@ -72,24 +72,24 @@ my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} ${MY_USEFULL_MACR
 
 ################################################
 # set default_build_type to current Debug
-if(NOT MY_BUILD_TYPE)
-	set(MY_BUILD_TYPE "Debug" CACHE STRING "My type of build" FORCE)
-	set_property(CACHE MY_BUILD_TYPE PROPERTY STRINGS "Debug" "Release" "MinSizeRel" "RelWithDebInfo")
+if(NOT MY_BUILD_INSTALL_TYPE)
+	set(MY_BUILD_INSTALL_TYPE "Debug" CACHE STRING "My type of build" FORCE)
+	set_property(CACHE MY_BUILD_INSTALL_TYPE PROPERTY STRINGS "Debug" "Release" "MinSizeRel" "RelWithDebInfo")
 endif()
 
 #if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
-#if(MY_BUILD_TYPE)
-if(MY_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
+#if(MY_BUILD_INSTALL_TYPE)
+if(MY_BUILD_INSTALL_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
 	# Set the cache entry CMAKE_BUILD_TYPE to default build type for cmake-gui
-    set(CMAKE_BUILD_TYPE ${MY_BUILD_TYPE} CACHE STRING "Choose the type of build." FORCE)
+    set(CMAKE_BUILD_TYPE ${MY_BUILD_INSTALL_TYPE} CACHE STRING "Choose the type of build." FORCE)
 	# Set the possible values of build type for cmake-gui
 	set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS "Debug" "Release" "MinSizeRel" "RelWithDebInfo")
 endif()
 
 ################################################
 # set CMAKE_INSTALL_PREFIX to current PROJECT_BINARY_DIR
-if(MY_BUILD_TYPE AND ${CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT})
-	set(CMAKE_INSTALL_PREFIX "${PROJECT_BINARY_DIR}/install/${MY_BUILD_TYPE}" CACHE PATH "install to current project bin folder" FORCE)
+if(MY_BUILD_INSTALL_TYPE AND ${CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT})
+	set(CMAKE_INSTALL_PREFIX "${PROJECT_BINARY_DIR}/install/${MY_BUILD_INSTALL_TYPE}" CACHE PATH "install to current project bin folder" FORCE)
 	set(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT FALSE CACHE BOOL "cmake_install_prefix_initialized_to_default" FORCE)
 endif()
 
