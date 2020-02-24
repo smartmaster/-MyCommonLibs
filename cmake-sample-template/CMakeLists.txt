@@ -122,12 +122,30 @@ set(MY_SOURCES ${MY_SOURCES} ${MY_FOUND_SOURCES})
 
 ################################################
 # enable asm language and set additional asm file extenstions
-enable_language(ASM_MASM)
+if(WIN32)
+	enable_language(ASM_MASM)
 
-# set additional asm file extenstions
-set(MY_ASM_SOURCES ${MY_SOURCES})
-list(FILTER MY_ASM_SOURCES INCLUDE REGEX ".+\.s$")
-set_source_files_properties(${MY_ASM_SOURCES} PROPERTIES LANGUAGE ASM_MASM)
+	# set additional asm file extenstions
+	set(MY_ASM_SOURCES ${MY_SOURCES})
+	list(FILTER MY_ASM_SOURCES INCLUDE REGEX ".+\.asm$")
+	set_source_files_properties(${MY_ASM_SOURCES} PROPERTIES LANGUAGE ASM_MASM)
+
+
+	set(MY_ASM_SOURCES ${MY_SOURCES})
+	list(FILTER MY_ASM_SOURCES INCLUDE REGEX ".+\.s$")
+	set_source_files_properties(${MY_ASM_SOURCES} PROPERTIES LANGUAGE ASM_MASM)
+else()
+	enable_language(ASM)
+
+	# set additional asm file extenstions
+	set(MY_ASM_SOURCES ${MY_SOURCES})
+	list(FILTER MY_ASM_SOURCES INCLUDE REGEX ".+\.asm$")
+	set_source_files_properties(${MY_ASM_SOURCES} PROPERTIES LANGUAGE ASM)
+
+	set(MY_ASM_SOURCES ${MY_SOURCES})
+	list(FILTER MY_ASM_SOURCES INCLUDE REGEX ".+\.s$")
+	set_source_files_properties(${MY_ASM_SOURCES} PROPERTIES LANGUAGE ASM)
+endif()
 
 
 ################################################
