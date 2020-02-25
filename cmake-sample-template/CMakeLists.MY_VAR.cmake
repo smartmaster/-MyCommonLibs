@@ -1,7 +1,5 @@
 
 
-# EDIT the following lines
-set(MY_PROJECT_NAME_VAR "cmake-sample-template")
 
 set(MY_BUILD_INSTALL_TYPE_VAR "Debug")
 
@@ -69,3 +67,4 @@ endif()
 set(MY_SUBDIRS_VAR
 	""
 )
+

@@ -23,11 +23,6 @@
 
 cmake_minimum_required(VERSION "3.15")
 
-##############################################
-# this file is rarely modified
-# EDIT the CMakeLists.MY_VAR.cmake
-include(CMakeLists.MY_VAR.cmake)
-
 ################################################
 function(my_print MY_FILE MY_LINE)
 	message("**************************")
@@ -45,9 +40,14 @@ endfunction()
 
 ################################################
 # project
+include(CMakeLists.MY_PROJECT_VAR.cmake)
 set(MY_PROJECT_NAME ${MY_PROJECT_NAME_VAR})
 project(${MY_PROJECT_NAME})
 
+##############################################
+# this file is rarely modified
+# EDIT the CMakeLists.MY_VAR.cmake
+include(CMakeLists.MY_VAR.cmake)
 
 ################################################
 # usefull macros
@@ -82,8 +82,7 @@ if(NOT MY_BUILD_INSTALL_TYPE)
 	set_property(CACHE MY_BUILD_INSTALL_TYPE PROPERTY STRINGS "Debug" "Release" "MinSizeRel" "RelWithDebInfo")
 endif()
 
-#if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
-#if(MY_BUILD_INSTALL_TYPE)
+
 if(MY_BUILD_INSTALL_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
 	# Set the cache entry CMAKE_BUILD_TYPE to default build type for cmake-gui
     set(CMAKE_BUILD_TYPE ${MY_BUILD_INSTALL_TYPE} CACHE STRING "Choose the type of build." FORCE)
@@ -100,7 +99,8 @@ endif()
 
 
 ################################################
-foreach(MY_SUBDIR ${MY_SUBDIRS_VAR})
+set(MY_SUBDIRS ${MY_SUBDIRS_VAR})
+foreach(MY_SUBDIR ${MY_SUBDIRS})
 	add_subdirectory(${MY_SUBDIR})
 endforeach()
 
