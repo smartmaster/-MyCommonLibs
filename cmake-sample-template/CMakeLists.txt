@@ -24,66 +24,9 @@
 cmake_minimum_required(VERSION "3.15")
 
 ##############################################
-# EDIT the following line
-set(MY_PROJECT_NAME_VAR "cmake-sample-template")
-
-set(MY_BUILD_INSTALL_TYPE_VAR "Debug")
-
-set(MY_SOURCE_PATTERNS_VAR
-
-	"./*.h" "./*.hpp"
-
-	"./*.cpp" "./*.cxx"
-	"./*.c" "./*.cc"
-
-	"./*.inc"
-	"./*.asm" "./*.s"
-
-	"./*.def"
-)
-
-set(MY_TARGET_PROPERTIES_VAR
-
-	LANGUAGE CXX
-	LINKER_LANGUAGE CXX
-
-	CXX_STANDARD 17 
-	CXX_STANDARD_REQUIRED YES
-)
-
-set(MY_TARGET_TYPE_VAR 
-	# EXE
-	SHARED
-	# STATIC
-	# MODULE
-)
-
-
-set(MY_INC_DIRS_VAR
-	"inc_dir1/inc1"
-	"inc_dir2/inc2"
-	"inc_dir3/inc3"
-)
-
-set(MY_LIB_DIRS_VAR
-	"lib_dir1/lib1"
-	"lib_dir2/lib2"
-	"lib_dir3/lib3"
-)
-
-if(WIN32)
-	set(MY_EXTRA_LIBS_VAR
-		"ws2_32"
-		"Wtsapi32"
-		"Netapi32"
-	)
-else()
-	set(MY_EXTRA_LIBS_VAR
-		""
-		""
-		""
-	)
-endif()
+# this file is rarely modified
+# EDIT the CMakeLists.MY_VAR.cmake
+include(CMakeLists.MY_VAR.cmake)
 
 ################################################
 function(my_print MY_FILE MY_LINE)
@@ -130,7 +73,7 @@ set(MY_USEFULL_MACROS
 	"CMAKE_BUILD_TYPE***"
 	${CMAKE_BUILD_TYPE}
 )
-my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} ${MY_USEFULL_MACROS})
+# my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} ${MY_USEFULL_MACROS})
 
 ################################################
 # set default_build_type to current Debug
@@ -156,89 +99,97 @@ if(MY_BUILD_INSTALL_TYPE AND CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
 endif()
 
 
-
-
-################################################# 
-# project sources
-# enum sources for taking easy, 
-# recomment to add sources mannually as cmake do good job on dependices
-
-set(MY_SOURCES "")
-set(MY_FOUND_SOURCES "")
-
-set(MY_SOURCE_PATTERNS ${MY_SOURCE_PATTERNS_VAR})
-file(GLOB MY_FOUND_SOURCES ${MY_SOURCE_PATTERNS})
-set(MY_SOURCES ${MY_SOURCES} ${MY_FOUND_SOURCES})
+################################################
+foreach(MY_SUBDIR ${MY_SUBDIRS_VAR})
+	add_subdirectory(${MY_SUBDIR})
+endforeach()
 
 ################################################
-# enable asm language and set additional asm file extenstions
-if(WIN32)
-	enable_language(ASM_MASM)
+my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} "To build ${MY_TARGET_TYPE_VAR}")
+if(${MY_TARGET_TYPE_VAR} STREQUAL "NULL")
+	my_print(${CMAKE_CURRENT_LIST_FILE} ${CMAKE_CURRENT_LIST_LINE} "Do not build any binary")
 
-	# set additional asm file extenstions
-	set(MY_ASM_SOURCES ${MY_SOURCES})
-	list(FILTER MY_ASM_SOURCES INCLUDE REGEX ".+\.asm$")
-	set_source_files_properties(${MY_ASM_SOURCES} PROPERTIES LANGUAGE ASM_MASM)
+else() #build exe or lib
 
+	################################################# 
+	# project sources
+	# enum sources for taking easy, 
+	# recomment to add sources mannually as cmake do good job on dependices
 
-	set(MY_ASM_SOURCES ${MY_SOURCES})
-	list(FILTER MY_ASM_SOURCES INCLUDE REGEX ".+\.s$")
-	set_source_files_properties(${MY_ASM_SOURCES} PROPERTIES LANGUAGE ASM_MASM)
-else()
-	enable_language(ASM)
+	set(MY_SOURCES "")
+	set(MY_FOUND_SOURCES "")
 
-	# set additional asm file extenstions
-	set(MY_ASM_SOURCES ${MY_SOURCES})
-	list(FILTER MY_ASM_SOURCES INCLUDE REGEX ".+\.asm$")
-	set_source_files_properties(${MY_ASM_SOURCES} PROPERTIES LANGUAGE ASM)
+	set(MY_SOURCE_PATTERNS ${MY_SOURCE_PATTERNS_VAR})
+	file(GLOB MY_FOUND_SOURCES ${MY_SOURCE_PATTERNS})
+	set(MY_SOURCES ${MY_SOURCES} ${MY_FOUND_SOURCES})
 
-	set(MY_ASM_SOURCES ${MY_SOURCES})
-	list(FILTER MY_ASM_SOURCES INCLUDE REGEX ".+\.s$")
-	set_source_files_properties(${MY_ASM_SOURCES} PROPERTIES LANGUAGE ASM)
-endif()
+	################################################
+	# enable asm language and set additional asm file extenstions
+	if(WIN32)
+		enable_language(ASM_MASM)
 
-
-################################################
-# add target executable or library
-
-if(${MY_TARGET_TYPE_VAR} STREQUAL "EXE")
-add_executable(${MY_PROJECT_NAME} ${MY_SOURCES})
-else()
-add_library(${MY_PROJECT_NAME} ${MY_TARGET_TYPE_VAR} ${MY_SOURCES})
-endif()
+		# set additional asm file extenstions
+		set(MY_ASM_SOURCES ${MY_SOURCES})
+		list(FILTER MY_ASM_SOURCES INCLUDE REGEX ".+\.asm$")
+		set_source_files_properties(${MY_ASM_SOURCES} PROPERTIES LANGUAGE ASM_MASM)
 
 
-set(MY_TARGET_PROPERTIES ${MY_TARGET_PROPERTIES_VAR})
-set_target_properties(${MY_PROJECT_NAME} PROPERTIES ${MY_TARGET_PROPERTIES})
+		set(MY_ASM_SOURCES ${MY_SOURCES})
+		list(FILTER MY_ASM_SOURCES INCLUDE REGEX ".+\.s$")
+		set_source_files_properties(${MY_ASM_SOURCES} PROPERTIES LANGUAGE ASM_MASM)
+	else()
+		enable_language(ASM)
 
-################################################
-# target additional include directries
-set(MY_INC_DIRS ${MY_INC_DIRS_VAR})
-target_include_directories(${MY_PROJECT_NAME} PRIVATE ${MY_INC_DIRS})
+		# set additional asm file extenstions
+		set(MY_ASM_SOURCES ${MY_SOURCES})
+		list(FILTER MY_ASM_SOURCES INCLUDE REGEX ".+\.asm$")
+		set_source_files_properties(${MY_ASM_SOURCES} PROPERTIES LANGUAGE ASM)
 
-
-
-################################################
-# target additional library directries
-set(MY_LIB_DIRS ${MY_LIB_DIRS_VAR})
-target_link_directories(${MY_PROJECT_NAME} PRIVATE ${MY_LIB_DIRS})
-
-##################################################
-# target additional library files
-set(MY_EXTRA_LIBS ${MY_EXTRA_LIBS_VAR})
-target_link_libraries(${MY_PROJECT_NAME} PRIVATE ${MY_EXTRA_LIBS})
+		set(MY_ASM_SOURCES ${MY_SOURCES})
+		list(FILTER MY_ASM_SOURCES INCLUDE REGEX ".+\.s$")
+		set_source_files_properties(${MY_ASM_SOURCES} PROPERTIES LANGUAGE ASM)
+	endif()
 
 
+	################################################
+	# add target executable or library
 
-##################################################
-# install target and system libraries
-install(TARGETS ${MY_PROJECT_NAME} DESTINATION bin)
-include(InstallRequiredSystemLibraries)
-
-
-##################################################
-# add test 
-# add_test()
+	if(${MY_TARGET_TYPE_VAR} STREQUAL "EXE")
+	add_executable(${MY_PROJECT_NAME} ${MY_SOURCES})
+	else()
+	add_library(${MY_PROJECT_NAME} ${MY_TARGET_TYPE_VAR} ${MY_SOURCES})
+	endif()
 
 
+	set(MY_TARGET_PROPERTIES ${MY_TARGET_PROPERTIES_VAR})
+	set_target_properties(${MY_PROJECT_NAME} PROPERTIES ${MY_TARGET_PROPERTIES})
 
+	################################################
+	# target additional include directries
+	set(MY_INC_DIRS ${MY_INC_DIRS_VAR})
+	target_include_directories(${MY_PROJECT_NAME} PRIVATE ${MY_INC_DIRS})
+	   
+	################################################
+	# target additional library directries
+	set(MY_LIB_DIRS ${MY_LIB_DIRS_VAR})
+	target_link_directories(${MY_PROJECT_NAME} PRIVATE ${MY_LIB_DIRS})
+
+	##################################################
+	# target additional library files
+	set(MY_EXTRA_LIBS ${MY_EXTRA_LIBS_VAR})
+	target_link_libraries(${MY_PROJECT_NAME} PRIVATE ${MY_EXTRA_LIBS})
+
+
+
+	##################################################
+	# install target and system libraries
+	install(TARGETS ${MY_PROJECT_NAME} DESTINATION bin)
+	include(InstallRequiredSystemLibraries)
+
+
+	##################################################
+	# add test 
+	# add_test()
+
+
+endif()  #build exe or lib
