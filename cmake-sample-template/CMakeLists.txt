@@ -125,40 +125,15 @@ else() #build exe or lib
 
 	################################################
 	# enable asm language and set additional asm file extenstions
-	if(WIN32)
-		enable_language(ASM_MASM)
-
-		# set additional asm file extenstions
-		set(MY_ASM_SOURCES ${MY_SOURCES})
-		list(FILTER MY_ASM_SOURCES INCLUDE REGEX ".+\.asm$")
-		if(MY_ASM_SOURCES)
-			set_source_files_properties(${MY_ASM_SOURCES} PROPERTIES LANGUAGE ASM_MASM)
-		endif()
-		
-
-
-		set(MY_ASM_SOURCES ${MY_SOURCES})
-		list(FILTER MY_ASM_SOURCES INCLUDE REGEX ".+\.s$")
-		if(MY_ASM_SOURCES)
-			set_source_files_properties(${MY_ASM_SOURCES} PROPERTIES LANGUAGE ASM_MASM)
-		endif()
-	else()
-		enable_language(ASM)
-
-		# set additional asm file extenstions
-		set(MY_ASM_SOURCES ${MY_SOURCES})
-		list(FILTER MY_ASM_SOURCES INCLUDE REGEX ".+\.asm$")
-		if(MY_ASM_SOURCES)
-			set_source_files_properties(${MY_ASM_SOURCES} PROPERTIES LANGUAGE ASM)
-		endif()
-		
-
-		set(MY_ASM_SOURCES ${MY_SOURCES})
-		list(FILTER MY_ASM_SOURCES INCLUDE REGEX ".+\.s$")
-		if(MY_ASM_SOURCES)
-			set_source_files_properties(${MY_ASM_SOURCES} PROPERTIES LANGUAGE ASM)
-		endif()
+	if(MY_ASM_VAR AND MY_ASM_PATTERNS_VAR)
+		enable_language(${MY_ASM_VAR})
+		foreach(MY_ASM_PATTERN ${MY_ASM_PATTERNS_VAR})
+			set(MY_ASM_SOURCES ${MY_SOURCES})
+			list(FILTER MY_ASM_SOURCES INCLUDE REGEX ${MY_ASM_PATTERN})
+			set_source_files_properties(${MY_ASM_SOURCES} PROPERTIES LANGUAGE ${MY_ASM_VAR})
+		endforeach()
 	endif()
+	
 
 
 	################################################

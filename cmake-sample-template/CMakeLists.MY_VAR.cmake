@@ -23,6 +23,22 @@ set(MY_SOURCE_PATTERNS_VAR
 	"./*.def"
 )
 
+# ASM_MASM ASM
+# ASM_MASM ASM
+if(WIN32)
+set(MY_ASM_VAR ASM_MASM)
+else()
+set(MY_ASM_VAR "")
+#set(MY_ASM_VAR ASM)
+endif()
+
+# ".+\.asm$" ".+\.s$"
+# ".+\.asm$" ".+\.s$"
+set(MY_ASM_PATTERNS_VAR
+	".+\.asm$"
+	".+\.s$"
+)
+#set(CMAKE_MSVC_RUNTIME_LIBRARY "")
 
 # LANGUAGE CXX
 # LINKER_LANGUAGE CXX
