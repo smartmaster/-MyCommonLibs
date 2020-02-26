@@ -1,5 +1,7 @@
-set cmake_build=..\cmake-sample-template-build-windows
-set cmake_config=debug
 
-cmake --install %cmake_build% --config %cmake_config%
+set CMAKE_BUILD=%cd%-out-win
+
+set CMAKE_CONFIG=debug
+
+cmake --install "%CMAKE_BUILD%" --config "%CMAKE_CONFIG%"
 

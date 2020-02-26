@@ -1,10 +1,11 @@
-#!/bin/bash
+#!/bin/sh
 
-# set cmake_source .
-# set cmake_build ../cmake-sample-template-build-linux
+CMAKE_SOURCE=$(pwd)
+CMAKE_BUILD=$(pwd)-out-nix
 
-mkdir ../cmake-sample-template-build-linux
-cmake-gui -S . -B ../cmake-sample-template-build-linux
+
+mkdir "$CMAKE_BUILD"
+cmake-gui -S "$CMAKE_SOURCE" -B "$CMAKE_BUILD"
 
 
 

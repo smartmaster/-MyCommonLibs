@@ -1,8 +1,10 @@
-set cmake_source=.
-set cmake_build=..\cmake-sample-template-build-windows
 
-mkdir %cmake_build% 
-cmake-gui -S %cmake_source% -B %cmake_build%
+set CMAKE_SOURCE=%cd%
+
+set CMAKE_BUILD=%cd%-out-win
+
+mkdir "%CMAKE_BUILD%"
+cmake-gui -S "%CMAKE_SOURCE%" -B "%CMAKE_BUILD%"
 
 
 

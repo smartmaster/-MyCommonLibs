@@ -1,9 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 
-# set cmake_build ../cmake-sample-template-build-linux
-# set cmake_config debug
+CMAKE_BUILD=$(pwd)-out-nix
+CMAKE_CONFIG=debug
 
-cmake --install ../cmake-sample-template-build-linux --config debug
+
+cmake --install "$CMAKE_BUILD" --config $CMAKE_CONFIG
 
 
 
