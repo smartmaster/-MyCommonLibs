@@ -131,23 +131,33 @@ else() #build exe or lib
 		# set additional asm file extenstions
 		set(MY_ASM_SOURCES ${MY_SOURCES})
 		list(FILTER MY_ASM_SOURCES INCLUDE REGEX ".+\.asm$")
-		set_source_files_properties(${MY_ASM_SOURCES} PROPERTIES LANGUAGE ASM_MASM)
+		if(MY_ASM_SOURCES)
+			set_source_files_properties(${MY_ASM_SOURCES} PROPERTIES LANGUAGE ASM_MASM)
+		endif()
+		
 
 
 		set(MY_ASM_SOURCES ${MY_SOURCES})
 		list(FILTER MY_ASM_SOURCES INCLUDE REGEX ".+\.s$")
-		set_source_files_properties(${MY_ASM_SOURCES} PROPERTIES LANGUAGE ASM_MASM)
+		if(MY_ASM_SOURCES)
+			set_source_files_properties(${MY_ASM_SOURCES} PROPERTIES LANGUAGE ASM_MASM)
+		endif()
 	else()
 		enable_language(ASM)
 
 		# set additional asm file extenstions
 		set(MY_ASM_SOURCES ${MY_SOURCES})
 		list(FILTER MY_ASM_SOURCES INCLUDE REGEX ".+\.asm$")
-		set_source_files_properties(${MY_ASM_SOURCES} PROPERTIES LANGUAGE ASM)
+		if(MY_ASM_SOURCES)
+			set_source_files_properties(${MY_ASM_SOURCES} PROPERTIES LANGUAGE ASM)
+		endif()
+		
 
 		set(MY_ASM_SOURCES ${MY_SOURCES})
 		list(FILTER MY_ASM_SOURCES INCLUDE REGEX ".+\.s$")
-		set_source_files_properties(${MY_ASM_SOURCES} PROPERTIES LANGUAGE ASM)
+		if(MY_ASM_SOURCES)
+			set_source_files_properties(${MY_ASM_SOURCES} PROPERTIES LANGUAGE ASM)
+		endif()
 	endif()
 
 
@@ -155,30 +165,49 @@ else() #build exe or lib
 	# add target executable or library
 
 	if(${MY_TARGET_TYPE_VAR} STREQUAL "EXE")
-	add_executable(${MY_PROJECT_NAME} ${MY_SOURCES})
+		add_executable(${MY_PROJECT_NAME} ${MY_SOURCES})
 	else()
-	add_library(${MY_PROJECT_NAME} ${MY_TARGET_TYPE_VAR} ${MY_SOURCES})
+		add_library(${MY_PROJECT_NAME} ${MY_TARGET_TYPE_VAR} ${MY_SOURCES})
 	endif()
 
 
 	set(MY_TARGET_PROPERTIES ${MY_TARGET_PROPERTIES_VAR})
-	set_target_properties(${MY_PROJECT_NAME} PROPERTIES ${MY_TARGET_PROPERTIES})
+	if(MY_TARGET_PROPERTIES)
+		set_target_properties(${MY_PROJECT_NAME} PROPERTIES ${MY_TARGET_PROPERTIES})
+	endif()
+	
 
 	################################################
 	# target additional include directries
 	set(MY_INC_DIRS ${MY_INC_DIRS_VAR})
-	target_include_directories(${MY_PROJECT_NAME} PRIVATE ${MY_INC_DIRS})
+	if(MY_INC_DIRS)
+		target_include_directories(${MY_PROJECT_NAME} PRIVATE ${MY_INC_DIRS})
+	endif()
+	
 	   
 	################################################
 	# target additional library directries
 	set(MY_LIB_DIRS ${MY_LIB_DIRS_VAR})
-	target_link_directories(${MY_PROJECT_NAME} PRIVATE ${MY_LIB_DIRS})
+	if(MY_LIB_DIRS)
+		target_link_directories(${MY_PROJECT_NAME} PRIVATE ${MY_LIB_DIRS})
+	endif()
+	
 
 	##################################################
 	# target additional library files
 	set(MY_EXTRA_LIBS ${MY_EXTRA_LIBS_VAR})
-	target_link_libraries(${MY_PROJECT_NAME} PRIVATE ${MY_EXTRA_LIBS})
+	if(MY_EXTRA_LIBS)
+		target_link_libraries(${MY_PROJECT_NAME} PRIVATE ${MY_EXTRA_LIBS})
+	endif()
+	
 
+
+	##################################################
+	# target dependencies sp as to build them first
+	set(MY_DEPENDENCIES ${MY_DEPENDENCIES_VAR})
+	if(MY_DEPENDENCIES)
+		add_dependencies(${MY_PROJECT_NAME} ${MY_DEPENDENCIES})
+	endif()
 
 
 	##################################################

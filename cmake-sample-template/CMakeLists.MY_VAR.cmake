@@ -1,6 +1,7 @@
 
 
-
+# "Debug" "Release" "MinSizeRel" "RelWithDebInfo"
+# "Debug" "Release" "MinSizeRel" "RelWithDebInfo"
 set(MY_BUILD_INSTALL_TYPE_VAR "Debug")
 
 # NULL EXE SHARED STATIC MODULE
@@ -22,6 +23,11 @@ set(MY_SOURCE_PATTERNS_VAR
 	"./*.def"
 )
 
+
+# LANGUAGE CXX
+# LINKER_LANGUAGE CXX
+# CXX_STANDARD 17 
+# CXX_STANDARD_REQUIRED YES
 set(MY_TARGET_PROPERTIES_VAR
 
 	LANGUAGE CXX
@@ -61,8 +67,13 @@ else()
 endif()
 
 
+set(MY_DEPENDENCIES_VAR
+	""
+	""
+)
 
 set(MY_SUBDIRS_VAR
+	""
 	""
 )
 
