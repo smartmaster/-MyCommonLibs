@@ -117,11 +117,13 @@ else() #build exe or lib
 	# recomment to add sources mannually as cmake do good job on dependices
 
 	set(MY_SOURCES "")
-	set(MY_FOUND_SOURCES "")
+	
+	foreach(MY_SOURCE_PATTERN ${MY_SOURCE_PATTERNS_VAR})
+		set(MY_FOUND_SOURCES "")
+		file(GLOB MY_FOUND_SOURCES ${MY_SOURCE_PATTERN})
+		set(MY_SOURCES ${MY_SOURCES} ${MY_FOUND_SOURCES})
+	endforeach()
 
-	set(MY_SOURCE_PATTERNS ${MY_SOURCE_PATTERNS_VAR})
-	file(GLOB MY_FOUND_SOURCES ${MY_SOURCE_PATTERNS})
-	set(MY_SOURCES ${MY_SOURCES} ${MY_FOUND_SOURCES})
 
 	################################################
 	# enable asm language and set additional asm file extenstions

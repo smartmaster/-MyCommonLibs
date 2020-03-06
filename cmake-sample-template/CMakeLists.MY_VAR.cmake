@@ -12,15 +12,21 @@ set(MY_TARGET_TYPE_VAR
 
 set(MY_SOURCE_PATTERNS_VAR
 
-	"./*.h" "./*.hpp"
+	"${PROJECT_SOURCE_DIR}/*.h"
+	"${PROJECT_SOURCE_DIR}/*.hpp"
 
-	"./*.cpp" "./*.cxx"
-	"./*.c" "./*.cc"
+	"${PROJECT_SOURCE_DIR}/*.cpp"
+	"${PROJECT_SOURCE_DIR}/*.cxx"
 
-	"./*.inc"
-	"./*.asm" "./*.s"
 
-	"./*.def"
+	"${PROJECT_SOURCE_DIR}/*.c" 
+	"${PROJECT_SOURCE_DIR}/*.cc"
+
+	"${PROJECT_SOURCE_DIR}/*.inc"
+	"${PROJECT_SOURCE_DIR}/*.asm" 
+	"${PROJECT_SOURCE_DIR}/*.s"
+
+	"${PROJECT_SOURCE_DIR}/*.def"
 )
 
 # ASM_MASM ASM
@@ -88,8 +94,8 @@ if(WIN32)
 	)
 else()
 	set(MY_EXTRA_LIBS_VAR
-		""
-		""
+		"cap"
+		"acl"
 		""
 	)
 endif()
