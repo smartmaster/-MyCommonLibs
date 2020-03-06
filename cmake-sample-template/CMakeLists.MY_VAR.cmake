@@ -1,3 +1,7 @@
+# make change on this file!!!!
+# make change on this file!!!!
+# make change on this file!!!!
+
 
 
 # "Debug" "Release" "MinSizeRel" "RelWithDebInfo"
@@ -32,8 +36,8 @@ set(MY_SOURCE_PATTERNS_VAR
 # ASM_MASM ASM
 # ASM_MASM ASM
 if(WIN32)
-set(MY_ASM_VAR "")
-#set(MY_ASM_VAR ASM_MASM)
+#set(MY_ASM_VAR "")
+set(MY_ASM_VAR ASM_MASM)
 else()
 set(MY_ASM_VAR "")
 #set(MY_ASM_VAR ASM)
@@ -89,8 +93,8 @@ set(MY_LIB_DIRS_VAR
 
 if(WIN32)
 	set(MY_EXTRA_LIBS_VAR
-		""
-		""
+		"ws2_32"
+		"rpcrt4"
 		""
 	)
 else()

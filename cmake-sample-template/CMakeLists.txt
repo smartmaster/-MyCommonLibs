@@ -1,3 +1,8 @@
+# do not change this file!!!!
+# do not change this file!!!!
+# do not change this file!!!!
+
+
 # CMakeLists.txt 
 # template and sample
 
@@ -21,6 +26,9 @@
 # cmake --build . 
 # cmake --install .
 
+
+
+
 cmake_minimum_required(VERSION "3.15")
 
 ################################################
@@ -43,7 +51,7 @@ endfunction()
 include(CMakeLists.MY_PROJECT_VAR.cmake)
 
 if(MY_CMAKE_TOOLCHAIN_FILE_VAR AND MY_TOOLCHAIN_PREFIX_VAR)
-	set(CMAKE_TOOLCHAIN_FILE "${MY_CMAKE_TOOLCHAIN_FILE_VAR}")
+	set(CMAKE_TOOLCHAIN_FILE "${MY_CMAKE_TOOLCHAIN_FILE_VAR}" CACHE FILEPATH "CMAKE_TOOLCHAIN_FILE" FORCE)
 endif()
 
 
