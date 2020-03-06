@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e69bca5548ac6483548e2e537848830b4fbaef492dddb08b537776075592b67b
-size 440
+#include "stdafx.h"
+#include "stdafx.include.h"
+#include "ErrnoException.h"
+
+ErrnoException::ErrnoException(const char* message, int error /*= errno*/)
+    : std::runtime_error(message)
+    , m_error(error)
+{
+}
+
+int ErrnoException::GetError() const
+{
+    return m_error;
+}
+
+std::string ErrnoException::GetDescription() const
+{
+	char buffer[2048] = { 0 };
+    strerror_s(buffer, m_error);
+	return std::string(buffer);
+}

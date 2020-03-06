@@ -1,3 +1,49 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d88a651a191a498f387b1cb03d1c4dcecc44f05776675efc3f2dc78efbbbccaa
-size 1187
+﻿
+
+using System.Collections.Generic;
+
+namespace VimClient
+{
+   public class VmHostInfo
+    {
+        public string VmxSpec { get; set; }
+        public string ServerName { get; set; }
+        public string UserName { get; set; }
+        public string Password { get; set; }
+        public int Port { get; set; }
+        public string ThumbPrint { get; set; }
+
+        public IList<string> CurrentDiskPath { get; set; }
+
+        public VmHostInfo()
+        {
+            CurrentDiskPath = new List<string>();
+        }
+    }
+
+    public class SnapshotInfo
+    {
+        public string Name { get; set; }
+        public string Desc { get; set; }
+        public  string SnapshotRef { get; set; }
+        public IList<string> DiskPath { get; set; }
+
+        public SnapshotInfo()
+        {
+            DiskPath = new List<string>();
+        }
+    }
+
+    public class VmSummaryInfo
+    {
+        public VmHostInfo VmHost { get; set; }
+        public IList<SnapshotInfo> Snapshots { get; set; }
+
+        public VmSummaryInfo()
+        {
+            VmHost = new VmHostInfo();
+            Snapshots = new List<SnapshotInfo>();
+        }
+    }
+
+}

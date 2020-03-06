@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9035b0bcc6df053d677794ab25c2fd7eb05b32f214927f868fb5af40c8115e21
-size 316
+// stdafx.cpp : source file that includes just the standard includes
+// GetCurrentModuleName-exe-test.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"
+
+// TODO: reference any additional headers you need in STDAFX.H
+// and not in this file

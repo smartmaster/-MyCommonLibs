@@ -1,3 +1,76 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:815b76143e4d19b4a16f10282b8868c8e3121ebeb544f030e3d2aca101346237
-size 2333
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace TestQuiz
+{
+    public static class Program
+    {
+        public static void Main(string[] args)
+        {
+
+
+            int testCase = 0;
+            int.TryParse(args[0], out testCase);
+            switch(testCase)
+            {
+                case 8:
+                    {
+                        Console.WriteLine(nameof(System));
+                        Console.WriteLine(nameof(System.Collections));
+                        Console.WriteLine(nameof(System.Collections.Generic));
+                        Console.WriteLine(nameof(System.Collections.Generic.ICollection<object>));
+                        Console.WriteLine(nameof(System.Collections.Generic.ICollection<object>.Add));
+                        Console.WriteLine(nameof(System.Collections.Generic.ICollection<object>.Count));
+
+                    }
+                    break;
+
+                case 7:
+                    {
+                        TestQuiz.AllCombinationOfSumTest.Case0();
+                    }
+                    break;
+                case 6:
+                    {
+                        TestQuiz.Calc18Test.Case0();
+                    }
+                    break;
+                case 5:
+                    {
+                        TestQuiz.BatchDisposableTest.Case0();
+                    }
+                    break;
+                case 4:
+                    {
+                        TestQuiz.SmartRefCountTest.Case0();
+                    }
+                    break;
+                case 3:
+                    {
+                        TestQuiz.PointerTest.Case0();
+                    }
+                    break;
+                case 2:
+                    {
+                        TestQuiz.PermutationTest.Case0();
+                    }
+                    break;
+                case 1:
+                    {
+                        TestQuiz.ClockGameV2.ClockTest.Case0();
+                    }
+                    break;
+                case 0:
+                    {
+                        //TestQuiz.ClockGameV1.ClockTest.Case0();
+                    }
+                    break;
+            }
+
+
+        }
+    }
+}

@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9e74ca51fad70f27bc7ac1e1e2dfb2d411a9b2fb0bc0f454770335125f883794
-size 290
+// stdafx.cpp : source file that includes just the standard includes
+// VSS.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"
+
+// TODO: reference any additional headers you need in STDAFX.H
+// and not in this file

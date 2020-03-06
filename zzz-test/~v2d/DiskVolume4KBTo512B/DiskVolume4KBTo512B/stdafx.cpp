@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d50bd102fb53e50b17e5ceec310a76573ad515d80999b15c0bbe8c1f5c163f23
-size 306
+// stdafx.cpp : source file that includes just the standard includes
+// DiskVolume4KBTo512B.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"
+
+// TODO: reference any additional headers you need in STDAFX.H
+// and not in this file

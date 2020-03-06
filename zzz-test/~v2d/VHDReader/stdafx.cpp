@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e055c5edf5616b03485ac491e6cc33122fcfa24f220f08ab43f511cd0e675c14
-size 296
+// stdafx.cpp : source file that includes just the standard includes
+// VHDReader.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"
+
+// TODO: reference any additional headers you need in STDAFX.H
+// and not in this file

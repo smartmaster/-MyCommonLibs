@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:afc93114ecdf5c76ab7a99c94e8176266234287f18075d849aa5bceccfeea929
-size 507
+#include "stdafx.h"
+#include "..\CommonFunctions\LIB_VHD_VHDObject.h"
+
+VOID LibVhdTest(LPCTSTR pszVhdFileName)
+{
+	CVHDObject * pVHDObject = CVHDObject::CreateInterfaceVhd();
+
+	LARGE_INTEGER liDiskSize = {0};
+	liDiskSize.QuadPart = 1024;
+	liDiskSize.QuadPart *= 1024;
+	liDiskSize.QuadPart *= 1024;
+
+	DISK_GEOMETRY diskGeo = {0};
+	pVHDObject->Create(pszVhdFileName, &diskGeo, liDiskSize, NULL, CREATE_NEW);
+	pVHDObject->GetGeometry(&diskGeo);
+	pVHDObject->Close();
+	pVHDObject->Release();
+}

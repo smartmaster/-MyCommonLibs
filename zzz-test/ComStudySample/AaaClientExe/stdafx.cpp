@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c605356329c974944ad0c41cba1c694c6e546daa7a8515492cd33c55095dbca7
-size 299
+// stdafx.cpp : source file that includes just the standard includes
+// AaaClientExe.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"
+
+// TODO: reference any additional headers you need in STDAFX.H
+// and not in this file

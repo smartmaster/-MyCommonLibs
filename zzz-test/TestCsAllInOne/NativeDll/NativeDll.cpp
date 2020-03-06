@@ -1,3 +1,45 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ce9cc55a923130b3455fa4a00ed267c5c25e639b4a5563be488869750e6e7d98
-size 808
+// NativeDll.cpp : Defines the exported functions for the DLL application.
+//
+
+#include "stdafx.h"
+
+#include <tchar.h>
+#include <windows.h>
+#include <atlbase.h>
+#include <atlstr.h>
+
+
+#include <cassert>
+//#include <vsserror.h>
+#include <vss.h>
+#include <vswriter.h>
+#include <VsBackup.h>
+
+#include "NativeDll.h"
+
+void DllFunc(int iCommand, const void * iBuffer, int iSize, int * oCommand, void * oBuffer, int oSize)
+{
+	switch (iCommand)
+	{
+	case 1:
+	{
+
+	}
+	break;
+	case 0:
+	{
+		IVssBackupComponents * pBackup = nullptr;
+		HRESULT hr = ::CreateVssBackupComponents(
+			&pBackup//_Out_  IVssBackupComponents **ppBackup
+		);
+		if (SUCCEEDED(hr))
+		{
+			assert(oSize >= sizeof(pBackup));
+			CopyMemory(oBuffer, &pBackup, sizeof(pBackup));
+		}
+
+	}
+	default:
+		break;
+	}
+}

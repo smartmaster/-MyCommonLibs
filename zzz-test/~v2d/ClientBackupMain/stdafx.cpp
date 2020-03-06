@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9cca7fe07e4c8c078cd01685ba15e65bca23563e39a564146894aad9b383f8d9
-size 303
+// stdafx.cpp : source file that includes just the standard includes
+// ClientBackupMain.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"
+
+// TODO: reference any additional headers you need in STDAFX.H
+// and not in this file

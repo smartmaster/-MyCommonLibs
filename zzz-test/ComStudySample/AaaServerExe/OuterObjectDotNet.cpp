@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:de91d4fcd317cfb828fcfa0a7d04d8dfa70d4e9da1cca24dd0e3d8fecee13edf
-size 261
+// OuterObjectDotNet.cpp : Implementation of COuterObjectDotNet
+
+#include "stdafx.h"
+#include "OuterObjectDotNet.h"
+
+
+// COuterObjectDotNet
+
+
+
+STDMETHODIMP COuterObjectDotNet::Nop()
+{
+	// TODO: Add your implementation code here
+
+	return S_OK;
+}

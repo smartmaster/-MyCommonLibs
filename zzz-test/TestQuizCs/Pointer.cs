@@ -1,3 +1,32 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:64ac3dde77e9c6804cd96450cf7dadc04a8411b97b7bc956db9a47d7dafd6907
-size 718
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace TestQuiz
+{
+    public class Pointer<T>
+    {
+        public T Object;
+    }
+
+
+    public static class PointerTest
+    {
+        public static void Case0()
+        {
+            Pointer<Pointer<Pointer<int>>> pppi = new Pointer<Pointer<Pointer<int>>>
+            {
+                Object = new Pointer<Pointer<int>>
+                {
+                    Object = new Pointer<int>
+                    {
+                        Object = 123
+                    }
+                }
+            };
+
+            Console.WriteLine($"{pppi.Object.Object.Object}");
+        }
+    }
+}

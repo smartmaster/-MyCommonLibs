@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:305092141892ed8b53843d4a710b7248c56465018a0f9017b44afff7a8436e30
-size 344
+using System;
+
+namespace diStorm
+{
+  public class DecodedInst
+  {
+    internal DecodedInst() { }
+    
+    public string Mnemonic { get; internal set; }
+    public string Operands { get; internal set; }
+    public string Hex { get; internal set; }
+    public uint Size { get; internal set; }
+    public IntPtr Offset { get; internal set; }
+  }
+}

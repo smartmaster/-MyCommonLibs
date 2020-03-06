@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c0232eba38e43202a45c1bb2319c1907c995e817d8b2d7aa93769a4d295be949
-size 302
+// stdafx.cpp : source file that includes just the standard includes
+// WSASocketServer.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"
+
+// TODO: reference any additional headers you need in STDAFX.H
+// and not in this file

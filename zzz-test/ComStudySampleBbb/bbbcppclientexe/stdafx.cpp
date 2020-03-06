@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a926087cd9801cb15e53f9e1d667ce9d0c5e39e30963907be1958d47ef31f07d
-size 302
+// stdafx.cpp : source file that includes just the standard includes
+// bbbcppclientexe.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"
+
+// TODO: reference any additional headers you need in STDAFX.H
+// and not in this file

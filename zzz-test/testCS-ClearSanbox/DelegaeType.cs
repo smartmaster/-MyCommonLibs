@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e6215a4392ac2803c8210269812d42ca9b2d834776acde9c490f480b4b00b349
-size 810
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace testCS
+{
+   static class DelegaeType
+    {
+        public static async Task<string> Progress(string beginMessage, string endMessage, int loop)
+        {
+            Console.WriteLine($"{beginMessage}");
+            for(int ii = 0; ii < loop; ++ ii)
+            {
+                await Task.Delay(1000);
+                Console.WriteLine($"{ii}");
+            }
+
+            Console.WriteLine($"{endMessage}");
+
+
+            return loop.ToString();
+        }
+
+
+        public static async Task Case0()
+        {
+            Func<string, string, int, Task<string>> func = Progress;
+            string rv = await func("started...", "finished!", 15);
+
+        }
+    }
+}

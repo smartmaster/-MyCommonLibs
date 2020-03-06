@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bfd90d0669fa2ff4e78fe46eaa1d6162f9d055ec1e269ccf4d5ad9fe17c07f01
-size 825
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace TestNetCore.LinqTest
+{
+    static class RangeVarialbeTest
+    {
+        public static void Test()
+        {
+            int[] arr = { 10, 4, 6, 3, 7, 9, 2};
+            var ee = from vv in arr
+                     where (vv | 1) == 1
+                     orderby vv
+                     select vv * 100;
+
+            foreach(int vv in ee)
+            {
+                Console.WriteLine($"{vv} ");
+            }
+
+            var ee2 = arr
+                .Where(vv => (vv | 1) == 1)
+                .OrderBy(aa => aa)
+                .Select(cc => cc * 100);
+
+            foreach (int vv in ee2)
+            {
+                Console.WriteLine($"{vv} ");
+            }
+
+
+        }
+    }
+}

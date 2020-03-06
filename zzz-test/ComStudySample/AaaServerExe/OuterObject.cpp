@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dcef83fd8176aa987603eefbc503e2fcc5002a8cedb5b313464e9c85206d49ef
-size 372
+// OuterObject.cpp : Implementation of COuterObject
+
+#include "stdafx.h"
+#include "OuterObject.h"
+
+
+// COuterObject
+#include "..\AaaaCommon\ObjectMethod.h"
+
+
+STDMETHODIMP COuterObject::OutDynamicArray(LONG* pLength , WCHAR ** ppBuffer)
+{
+	// TODO: Add your implementation code here
+	HRESULT hr = ::OutDynamicArray(
+		pLength, 
+		ppBuffer);
+	return hr;
+}

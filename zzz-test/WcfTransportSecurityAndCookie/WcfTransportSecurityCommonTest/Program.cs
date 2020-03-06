@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2582fadb634ba26dd5eaed0e9e873d4fcc9004ee3b7f1e89799fb329b7ca186d
-size 727
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WcfTransportSecurityCommonTest
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int testCase = 1;
+            switch (testCase)
+            {
+                case 1:
+                    {
+                        WcfTransportSecurityCommon.ObjectViewerTest.Case0();
+                    }
+                    break;
+
+                case 0:
+                    {
+                        WcfTransportSecurityCommon.TypeViewer.TypeViewerTest.Case0();
+                    }
+                    break;
+            }
+        }
+    }
+}

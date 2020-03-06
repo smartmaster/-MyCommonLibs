@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d39f374b1af8d06ace760e97c85b866cb31ccda3f2e2e2cf7e0858a83399629c
-size 1097
+// VssLayerObject.cpp : Implementation of CVssLayerObject
+
+#include "stdafx.h"
+#include "VssLayerObject.h"
+
+
+// CVssLayerObject
+
+extern HRESULT VShadowComMainEntry(SAFEARRAY * psaArgvs, IStorage * pISorageXmls, IStorage * pISorageVssResults, DWORD * pdwCookieIVssBackupComponents);
+
+STDMETHODIMP CVssLayerObject::ShadowCopy(SAFEARRAY *  psaArgvs, IStorage * pISorageXmls , IStorage * pISorageVssResults)
+{
+	// TODO: Add your implementation code here
+	ObjectLock lock(this);
+	DSTART(999);
+	DWORD dwCookieIVssBackupComponents = 0;
+	HRESULT hr = VShadowComMainEntry(psaArgvs, pISorageXmls, pISorageVssResults, &dwCookieIVssBackupComponents);
+	if (dwCookieIVssBackupComponents)
+	{
+		m_spGITPtrIVssBackupComponents.Attach(dwCookieIVssBackupComponents);
+	}
+	return hr;
+}
+
+
+STDMETHODIMP CVssLayerObject::VssBackupComponentsRelease(void)
+{
+	// TODO: Add your implementation code here
+	ObjectLock lock(this);
+	DSTART(999);
+	CleanupIVssBackupComponents();
+	return S_OK;
+}
+
+VOID CVssLayerObject::CleanupIVssBackupComponents()
+{
+	m_spGITPtrIVssBackupComponents.Revoke();
+}

@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ed56d68a8acdeae445610d1faaa9fc0848fac41aadb969ec60812ab2dc8555d4
-size 299
+// stdafx.cpp : source file that includes just the standard includes
+// MyObjectTest.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"
+
+// TODO: reference any additional headers you need in STDAFX.H
+// and not in this file

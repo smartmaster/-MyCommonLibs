@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1659888d22522fc6abee3e2abe58f000adbe4550d4d782526a468c906dce094b
-size 342
+// dllmain.cpp : Implementation of DllMain.
+
+#include "stdafx.h"
+#include "resource.h"
+#include "Both_i.h"
+#include "dllmain.h"
+
+CBothModule _AtlModule;
+
+// DLL Entry Point
+extern "C" BOOL WINAPI DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
+{
+	hInstance;
+	return _AtlModule.DllMain(dwReason, lpReserved); 
+}

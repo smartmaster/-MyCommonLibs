@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ab97ab3095c0b5a9503eda86ad7ef0476b54054cee13f72841aba60ef10d8636
-size 371
+// InnerObject.cpp : Implementation of CInnerObject
+
+#include "stdafx.h"
+#include "InnerObject.h"
+
+
+// CInnerObject
+#include "..\AaaaCommon\ObjectMethod.h"
+
+
+STDMETHODIMP CInnerObject::OutDynamicArray(LONG* pLength, WCHAR ** ppBuffer)
+{
+	// TODO: Add your implementation code here
+	HRESULT hr = ::OutDynamicArray(
+		pLength, 
+		ppBuffer);
+	return hr;
+}

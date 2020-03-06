@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c1658d5d05df9be629e313943ce73754b7b040e3380a5f0606438b9d4ec63174
-size 306
+// stdafx.cpp : source file that includes just the standard includes
+// SharedSocketProcess.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"
+
+// TODO: reference any additional headers you need in STDAFX.H
+// and not in this file

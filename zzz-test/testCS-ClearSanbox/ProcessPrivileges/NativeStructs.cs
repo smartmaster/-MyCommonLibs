@@ -1,3 +1,35 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dc4bc135f2f160832c6d2ba6cf4e9d0e55ae21b84c801647bc6a0dd2e38ff1bf
-size 820
+﻿// <copyright file="NativeStructs.cs" company="Nick Lowe">
+// Copyright © Nick Lowe 2009
+// </copyright>
+// <author>Nick Lowe</author>
+// <email>nick@int-r.net</email>
+// <url>http://processprivileges.codeplex.com/</url>
+
+namespace ProcessPrivileges
+{
+    using System.Runtime.InteropServices;
+
+    [StructLayout(LayoutKind.Sequential)]
+    internal struct Luid
+    {
+        internal int LowPart;
+
+        internal int HighPart;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    internal struct LuidAndAttributes
+    {
+        internal Luid Luid;
+
+        internal PrivilegeAttributes Attributes;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
+    internal struct TokenPrivilege
+    {
+        internal int PrivilegeCount;
+
+        internal LuidAndAttributes Privilege;
+    }
+}

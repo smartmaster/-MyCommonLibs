@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:09b89200305c463f6ff6c996a02a0268c244e397a063545f8578374cb59bbf5a
-size 301
+// stdafx.cpp : source file that includes just the standard includes
+// CabinetMagager.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"
+
+// TODO: reference any additional headers you need in STDAFX.H
+// and not in this file

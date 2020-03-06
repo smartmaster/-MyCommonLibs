@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9764f33192c02130b80ddc2d1939b77a39ff1c4cd5248299481be9283765100c
-size 302
+// stdafx.cpp : source file that includes just the standard includes
+// zzz-test-client.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"
+
+// TODO: reference any additional headers you need in STDAFX.H
+// and not in this file

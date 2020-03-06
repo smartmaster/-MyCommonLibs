@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5c8ca47c9397cdef76c0a1aaf5b35b3fccf9ae0e344d93204cf3fc89a4d8c83e
-size 687
+﻿using System;
+using System.Collections.Generic;
+using System.Reactive.Linq;
+using System.Text;
+
+namespace TestReactive
+{
+  public static  class TestCases
+    {
+        public static void Case0()
+        {
+            IObservable<int> source = Observable.Range(1, 20);
+            IDisposable subcription = source.Subscribe(
+                x => Console.WriteLine($"on next value {x}"),
+                ex => Console.WriteLine($"on exception {ex}"),
+                () => Console.WriteLine("On completed"));
+
+            Console.WriteLine("Press ENTER to continue...");
+
+            Console.WriteLine();
+
+            subcription.Dispose();
+        }
+
+    }
+}

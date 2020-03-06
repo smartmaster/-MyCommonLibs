@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fc4726329254f18e94a5c0cec2c4dac2d9083562d3b23888d3e48cc4726e53ed
-size 361
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace test_sc_azure_sdk
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int testCase = int.Parse(args[0]);
+            _001AzureResourceTest.TestCases(testCase);
+        }
+    }
+}

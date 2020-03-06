@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:607fa3ec6c6dd519801e497819ee79b31c9250410176fab860223cccd1e0f92a
-size 598
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace testCS
+{
+    static class SingleInstance<T>
+        where T : class, new()
+    {
+        private static T _instance;
+
+        public static T Instance()
+        {
+            if(null == _instance)
+            {
+                lock(typeof(SingleInstance<T>))
+                {
+                    if(null == _instance)
+                    {
+                        _instance = new T();
+                    }
+                }
+            }
+
+            return _instance;
+        }
+    }
+}

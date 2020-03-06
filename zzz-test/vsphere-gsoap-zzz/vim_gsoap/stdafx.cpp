@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6c123941d2a03ca6e76b333534b33dc2c0aaeb78f7ee6869cc92d9283963f827
-size 296
+// stdafx.cpp : source file that includes just the standard includes
+// vim_gsoap.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"
+
+// TODO: reference any additional headers you need in STDAFX.H
+// and not in this file

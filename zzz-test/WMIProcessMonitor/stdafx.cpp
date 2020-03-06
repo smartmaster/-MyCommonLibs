@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f0fb08aa68dfd2fc365ca1570f6c9fc78ed958414c43154c600618a0fbf6ddef
-size 304
+// stdafx.cpp : source file that includes just the standard includes
+// WMIProcessMonitor.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"
+
+// TODO: reference any additional headers you need in STDAFX.H
+// and not in this file

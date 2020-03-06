@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c7bca823bc474956d8534b46da0b34e561641a352ab3e76167cfbee76cc78677
-size 350
+// VShadow.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+
+#include "..\PublicHeader\PublicDTraceLib.h"
+
+
+int VShadowMain(__in int argc, __in_ecount(argc) WCHAR ** argv);
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	D_SETTINGS(99999, FALSE, TEXT("vshadow-"), NULL);
+	return VShadowMain(argc, argv);
+}
+

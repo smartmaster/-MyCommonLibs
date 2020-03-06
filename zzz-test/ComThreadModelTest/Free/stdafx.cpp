@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:90690d947bfec8c21caa08fb11b63223fadf50090573201db4310c3ea02f302c
-size 200
+// stdafx.cpp : source file that includes just the standard includes
+// Free.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"

@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1194532c739eb310141d34e64a33d2513b5d1ad93b049969800a1e1a2ccbd66a
-size 808
+#include "stdafx.h"
+#include "WSAResponceHandler.h"
+
+
+HRESULT CEchoResponceHandler::Process( IN CONST TWSAIoBuffer & InBuffer, OUT TWSAIoBuffer & OutBuffer )
+{
+	OutBuffer.m_DataLength = InBuffer.m_DataLength;
+	if (OutBuffer.m_DataLength > OutBuffer.m_AllocatedSize)
+	{
+		OutBuffer.RellocateBuffer(OutBuffer.m_DataLength);
+	}
+	for (ULONG ii = 0; ii < OutBuffer.m_DataLength; ++ii)
+	{
+		OutBuffer.m_pBuffer[ii] = InBuffer.m_pBuffer[ii] + 1;
+	}
+
+	return S_OK;
+}
+
+HRESULT CEchoResponceHandler::Release()
+{
+	delete this;
+	return S_OK;
+}
+
+HRESULT CEchoResponceHandlerFactory::CreateInstance( IResponceHandler ** ppResponceHandler )
+{
+	*ppResponceHandler = new CEchoResponceHandler;
+	return S_OK;
+}
+
+HRESULT CEchoResponceHandlerFactory::Release()
+{
+	delete this;
+	return S_OK;
+}

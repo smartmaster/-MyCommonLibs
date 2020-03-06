@@ -1,3 +1,42 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5e3e084a5bc6ad1ff607a01e8523617f48e40631590859547a51967b82e1a074
-size 856
+// dllmain.cpp : Defines the entry point for the DLL application.
+#include "stdafx.h"
+#include "ThreadLocalData.h"
+#include "ProcessGlobalData.h"
+
+
+BOOL APIENTRY DllMain( HMODULE hModule,
+					   DWORD  ul_reason_for_call,
+					   LPVOID lpReserved
+					 )
+{
+	BOOL bRet = TRUE;
+	switch (ul_reason_for_call)
+	{
+	case DLL_PROCESS_ATTACH:
+		CSIProcessGlobalData::CreateMember();
+		if (TLS_OUT_OF_INDEXES == CTlsDataManager::AllocateIndex())
+		{
+			bRet = FALSE;
+			break;
+		}
+		CTlsDataManager::AllocateData();
+		break;
+
+	case DLL_THREAD_ATTACH:
+		CTlsDataManager::AllocateData();
+		break;
+
+	case DLL_THREAD_DETACH:
+		CTlsDataManager::FreeData();
+		break;
+
+	case DLL_PROCESS_DETACH:
+		CTlsDataManager::FreeData();
+		CTlsDataManager::FreeIndex();
+		CSIProcessGlobalData::DestroyMember();
+		break;
+	}
+
+	return bRet;
+}
+

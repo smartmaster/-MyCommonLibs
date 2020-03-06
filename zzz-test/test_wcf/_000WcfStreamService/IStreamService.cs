@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c9f34d27b5f46e018887afd6219c0f7fb49d823f5790f9a3422c86669168f22f
-size 620
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.ServiceModel;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _000WcfStreamService
+{
+    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
+    [ServiceContract]
+    public interface IStreamService
+    {
+        [OperationContract]
+        Task Upload(UploadStreamInfo usi);
+        [OperationContract]
+        Task<DownloadSteamInfo> Download(DownloadFileInfo dfi);
+    }
+}

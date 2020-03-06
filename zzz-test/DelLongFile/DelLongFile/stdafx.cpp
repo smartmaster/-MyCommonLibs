@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:83a862f7ccbd14ebadfa665e63096a274d026c9bee6b9a48c7391c9ef7b7b75b
-size 298
+// stdafx.cpp : source file that includes just the standard includes
+// DelLongFile.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"
+
+// TODO: reference any additional headers you need in STDAFX.H
+// and not in this file

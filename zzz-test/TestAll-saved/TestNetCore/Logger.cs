@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:af984992fc27f8ebd743a1cd29f2ab6a46fc7c757f6f1b0e2f6a866f235c8905
-size 934
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
+using System.Text;
+
+namespace TestNetCore
+{
+   static class Logger
+    {
+        public static void Log(string message, 
+            [CallerMemberName] string function = "",
+            [CallerFilePath] string filePath = "",
+            [CallerLineNumber] int line = 0
+            )
+        {
+            Console.WriteLine($"{message}   ^^^[{function}, {filePath}, {line}]$$$");
+        }
+
+
+        public static void Log2(string message)
+        {
+            StackFrame frame = new StackFrame(1, true);
+            var method = frame.GetMethod();
+            var rtype = method.ReflectedType;
+            Console.WriteLine($"{message}   ^^^[{method.Module.Name}!{rtype.Namespace}.{rtype.Name}::{method.Name}, {frame.GetFileName()}, {frame.GetFileLineNumber()}]$$$");
+        }
+
+    }
+}

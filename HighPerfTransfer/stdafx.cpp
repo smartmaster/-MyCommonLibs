@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a646d1d6b51c11b106c237e4ad356c60c6f46b865dda49d9de52b5afb247c71f
-size 303
+// stdafx.cpp : source file that includes just the standard includes
+// HighPerfTransfer.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"
+
+// TODO: reference any additional headers you need in STDAFX.H
+// and not in this file

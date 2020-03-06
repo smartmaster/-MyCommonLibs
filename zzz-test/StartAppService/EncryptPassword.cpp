@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fec66f68ffabd31902559a00c44cac9db24daa222b594fd029633908f5d455ef
-size 575
+#include "stdafx.h"
+#include "EncryptString.h"
+
+static INT MyHash(INT ii)
+{
+	return ((ii+13)%11 + (ii+5)*(ii+23)%17);
+}
+
+LONG GetEncPassword(OUT CString & StrPassword)
+{
+	TCHAR ThisIsMe[] = TEXT("ILIKEMATHButmuchtostudyMATHEMAticsIthoughTAFTERGRADUATINGfromcollegeaNDLESSWORKINVolvedinmatheMATICS");
+	StrPassword = ThisIsMe;
+	SecureZeroMemory((LPVOID)ThisIsMe, sizeof(ThisIsMe));
+	StrPassword.MakeReverse();
+	LPTSTR pBuffer = StrPassword.GetBuffer();
+	for (INT ii = 0; ii < StrPassword.GetLength(); ++ii)
+	{
+		pBuffer[ii] +=  MyHash(ii);
+	}
+
+	return 0;
+}

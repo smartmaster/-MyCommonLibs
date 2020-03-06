@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0e45ad98d2c02d1757041947de97907751d732e1dd22516323d1211fa33047ff
-size 312
+// stdafx.cpp : source file that includes just the standard includes
+// PluginFileFactoryFileTest.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"
+
+// TODO: reference any additional headers you need in STDAFX.H
+// and not in this file

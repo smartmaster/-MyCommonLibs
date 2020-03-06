@@ -1,3 +1,68 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:36498a737f46378d2ee8bfedfa8c840a1780ffb504360bcec391740424849ed0
-size 1482
+#include "stdafx.h"
+#include "Helper.h"
+#include "PrintField.h"
+
+
+
+//////////////////////////////////////////////////////////////////////////
+//template<>
+VOID PrintField(LPCTSTR FiledName, UINT64 Val)
+{
+	D_INFO(0, TEXT("%s=%I64d(0x%016I64x)"), FiledName, Val, Val);
+}
+
+//template<>
+VOID PrintField(LPCTSTR FiledName, INT64 Val)
+{
+	D_INFO(0, TEXT("%s=%I64d(0x%016I64x)"), FiledName, Val, Val);
+}
+
+//template<>
+VOID PrintField(LPCTSTR FiledName, UINT32 Val)
+{
+	D_INFO(0, TEXT("%s=%d(0x%08x)"), FiledName, Val, Val);
+}
+
+//template<>
+VOID PrintField(LPCTSTR FiledName, INT32 Val)
+{
+	D_INFO(0, TEXT("%s=%d(0x%08x)"), FiledName, Val, Val);
+}
+
+//template<>
+VOID PrintField(LPCTSTR FiledName, UINT16 Val)
+{
+	D_INFO(0, TEXT("%s=%d(0x%08x)"), FiledName, Val, Val);
+}
+
+//template<>
+VOID PrintField(LPCTSTR FiledName, INT16 Val)
+{
+	D_INFO(0, TEXT("%s=%d(0x%08x)"), FiledName, Val, Val);
+}
+
+//template<>
+VOID PrintField(LPCTSTR FiledName, UINT8 Val)
+{
+	D_INFO(0, TEXT("%s=%d(0x%08x)"), FiledName, Val, Val);
+}
+
+//template<>
+VOID PrintField(LPCTSTR FiledName, INT8 Val)
+{
+	D_INFO(0, TEXT("%s=%d(0x%08x)"), FiledName, Val, Val);
+}
+
+//template<>
+VOID PrintField(LPCTSTR FiledName, CONST GUID & guid)
+{
+	TCHAR Buffer[64] = {0};
+	D_INFO(0, TEXT("%s=%s"), FiledName, GuidToStringHelper(guid, Buffer, _countof(Buffer)));
+}
+
+//template<>
+VOID PrintField(LPCTSTR FiledName, LPCTSTR str)
+{
+	D_INFO(0, TEXT("%s=%s"), FiledName, str);
+}
+

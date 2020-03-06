@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e7e1971763eaf85bd9e58ced3625eff5d3b155a6fb587a713763d8c671e32599
-size 439
+#include "stdafx.h"
+
+HRESULT OutDynamicArray(
+		LONG* pLength, 
+		WCHAR ** ppBuffer)
+{
+	//D_START(0);
+	CString str = TEXT(__FUNCTION__);
+
+	CComHeapPtr<WCHAR> apBuffer;
+	LONG BufferSize = *pLength = str.GetLength() + 1;
+	apBuffer.Allocate(BufferSize);
+	_tcscpy_s(apBuffer.m_pData, BufferSize, str.GetString());
+	*ppBuffer = apBuffer.Detach();
+	//_OLD_DINFO((0, DRNPOS, TEXT("Out String [%s]"), *ppBuffer));
+
+	return S_OK;
+}

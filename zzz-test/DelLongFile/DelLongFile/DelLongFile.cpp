@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:693e8b9c0bcbed1c854f7bedd66b02a3a7dfc650a457ae5bd54ff2ac0d9d0ef1
-size 243
+// DelLongFile.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+
+#include "EnumFiles.h"
+
+int _tmain(int argc, TCHAR ** argv)
+{
+	SmartLib::StaticAPI::RemoveFile(argv[1], argv[2]);
+    return 0;
+}
+

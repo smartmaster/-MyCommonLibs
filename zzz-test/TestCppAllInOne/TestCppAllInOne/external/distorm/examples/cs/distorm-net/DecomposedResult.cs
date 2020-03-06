@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3a2a32ee6eedb079d6795bae3939c0e25ee43b8b6967500b351bc11fa8e99bd6
-size 308
+namespace diStorm
+{
+  public class DecomposedResult
+  {
+    public DecomposedResult(int maxInstructions)
+    {
+      MaxInstructions = maxInstructions;
+      Instructions = null;
+    }
+
+    public DecomposedInst[] Instructions { get; internal set; }
+    public int MaxInstructions { get; private set; }
+  }
+}

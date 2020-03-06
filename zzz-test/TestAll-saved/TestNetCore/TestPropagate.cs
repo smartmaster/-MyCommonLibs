@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ed0f5bd60074a5ddb766aeb022c9998889a205b696ccf9f3dd65e0bba0297519
-size 590
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace TestNetCore
+{
+    struct Inner
+    //class Inner
+    {
+        public int innerValue;
+    }
+
+    struct Outer
+    //class Outer
+    {
+        public int outerValue;
+        public Inner innerObject;
+    }
+
+    class TestPropagate
+    {
+        public static void TestInParam(in Outer outerObject)
+        {
+            //outerObject.outerValue = 100;
+            //outerObject.innerObject = new Inner();
+            //outerObject.innerObject.innerValue = 200;
+
+        }
+    }
+}

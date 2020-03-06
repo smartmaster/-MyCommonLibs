@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1e3e8164c64c04059c2d4d14d0462200ff35d8d4cdad0b56394f1e48ff88f75d
-size 294
+// stdafx.cpp : source file that includes just the standard includes
+// VShadow.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"
+
+// TODO: reference any additional headers you need in STDAFX.H
+// and not in this file

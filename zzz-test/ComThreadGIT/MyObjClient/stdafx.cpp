@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:766203f7256eb2aa62b5f7eed6a7c93213838742af3c92162a3697f94644fcfd
-size 298
+// stdafx.cpp : source file that includes just the standard includes
+// MyObjClient.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"
+
+// TODO: reference any additional headers you need in STDAFX.H
+// and not in this file

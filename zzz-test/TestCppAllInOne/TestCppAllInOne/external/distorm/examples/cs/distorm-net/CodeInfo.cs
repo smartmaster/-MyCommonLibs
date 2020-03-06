@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:194b0b300ab2090e94a03cbe2e0edcd6cb967f35ae28a37cf1e6977ea9d2eb0a
-size 494
+﻿using System;
+
+namespace diStorm
+{
+  public class CodeInfo
+  {
+    public CodeInfo(long codeOffset, byte[] rawCode, DecodeType dt, int features)
+    {
+      _code = new byte[rawCode.Length];
+      Array.Copy(rawCode, _code, _code.Length);
+
+      _codeOffset = codeOffset;
+      _decodeType = dt;
+      _features = features;
+    }
+
+    internal long _codeOffset;
+    internal long _nextOffset;
+    internal byte[] _code;
+    internal DecodeType _decodeType;
+    internal int _features;
+  }
+}

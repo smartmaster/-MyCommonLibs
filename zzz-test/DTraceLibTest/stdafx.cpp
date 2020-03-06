@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cc14cbd9ac36571aba8c47787625d50f723f4884542028b01827184978415902
-size 300
+// stdafx.cpp : source file that includes just the standard includes
+// DTraceLibTest.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"
+
+// TODO: reference any additional headers you need in STDAFX.H
+// and not in this file

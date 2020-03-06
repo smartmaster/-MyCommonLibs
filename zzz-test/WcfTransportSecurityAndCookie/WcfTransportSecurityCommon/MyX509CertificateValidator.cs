@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3c0983749607b68d4c284be9468759bacc5772712e9abc6697053ad6e5073b24
-size 708
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using System.IdentityModel.Selectors;
+using System.Security.Cryptography.X509Certificates;
+
+namespace WcfTransportSecurityCommon
+{
+  public  class MyX509CertificateValidator : X509CertificateValidator
+    {
+
+        public MyX509CertificateValidator()
+        {
+        }
+        public override void Validate(X509Certificate2 certificate)
+        {
+            Console.WriteLine($"{nameof(certificate.Issuer)}={certificate.Issuer}, {nameof(certificate.Subject)}={certificate.Subject}, {nameof(certificate.Thumbprint)}={certificate.Thumbprint}");
+        }
+    }
+}

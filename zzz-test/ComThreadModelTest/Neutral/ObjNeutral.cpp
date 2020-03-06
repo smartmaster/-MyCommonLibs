@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9bd71c4b033ac00a7157a6ebedab2ea012ca53e89dcacfdba46d6aa0f762995d
-size 295
+// ObjNeutral.cpp : Implementation of CObjNeutral
+
+#include "stdafx.h"
+#include "ObjNeutral.h"
+
+
+// CObjNeutral
+
+
+
+STDMETHODIMP CObjNeutral::Print()
+{
+	// TODO: Add your implementation code here
+	_tprintf_s(TEXT("NEUTRAL %d") TEXT("\r\n"), GetCurrentThreadId());
+	return S_OK;
+}

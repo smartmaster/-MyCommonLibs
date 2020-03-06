@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:850416f8c28d951546cca9b6b811eb26f060f2f8d8949ca338a6b69462620d78
-size 301
+// stdafx.cpp : source file that includes just the standard includes
+// interview-quit.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"
+
+// TODO: reference any additional headers you need in STDAFX.H
+// and not in this file

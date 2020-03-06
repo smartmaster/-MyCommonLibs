@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3e925124d9eb51b3aeb95ecc21deaf54feb06471aee7495fb49aa941ecee8a0d
-size 300
+// stdafx.cpp : source file that includes just the standard includes
+// OpensslHelper.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"
+
+// TODO: reference any additional headers you need in STDAFX.H
+// and not in this file

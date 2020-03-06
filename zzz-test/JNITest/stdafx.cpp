@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9ddb6fc201ee5607a20f870d11ffa93e95c014db0bdef03863b0e8046375941a
-size 294
+// stdafx.cpp : source file that includes just the standard includes
+// JNITest.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"
+
+// TODO: reference any additional headers you need in STDAFX.H
+// and not in this file

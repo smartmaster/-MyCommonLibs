@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:17bc364ebe87dec9988faee5254167a0adf43dd0187588500ed87a392b4c355a
-size 661
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace TestNetCore
+{
+    class TestEnum
+    {
+        static bool IsFlagDefined(Enum e)
+        {
+            decimal d;
+            return !decimal.TryParse(e.ToString(), out d);
+        }
+        [Flags]
+        public enum BorderSides { Left = 1, Right = 2, Top = 4, Bottom = 8 }
+       public static void Case0()
+        {
+            for (int i = 0; i <= 32; i++)
+            {
+                BorderSides side = (BorderSides)i;
+                Console.WriteLine(IsFlagDefined(side) + " [" + side + "], " + side.ToString());
+            }
+        }
+    }
+}

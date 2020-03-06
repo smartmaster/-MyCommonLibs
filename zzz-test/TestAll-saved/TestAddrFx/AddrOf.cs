@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a33a533ccf8204a0ea6cf13d06187a6f154c08429a54bf9a63b12908d31887ab
-size 570
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TestAddrFx
+{
+
+
+        public static class AddrHelper
+        {
+            public static IntPtr AddrOfObject<T>(T oo)
+                where T : class
+            {
+                return IntPtr.Zero + IntPtr.Size;
+            }
+
+
+            public static IntPtr AddrOfValue<T>(ref T ss)
+                where T : struct
+            {
+                return IntPtr.Zero + IntPtr.Size;
+            }
+        }
+
+}

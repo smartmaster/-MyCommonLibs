@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:84ce78436ea43e9ace580343653dc3d702421fd1d2691562d63fe91b94ac6e2c
-size 301
+// stdafx.cpp : source file that includes just the standard includes
+// thread_com_ptr.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"
+
+// TODO: reference any additional headers you need in STDAFX.H
+// and not in this file

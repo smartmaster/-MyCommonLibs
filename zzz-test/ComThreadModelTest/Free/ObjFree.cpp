@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a21ac0787114f898cfc03f5bdc05c3f1ba3aa05c03533d401987938f3383ef02
-size 277
+// ObjFree.cpp : Implementation of CObjFree
+
+#include "stdafx.h"
+#include "ObjFree.h"
+
+
+// CObjFree
+
+
+
+STDMETHODIMP CObjFree::Print()
+{
+	// TODO: Add your implementation code here
+	_tprintf_s(TEXT("FREE %d") TEXT("\r\n"), GetCurrentThreadId());
+	return S_OK;
+}

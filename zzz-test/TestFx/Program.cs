@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6d175a8bbf2996f03509949c75757664f27a5fd1cb0f046b6dced09ffb775c26
-size 767
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace TestFx
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int testCase = -1;
+            if(args.Length > 0)
+            {
+                int.TryParse(args[0], out testCase);
+            }
+
+            switch(testCase)
+            {
+                case 0:
+                    {
+                        TestFx.KeySim.InputKey();
+                    }
+                    break;
+                case -1:
+                default:
+                    {
+                        Console.WriteLine("Invalid test case");
+                    }
+                    break;
+            }
+        }
+    }
+}

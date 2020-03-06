@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7ee652d92f1213789316a654d6336c59ea67cf4e21f75e1213123a822d999c5d
-size 476
+// GetCurrentModuleName-dll-test.cpp : Defines the exported functions for the DLL application.
+//
+
+#include "stdafx.h"
+
+
+#include "..\PublicHeader\PublicGetCurrentModuleName.h"
+//#pragma comment(lib, "E:/MyProjects/MyCommonLibs/PublicLib/ReleaseX86/GetCurrentModuleName.lib")
+
+
+int dll_name()
+{
+	LPCTSTR p1 = GetCurrentModuleName();
+	LPCTSTR p2 = GetCurrentModuleName();
+	LPCTSTR p3 = GetCurrentModuleName();
+	LPCTSTR p4 = GetCurrentModuleName();
+	return 0;
+}

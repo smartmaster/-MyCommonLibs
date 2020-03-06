@@ -41,6 +41,13 @@ endfunction()
 ################################################
 # project
 include(CMakeLists.MY_PROJECT_VAR.cmake)
+
+if(MY_CMAKE_TOOLCHAIN_FILE_VAR AND MY_TOOLCHAIN_PREFIX_VAR)
+	set(CMAKE_TOOLCHAIN_FILE "${MY_CMAKE_TOOLCHAIN_FILE_VAR}")
+endif()
+
+
+
 set(MY_PROJECT_NAME ${MY_PROJECT_NAME_VAR})
 project(${MY_PROJECT_NAME})
 
@@ -155,6 +162,14 @@ else() #build exe or lib
 	set(MY_TARGET_PROPERTIES ${MY_TARGET_PROPERTIES_VAR})
 	if(MY_TARGET_PROPERTIES)
 		set_target_properties(${MY_PROJECT_NAME} PROPERTIES ${MY_TARGET_PROPERTIES})
+	endif()
+
+
+	if(MY_CMAKE_TOOLCHAIN_FILE_VAR AND MY_TOOLCHAIN_PREFIX_VAR)
+		target_include_directories(${MY_PROJECT_NAME} PRIVATE "/usr/local/${MY_TOOLCHAIN_PREFIX_VAR}/include")
+		target_include_directories(${MY_PROJECT_NAME} PRIVATE "/usr/${MY_TOOLCHAIN_PREFIX_VAR}/include")
+		target_link_directories(${MY_PROJECT_NAME} PRIVATE "/usr/local/${MY_TOOLCHAIN_PREFIX_VAR}/lib")
+		target_link_directories(${MY_PROJECT_NAME} PRIVATE "/usr/${MY_TOOLCHAIN_PREFIX_VAR}/lib")
 	endif()
 	
 

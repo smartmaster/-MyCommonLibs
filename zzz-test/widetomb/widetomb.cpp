@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f4a47d06c0c2829a04ae355eb523ebfa2034beedd1a4c9d967db816f035bbca3
-size 442
+// widetomb.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+
+#include "WideNarrowChar.h"
+
+void test()
+{
+	WCHAR strW[] = L"Œ“a√«";
+
+	CStringA strUtf8;
+	Utf16To8String(strW, strUtf8);
+	int size = strUtf8.GetLength();
+
+	CStringW strUtf16;
+	Utf8To16String(strUtf8, strUtf16);
+	size = strUtf16.GetLength();
+
+	return;
+}
+
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	test();
+	return 0;
+}
+

@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b9940eb6178ce5c319ce00ef4ae4da645912e975b07641ca31273bb820f37bca
-size 296
+// stdafx.cpp : source file that includes just the standard includes
+// MutexLock.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"
+
+// TODO: reference any additional headers you need in STDAFX.H
+// and not in this file

@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b1611e2e4f8978375d0dae4d58edf88325473c8e9db06434952de9436f5fe34f
-size 239
+// FileLock.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+
+int _tmain_test(int argc, _TCHAR* argv[]);
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	return _tmain_test(argc, argv);
+	return 0;
+}
+

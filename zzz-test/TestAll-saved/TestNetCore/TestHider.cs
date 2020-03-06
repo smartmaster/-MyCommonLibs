@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1b63c6c667cbc76d1a0f0697b7b123fe41e1d9372a2ac54130d9c7f1fda0bdcf
-size 879
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace TestNetCore.CsInNutshell
+{
+    public class BaseClass
+    {
+        public virtual void Foo() { Console.WriteLine("BaseClass.Foo"); }
+    }
+    public class Overrider : BaseClass
+    {
+        public override void Foo() { Console.WriteLine("Overrider.Foo"); }
+    }
+    public class Hider : BaseClass
+    {
+        public new void Foo() { Console.WriteLine("Hider.Foo"); }
+    }
+    class TestHider
+    {
+        public static void Case0()
+        {
+            Overrider over = new Overrider();
+            BaseClass b1 = over;
+            over.Foo(); // Overrider.Foo
+            b1.Foo(); // Overrider.Foo
+            Hider h = new Hider();
+            BaseClass b2 = h;
+            h.Foo(); // Hider.Foo
+            b2.Foo(); // BaseClass.Foo
+        }
+    }
+}

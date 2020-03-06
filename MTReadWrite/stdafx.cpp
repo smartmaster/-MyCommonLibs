@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b73d95b502efad98a688783517b41dbf1049eeef9ceed0090627aeea21cd6c49
-size 298
+// stdafx.cpp : source file that includes just the standard includes
+// MTReadWrite.pch will be the pre-compiled header
+// stdafx.obj will contain the pre-compiled type information
+
+#include "stdafx.h"
+
+// TODO: reference any additional headers you need in STDAFX.H
+// and not in this file

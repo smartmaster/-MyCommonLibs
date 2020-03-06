@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:542e67d6247001859b6bb38c2aa085f5446371eb2f2385546e12d0bf275de503
-size 410
+// dllmain.cpp : Defines the entry point for the DLL application.
+#include "stdafx.h"
+
+BOOL APIENTRY DllMain( HMODULE hModule,
+                       DWORD  ul_reason_for_call,
+                       LPVOID lpReserved
+					 )
+{
+	switch (ul_reason_for_call)
+	{
+	case DLL_PROCESS_ATTACH:
+	case DLL_THREAD_ATTACH:
+	case DLL_THREAD_DETACH:
+	case DLL_PROCESS_DETACH:
+		break;
+	}
+	return TRUE;
+}
+
