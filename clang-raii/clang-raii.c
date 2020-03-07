@@ -5,6 +5,139 @@
 
 #include "clang-raii.h"
 
+
+extern int my_setjmp(jmp_buf env);
+extern void my_longjmp(jmp_buf env, int value);
+
+
+void CLangRaii4()
+{
+
+#define  xx_setjmp my_setjmp
+#define  xx_longjmp my_longjmp
+
+	//////////////////////////////////////////////////////////////////////////
+	jmp_buf res_buff_suffix[4];
+	jmp_buf end_buff_suffix = { 0 };
+	volatile long res_count_suffix = 0;
+
+	//////////////////////////////////////////////////////////////////////////
+	char* str0 = strdup("this is the 1st resource allocated");
+	printf("Allocated resource: %s" "\r\n", str0);
+
+	switch (xx_setjmp(res_buff_suffix[res_count_suffix]))
+	{
+	case 0:
+	{
+		++res_count_suffix;
+	}
+	break;
+	default:
+	{
+		printf("To free resource: %s" "\r\n", str0);
+		free(str0);
+
+		if (res_count_suffix > 0)
+		{
+			--res_count_suffix;
+			xx_longjmp(res_buff_suffix[res_count_suffix], 1);
+		}
+		else
+		{
+			xx_longjmp(end_buff_suffix, 1);
+		}
+	}
+	break;
+	}
+
+	//////////////////////////////////////////////////////////////////////////
+	char* str1 = strdup("this is the 2nd resource allocated");
+	printf("Allocated resource: %s" "\r\n", str1);
+
+	switch (xx_setjmp(res_buff_suffix[res_count_suffix]))
+	{
+	case 0:
+	{
+		++res_count_suffix;
+	}
+	break;
+	default:
+	{
+		printf("To free resource: %s" "\r\n", str1);
+		free(str1);
+
+		if (res_count_suffix > 0)
+		{
+			--res_count_suffix;
+			xx_longjmp(res_buff_suffix[res_count_suffix], 1);
+		}
+		else
+		{
+			xx_longjmp(end_buff_suffix, 1);
+		}
+	}
+	break;
+	}
+
+	//////////////////////////////////////////////////////////////////////////
+	char* str2 = strdup("this is the 3rd resource allocated");
+	printf("Allocated resource: %s" "\r\n", str2);
+
+	switch (xx_setjmp(res_buff_suffix[res_count_suffix]))
+	{
+	case 0:
+	{
+		++res_count_suffix;
+	}
+	break;
+	default:
+	{
+		printf("To free resource: %s" "\r\n", str2);
+		free(str2);
+
+		if (res_count_suffix > 0)
+		{
+			--res_count_suffix;
+			xx_longjmp(res_buff_suffix[res_count_suffix], 1);
+		}
+		else
+		{
+			xx_longjmp(end_buff_suffix, 1);
+		}
+
+	}
+	break;
+	}
+
+	//////////////////////////////////////////////////////////////////////////
+	printf("To free all resource" "\r\n");
+
+	//////////////////////////////////////////////////////////////////////////
+	switch (xx_setjmp(end_buff_suffix))
+	{
+	case 0:
+	{
+		if (res_count_suffix > 0)
+		{
+			--res_count_suffix;
+			xx_longjmp(res_buff_suffix[res_count_suffix], 1);
+		}
+	}
+	break;
+	default:
+	{
+	}
+	break;
+	}
+
+
+	//////////////////////////////////////////////////////////////////////////
+	printf("all resource are freed" "\r\n");
+}
+
+
+
+
 void CLangRaii3()
 {
 

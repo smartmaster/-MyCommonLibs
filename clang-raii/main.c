@@ -13,27 +13,33 @@ int main(int argc, char** argv)
 	{
 		testCase = strtol(argv[1], NULL, 10);
 	}
-	
+
 	switch (testCase)
 	{
-		case 2:
-		{
-			CLangRaii3();
-			CLangRaii3();
-		}
-		break;
-		case 1:
-		{
-			CLangRaii2();
-			CLangRaii2();
-		}
-		break;
-		case 0:
-		{
-			CLangRaii();
-			CLangRaii();
-		}
-		break;
+	case 3:
+	{
+		CLangRaii4();
+		CLangRaii4();
+	}
+	break;
+	case 2:
+	{
+		CLangRaii3();
+		CLangRaii3();
+	}
+	break;
+	case 1:
+	{
+		CLangRaii2();
+		CLangRaii2();
+	}
+	break;
+	case 0:
+	{
+		CLangRaii();
+		CLangRaii();
+	}
+	break;
 	}
 
 
