@@ -10,6 +10,50 @@ extern int my_setjmp(jmp_buf env);
 extern void my_longjmp(jmp_buf env, int value);
 
 
+void CLangRaii5()
+{
+
+	RES_SCOPE_START(CLangRaii5, 16);
+
+	//////////////////////////////////////////////////////////////////////////
+	char* str0 = strdup("this is the 1st resource allocated");
+	printf("Allocated resource: %s" "\r\n", str0);
+
+
+	RES_CLEANUP(CLangRaii5, {
+		printf("To free resource: %s" "\r\n", str0);
+		free(str0);
+		});
+
+	//////////////////////////////////////////////////////////////////////////
+	char* str1 = strdup("this is the 2nd resource allocated");
+	printf("Allocated resource: %s" "\r\n", str1);
+
+	RES_CLEANUP(CLangRaii5, {
+		printf("To free resource: %s" "\r\n", str1);
+		free(str1);
+		});
+
+	//////////////////////////////////////////////////////////////////////////
+	char* str2 = strdup("this is the 3rd resource allocated");
+	printf("Allocated resource: %s" "\r\n", str2);
+
+
+	RES_CLEANUP(CLangRaii5, {
+		printf("To free resource: %s" "\r\n", str2);
+		free(str2);
+		});
+
+
+	//////////////////////////////////////////////////////////////////////////
+	RES_SCOPE_END(CLangRaii5);
+
+	return;
+}
+
+
+
+
 void CLangRaii4()
 {
 

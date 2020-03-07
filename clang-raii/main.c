@@ -16,6 +16,12 @@ int main(int argc, char** argv)
 
 	switch (testCase)
 	{
+	case 4:
+	{
+		CLangRaii5();
+		CLangRaii5();
+	}
+	break;
 	case 3:
 	{
 		CLangRaii4();

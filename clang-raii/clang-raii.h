@@ -58,4 +58,11 @@ default: \
 }
 
 
+
+#define RES_CLEANUP(suffix, x) \
+RES_START(suffix) \
+x \
+RES_END(suffix)
+
+
 #endif //_6F7CCBF4_E94C_46F4_BA53_75CF804058F6_
