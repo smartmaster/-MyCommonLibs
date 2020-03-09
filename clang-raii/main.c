@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include <string.h>
 
-extern void CLangRaii();
-extern void CLangRaii2();
-extern void CLangRaii3();
+//extern void CLangRaii();
+//extern void CLangRaii2();
+//extern void CLangRaii3();
 
 int main(int argc, char** argv)
 {
@@ -16,6 +16,13 @@ int main(int argc, char** argv)
 
 	switch (testCase)
 	{
+	case 5:
+	{
+		CLangRaii6();
+		CLangRaii6();
+	}
+	break;
+
 	case 4:
 	{
 		CLangRaii5();

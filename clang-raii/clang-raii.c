@@ -10,17 +10,17 @@ extern int my_setjmp(jmp_buf env);
 extern void my_longjmp(jmp_buf env, int value);
 
 
-void CLangRaii5()
+void CLangRaii6()
 {
 
-	RES_SCOPE_START(CLangRaii5, 16);
+	rs_start(16);
 
 	//////////////////////////////////////////////////////////////////////////
 	char* str0 = strdup("this is the 1st resource allocated");
 	printf("Allocated resource: %s" "\r\n", str0);
 
 
-	RES_CLEANUP(CLangRaii5, {
+	r_cleanup({
 		printf("To free resource: %s" "\r\n", str0);
 		free(str0);
 		});
@@ -29,7 +29,7 @@ void CLangRaii5()
 	char* str1 = strdup("this is the 2nd resource allocated");
 	printf("Allocated resource: %s" "\r\n", str1);
 
-	RES_CLEANUP(CLangRaii5, {
+	r_cleanup({
 		printf("To free resource: %s" "\r\n", str1);
 		free(str1);
 		});
@@ -39,14 +39,56 @@ void CLangRaii5()
 	printf("Allocated resource: %s" "\r\n", str2);
 
 
-	RES_CLEANUP(CLangRaii5, {
+	r_cleanup({
 		printf("To free resource: %s" "\r\n", str2);
 		free(str2);
 		});
 
 
 	//////////////////////////////////////////////////////////////////////////
-	RES_SCOPE_END(CLangRaii5);
+	rs_end();
+
+	return;
+}
+
+
+void CLangRaii5()
+{
+
+	res_scope_start(CLangRaii5, 16);
+
+	//////////////////////////////////////////////////////////////////////////
+	char* str0 = strdup("this is the 1st resource allocated");
+	printf("Allocated resource: %s" "\r\n", str0);
+
+
+	res_cleanup(CLangRaii5, {
+		printf("To free resource: %s" "\r\n", str0);
+		free(str0);
+		});
+
+	//////////////////////////////////////////////////////////////////////////
+	char* str1 = strdup("this is the 2nd resource allocated");
+	printf("Allocated resource: %s" "\r\n", str1);
+
+	res_cleanup(CLangRaii5, {
+		printf("To free resource: %s" "\r\n", str1);
+		free(str1);
+		});
+
+	//////////////////////////////////////////////////////////////////////////
+	char* str2 = strdup("this is the 3rd resource allocated");
+	printf("Allocated resource: %s" "\r\n", str2);
+
+
+	res_cleanup(CLangRaii5, {
+		printf("To free resource: %s" "\r\n", str2);
+		free(str2);
+		});
+
+
+	//////////////////////////////////////////////////////////////////////////
+	res_scope_end(CLangRaii5);
 
 	return;
 }
@@ -57,9 +99,6 @@ void CLangRaii5()
 void CLangRaii4()
 {
 
-#define  xx_setjmp my_setjmp
-#define  xx_longjmp my_longjmp
-
 	//////////////////////////////////////////////////////////////////////////
 	jmp_buf res_buff_suffix[4];
 	jmp_buf end_buff_suffix = { 0 };
@@ -69,11 +108,15 @@ void CLangRaii4()
 	char* str0 = strdup("this is the 1st resource allocated");
 	printf("Allocated resource: %s" "\r\n", str0);
 
-	switch (xx_setjmp(res_buff_suffix[res_count_suffix]))
+	switch (sml_setjmp(res_buff_suffix[res_count_suffix]))
 	{
 	case 0:
 	{
 		++res_count_suffix;
+		if (res_count_suffix > sizeof(res_buff_suffix)/sizeof(res_buff_suffix[0]))
+		{
+			assert(0);
+		}
 	}
 	break;
 	default:
@@ -84,11 +127,11 @@ void CLangRaii4()
 		if (res_count_suffix > 0)
 		{
 			--res_count_suffix;
-			xx_longjmp(res_buff_suffix[res_count_suffix], 1);
+			sml_longjmp(res_buff_suffix[res_count_suffix], 1);
 		}
 		else
 		{
-			xx_longjmp(end_buff_suffix, 1);
+			sml_longjmp(end_buff_suffix, 1);
 		}
 	}
 	break;
@@ -98,11 +141,15 @@ void CLangRaii4()
 	char* str1 = strdup("this is the 2nd resource allocated");
 	printf("Allocated resource: %s" "\r\n", str1);
 
-	switch (xx_setjmp(res_buff_suffix[res_count_suffix]))
+	switch (sml_setjmp(res_buff_suffix[res_count_suffix]))
 	{
 	case 0:
 	{
 		++res_count_suffix;
+		if (res_count_suffix > sizeof(res_buff_suffix) / sizeof(res_buff_suffix[0]))
+		{
+			assert(0);
+		}
 	}
 	break;
 	default:
@@ -113,11 +160,11 @@ void CLangRaii4()
 		if (res_count_suffix > 0)
 		{
 			--res_count_suffix;
-			xx_longjmp(res_buff_suffix[res_count_suffix], 1);
+			sml_longjmp(res_buff_suffix[res_count_suffix], 1);
 		}
 		else
 		{
-			xx_longjmp(end_buff_suffix, 1);
+			sml_longjmp(end_buff_suffix, 1);
 		}
 	}
 	break;
@@ -127,11 +174,15 @@ void CLangRaii4()
 	char* str2 = strdup("this is the 3rd resource allocated");
 	printf("Allocated resource: %s" "\r\n", str2);
 
-	switch (xx_setjmp(res_buff_suffix[res_count_suffix]))
+	switch (sml_setjmp(res_buff_suffix[res_count_suffix]))
 	{
 	case 0:
 	{
 		++res_count_suffix;
+		if (res_count_suffix > sizeof(res_buff_suffix) / sizeof(res_buff_suffix[0]))
+		{
+			assert(0);
+		}
 	}
 	break;
 	default:
@@ -142,11 +193,11 @@ void CLangRaii4()
 		if (res_count_suffix > 0)
 		{
 			--res_count_suffix;
-			xx_longjmp(res_buff_suffix[res_count_suffix], 1);
+			sml_longjmp(res_buff_suffix[res_count_suffix], 1);
 		}
 		else
 		{
-			xx_longjmp(end_buff_suffix, 1);
+			sml_longjmp(end_buff_suffix, 1);
 		}
 
 	}
@@ -157,14 +208,14 @@ void CLangRaii4()
 	printf("To free all resource" "\r\n");
 
 	//////////////////////////////////////////////////////////////////////////
-	switch (xx_setjmp(end_buff_suffix))
+	switch (sml_setjmp(end_buff_suffix))
 	{
 	case 0:
 	{
 		if (res_count_suffix > 0)
 		{
 			--res_count_suffix;
-			xx_longjmp(res_buff_suffix[res_count_suffix], 1);
+			sml_longjmp(res_buff_suffix[res_count_suffix], 1);
 		}
 	}
 	break;
@@ -185,45 +236,45 @@ void CLangRaii4()
 void CLangRaii3()
 {
 
-	RES_SCOPE_START(__FUNCTION__, 16);
+	res_scope_start(CLangRaii3, 16);
 	
 	//////////////////////////////////////////////////////////////////////////
 	char* str0 = strdup("this is the 1st resource allocated");
 	printf("Allocated resource: %s" "\r\n", str0);
 
-	RES_START(__FUNCTION__);
+	res_start(CLangRaii3);
 	printf("To free resource: %s" "\r\n", str0);
 	free(str0);
-	RES_END(__FUNCTION__);
+	res_end(CLangRaii3);
 
 
 	//////////////////////////////////////////////////////////////////////////
 	char* str1 = strdup("this is the 2nd resource allocated");
 	printf("Allocated resource: %s" "\r\n", str1);
 
-	RES_START(__FUNCTION__);
+	res_start(CLangRaii3);
 	printf("To free resource: %s" "\r\n", str1);
 	free(str1);
-	RES_END(__FUNCTION__);
+	res_end(CLangRaii3);
 
 	//////////////////////////////////////////////////////////////////////////
 	char* str2 = strdup("this is the 3rd resource allocated");
 	printf("Allocated resource: %s" "\r\n", str2);
 
-	RES_START(__FUNCTION__);
+	res_start(CLangRaii3);
 	printf("To free resource: %s" "\r\n", str2);
 	free(str2);
-	RES_END(__FUNCTION__);
+	res_end(CLangRaii3);
 
 
 	//////////////////////////////////////////////////////////////////////////
-	RES_SCOPE_END(__FUNCTION__);
+	res_scope_end(CLangRaii3);
 
 	return;
 }
 
 
-
+#if 1
 void CLangRaii2()
 {
 
@@ -236,7 +287,7 @@ void CLangRaii2()
 	char* str0 = strdup("this is the 1st resource allocated");
 	printf("Allocated resource: %s" "\r\n", str0);
 
-	switch (setjmp(res_buff_suffix[res_count_suffix]))
+	switch (sml_setjmp(res_buff_suffix[res_count_suffix]))
 	{
 	case 0:
 	{
@@ -251,11 +302,11 @@ void CLangRaii2()
 		if (res_count_suffix > 0)
 		{
 			--res_count_suffix;
-			longjmp(res_buff_suffix[res_count_suffix], 1);
+			sml_longjmp(res_buff_suffix[res_count_suffix], 1);
 		}
 		else
 		{
-			longjmp(end_buff_suffix, 1);
+			sml_longjmp(end_buff_suffix, 1);
 		}
 	}
 	break;
@@ -265,7 +316,7 @@ void CLangRaii2()
 	char* str1 = strdup("this is the 2nd resource allocated");
 	printf("Allocated resource: %s" "\r\n", str1);
 
-	switch (setjmp(res_buff_suffix[res_count_suffix]))
+	switch (sml_setjmp(res_buff_suffix[res_count_suffix]))
 	{
 	case 0:
 	{
@@ -280,11 +331,11 @@ void CLangRaii2()
 		if (res_count_suffix > 0)
 		{
 			--res_count_suffix;
-			longjmp(res_buff_suffix[res_count_suffix], 1);
+			sml_longjmp(res_buff_suffix[res_count_suffix], 1);
 		}
 		else
 		{
-			longjmp(end_buff_suffix, 1);
+			sml_longjmp(end_buff_suffix, 1);
 		}
 	}
 	break;
@@ -294,7 +345,7 @@ void CLangRaii2()
 	char* str2 = strdup("this is the 3rd resource allocated");
 	printf("Allocated resource: %s" "\r\n", str2);
 
-	switch (setjmp(res_buff_suffix[res_count_suffix]))
+	switch (sml_setjmp(res_buff_suffix[res_count_suffix]))
 	{
 	case 0:
 	{
@@ -309,11 +360,11 @@ void CLangRaii2()
 		if (res_count_suffix > 0)
 		{
 			--res_count_suffix;
-			longjmp(res_buff_suffix[res_count_suffix], 1);
+			sml_longjmp(res_buff_suffix[res_count_suffix], 1);
 		}
 		else
 		{
-			longjmp(end_buff_suffix, 1);
+			sml_longjmp(end_buff_suffix, 1);
 		}
 		
 	}
@@ -324,14 +375,14 @@ void CLangRaii2()
 	printf("To free all resource" "\r\n");
 
 	//////////////////////////////////////////////////////////////////////////
-	switch (setjmp(end_buff_suffix))
+	switch (sml_setjmp(end_buff_suffix))
 	{
 	case 0:
 	{
 		if (res_count_suffix > 0)
 		{
 			--res_count_suffix;
-			longjmp(res_buff_suffix[res_count_suffix], 1);
+			sml_longjmp(res_buff_suffix[res_count_suffix], 1);
 		}
 	}
 	break;
@@ -345,7 +396,7 @@ void CLangRaii2()
 	//////////////////////////////////////////////////////////////////////////
 	printf("all resource are freed" "\r\n");
 }
-
+#endif
 
 
 void CLangRaii()
@@ -356,7 +407,7 @@ void CLangRaii()
 
 	char* str1 = strdup("this is the 1st resource allocated");
 	STATIC jmp_buf env_str1;
-	switch (setjmp(env_str1))
+	switch (sml_setjmp(env_str1))
 	{
 	case 0:
 	{
@@ -367,14 +418,14 @@ void CLangRaii()
 	{
 		printf("To free resource: %s" "\r\n", str1);
 		free(str1);
-		longjmp(env_end, 1);
+		sml_longjmp(env_end, 1);
 	}
 	break;
 	}
 
 	char* str2 = strdup("this is the 2nd resource allocated");
 	STATIC jmp_buf env_str2;
-	switch (setjmp(env_str2))
+	switch (sml_setjmp(env_str2))
 	{
 	case 0:
 	{
@@ -385,7 +436,7 @@ void CLangRaii()
 	{
 		printf("To free resource: %s" "\r\n", str2);
 		free(str2);
-		longjmp(env_str1, 1);
+		sml_longjmp(env_str1, 1);
 	}
 	break;
 	}
@@ -393,7 +444,7 @@ void CLangRaii()
 
 	char* str3 = strdup("this is the 3rd resource allocated");
 	STATIC jmp_buf env_str3;
-	switch (setjmp(env_str3))
+	switch (sml_setjmp(env_str3))
 	{
 	case 0:
 	{
@@ -404,18 +455,18 @@ void CLangRaii()
 	{
 		printf("To free resource: %s" "\r\n", str3);
 		free(str3);
-		longjmp(env_str2, 1);
+		sml_longjmp(env_str2, 1);
 	}
 	break;
 	}
 
 	   	 	
-	switch (setjmp(env_end))
+	switch (sml_setjmp(env_end))
 	{
 	case 0:
 	{
 		printf("To free all resource" "\r\n");
-		longjmp(env_str3, 1);
+		sml_longjmp(env_str3, 1);
 	}
 	break;
 	default:
