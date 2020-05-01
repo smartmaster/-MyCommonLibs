@@ -1,4 +1,8 @@
 #pragma once
+
+#include <iostream>
+
+#include "sml-common.h"
 #include "graph-lib.h"
 
 

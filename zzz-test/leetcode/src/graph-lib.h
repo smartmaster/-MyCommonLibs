@@ -15,11 +15,6 @@
 
 namespace SmartLib
 {
-#ifdef _WIN32
-
-#else
-	static const long  SML_MAX_DISTANCE = 99999999;
-#endif // _WIN32
 
 	using namespace ::std;
 
@@ -208,9 +203,7 @@ namespace SmartLib
 	{
 	private:
 
-#ifdef _WIN32
-		static const long SML_MAX_DISTANCE{ LONG_MAX / 2 };
-#endif // _WIN32
+		inline static const long SML_MAX_DISTANCE{ LONG_MAX / 2 };
 		
 	
 	private:
@@ -302,9 +295,7 @@ namespace SmartLib
 	{
 	private:
 
-#ifdef _WIN32
-		static const long SML_MAX_DISTANCE{ LONG_MAX / 2 };
-#endif // _WIN32
+		inline static const long SML_MAX_DISTANCE{ LONG_MAX / 2 };
 
 
 	private:
@@ -368,10 +359,10 @@ namespace SmartLib
 	class MinCostDirectionGridAlg3
 	{
 	public:
-		static const int  UP{ 4 };
-		static const int  DOWN{ 3 };
-		static const int  LEFT{ 2 };
-		static const int  RIGHT{ 1 };
+		inline static const int  UP{ 4 };
+		inline static const int  DOWN{ 3 };
+		inline static const int  LEFT{ 2 };
+		inline static const int  RIGHT{ 1 };
 
 	private:
 		const vector<vector<int>>& _direction; /***INCOMMING***/
