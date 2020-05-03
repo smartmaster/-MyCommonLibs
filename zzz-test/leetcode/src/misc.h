@@ -14,6 +14,40 @@ namespace SmartLib
 {
 	using namespace ::std;
 
+
+	class Self :
+		public enable_shared_from_this<Self>
+	{
+	private:
+		string _data;
+
+	private:
+		void Print()
+		{
+			cout << "the data is " << _data << endl;
+		}
+
+
+	public:
+		Self(const char* data) :
+			_data{data}
+		{
+		}
+
+		void CallPrint()
+		{
+			auto self{ shared_from_this() };
+			self->Print();
+		}
+
+	public:
+		static void Case0()
+		{
+			shared_ptr<Self> sp{ make_shared<Self>("hello world!") };
+			sp->CallPrint();
+		}
+	};
+
 	class Misc
 	{
 	public:

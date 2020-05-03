@@ -5,10 +5,12 @@
 #include <map>
 #include <unordered_map>
 #include <tuple>
-
+#include <vector>
 
 namespace SmartLib
 {
+	using namespace  ::std;
+
 	class Longest_Well_Performing_Interval
 	{
 	private:
