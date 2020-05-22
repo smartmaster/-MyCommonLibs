@@ -4,6 +4,8 @@
 
 namespace SmartLib
 {
+	using namespace  ::std;
+
 	class MergeSortAlg
 	{
 	private:

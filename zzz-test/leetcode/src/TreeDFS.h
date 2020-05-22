@@ -87,20 +87,22 @@ namespace SmartLib::TreeDFS
 		}
 
 		//1. create the tree
-		static void BuildTree(Node** root, int height)
+		static Node* BuildTree(int height)
 		{
 			if (height == 0)
 			{
 				return;
 			}
 
-			*root = new Node{};
+			Node* root = new Node{};
 
-			for (int ii = 0; ii < (**root)._childCount; ++ii)
+			for (int ii = 0; ii < root->_childCount; ++ii)
 			{
-				BuildTree(&(**root)._child[ii], height - 1);
+				root->_child[ii] = BuildTree(height - 1);
 			}
 
+
+			return root;
 		}
 
 		//2. traverse the tree

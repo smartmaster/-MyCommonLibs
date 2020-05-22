@@ -1,6 +1,7 @@
 #pragma once
 
 #include <vector>
+#include <deque>
 
 namespace SmartLib::all_nodes_distance_k_in_binary_tree
 {
