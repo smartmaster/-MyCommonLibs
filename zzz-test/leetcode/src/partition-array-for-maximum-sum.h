@@ -3,9 +3,12 @@
 //https://leetcode.com/problems/partition-array-for-maximum-sum/
 
 #include <vector>
+#include <climits>
 
 namespace SmartLib
 {
+	using namespace ::std;
+
 	class partition_array_for_maximum_sum
 	{
 	private:

@@ -16,6 +16,7 @@
 			"add_executable",
 			"install",
 			"target_link_directories",
+			"target_link_libraries",
 			"add_definitions",
 			"target_include_directories"
 		],
@@ -49,11 +50,17 @@
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 157,
+				"line" : 204,
 				"parent" : 0
 			},
 			{
 				"command" : 4,
+				"file" : 0,
+				"line" : 157,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
 				"file" : 0,
 				"line" : 188,
 				"parent" : 0
@@ -75,56 +82,32 @@
 			"defines" : 
 			[
 				{
-					"backtrace" : 4,
+					"backtrace" : 5,
 					"define" : "UNICODE"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 5,
 					"define" : "_UNICODE"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 5,
+					"backtrace" : 6,
 					"path" : "D:/MyProjects/~MyCommonLibs/zzz-test/leetcode/inc_dir1/inc1"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 6,
 					"path" : "D:/MyProjects/~MyCommonLibs/zzz-test/leetcode/inc_dir2/inc2"
 				},
 				{
-					"backtrace" : 5,
+					"backtrace" : 6,
 					"path" : "D:/MyProjects/~MyCommonLibs/zzz-test/leetcode/inc_dir3/inc3"
 				}
 			],
 			"language" : "CXX",
 			"sourceIndexes" : 
 			[
-				77,
-				78,
-				79,
-				80,
-				81,
-				82,
-				83,
-				84,
-				85,
-				86,
-				87,
-				88,
-				89,
-				90,
-				91,
-				92,
-				93,
-				94,
-				95,
-				96,
-				97,
-				98,
-				99,
-				100,
 				101,
 				102,
 				103,
@@ -177,7 +160,51 @@
 				150,
 				151,
 				152,
-				153
+				153,
+				154,
+				155,
+				156,
+				157,
+				158,
+				159,
+				160,
+				161,
+				162,
+				163,
+				164,
+				165,
+				166,
+				167,
+				168,
+				169,
+				170,
+				171,
+				172,
+				173,
+				174,
+				175,
+				176,
+				177,
+				178,
+				179,
+				180,
+				181,
+				182,
+				183,
+				184,
+				185,
+				186,
+				187,
+				188,
+				189,
+				190,
+				191,
+				192,
+				193,
+				194,
+				195,
+				196,
+				197
 			]
 		}
 	],
@@ -224,10 +251,12 @@
 				"role" : "libraryPath"
 			},
 			{
+				"backtrace" : 4,
 				"fragment" : "ws2_32.lib",
 				"role" : "libraries"
 			},
 			{
+				"backtrace" : 4,
 				"fragment" : "rpcrt4.lib",
 				"role" : "libraries"
 			},
@@ -327,13 +356,7 @@
 				73,
 				74,
 				75,
-				76
-			]
-		},
-		{
-			"name" : "Source Files",
-			"sourceIndexes" : 
-			[
+				76,
 				77,
 				78,
 				79,
@@ -357,7 +380,13 @@
 				97,
 				98,
 				99,
-				100,
+				100
+			]
+		},
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
 				101,
 				102,
 				103,
@@ -410,12 +439,76 @@
 				150,
 				151,
 				152,
-				153
+				153,
+				154,
+				155,
+				156,
+				157,
+				158,
+				159,
+				160,
+				161,
+				162,
+				163,
+				164,
+				165,
+				166,
+				167,
+				168,
+				169,
+				170,
+				171,
+				172,
+				173,
+				174,
+				175,
+				176,
+				177,
+				178,
+				179,
+				180,
+				181,
+				182,
+				183,
+				184,
+				185,
+				186,
+				187,
+				188,
+				189,
+				190,
+				191,
+				192,
+				193,
+				194,
+				195,
+				196,
+				197
 			]
 		}
 	],
 	"sources" : 
 	[
+		{
+			"backtrace" : 1,
+			"path" : "src/FindPath.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/TreeDFS.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/all-nodes-distance-k-in-binary-tree.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/all-nodes-distance-k-in-binary-tree.test.h",
+			"sourceGroupIndex" : 0
+		},
 		{
 			"backtrace" : 1,
 			"path" : "src/best-sightseeing-pair.h",
@@ -488,12 +581,47 @@
 		},
 		{
 			"backtrace" : 1,
+			"path" : "src/distribute-coins-in-binary-tree.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/distribute-coins-in-binary-tree.test.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/filling-bookcase-shelves.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/filling-bookcase-shelves.test.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
 			"path" : "src/find-point-in-rotaion-array.h",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"path" : "src/find-point-in-rotaion-array.test.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/get-input.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/global-and-local-inversions.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/global-and-local-inversions.test.h",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -668,6 +796,36 @@
 		},
 		{
 			"backtrace" : 1,
+			"path" : "src/numbers-with-same-consecutive-differences.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/numbers-with-same-consecutive-differences.test.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/part-3.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/part-3.test.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/partition-array-for-maximum-sum.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/partition-array-for-maximum-sum.test.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
 			"path" : "src/path-sum-ii.h",
 			"sourceGroupIndex" : 0
 		},
@@ -699,6 +857,16 @@
 		{
 			"backtrace" : 1,
 			"path" : "src/recur-reverse-stack.test.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/regions-cut-by-slashes.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/regions-cut-by-slashes.test.h",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -773,12 +941,27 @@
 		},
 		{
 			"backtrace" : 1,
+			"path" : "src/strings-to-max-number.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/strings-to-max-number.test.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
 			"path" : "src/tree-test.h",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"path" : "src/tree-test.test.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/treeBFS.h",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -793,6 +976,16 @@
 		},
 		{
 			"backtrace" : 1,
+			"path" : "src/video-stitching.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/video-stitching.test.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
 			"path" : "src/windows-test.h",
 			"sourceGroupIndex" : 0
 		},
@@ -800,6 +993,18 @@
 			"backtrace" : 1,
 			"path" : "src/windows-test.test.h",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/all-nodes-distance-k-in-binary-tree.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/all-nodes-distance-k-in-binary-tree.test.cpp",
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
@@ -888,6 +1093,30 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+			"path" : "src/distribute-coins-in-binary-tree.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/distribute-coins-in-binary-tree.test.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/filling-bookcase-shelves.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/filling-bookcase-shelves.test.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
 			"path" : "src/find-point-in-rotaion-array.cpp",
 			"sourceGroupIndex" : 1
 		},
@@ -895,6 +1124,18 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/find-point-in-rotaion-array.test.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/global-and-local-inversions.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/global-and-local-inversions.test.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -1104,6 +1345,42 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+			"path" : "src/numbers-with-same-consecutive-differences.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/numbers-with-same-consecutive-differences.test.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/part-3.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/part-3.test.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/partition-array-for-maximum-sum.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/partition-array-for-maximum-sum.test.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
 			"path" : "src/path-sum-ii.cpp",
 			"sourceGroupIndex" : 1
 		},
@@ -1135,6 +1412,18 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/recur-reverse-stack.test.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/regions-cut-by-slashes.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/regions-cut-by-slashes.test.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -1224,6 +1513,18 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+			"path" : "src/strings-to-max-number.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/strings-to-max-number.test.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
 			"path" : "src/tree-test.cpp",
 			"sourceGroupIndex" : 1
 		},
@@ -1243,6 +1544,18 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/two-stack-queue.test.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/video-stitching.cpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/video-stitching.test.cpp",
 			"sourceGroupIndex" : 1
 		},
 		{

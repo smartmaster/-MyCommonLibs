@@ -4,6 +4,15 @@
 #include <cstdlib>
 
 
+#ifdef _WIN32
+
+#else
+
+#define _countof(arr) (sizeof(arr)/sizeof(arr[0])) //linux
+
+#endif
+
+
 namespace SmartLib
 {
 	using namespace ::std;

@@ -11,13 +11,13 @@ namespace SmartLib
 {
 	using namespace ::std;
 
-	class TupleTest
+	class SmlTupleTest
 	{
 	public:
 		static void Case0()
 		{
 			string temp{"hello"};
-			Tuple<double, long, string> tpl{12.34, 5678L, static_cast<string&&>(temp)};
+			SmlTuple<double, long, string> tpl{12.34, 5678L, static_cast<string&&>(temp)};
 
 			cout << "there are " << tpl.ItemsCount() << " items in the tuple" << endl;
 			cout << tpl.Get<0>() << " "
@@ -25,7 +25,7 @@ namespace SmartLib
 				<< tpl.Get<2>() << endl;
 
 
-			//Tuple<double, long, string> tpl2{111, 111, ""};
+			//SmlTuple<double, long, string> tpl2{111, 111, ""};
 			//tpl2 = tpl;
 			//cout << "there are " << tpl2.ItemsCount() << " items in the tuple" << endl;
 			//cout << tpl2.Get<0>() << " "

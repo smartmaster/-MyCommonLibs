@@ -7,6 +7,8 @@
 #include <map>
 #include <unordered_map>
 
+#include <climits>
+
 namespace SmartLib
 {
 	using namespace ::std;
@@ -20,6 +22,13 @@ namespace SmartLib
 
 		vector<vector<long>> _clips;
 
+		vector<vector<long>> _dp;
+
+
+	private:
+		inline constexpr static long SML_INFI{LONG_MAX / 2};
+
+
 	private:
 		video_stitching(const vector<vector<int>>& raw, const long T) :
 			_raw{raw},
@@ -31,7 +40,8 @@ namespace SmartLib
 		void PreProcess() //reduce apparently useless ranges
 		{
 
-			unordered_map<long, long> reducedES;
+			//unordered_map<long, long> reducedES;
+			map<long, long> reducedES;
 			for (const auto& sub : _raw)
 			{
 				long start = sub[0];
@@ -64,7 +74,8 @@ namespace SmartLib
 
 
 
-			unordered_map<long, long> reducedSE;
+			//unordered_map<long, long> reducedSE;
+			map<long, long> reducedSE;
 			for (auto [end, start] : reducedES)
 			{
 				auto iter = reducedSE.find(start);
@@ -105,6 +116,9 @@ namespace SmartLib
 			//	long end = sub[1];
 			//	cout << "{" << start << ", " << end << "}, " << endl;
  		//	}
+
+
+			_dp.resize(_T + 1, vector<long>(_T + 1, SML_INFI));
 		}
 
 
@@ -176,13 +190,59 @@ namespace SmartLib
 			return range[1] == _T? count : -1;
 		}
 
+	private:
+		void DP(long ss, long ee)
+		{
+			//for (long len = 1; len <= _T; ++len)
+			for (long ii = 0; ii < _T; ++ ii)
+			{
+				//for (long ii = 0; ii <= _T - len; ++ ii)
+				for (long jj = ii + 1; jj <= _T; ++ jj)
+				{
+					//long jj = ii + len;
+					if (ss > jj || ee < ii) //no intersection
+					{
+						continue;
+					}
+					else if (ss <= ii && ee >= jj) //this covers all
+					{
+						_dp[ii][jj] = 1;
+					}
+					else if (ee >= jj) //this covers right part
+					{
+						_dp[ii][jj] = min(_dp[ii][jj], _dp[ii][ss] + 1);
+					}
+					else if (ss <= ii) //this covers left part
+					{
+						_dp[ii][jj] = min(_dp[ii][jj], _dp[ee][jj] + 1);
+					}
+					else // if(ss > ii && ee < jj) this is covered
+					{
+						_dp[ii][jj] = min(_dp[ii][jj], _dp[ii][ss] + _dp[ee][jj] + 1);
+					}
+				}
+			}
+		}
+
+	private:
+		long DPAll()
+		{
+			for (const auto& clip : _clips)
+			{
+				DP(clip[0], clip[1]);
+			}
+
+			return _dp[0][_T] == SML_INFI ? -1 : _dp[0][_T];
+		}
+
 
 	public:
 		static long videoStitching(const vector<vector<int>>& raw, long T)
 		{
 			video_stitching alg{ raw, T };
 			alg.PreProcess();
-			long res = alg.Count();
+			//long res = alg.Count();
+			long res = alg.DPAll();
 			return res;
 		}
 	};
